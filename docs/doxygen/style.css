@@ -1,0 +1,30 @@
+pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+}
+html {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+code{
+    border: 1px solid #ccc;
+}
+pre.src:hover:before {
+    display: none;
+}
+.smallcenter {
+    width:100%;
+    max-width:250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bigcenter {
+    width:100%;
+    max-width:500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

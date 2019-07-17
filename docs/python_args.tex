@@ -1,0 +1,184 @@
+\section{Python Script Execution}
+\label{sec:orgdfb4f1e}
+\subsection{Animate Data}
+\label{sec:org06de043}
+\begin{verbatim}
+usage: animate_data.py [-h] [-f] [-i [IN_DIR]] [-o [OUT_DIR]] [-m [MONTH]]
+                       [-v [VARIABLE]]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f, --figure          Whether to show or save
+  -i [IN_DIR], --in_dir [IN_DIR]
+                        Path to input directory
+  -o [OUT_DIR], --out_dir [OUT_DIR]
+                        Path to output directory
+  -m [MONTH], --month [MONTH]
+                        The month (2 digits)
+  -v [VARIABLE], --variable [VARIABLE]
+                        The netcdf variable name
+\end{verbatim}
+
+\subsection{Animate Map}
+\label{sec:org143feb5}
+\begin{verbatim}
+usage: animate_map.py [-h] [-f] [-i [IN_FILE]] [-o [OUT_DIR]] [-d [DATA_DIR]]
+                      [-t [TITLE]] [-w [WGT_PATH]] [-u [UWT_PATH]]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f, --figure          Whether to show or save
+  -i [IN_FILE], --in_file [IN_FILE]
+                        Path to input file
+  -o [OUT_DIR], --out_dir [OUT_DIR]
+                        Path to output directory
+  -d [DATA_DIR], --data_dir [DATA_DIR]
+                        Path to data directory
+  -t [TITLE], --title [TITLE]
+                        Title for the plot
+  -w [WGT_PATH], --wgt_path [WGT_PATH]
+                        Path to weighted adjacency list log
+  -u [UWT_PATH], --uwt_path [UWT_PATH]
+                        Path to unweighted adjacency list log
+\end{verbatim}
+
+\subsection{Animate Network}
+\label{sec:orga73a9d6}
+\begin{verbatim}
+usage: animate_network.py [-h] [-f] [-i [IN_FILE]] [-o [OUT_FILE]] [-w]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f, --figure          Whether to show or save
+  -i [IN_FILE], --in_file [IN_FILE]
+                        Path to input file
+  -o [OUT_FILE], --out_file [OUT_FILE]
+                        Path to output directory
+  -w, --weighted        Whether data is weighted
+\end{verbatim}
+
+\subsection{Plot Antenna}
+\label{sec:org9863205}
+\begin{verbatim}
+usage: plot_antenna.py [-h] [-f] [-i [IN_FILE]] [-o [OUT_DIR]]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f, --figure          Whether to show or save
+  -i [IN_FILE], --in_file [IN_FILE]
+                        Path to input file
+  -o [OUT_DIR], --out_dir [OUT_DIR]
+                        Path to output directory
+\end{verbatim}
+
+\subsection{Plot Channel}
+\label{sec:org4fa2a4c}
+\begin{verbatim}
+usage: plot_channel.py [-h] [-f] [-i [IN_DIR]] [-d [DATA_DIR]] [-o [OUT_DIR]]
+                       [-n INDEX]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f, --figure          Whether to show or save
+  -i [IN_DIR], --in_dir [IN_DIR]
+                        Path to input directory
+  -d [DATA_DIR], --data_dir [DATA_DIR]
+                        Path to input directory
+  -o [OUT_DIR], --out_dir [OUT_DIR]
+                        Path to output directory
+  -n INDEX, --index INDEX
+                        The file index
+\end{verbatim}
+
+\subsection{Plot Data}
+\label{sec:org7b15066}
+\begin{verbatim}
+usage: plot_data.py [-h] [-f] [-i [IN_DIR]] [-o [OUT_DIR]] [-n INDEX]
+                    [-m [MONTH]] [-j [IN_DIR2]]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f, --figure          Whether to show or save
+  -i [IN_DIR], --in_dir [IN_DIR]
+                        Path to input directory
+  -o [OUT_DIR], --out_dir [OUT_DIR]
+                        Path to output directory
+  -n INDEX, --index INDEX
+                        The frame index
+  -m [MONTH], --month [MONTH]
+                        The month (2 digits)
+  -j [IN_DIR2], --in_dir2 [IN_DIR2]
+                        A second optional dataset
+\end{verbatim}
+
+\subsection{Plot Map}
+\label{sec:org40aeaed}
+\begin{verbatim}
+usage: plot_map.py [-h] [-f] [-i [IN_FILE]] [-o [OUT_DIR]] [-n INDEX]
+                   [-w [WGT_PATH]] [-u [UWT_PATH]]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f, --figure          Whether to show or save
+  -i [IN_FILE], --in_file [IN_FILE]
+                        Path to input file
+  -o [OUT_DIR], --out_dir [OUT_DIR]
+                        Path to output directory
+  -n INDEX, --index INDEX
+                        The frame index
+  -w [WGT_PATH], --wgt_path [WGT_PATH]
+                        Path to weighted adjacency list log
+  -u [UWT_PATH], --uwt_path [UWT_PATH]
+                        Path to unweighted adjacency list log
+\end{verbatim}
+
+\subsection{Plot Measurement}
+\label{sec:org1737f2f}
+\begin{verbatim}
+usage: plot_measurement.py [-h] [-i [IN_DIR]] [-d [DATA_DIR]] [-o [OUT_DIR]]
+                           [-n INDEX]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i [IN_DIR], --in_dir [IN_DIR]
+                        Path to input directory
+  -d [DATA_DIR], --data_dir [DATA_DIR]
+                        Path to input directory
+  -o [OUT_DIR], --out_dir [OUT_DIR]
+                        Path to output directory
+  -n INDEX, --index INDEX
+                        The file index
+\end{verbatim}
+
+\subsection{Plot Network}
+\label{sec:org037bf1f}
+\begin{verbatim}
+usage: plot_network.py [-h] [-i [IN_FILE]] [-o [OUT_DIR]] [-n INDEX] [-w] [-f]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i [IN_FILE], --in_file [IN_FILE]
+                        Path to input file
+  -o [OUT_DIR], --out_dir [OUT_DIR]
+                        Path to output directory
+  -n INDEX, --index INDEX
+                        The frame index
+  -w, --weighted        Whether data is weighted
+  -f, --figure          Whether to show or save
+\end{verbatim}
+
+\subsection{Plot Series}
+\label{sec:orgd690f64}
+\begin{verbatim}
+usage: plot_series.py [-h] [-i [IN_FILE]] [-o [OUT_DIR]] [-n INDEX] [-f]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i [IN_FILE], --in_file [IN_FILE]
+                        Path to input file
+  -o [OUT_DIR], --out_dir [OUT_DIR]
+                        Path to output directory
+  -n INDEX, --index INDEX
+                        The frame index
+  -f, --figure          Whether to show or save
+\end{verbatim}

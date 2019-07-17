@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+add_subdirectory(netcdf)
+add_subdirectory(nlohmann)
+add_subdirectory(spdlog)
+add_subdirectory(sgp4)
+add_subdirectory(collaborate)

@@ -1,0 +1,541 @@
+#+TITLE: Collaborate
+#+AUTHOR: Ryan Linnabary
+#+OPTIONS: html-postamble:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="doxygen/style.css" />
+# https://github.com/ryananan/collaborate
+# https://ryananan.github.io/collaborate
+#+ATTR_HTML: :width 100%
+#+ATTR_MD: :width 300
+[[./images/raster/top.png]]
+-----
+* Introduction
+** Summary
+   # - Collaborative networks of small satellites will form future Earth-observing
+   #   systems.
+   # - Maximizing the science value of measurements from such systems will require
+   #   autonomous decision making with regard to management of limited resources
+   #   (i.e. power, communications, and sensor configuration).
+   # - The complexity of this decision space warrants the creation of software
+   #   tools to aid users in efficient modeling and simulation of collaborative
+   #   remote sensing networks.
+   # - COLLABORATE is a new open-source software library and toolset that has been
+   #   specifically designed for simulating such networks.
+   # - The library is designed to quantify the improvements (i.e. science value)
+   #   of the usage of collaborative, autonomous decision making networks of
+   #   adaptive sensors through rapid simulation and modeling.
+   # - COLLABORATE simplifies observing-system simulation through constellation
+   #   design involving diverse sensor platforms and visual analysis of network
+   #   behavior.
+   # - The library’s object-oriented class hierarchy provides a straight-forward
+   #   approach to incorporating user-defined algorithms into simulations.
+   # - The software tools developed offer enhanced simulation capabilities to
+   #   developers of future observing system simulation experiments (OSSEs) with
+   #   collaborative networks of adaptive sensor platforms.
+   # *Background*
+   - _Collaborative Networks of Small Satellites_ will form future Earth-observing
+     systems and enable _New Observing Strategies_.
+   - Observing systems will operate adaptive sensors with limited resources.
+     - /(Restricted duty cycle, buffer size, power, bandwidth, link availability)/
+   - *Problem*: maximizing measurement science value
+   - *Challenge*: complex decision-making space
+   - *Solution*: Autonomous resource management /(power, comm., sensing)/
+   - *First Step*: _Software Tools_ for _Modeling/Simulating Future Systems_
+** Author
+   Ryan Linnabary - linnabary.24@osu.edu
+** Sponsor
+   NASA Advanced Information Systems Technology Program NNH16ZDA001N-AIST
+** Source Code & Documentation
+   The complete source code is available on [[https://github.com/ryananan/collaborate][Github]].  Complete Doxygen API
+   documentation is available for the [[https://ryananan.github.io/collaborate/cpp_html/index.html][C++ Library]] and [[https://ryananan.github.io/collaborate/py_html/index.html][Python Tools]]. There is
+   also a [[https://ryananan.github.io/collaborate/refman.pdf][User Manual]].
+** Applications
+   Collaborate is a software library and toolset for simulating collaborative
+   autonomous small-satellite sensor networks.
+   - Optimize mission science return
+   - _Predict optimal communication routes_
+   - Produce data (telemetry, etc.) to train machine-learning models
+   - Constellation design
+   - Facilitate algorithm development
+     - Adaptive remote sensing
+     - Resource management
+     - Delay-tolerant networks
+** Publications
+   #+BEGIN_QUOTE
+   Ryan Linnabary, et. al., /"Software Library for Simulation of Collaborative
+   Sensor Networks for Navigation and Sensing"/, Consortium of Ohio Universities
+   on Navigation and Timekeeping (COUNT), April 3 2019, Columbus,
+   OH.  [[[https://ryananan.github.io/collaborate/publications/count_abstract.pdf][Abstract]]|[[https://ryananan.github.io/collaborate/publications/count_poster.pdf][Poster]]]
+   #+END_QUOTE
+   #+BEGIN_QUOTE
+   Ryan Linnabary, et. al., /"Using Cognitive Communications to Increase the
+   Operational Value of Collaborative Networks of Satellites"/, IEEE Cognitive
+   Communications for Aerospace Applications Workshop (IEEE-CCAAW), June 26
+   2019, Cleveland, OH.  [[[https://ryananan.github.io/collaborate/publications/ccaaw_paper.pdf][Paper]]|[[https://ryananan.github.io/collaborate/publications/ccaaw_slides.pdf][Slides]]]
+   #+END_QUOTE
+   #+BEGIN_QUOTE
+   Ryan Linnabary, et. al., /"Open Source Software for Simulating Collaborative
+   Networks of Autonomous Adaptive Sensors"/, in Proceedings of the IEEE
+   International Geoscience and Remote Sensing Symposium (IGARSS) 2019,
+   Yokahama, Japan.  [[[https://ryananan.github.io/collaborate/publications/igarss_paper.pdf][Paper]]|[[https://ryananan.github.io/collaborate/publications/igarss_slides.pdf][Slides]]]
+   #+END_QUOTE
+   #+BEGIN_QUOTE
+   Ryan Linnabary, et. al., /"Open Source Software for Simulating Collaborative
+   Networks of Autonomous Adaptive Sensors"/, ElectroScience Laboratory
+   Consortium on Electromagnetics and Radio Frequencies (ESL-CERF), August 5
+   2019, Columbus, OH.  [[[https://ryananan.github.io/collaborate/publications/cerf_slide.pdf][Slide]]|[[https://ryananan.github.io/collaborate/publications/cerf_poster.pdf][Poster]]]
+   #+END_QUOTE
+   -----
+* Work Flow
+  #+ATTR_HTML: :style width: 100%; max-width: 600px;
+  [[./images/raster/workflow.png]]
+  #
+  C++ programs use the library to produce simulation data.  This data may be
+  visualized or analyzed using the included Python scripts.
+  #
+  -----
+* Development Environment
+** Option 1: Docker
+   /Time/: 12 min.
+   #
+   /Note/: Users can not currently open videos from the Docker command prompt
+   (feature in progress).
+   #
+   Install git.  Clone this repository in the home directory.
+   #+BEGIN_SRC
+   ~ $ sudo apt install git
+   ~ $ git clone https://github.com/ryananan/collaborate.git
+   #+END_SRC
+   Install Docker.
+   #+BEGIN_SRC
+   ~ $ sudo apt install docker.io
+   #+END_SRC
+   Build the Docker image using the [[https://raw.githubusercontent.com/ryananan/collaborate/master/env/docker/build.sh][image build script]].
+   #+BEGIN_SRC
+   ~ $ sudo ./collaborate/env/docker/build.sh
+   #+END_SRC
+   Run the Docker container using the [[https://raw.githubusercontent.com/ryananan/collaborate/master/env/docker/run.sh][container run script]].
+   #+BEGIN_SRC
+   ~ $ sudo ./collaborate/env/docker/run.sh
+   root@collaborate-test:~/collaborate#
+   #+END_SRC
+   -----
+** Option 2: Local Machine
+*** Disk Image
+    /Time/: 5 min.
+    #
+    Install wget and download Ubuntu 18.04.
+    #+BEGIN_SRC
+    ~ $ sudo apt install wget
+    ~ $ wget http://releases.ubuntu.com/18.04/ubuntu-18.04.2-desktop-amd64.iso
+    #+END_SRC
+*** Installation
+    _Option 2-A: Virtual Machine_
+    #
+    /Time/: 30 min.
+    #
+    Install VirtualBox.
+    #+BEGIN_SRC
+    ~ $ sudo apt install virtualbox
+    #+END_SRC
+    Run virtualbox and follow the on-screen instructions to boot and install the
+    ISO.  Use the following options:
+    - At least 15 GB disk space
+    - Minimal installation
+    - Download updates while installing
+    - Install third-party software
+    _Option 2-B: Hard Drive_
+    #
+    /Time/: 35 min.
+    #
+    Plug in and identify a target USB device.
+    #+BEGIN_SRC
+    ~ $ lsblk
+    #+END_SRC
+    If your target device is located at ~/dev/sdb~, then write the ISO to that
+    drive.
+    #+BEGIN_SRC
+    ~ $ sudo umount /dev/sdb
+    ~ $ sudo dd if=ubuntu-18.04.2-desktop-amd64.iso of=/dev/sdb
+    #+END_SRC
+    Reboot the computer.  Boot from USB device.  Follow instructions to
+    install.
+*** Dependencies
+    /Time/: 25 min.
+    #
+    Update everything.  Install git.  Clone this repository in the home
+    directory.
+    #+BEGIN_SRC
+    ~ $ sudo apt install update
+    ~ $ sudo apt install upgrade
+    ~ $ sudo apt install git
+    ~ $ git clone https://github.com/ryananan/collaborate.git
+    #+END_SRC
+    Download C++ dependencies listed in [[https://raw.githubusercontent.com/ryananan/collaborate/master/env/local/apt.txt][apt.txt]].
+    #+BEGIN_SRC
+    ~ $ cat collaborate/env/local/apt.txt | xargs sudo apt install -y
+    #+END_SRC
+    Download Python3 dependencies listed in [[https://raw.githubusercontent.com/ryananan/collaborate/master/env/local/py.txt][py.txt]].
+    #+BEGIN_SRC
+    ~ $ cat collaborate/env/local/py.txt | xargs sudo -H pip3 install
+    ~ $ sudo -H install cartopy
+    #+END_SRC
+    Execute the following to set up the ~PYTHONPATH~ environment variable.
+    #+BEGIN_SRC
+    ~ $ echo "export PYTHONPATH=\${PYTHONPATH}:\${HOME}/collaborate/util" >> .bashrc
+    ~ $ source .bashrc
+    #+END_SRC
+    -----
+* Build the Project
+  /Time/: 5 min.
+  #
+  The following [[https://raw.githubusercontent.com/ryananan/collaborate/master/sys/build.sh][project build script]] will build the project with CMake.  If you
+  set either of the variables CPPLINT, PYLINT, DOXYGEN to true, it will also
+  check code style conformance and generate documentation.
+  #+BEGIN_SRC
+  ~ $ cd collaborate
+  ~/collaborate $ ./sys/build.sh
+  #+END_SRC
+  A build folder will appear at ~osse-build~.  If this folder is present the
+  next time the project build script is run, CMake will only build those files
+  which have been updated since the last run.  Remove the folder ~osse-build~
+  to completely rebuild the project (file names or folder names were changed).
+  #
+  In-between simulations, it may be useful to empty the directories ~output~
+  and ~analysis~ so that new simulation results do not clobber the old ones.
+  The [[https://raw.githubusercontent.com/ryananan/collaborate/master/sys/clean.sh][clean script]] accomplishes this, but /does not prompt for confirmation/.
+  #+BEGIN_SRC
+  ~/collaborate $ ./sys/clean.sh
+  #+END_SRC
+  -----
+* Condition the Input Data
+  Since the repository can not track large files, the input NetCDF data has been
+  broken-up into smaller files.  Run the [[https://raw.githubusercontent.com/ryananan/collaborate/master/util/combine.py][combine script]] to merge these files
+  together before running any example programs.  This needs to be done only
+  once.
+  #+BEGIN_SRC
+  ~/collaborate $ util/combine.py
+  #+END_SRC
+  -----
+* Command-Line Documentation
+  /Time/: 1 min.
+** PyDoc
+   Python modules are accessible using the program ~pydoc3~.
+   #+BEGIN_SRC
+   ~/collaborate $ pydoc3 plot_map
+   #+END_SRC
+** Python Help
+   Python script arguments can be referenced by passing ~-h~ or ~--help~.
+   #+BEGIN_SRC
+   ~/collaborate $ util/animate_data.py -h
+   #+END_SRC
+  -----
+* Simple Example
+  /Time/: 2 min.
+  #
+  The simple simulation /(source: [[https://raw.githubusercontent.com/ryananan/collaborate/master/apps/simple/simple.cpp][simple.cpp]])/ will produce simulation data in
+  the ~output~ folder.
+  #+BEGIN_SRC
+  ~/collaborate $ ./simple.out
+  ~/collaborate $ ls output
+  antenna.nc4
+  data.nc4
+  events.txt
+  network.nc4
+  #+END_SRC
+  If a NetCDF viewer is available (Panoply, etc.), open and explore the ~.nc4~
+  files.
+  #
+  Also, Python scripts are provided in ~util~ for post-processing.
+  #
+  These scripts accept command-line arguments. /Required/ arguments have default
+  values, so the scripts can be run without passing any arguments.
+  #
+  By default, scripts produce files in the ~analysis~ directory without opening
+  a figure.  Passing the argument ~-f~ to any Python script will open a Python
+  figure instead.
+  #
+  /Note/: The first time a Python script reads a ~.nc4~ file, it is archived to
+  a ~.pkl~ file.  Additional "runs" will access the ~.pkl~ file to save time.
+  #
+  Run the [[https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_antenna.py][antenna plot script]] to view the dipole's gain pattern (passing ~-f~
+  for an interactive 3D plot).
+  #+BEGIN_SRC
+  ~/collaborate $ util/plot_antenna.py -f
+  #+END_SRC
+  #+ATTR_HTML: :style width: 100%; max-width: 250px;
+  [[./images/raster/dipole.png]]
+  #
+  Run the [[https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_series.py][series plot script]] to graph satellite parameters in time.
+  #+BEGIN_SRC
+  ~/collaborate $ util/plot_series.py -f
+  #+END_SRC
+  #+ATTR_HTML: :style width: 100%; max-width: 350px;
+  [[./images/raster/parameters.png]]
+  -----
+* Intermediate Example
+  /Time/: 4 min.
+  #
+  Remove output and analysis files.
+  #+BEGIN_SRC
+  ~/collaborate $ ./sys/clean.sh
+  #+END_SRC
+  The intermediate simulation /(source: [[https://raw.githubusercontent.com/ryananan/collaborate/master/apps/intermediate/intermediate.cpp][intermediate.cpp]])/ will produce
+  simulation data in the ~output~ folder, including measurement logs.
+  #+BEGIN_SRC
+  ~/collaborate $ ./intermediate.out
+  ~/collaborate $ ls output
+  0000000649s_N00000_TAUTOT_measure.nc4
+  0000003284s_N00005_TAUTOT_measure.nc4
+  data.nc4
+  events.txt
+  network.nc4
+  #+END_SRC
+  #
+  Run the [[https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_map.py][map plot script]] to view the initial positions of the satellites
+  (passing ~-u~ to include the line-of-sight /contact graph/).
+  #+BEGIN_SRC
+  ~/collaborate $ util/plot_map.py -u output/network.nc4 -f
+  Processing log "output/data.nc4"
+  Processing "output/network.nc4"
+  Preparing equirectangular projection
+  #+END_SRC
+  #+ATTR_HTML: :style width: 100%; max-width: 500px;
+  [[./images/raster/all_los.png]]
+  #
+  This contact graph can also be viewed as an image with the
+  [[https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_network.py][network plot script]].
+  #+BEGIN_SRC
+  ~/collaborate $ util/plot_network.py -f
+  #+END_SRC
+  #+ATTR_HTML: :style width: 100%; max-width: 250px;
+  [[./images/raster/unweighted.png]]
+  #
+  Use the [[https://raw.githubusercontent.com/ryananan/collaborate/master/util/animate_network.py][network animation script]] to visualize instantaneous line-of-sight
+  distances.
+  #+BEGIN_SRC
+  ~/collaborate $ util/animate_network.py -i output/distance.nc4 -w -f
+  #+END_SRC
+  #+HTML: <video controls="" class="smallcenter">
+  #+HTML: <source src="./anim/network.mp4" type="video/mp4">
+  #+HTML: </video>
+  #
+  Run the [[https://raw.githubusercontent.com/ryananan/collaborate/master/util/animate_map.py][map animation script]] to visualize satellite motion.  This works best
+  without opening a figure (writing to an MP4 file instead).
+  #+BEGIN_SRC
+  ~/collaborate $ util/animate_map.py
+  Processing archive "output/data.nc4"
+  Preparing equirectangular projection
+  Status:
+  99%
+  #+END_SRC
+  #+HTML: <video class="bigcenter" controls="">
+  #+HTML: <source src="./anim/map.mp4" type="video/mp4">
+  #+HTML: Watch Video</video>
+  #
+  Run the [[https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_data.py][data plot script]] with an additional argument to view the first frame
+  of ~"TAUTOT"~ + ~"PRECTOT"~ together.
+  #+BEGIN_SRC
+  ~/collaborate $ util/plot_data.py -j input/nc4/ -f
+  #+END_SRC
+  #+ATTR_HTML: :style width: 100%; max-width: 500px;
+  [[./images/raster/combined.png]]
+  -----
+* Advanced Example
+  /Time/: 20 min.
+  #
+  Remove output and analysis files.
+  #+BEGIN_SRC
+  ~/collaborate $ ./sys/clean.sh
+  #+END_SRC
+  The advanced simulation /(source: [[https://raw.githubusercontent.com/ryananan/collaborate/master/apps/advanced/advanced.cpp][advanced.cpp]])/ will produce simulation data
+  to the ~output~ folder, including measurement and communication logs..
+  #+BEGIN_SRC
+  ~/collaborate $ ./advanced.out
+  ~/git/collaborate $ ls -lSa output
+  data.nc4
+  0000000459s_N65535_TAUTOT_measure.nc4
+  0000008994s_N65535_TAUTOT_measure.nc4
+  0000001326s_N00001_N00100_channel.nc4
+  0000008928s_N00034_N00002_channel.nc4
+  events.txt
+  network.nc4
+  tree_0_47_7459.tex
+  tree_3_165_5359.tex
+  #+END_SRC
+  Run the [[https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_measurement.py][measurement plot script]] to plot a map and graph of a measurement.
+  These files are created in ~analysis~ unless otherwise specified.
+  #+BEGIN_SRC
+  ~/collaborate $ util/plot_measurement.py
+  #+END_SRC
+  #+ATTR_HTML: :style width: 100%; max-width: 600px;
+  [[./images/raster/measurement.png]]
+  #
+  Low-level communication channel parameters can be plotted using the
+  [[https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_channel.py][channel plot script]].
+  #+BEGIN_SRC
+  ~/collaborate $ util/plot_channel.py -f
+  #+END_SRC
+  #+ATTR_HTML: :style width: 100%; max-width: 500px;
+  [[./images/raster/channel.png]]
+  #
+  The data structures used to predict routes are logged as well.  Open some of
+  these ~.tex~ files and select one that has an interesting structure.  Use
+  LaTeX to generate a PDF plot.
+  #+BEGIN_SRC
+  ~/collaborate $ cd output
+  ~/collaborate/output $ pdflatex tree_3_165_5359.tex
+  #+END_SRC
+  #+ATTR_HTML: :style width: 100%; max-width: 600px;
+  [[./images/raster/tree.png]]
+  -----
+* Library Details
+** License
+   This project is licensed under [[https://raw.githubusercontent.com/ryananan/collaborate/master/LICENSE.txt][LGPL v3.0]] and contains code protected by other
+   compatible free-software licenses.
+   #+ATTR_HTML: :border 2 :rules all :frame border :width 100%
+   |------------------+------------+------------+-------------+----------------+----------------------|
+   | *Directory*      | *Language* | *License*  | *Copyright* | *Author*       | *Repository*         |
+   |------------------+------------+------------+-------------+----------------+----------------------|
+   | libs/collaborate | C++        | [[https://raw.githubusercontent.com/ryananan/collaborate/master/LICENSE.txt][LGPL v3.0]]  | [[https://raw.githubusercontent.com/ryananan/collaborate/master/COPYRIGHT.txt][Link]]        | Ryan Linnabary | [[https://github.com/ryananan/collaborate][ryananan/collaborate]] |
+   |------------------+------------+------------+-------------+----------------+----------------------|
+   | libs/sgp4        | C++        | [[https://raw.githubusercontent.com/ryananan/collaborate/master/libs/sgp4/LICENSE.txt][Apache 2.0]] | [[https://raw.githubusercontent.com/ryananan/collaborate/master/libs/sgp4/COPYRIGHT.txt][Link]]        | Daniel Warner  | [[https://github.com/dnwrnr/sgp4][dnwrnr/sgp4]]          |
+   |------------------+------------+------------+-------------+----------------+----------------------|
+   | libs/spdlog      | C++        | [[https://raw.githubusercontent.com/ryananan/collaborate/master/libs/spdlog/LICENSE.txt][MIT]]        | [[https://raw.githubusercontent.com/ryananan/collaborate/master/libs/spdlog/COPYRIGHT.txt][Link]]        | Gabi Melman    | [[https://github.com/gabime/spdlog][gabime/spdlog]]        |
+   |------------------+------------+------------+-------------+----------------+----------------------|
+   | libs/nlohmann    | C++        | [[https://raw.githubusercontent.com/ryananan/collaborate/master/libs/nlohmann/LICENSE.txt][MIT]]        | [[https://raw.githubusercontent.com/ryananan/collaborate/master/libs/nlohmann/COPYRIGHT.txt][Link]]        | Niels Lohmann  | [[https://github.com/nlohmann/json][nlohmann/json]]        |
+   |------------------+------------+------------+-------------+----------------+----------------------|
+   | libs/netcdf      | C++        | [[https://raw.githubusercontent.com/ryananan/collaborate/master/libs/netcdf/LICENSE.txt][UniData]]    | [[https://raw.githubusercontent.com/ryananan/collaborate/master/libs/netcdf/COPYRIGHT.txt][Link]]        | Unidata        | [[https://github.com/Unidata/netCDF-cxx4][unidata/netcdf-cxx4]]  |
+   |------------------+------------+------------+-------------+----------------+----------------------|
+   | util             | Python     | [[https://raw.githubusercontent.com/ryananan/collaborate/master/LICENSE.txt][LGPL v3.0]]  | [[https://raw.githubusercontent.com/ryananan/collaborate/master/COPYRIGHT.txt][Link]]        | Ryan Linnabary | [[https://github.com/ryananan/collaborate][ryananan/collaborate]] |
+   |------------------+------------+------------+-------------+----------------+----------------------|
+** Structure
+   The C++ library's class hierarchy provides an object-oriented system for
+   observing system simulation experiments.  The following illustration shows how
+   the most prevalent abstract classes interact with, and depend on, one another.
+   #+ATTR_HTML: :style width: 100%; max-width: 600px;
+   [[./images/raster/library.png]]
+** Profiling
+   The call-graph below was created with Valgrind /(source: [[https://raw.githubusercontent.com/ryananan/collaborate/master/sys/profile.sh][profile.sh]])/.  It
+   shows the most common function calls (>5% CPU) for the program
+   [[https://raw.githubusercontent.com/ryananan/collaborate/master/apps/simple/simple.cpp][simple.cpp]].
+   #+BEGIN_SRC
+   ~/collaborate $ ./sys/profile.sh ./simple.out
+   ~/collaborate $ ls -lSa callgrind*
+   callgrind.out.10081
+   ~/collaborate $ kcachegrind callgrind.out.10081
+   #+END_SRC
+   #+ATTR_HTML: :width 100%
+   [[./images/raster/callgraph.png]]
+** Testing
+   The Valgrind tool ~memcheck~ is used to evaluate memory behavior.
+*** Simple Example
+    Testing memory behavior for [[https://raw.githubusercontent.com/ryananan/collaborate/master/apps/simple/simple.cpp][simple.cpp]]:
+    #+BEGIN_SRC
+    ./sys/memcheck.sh ./simple.out
+    ==2119== Memcheck, a memory error detector
+    ==2119== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+    ==2119== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+    ==2119== Command: ./simple.out
+    ==2119==
+    ==2119==
+    ==2119== HEAP SUMMARY:
+    ==2119==     in use at exit: 97,579 bytes in 707 blocks
+    ==2119==   total heap usage: 44,701 allocs, 43,994 frees, 71,748,921 bytes allocated
+    ==2119==
+    ==2119== LEAK SUMMARY:
+    ==2119==    definitely lost: 0 bytes in 0 blocks
+    ==2119==    indirectly lost: 0 bytes in 0 blocks
+    ==2119==      possibly lost: 0 bytes in 0 blocks
+    ==2119==    still reachable: 97,579 bytes in 707 blocks
+    ==2119==         suppressed: 0 bytes in 0 blocks
+    ==2119== Rerun with --leak-check=full to see details of leaked memory
+    ==2119==
+    ==2119== For counts of detected and suppressed errors, rerun with: -v
+    ==2119== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+    #+END_SRC
+*** Intermediate Example
+    Testing memory behavior for [[https://raw.githubusercontent.com/ryananan/collaborate/master/apps/intermediate/intermediate.cpp][intermediate.cpp]]:
+    #+BEGIN_SRC
+    ./sys/memcheck.sh ./intermediate.out
+    ==1936== Memcheck, a memory error detector
+    ==1936== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+    ==1936== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+    ==1936== Command: ./intermediate.out
+    ==1936==
+    ==1936==
+    ==1936== HEAP SUMMARY:
+    ==1936==     in use at exit: 97,579 bytes in 707 blocks
+    ==1936==   total heap usage: 730,824 allocs, 730,117 frees, 643,571,312 bytes allocated
+    ==1936==
+    ==1936== LEAK SUMMARY:
+    ==1936==    definitely lost: 0 bytes in 0 blocks
+    ==1936==    indirectly lost: 0 bytes in 0 blocks
+    ==1936==      possibly lost: 0 bytes in 0 blocks
+    ==1936==    still reachable: 97,579 bytes in 707 blocks
+    ==1936==         suppressed: 0 bytes in 0 blocks
+    ==1936== Rerun with --leak-check=full to see details of leaked memory
+    ==1936==
+    ==1936== For counts of detected and suppressed errors, rerun with: -v
+    ==1936== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+    #+END_SRC
+*** Advanced Example
+    Testing memory behavior for [[https://raw.githubusercontent.com/ryananan/collaborate/master/apps/advanced/advanced.cpp][advanced.cpp]]:
+    #+BEGIN_SRC
+    ./sys/memcheck.sh ./advanced.out
+    ==2501== Memcheck, a memory error detector
+    ==2501== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+    ==2501== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+    ==2501== Command: ./advanced.out
+    ==2501==
+    ==2501==
+    ==2501== HEAP SUMMARY:
+    ==2501==     in use at exit: 97,579 bytes in 707 blocks
+    ==2501==   total heap usage: 1,021,227 allocs, 1,020,520 frees, 598,970,742 bytes allocated
+    ==2501==
+    ==2501== LEAK SUMMARY:
+    ==2501==    definitely lost: 0 bytes in 0 blocks
+    ==2501==    indirectly lost: 0 bytes in 0 blocks
+    ==2501==      possibly lost: 0 bytes in 0 blocks
+    ==2501==    still reachable: 97,579 bytes in 707 blocks
+    ==2501==         suppressed: 0 bytes in 0 blocks
+    ==2501== Rerun with --leak-check=full to see details of leaked memory
+    ==2501==
+    ==2501== For counts of detected and suppressed errors, rerun with: -v
+    ==2501== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+    #+END_SRC
+** Development Tools
+   The following software tools were used in the creation of this project.
+   #+ATTR_HTML: :border 2 :rules all :frame border :width 100%
+   |---------------+------------+----------------------+----------------------------|
+   | *Tool*        |  *Version* | *Links*              | *License*                  |
+   |---------------+------------+----------------------+----------------------------|
+   | Docker / Moby |    18.09.7 | [[https://github.com/moby/moby/blob/master/LICENSE][repository]] / [[https://www.docker.com/][webpage]] | [[https://github.com/moby/moby/blob/master/LICENSE][Apache 2.0]]                 |
+   |---------------+------------+----------------------+----------------------------|
+   | pdfTeX        | 3.14159265 | [[https://www.tug.org/svn/pdftex/][repository]] / [[http://www.tug.org/applications/pdftex/][webpage]] | [[https://www.gnu.org/licenses/lgpl-3.0.html][GPLv3]]                      |
+   |---------------+------------+----------------------+----------------------------|
+   | Doxygen       |     1.8.13 | [[https://github.com/doxygen/doxygen][repository]] / [[http://doxygen.nl/][webpage]] | [[https://www.gnu.org/licenses/old-licenses/gpl-2.0.html][GPLv2]]                      |
+   |---------------+------------+----------------------+----------------------------|
+   | GraphViz      |   2.40.1-2 | [[https://gitlab.com/graphviz/graphviz/][repository]] / [[https://graphviz.org/][webpage]] | [[https://graphviz.org/license/][Common Public License V1.0]] |
+   |---------------+------------+----------------------+----------------------------|
+   | Valgrind      |     3.13.0 | [[http://valgrind.org/downloads/repository.html][repository]] / [[http://valgrind.org/][webpage]] | [[https://www.gnu.org/licenses/old-licenses/gpl-2.0.html][GPLv2]]                      |
+   |---------------+------------+----------------------+----------------------------|
+   | kCacheGrind   |      0.8.0 | [[https://kcachegrind.github.io/html/Download.html][repository]] / [[http://kcachegrind.sourceforge.net/html/Home.html][webpage]] | [[https://www.gnu.org/licenses/old-licenses/gpl-2.0.html][GPLv2]]                      |
+   |---------------+------------+----------------------+----------------------------|
+   | netCDF4       |    1.5.1.2 | [[https://github.com/Unidata/netcdf4-python][repository]] / [[http://unidata.github.io/netcdf4-python/netCDF4/index.html][webpage]] | [[https://raw.githubusercontent.com/Unidata/netcdf4-python/master/COPYING][UniData]]                    |
+   |---------------+------------+----------------------+----------------------------|
+   | SciPy         |      1.3.0 | [[https://github.com/scipy/scipy][repository]] / [[https://www.scipy.org/][webpage]] | [[https://scipy.org/scipylib/license.html][BSD]]                        |
+   |---------------+------------+----------------------+----------------------------|
+   | Cartopy       |     0.17.0 | [[https://github.com/SciTools/cartopy][repository]] / [[https://scitools.org.uk/cartopy/docs/latest/][webpage]] | [[https://www.gnu.org/licenses/lgpl-3.0.html][GPLv3]]                      |
+   |---------------+------------+----------------------+----------------------------|
+   | PyLint        |      2.3.1 | [[https://github.com/PyCQA/pylint][repository]] / [[https://www.pylint.org/][webpage]] | [[https://www.gnu.org/licenses/old-licenses/gpl-2.0.html][GPLv2]]                      |
+   |---------------+------------+----------------------+----------------------------|
+   | CppLint       |      1.4.4 | [[https://github.com/cpplint/cpplint][repository]] / [[https://pypi.org/project/cpplint/][webpage]] | [[https://raw.githubusercontent.com/cpplint/cpplint/master/LICENSE][Google]]                     |
+   |---------------+------------+----------------------+----------------------------|
+   | Python        |      3.6.8 | [[https://github.com/python/][repository]] / [[https://www.python.org/][webpage]] | [[https://docs.python.org/3/license.html][PSF]]                        |
+   |---------------+------------+----------------------+----------------------------|
+   | CMake         |     3.10.2 | [[https://gitlab.kitware.com/cmake/cmake][repository]] / [[https://cmake.org/][webpage]] | [[https://gitlab.kitware.com/cmake/cmake/raw/master/Copyright.txt][BSD]]                        |
+   |---------------+------------+----------------------+----------------------------|
+   | FFMpeg        |      3.4.6 | [[https://github.com/FFmpeg/FFmpeg][repository]] / [[https://ffmpeg.org/][webpage]] | [[https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html][LGPLv2.1]]                   |
+   |---------------+------------+----------------------+----------------------------|
+   | Emacs         |       26.2 | [[https://github.com/emacs-mirror/emacs][repository]] / [[https://www.gnu.org/software/emacs/][webpage]] | [[https://www.gnu.org/licenses/gpl-3.0.en.html][GPLv3]]                      |
+   |---------------+------------+----------------------+----------------------------|

@@ -1,0 +1,41 @@
+* Python Script Execution
+** Animate Data
+   #+BEGIN_SRC bash :exports results :results output
+   python3 ../util/animate_data.py -h
+   #+END_SRC
+** Animate Map
+   #+BEGIN_SRC bash :exports results :results output
+   python3 ../util/animate_map.py -h
+   #+END_SRC
+** Animate Network
+   #+BEGIN_SRC bash :exports results :results output
+   python3 ../util/animate_network.py -h
+   #+END_SRC
+** Plot Antenna
+   #+BEGIN_SRC bash :exports results :results output
+   python3 ../util/plot_antenna.py -h
+   #+END_SRC
+** Plot Channel
+   #+BEGIN_SRC bash :exports results :results output
+   python3 ../util/plot_channel.py -h
+   #+END_SRC
+** Plot Data
+   #+BEGIN_SRC bash :exports results :results output
+   python3 ../util/plot_data.py -h
+   #+END_SRC
+** Plot Map
+   #+BEGIN_SRC bash :exports results :results output
+   python3 ../util/plot_map.py -h
+   #+END_SRC
+** Plot Measurement
+   #+BEGIN_SRC bash :exports results :results output
+   python3 ../util/plot_measurement.py -h
+   #+END_SRC
+** Plot Network
+   #+BEGIN_SRC bash :exports results :results output
+   python3 ../util/plot_network.py -h
+   #+END_SRC
+** Plot Series
+   #+BEGIN_SRC bash :exports results :results output
+   python3 ../util/plot_series.py -h
+   #+END_SRC

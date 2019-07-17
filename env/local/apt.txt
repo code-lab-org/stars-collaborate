@@ -1,0 +1,16 @@
+mpv
+cmake
+doxygen
+python3
+libcanberra-gtk3-module
+ffmpeg
+libgeos-dev
+graphviz
+python3-tk
+python3-pip
+man
+libproj-dev
+proj-data
+proj-bin
+texlive-latex-extra
+libnetcdf-dev

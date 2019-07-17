@@ -1,0 +1,1292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-07-17 Wed 09:21 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Collaborate</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Ryan Linnabary" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="doxygen/style.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Collaborate</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org951f07d">1. Introduction</a>
+<ul>
+<li><a href="#org7e163bb">1.1. Summary</a></li>
+<li><a href="#orgad4833e">1.2. Author</a></li>
+<li><a href="#org85d3a44">1.3. Sponsor</a></li>
+<li><a href="#orga06de02">1.4. Source Code &amp; Documentation</a></li>
+<li><a href="#orgc82139e">1.5. Applications</a></li>
+<li><a href="#orgbc61fff">1.6. Publications</a></li>
+</ul>
+</li>
+<li><a href="#org57569fe">2. Work Flow</a></li>
+<li><a href="#orgd0a8967">3. Development Environment</a>
+<ul>
+<li><a href="#org68b8795">3.1. Option 1: Docker</a></li>
+<li><a href="#org67d7cdf">3.2. Option 2: Local Machine</a>
+<ul>
+<li><a href="#orgc2e0d0c">3.2.1. Disk Image</a></li>
+<li><a href="#org81d5eaf">3.2.2. Installation</a></li>
+<li><a href="#org31f637b">3.2.3. Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1ded80c">4. Build the Project</a></li>
+<li><a href="#org54417bc">5. Condition the Input Data</a></li>
+<li><a href="#org3cdd694">6. Command-Line Documentation</a>
+<ul>
+<li><a href="#org31e9c34">6.1. PyDoc</a></li>
+<li><a href="#orgdc732c0">6.2. Python Help</a></li>
+</ul>
+</li>
+<li><a href="#org5542927">7. Simple Example</a></li>
+<li><a href="#org54af04f">8. Intermediate Example</a></li>
+<li><a href="#org7a33eb6">9. Advanced Example</a></li>
+<li><a href="#orgaf18424">10. Library Details</a>
+<ul>
+<li><a href="#org9205d9a">10.1. License</a></li>
+<li><a href="#org8800795">10.2. Structure</a></li>
+<li><a href="#org800779b">10.3. Profiling</a></li>
+<li><a href="#orgb76f07c">10.4. Testing</a>
+<ul>
+<li><a href="#org8a8b9ab">10.4.1. Simple Example</a></li>
+<li><a href="#org3d2c2c0">10.4.2. Intermediate Example</a></li>
+<li><a href="#orgbaec55d">10.4.3. Advanced Example</a></li>
+</ul>
+</li>
+<li><a href="#org7ae273e">10.5. Development Tools</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="./images/raster/top.png" alt="top.png" width="100%" />
+</p>
+</div>
+<hr />
+<div id="outline-container-org951f07d" class="outline-2">
+<h2 id="org951f07d"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org7e163bb" class="outline-3">
+<h3 id="org7e163bb"><span class="section-number-3">1.1</span> Summary</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li><span class="underline">Collaborative Networks of Small Satellites</span> will form future Earth-observing
+systems and enable <span class="underline">New Observing Strategies</span>.</li>
+<li>Observing systems will operate adaptive sensors with limited resources.
+<ul class="org-ul">
+<li><i>(Restricted duty cycle, buffer size, power, bandwidth, link availability)</i></li>
+</ul></li>
+<li><b>Problem</b>: maximizing measurement science value</li>
+<li><b>Challenge</b>: complex decision-making space</li>
+<li><b>Solution</b>: Autonomous resource management <i>(power, comm., sensing)</i></li>
+<li><b>First Step</b>: <span class="underline">Software Tools</span> for <span class="underline">Modeling/Simulating Future Systems</span></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgad4833e" class="outline-3">
+<h3 id="orgad4833e"><span class="section-number-3">1.2</span> Author</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Ryan Linnabary - linnabary.24@osu.edu
+</p>
+</div>
+</div>
+<div id="outline-container-org85d3a44" class="outline-3">
+<h3 id="org85d3a44"><span class="section-number-3">1.3</span> Sponsor</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+NASA Advanced Information Systems Technology Program NNH16ZDA001N-AIST
+</p>
+</div>
+</div>
+<div id="outline-container-orga06de02" class="outline-3">
+<h3 id="orga06de02"><span class="section-number-3">1.4</span> Source Code &amp; Documentation</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+The complete source code is available on <a href="https://github.com/ryananan/collaborate">Github</a>.  Complete Doxygen API
+documentation is available for the <a href="https://ryananan.github.io/collaborate/cpp_html/index.html">C++ Library</a> and <a href="https://ryananan.github.io/collaborate/py_html/index.html">Python Tools</a>. There is
+also a <a href="https://ryananan.github.io/collaborate/refman.pdf">User Manual</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc82139e" class="outline-3">
+<h3 id="orgc82139e"><span class="section-number-3">1.5</span> Applications</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Collaborate is a software library and toolset for simulating collaborative
+autonomous small-satellite sensor networks.
+</p>
+<ul class="org-ul">
+<li>Optimize mission science return</li>
+<li><span class="underline">Predict optimal communication routes</span></li>
+<li>Produce data (telemetry, etc.) to train machine-learning models</li>
+<li>Constellation design</li>
+<li>Facilitate algorithm development
+<ul class="org-ul">
+<li>Adaptive remote sensing</li>
+<li>Resource management</li>
+<li>Delay-tolerant networks</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbc61fff" class="outline-3">
+<h3 id="orgbc61fff"><span class="section-number-3">1.6</span> Publications</h3>
+<div class="outline-text-3" id="text-1-6">
+<blockquote>
+<p>
+Ryan Linnabary, et. al., <i>"Software Library for Simulation of Collaborative
+Sensor Networks for Navigation and Sensing"</i>, Consortium of Ohio Universities
+on Navigation and Timekeeping (COUNT), April 3 2019, Columbus,
+OH.  [<a href="https://ryananan.github.io/collaborate/publications/count_abstract.pdf">Abstract</a>|<a href="https://ryananan.github.io/collaborate/publications/count_poster.pdf">Poster</a>]
+</p>
+</blockquote>
+<blockquote>
+<p>
+Ryan Linnabary, et. al., <i>"Using Cognitive Communications to Increase the
+Operational Value of Collaborative Networks of Satellites"</i>, IEEE Cognitive
+Communications for Aerospace Applications Workshop (IEEE-CCAAW), June 26
+2019, Cleveland, OH.  [<a href="https://ryananan.github.io/collaborate/publications/ccaaw_paper.pdf">Paper</a>|<a href="https://ryananan.github.io/collaborate/publications/ccaaw_slides.pdf">Slides</a>]
+</p>
+</blockquote>
+<blockquote>
+<p>
+Ryan Linnabary, et. al., <i>"Open Source Software for Simulating Collaborative
+Networks of Autonomous Adaptive Sensors"</i>, in Proceedings of the IEEE
+International Geoscience and Remote Sensing Symposium (IGARSS) 2019,
+Yokahama, Japan.  [<a href="https://ryananan.github.io/collaborate/publications/igarss_paper.pdf">Paper</a>|<a href="https://ryananan.github.io/collaborate/publications/igarss_slides.pdf">Slides</a>]
+</p>
+</blockquote>
+<blockquote>
+<p>
+Ryan Linnabary, et. al., <i>"Open Source Software for Simulating Collaborative
+Networks of Autonomous Adaptive Sensors"</i>, ElectroScience Laboratory
+Consortium on Electromagnetics and Radio Frequencies (ESL-CERF), August 5
+2019, Columbus, OH.  [<a href="https://ryananan.github.io/collaborate/publications/cerf_slide.pdf">Slide</a>|<a href="https://ryananan.github.io/collaborate/publications/cerf_poster.pdf">Poster</a>]
+</p>
+</blockquote>
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org57569fe" class="outline-2">
+<h2 id="org57569fe"><span class="section-number-2">2</span> Work Flow</h2>
+<div class="outline-text-2" id="text-2">
+
+<div class="figure">
+<p><img src="./images/raster/workflow.png" alt="workflow.png" style="width: 100%; max-width: 600px;" />
+</p>
+</div>
+
+<p>
+C++ programs use the library to produce simulation data.  This data may be
+visualized or analyzed using the included Python scripts.
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-orgd0a8967" class="outline-2">
+<h2 id="orgd0a8967"><span class="section-number-2">3</span> Development Environment</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org68b8795" class="outline-3">
+<h3 id="org68b8795"><span class="section-number-3">3.1</span> Option 1: Docker</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+<i>Time</i>: 12 min.
+</p>
+
+<p>
+<i>Note</i>: Users can not currently open videos from the Docker command prompt
+(feature in progress).
+</p>
+
+<p>
+Install git.  Clone this repository in the home directory.
+</p>
+<pre class="example">
+~ $ sudo apt install git
+~ $ git clone https://github.com/ryananan/collaborate.git
+</pre>
+<p>
+Install Docker.
+</p>
+<pre class="example">
+~ $ sudo apt install docker.io
+</pre>
+<p>
+Build the Docker image using the <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/env/docker/build.sh">image build script</a>.
+</p>
+<pre class="example">
+~ $ sudo ./collaborate/env/docker/build.sh
+</pre>
+<p>
+Run the Docker container using the <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/env/docker/run.sh">container run script</a>.
+</p>
+<pre class="example">
+~ $ sudo ./collaborate/env/docker/run.sh
+root@collaborate-test:~/collaborate#
+</pre>
+<hr />
+</div>
+</div>
+<div id="outline-container-org67d7cdf" class="outline-3">
+<h3 id="org67d7cdf"><span class="section-number-3">3.2</span> Option 2: Local Machine</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgc2e0d0c" class="outline-4">
+<h4 id="orgc2e0d0c"><span class="section-number-4">3.2.1</span> Disk Image</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+<i>Time</i>: 5 min.
+</p>
+
+<p>
+Install wget and download Ubuntu 18.04.
+</p>
+<pre class="example">
+~ $ sudo apt install wget
+~ $ wget http://releases.ubuntu.com/18.04/ubuntu-18.04.2-desktop-amd64.iso
+</pre>
+</div>
+</div>
+<div id="outline-container-org81d5eaf" class="outline-4">
+<h4 id="org81d5eaf"><span class="section-number-4">3.2.2</span> Installation</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+<span class="underline">Option 2-A: Virtual Machine</span>
+</p>
+
+<p>
+<i>Time</i>: 30 min.
+</p>
+
+<p>
+Install VirtualBox.
+</p>
+<pre class="example">
+~ $ sudo apt install virtualbox
+</pre>
+<p>
+Run virtualbox and follow the on-screen instructions to boot and install the
+ISO.  Use the following options:
+</p>
+<ul class="org-ul">
+<li>At least 15 GB disk space</li>
+<li>Minimal installation</li>
+<li>Download updates while installing</li>
+<li>Install third-party software</li>
+</ul>
+<p>
+<span class="underline">Option 2-B: Hard Drive</span>
+</p>
+
+<p>
+<i>Time</i>: 35 min.
+</p>
+
+<p>
+Plug in and identify a target USB device.
+</p>
+<pre class="example">
+~ $ lsblk
+</pre>
+<p>
+If your target device is located at <code>/dev/sdb</code>, then write the ISO to that
+drive.
+</p>
+<pre class="example">
+~ $ sudo umount /dev/sdb
+~ $ sudo dd if=ubuntu-18.04.2-desktop-amd64.iso of=/dev/sdb
+</pre>
+<p>
+Reboot the computer.  Boot from USB device.  Follow instructions to
+install.
+</p>
+</div>
+</div>
+<div id="outline-container-org31f637b" class="outline-4">
+<h4 id="org31f637b"><span class="section-number-4">3.2.3</span> Dependencies</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<p>
+<i>Time</i>: 25 min.
+</p>
+
+<p>
+Update everything.  Install git.  Clone this repository in the home
+directory.
+</p>
+<pre class="example">
+~ $ sudo apt install update
+~ $ sudo apt install upgrade
+~ $ sudo apt install git
+~ $ git clone https://github.com/ryananan/collaborate.git
+</pre>
+<p>
+Download C++ dependencies listed in <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/env/local/apt.txt">apt.txt</a>.
+</p>
+<pre class="example">
+~ $ cat collaborate/env/local/apt.txt | xargs sudo apt install -y
+</pre>
+<p>
+Download Python3 dependencies listed in <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/env/local/py.txt">py.txt</a>.
+</p>
+<pre class="example">
+~ $ cat collaborate/env/local/py.txt | xargs sudo -H pip3 install
+~ $ sudo -H install cartopy
+</pre>
+<p>
+Execute the following to set up the <code>PYTHONPATH</code> environment variable.
+</p>
+<pre class="example">
+~ $ echo "export PYTHONPATH=\${PYTHONPATH}:\${HOME}/collaborate/util" &gt;&gt; .bashrc
+~ $ source .bashrc
+</pre>
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1ded80c" class="outline-2">
+<h2 id="org1ded80c"><span class="section-number-2">4</span> Build the Project</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<i>Time</i>: 5 min.
+</p>
+
+<p>
+The following <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/sys/build.sh">project build script</a> will build the project with CMake.  If you
+set either of the variables CPPLINT, PYLINT, DOXYGEN to true, it will also
+check code style conformance and generate documentation.
+</p>
+<pre class="example">
+~ $ cd collaborate
+~/collaborate $ ./sys/build.sh
+</pre>
+<p>
+A build folder will appear at <code>osse-build</code>.  If this folder is present the
+next time the project build script is run, CMake will only build those files
+which have been updated since the last run.  Remove the folder <code>osse-build</code>
+to completely rebuild the project (file names or folder names were changed).
+</p>
+
+<p>
+In-between simulations, it may be useful to empty the directories <code>output</code>
+and <code>analysis</code> so that new simulation results do not clobber the old ones.
+The <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/sys/clean.sh">clean script</a> accomplishes this, but <i>does not prompt for confirmation</i>.
+</p>
+<pre class="example">
+~/collaborate $ ./sys/clean.sh
+</pre>
+<hr />
+</div>
+</div>
+<div id="outline-container-org54417bc" class="outline-2">
+<h2 id="org54417bc"><span class="section-number-2">5</span> Condition the Input Data</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Since the repository can not track large files, the input NetCDF data has been
+broken-up into smaller files.  Run the <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/util/combine.py">combine script</a> to merge these files
+together before running any example programs.  This needs to be done only
+once.
+</p>
+<pre class="example">
+~/collaborate $ util/combine.py
+</pre>
+<hr />
+</div>
+</div>
+<div id="outline-container-org3cdd694" class="outline-2">
+<h2 id="org3cdd694"><span class="section-number-2">6</span> Command-Line Documentation</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+<i>Time</i>: 1 min.
+</p>
+</div>
+<div id="outline-container-org31e9c34" class="outline-3">
+<h3 id="org31e9c34"><span class="section-number-3">6.1</span> PyDoc</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Python modules are accessible using the program <code>pydoc3</code>.
+</p>
+<pre class="example">
+~/collaborate $ pydoc3 plot_map
+</pre>
+</div>
+</div>
+<div id="outline-container-orgdc732c0" class="outline-3">
+<h3 id="orgdc732c0"><span class="section-number-3">6.2</span> Python Help</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+Python script arguments can be referenced by passing <code>-h</code> or <code>--help</code>.
+</p>
+<pre class="example">
+~/collaborate $ util/animate_data.py -h
+</pre>
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org5542927" class="outline-2">
+<h2 id="org5542927"><span class="section-number-2">7</span> Simple Example</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+<i>Time</i>: 2 min.
+</p>
+
+<p>
+The simple simulation <i>(source: <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/apps/simple/simple.cpp">simple.cpp</a>)</i> will produce simulation data in
+the <code>output</code> folder.
+</p>
+<pre class="example">
+~/collaborate $ ./simple.out
+~/collaborate $ ls output
+antenna.nc4
+data.nc4
+events.txt
+network.nc4
+</pre>
+<p>
+If a NetCDF viewer is available (Panoply, etc.), open and explore the <code>.nc4</code>
+files.
+</p>
+
+<p>
+Also, Python scripts are provided in <code>util</code> for post-processing.
+</p>
+
+<p>
+These scripts accept command-line arguments. <i>Required</i> arguments have default
+values, so the scripts can be run without passing any arguments.
+</p>
+
+<p>
+By default, scripts produce files in the <code>analysis</code> directory without opening
+a figure.  Passing the argument <code>-f</code> to any Python script will open a Python
+figure instead.
+</p>
+
+<p>
+<i>Note</i>: The first time a Python script reads a <code>.nc4</code> file, it is archived to
+a <code>.pkl</code> file.  Additional "runs" will access the <code>.pkl</code> file to save time.
+</p>
+
+<p>
+Run the <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_antenna.py">antenna plot script</a> to view the dipole's gain pattern (passing <code>-f</code>
+for an interactive 3D plot).
+</p>
+<pre class="example">
+~/collaborate $ util/plot_antenna.py -f
+</pre>
+
+<div class="figure">
+<p><img src="./images/raster/dipole.png" alt="dipole.png" style="width: 100%; max-width: 250px;" />
+</p>
+</div>
+
+<p>
+Run the <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_series.py">series plot script</a> to graph satellite parameters in time.
+</p>
+<pre class="example">
+~/collaborate $ util/plot_series.py -f
+</pre>
+
+<div class="figure">
+<p><img src="./images/raster/parameters.png" alt="parameters.png" style="width: 100%; max-width: 350px;" />
+</p>
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-org54af04f" class="outline-2">
+<h2 id="org54af04f"><span class="section-number-2">8</span> Intermediate Example</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+<i>Time</i>: 4 min.
+</p>
+
+<p>
+Remove output and analysis files.
+</p>
+<pre class="example">
+~/collaborate $ ./sys/clean.sh
+</pre>
+<p>
+The intermediate simulation <i>(source: <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/apps/intermediate/intermediate.cpp">intermediate.cpp</a>)</i> will produce
+simulation data in the <code>output</code> folder, including measurement logs.
+</p>
+<pre class="example">
+~/collaborate $ ./intermediate.out
+~/collaborate $ ls output
+0000000649s_N00000_TAUTOT_measure.nc4
+0000003284s_N00005_TAUTOT_measure.nc4
+data.nc4
+events.txt
+network.nc4
+</pre>
+
+<p>
+Run the <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_map.py">map plot script</a> to view the initial positions of the satellites
+(passing <code>-u</code> to include the line-of-sight <i>contact graph</i>).
+</p>
+<pre class="example">
+~/collaborate $ util/plot_map.py -u output/network.nc4 -f
+Processing log "output/data.nc4"
+Processing "output/network.nc4"
+Preparing equirectangular projection
+</pre>
+
+<div class="figure">
+<p><img src="./images/raster/all_los.png" alt="all_los.png" style="width: 100%; max-width: 500px;" />
+</p>
+</div>
+
+<p>
+This contact graph can also be viewed as an image with the
+<a href="https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_network.py">network plot script</a>.
+</p>
+<pre class="example">
+~/collaborate $ util/plot_network.py -f
+</pre>
+
+<div class="figure">
+<p><img src="./images/raster/unweighted.png" alt="unweighted.png" style="width: 100%; max-width: 250px;" />
+</p>
+</div>
+
+<p>
+Use the <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/util/animate_network.py">network animation script</a> to visualize instantaneous line-of-sight
+distances.
+</p>
+<pre class="example">
+~/collaborate $ util/animate_network.py -i output/distance.nc4 -w -f
+</pre>
+<video controls="" class="smallcenter">
+<source src="./anim/network.mp4" type="video/mp4">
+</video>
+
+<p>
+Run the <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/util/animate_map.py">map animation script</a> to visualize satellite motion.  This works best
+without opening a figure (writing to an MP4 file instead).
+</p>
+<pre class="example">
+~/collaborate $ util/animate_map.py
+Processing archive "output/data.nc4"
+Preparing equirectangular projection
+Status:
+99%
+</pre>
+<video class="bigcenter" controls="">
+<source src="./anim/map.mp4" type="video/mp4">
+Watch Video</video>
+
+<p>
+Run the <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_data.py">data plot script</a> with an additional argument to view the first frame
+of <code>"TAUTOT"</code> + <code>"PRECTOT"</code> together.
+</p>
+<pre class="example">
+~/collaborate $ util/plot_data.py -j input/nc4/ -f
+</pre>
+
+<div class="figure">
+<p><img src="./images/raster/combined.png" alt="combined.png" style="width: 100%; max-width: 500px;" />
+</p>
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-org7a33eb6" class="outline-2">
+<h2 id="org7a33eb6"><span class="section-number-2">9</span> Advanced Example</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+<i>Time</i>: 20 min.
+</p>
+
+<p>
+Remove output and analysis files.
+</p>
+<pre class="example">
+~/collaborate $ ./sys/clean.sh
+</pre>
+<p>
+The advanced simulation <i>(source: <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/apps/advanced/advanced.cpp">advanced.cpp</a>)</i> will produce simulation data
+to the <code>output</code> folder, including measurement and communication logs..
+</p>
+<pre class="example">
+~/collaborate $ ./advanced.out
+~/git/collaborate $ ls -lSa output
+data.nc4
+0000000459s_N65535_TAUTOT_measure.nc4
+0000008994s_N65535_TAUTOT_measure.nc4
+0000001326s_N00001_N00100_channel.nc4
+0000008928s_N00034_N00002_channel.nc4
+events.txt
+network.nc4
+tree_0_47_7459.tex
+tree_3_165_5359.tex
+</pre>
+<p>
+Run the <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_measurement.py">measurement plot script</a> to plot a map and graph of a measurement.
+These files are created in <code>analysis</code> unless otherwise specified.
+</p>
+<pre class="example">
+~/collaborate $ util/plot_measurement.py
+</pre>
+
+<div class="figure">
+<p><img src="./images/raster/measurement.png" alt="measurement.png" style="width: 100%; max-width: 600px;" />
+</p>
+</div>
+
+<p>
+Low-level communication channel parameters can be plotted using the
+<a href="https://raw.githubusercontent.com/ryananan/collaborate/master/util/plot_channel.py">channel plot script</a>.
+</p>
+<pre class="example">
+~/collaborate $ util/plot_channel.py -f
+</pre>
+
+<div class="figure">
+<p><img src="./images/raster/channel.png" alt="channel.png" style="width: 100%; max-width: 500px;" />
+</p>
+</div>
+
+<p>
+The data structures used to predict routes are logged as well.  Open some of
+these <code>.tex</code> files and select one that has an interesting structure.  Use
+LaTeX to generate a PDF plot.
+</p>
+<pre class="example">
+~/collaborate $ cd output
+~/collaborate/output $ pdflatex tree_3_165_5359.tex
+</pre>
+
+<div class="figure">
+<p><img src="./images/raster/tree.png" alt="tree.png" style="width: 100%; max-width: 600px;" />
+</p>
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-orgaf18424" class="outline-2">
+<h2 id="orgaf18424"><span class="section-number-2">10</span> Library Details</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org9205d9a" class="outline-3">
+<h3 id="org9205d9a"><span class="section-number-3">10.1</span> License</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+This project is licensed under <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/LICENSE.txt">LGPL v3.0</a> and contains code protected by other
+compatible free-software licenses.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="all" frame="border" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Directory</b></th>
+<th scope="col" class="org-left"><b>Language</b></th>
+<th scope="col" class="org-left"><b>License</b></th>
+<th scope="col" class="org-left"><b>Copyright</b></th>
+<th scope="col" class="org-left"><b>Author</b></th>
+<th scope="col" class="org-left"><b>Repository</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">libs/collaborate</td>
+<td class="org-left">C++</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/ryananan/collaborate/master/LICENSE.txt">LGPL v3.0</a></td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/ryananan/collaborate/master/COPYRIGHT.txt">Link</a></td>
+<td class="org-left">Ryan Linnabary</td>
+<td class="org-left"><a href="https://github.com/ryananan/collaborate">ryananan/collaborate</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">libs/sgp4</td>
+<td class="org-left">C++</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/ryananan/collaborate/master/libs/sgp4/LICENSE.txt">Apache 2.0</a></td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/ryananan/collaborate/master/libs/sgp4/COPYRIGHT.txt">Link</a></td>
+<td class="org-left">Daniel Warner</td>
+<td class="org-left"><a href="https://github.com/dnwrnr/sgp4">dnwrnr/sgp4</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">libs/spdlog</td>
+<td class="org-left">C++</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/ryananan/collaborate/master/libs/spdlog/LICENSE.txt">MIT</a></td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/ryananan/collaborate/master/libs/spdlog/COPYRIGHT.txt">Link</a></td>
+<td class="org-left">Gabi Melman</td>
+<td class="org-left"><a href="https://github.com/gabime/spdlog">gabime/spdlog</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">libs/nlohmann</td>
+<td class="org-left">C++</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/ryananan/collaborate/master/libs/nlohmann/LICENSE.txt">MIT</a></td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/ryananan/collaborate/master/libs/nlohmann/COPYRIGHT.txt">Link</a></td>
+<td class="org-left">Niels Lohmann</td>
+<td class="org-left"><a href="https://github.com/nlohmann/json">nlohmann/json</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">libs/netcdf</td>
+<td class="org-left">C++</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/ryananan/collaborate/master/libs/netcdf/LICENSE.txt">UniData</a></td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/ryananan/collaborate/master/libs/netcdf/COPYRIGHT.txt">Link</a></td>
+<td class="org-left">Unidata</td>
+<td class="org-left"><a href="https://github.com/Unidata/netCDF-cxx4">unidata/netcdf-cxx4</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">util</td>
+<td class="org-left">Python</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/ryananan/collaborate/master/LICENSE.txt">LGPL v3.0</a></td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/ryananan/collaborate/master/COPYRIGHT.txt">Link</a></td>
+<td class="org-left">Ryan Linnabary</td>
+<td class="org-left"><a href="https://github.com/ryananan/collaborate">ryananan/collaborate</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org8800795" class="outline-3">
+<h3 id="org8800795"><span class="section-number-3">10.2</span> Structure</h3>
+<div class="outline-text-3" id="text-10-2">
+<p>
+The C++ library's class hierarchy provides an object-oriented system for
+observing system simulation experiments.  The following illustration shows how
+the most prevalent abstract classes interact with, and depend on, one another.
+</p>
+
+<div class="figure">
+<p><img src="./images/raster/library.png" alt="library.png" style="width: 100%; max-width: 600px;" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org800779b" class="outline-3">
+<h3 id="org800779b"><span class="section-number-3">10.3</span> Profiling</h3>
+<div class="outline-text-3" id="text-10-3">
+<p>
+The call-graph below was created with Valgrind <i>(source: <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/sys/profile.sh">profile.sh</a>)</i>.  It
+shows the most common function calls (&gt;5% CPU) for the program
+<a href="https://raw.githubusercontent.com/ryananan/collaborate/master/apps/simple/simple.cpp">simple.cpp</a>.
+</p>
+<pre class="example">
+~/collaborate $ ./sys/profile.sh ./simple.out
+~/collaborate $ ls -lSa callgrind*
+callgrind.out.10081
+~/collaborate $ kcachegrind callgrind.out.10081
+</pre>
+
+<div class="figure">
+<p><img src="./images/raster/callgraph.png" alt="callgraph.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb76f07c" class="outline-3">
+<h3 id="orgb76f07c"><span class="section-number-3">10.4</span> Testing</h3>
+<div class="outline-text-3" id="text-10-4">
+<p>
+The Valgrind tool <code>memcheck</code> is used to evaluate memory behavior.
+</p>
+</div>
+<div id="outline-container-org8a8b9ab" class="outline-4">
+<h4 id="org8a8b9ab"><span class="section-number-4">10.4.1</span> Simple Example</h4>
+<div class="outline-text-4" id="text-10-4-1">
+<p>
+Testing memory behavior for <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/apps/simple/simple.cpp">simple.cpp</a>:
+</p>
+<pre class="example">
+./sys/memcheck.sh ./simple.out
+==2119== Memcheck, a memory error detector
+==2119== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2119== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==2119== Command: ./simple.out
+==2119==
+==2119==
+==2119== HEAP SUMMARY:
+==2119==     in use at exit: 97,579 bytes in 707 blocks
+==2119==   total heap usage: 44,701 allocs, 43,994 frees, 71,748,921 bytes allocated
+==2119==
+==2119== LEAK SUMMARY:
+==2119==    definitely lost: 0 bytes in 0 blocks
+==2119==    indirectly lost: 0 bytes in 0 blocks
+==2119==      possibly lost: 0 bytes in 0 blocks
+==2119==    still reachable: 97,579 bytes in 707 blocks
+==2119==         suppressed: 0 bytes in 0 blocks
+==2119== Rerun with --leak-check=full to see details of leaked memory
+==2119==
+==2119== For counts of detected and suppressed errors, rerun with: -v
+==2119== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</pre>
+</div>
+</div>
+<div id="outline-container-org3d2c2c0" class="outline-4">
+<h4 id="org3d2c2c0"><span class="section-number-4">10.4.2</span> Intermediate Example</h4>
+<div class="outline-text-4" id="text-10-4-2">
+<p>
+Testing memory behavior for <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/apps/intermediate/intermediate.cpp">intermediate.cpp</a>:
+</p>
+<pre class="example">
+./sys/memcheck.sh ./intermediate.out
+==1936== Memcheck, a memory error detector
+==1936== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1936== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==1936== Command: ./intermediate.out
+==1936==
+==1936==
+==1936== HEAP SUMMARY:
+==1936==     in use at exit: 97,579 bytes in 707 blocks
+==1936==   total heap usage: 730,824 allocs, 730,117 frees, 643,571,312 bytes allocated
+==1936==
+==1936== LEAK SUMMARY:
+==1936==    definitely lost: 0 bytes in 0 blocks
+==1936==    indirectly lost: 0 bytes in 0 blocks
+==1936==      possibly lost: 0 bytes in 0 blocks
+==1936==    still reachable: 97,579 bytes in 707 blocks
+==1936==         suppressed: 0 bytes in 0 blocks
+==1936== Rerun with --leak-check=full to see details of leaked memory
+==1936==
+==1936== For counts of detected and suppressed errors, rerun with: -v
+==1936== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</pre>
+</div>
+</div>
+<div id="outline-container-orgbaec55d" class="outline-4">
+<h4 id="orgbaec55d"><span class="section-number-4">10.4.3</span> Advanced Example</h4>
+<div class="outline-text-4" id="text-10-4-3">
+<p>
+Testing memory behavior for <a href="https://raw.githubusercontent.com/ryananan/collaborate/master/apps/advanced/advanced.cpp">advanced.cpp</a>:
+</p>
+<pre class="example">
+./sys/memcheck.sh ./advanced.out
+==2501== Memcheck, a memory error detector
+==2501== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2501== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==2501== Command: ./advanced.out
+==2501==
+==2501==
+==2501== HEAP SUMMARY:
+==2501==     in use at exit: 97,579 bytes in 707 blocks
+==2501==   total heap usage: 1,021,227 allocs, 1,020,520 frees, 598,970,742 bytes allocated
+==2501==
+==2501== LEAK SUMMARY:
+==2501==    definitely lost: 0 bytes in 0 blocks
+==2501==    indirectly lost: 0 bytes in 0 blocks
+==2501==      possibly lost: 0 bytes in 0 blocks
+==2501==    still reachable: 97,579 bytes in 707 blocks
+==2501==         suppressed: 0 bytes in 0 blocks
+==2501== Rerun with --leak-check=full to see details of leaked memory
+==2501==
+==2501== For counts of detected and suppressed errors, rerun with: -v
+==2501== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org7ae273e" class="outline-3">
+<h3 id="org7ae273e"><span class="section-number-3">10.5</span> Development Tools</h3>
+<div class="outline-text-3" id="text-10-5">
+<p>
+The following software tools were used in the creation of this project.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="all" frame="border" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Tool</b></th>
+<th scope="col" class="org-right"><b>Version</b></th>
+<th scope="col" class="org-left"><b>Links</b></th>
+<th scope="col" class="org-left"><b>License</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Docker / Moby</td>
+<td class="org-right">18.09.7</td>
+<td class="org-left"><a href="https://github.com/moby/moby/blob/master/LICENSE">repository</a> / <a href="https://www.docker.com/">webpage</a></td>
+<td class="org-left"><a href="https://github.com/moby/moby/blob/master/LICENSE">Apache 2.0</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">pdfTeX</td>
+<td class="org-right">3.14159265</td>
+<td class="org-left"><a href="https://www.tug.org/svn/pdftex/">repository</a> / <a href="http://www.tug.org/applications/pdftex/">webpage</a></td>
+<td class="org-left"><a href="https://www.gnu.org/licenses/lgpl-3.0.html">GPLv3</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Doxygen</td>
+<td class="org-right">1.8.13</td>
+<td class="org-left"><a href="https://github.com/doxygen/doxygen">repository</a> / <a href="http://doxygen.nl/">webpage</a></td>
+<td class="org-left"><a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GPLv2</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">GraphViz</td>
+<td class="org-right">2.40.1-2</td>
+<td class="org-left"><a href="https://gitlab.com/graphviz/graphviz/">repository</a> / <a href="https://graphviz.org/">webpage</a></td>
+<td class="org-left"><a href="https://graphviz.org/license/">Common Public License V1.0</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Valgrind</td>
+<td class="org-right">3.13.0</td>
+<td class="org-left"><a href="http://valgrind.org/downloads/repository.html">repository</a> / <a href="http://valgrind.org/">webpage</a></td>
+<td class="org-left"><a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GPLv2</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">kCacheGrind</td>
+<td class="org-right">0.8.0</td>
+<td class="org-left"><a href="https://kcachegrind.github.io/html/Download.html">repository</a> / <a href="http://kcachegrind.sourceforge.net/html/Home.html">webpage</a></td>
+<td class="org-left"><a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GPLv2</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">netCDF4</td>
+<td class="org-right">1.5.1.2</td>
+<td class="org-left"><a href="https://github.com/Unidata/netcdf4-python">repository</a> / <a href="http://unidata.github.io/netcdf4-python/netCDF4/index.html">webpage</a></td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/Unidata/netcdf4-python/master/COPYING">UniData</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">SciPy</td>
+<td class="org-right">1.3.0</td>
+<td class="org-left"><a href="https://github.com/scipy/scipy">repository</a> / <a href="https://www.scipy.org/">webpage</a></td>
+<td class="org-left"><a href="https://scipy.org/scipylib/license.html">BSD</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Cartopy</td>
+<td class="org-right">0.17.0</td>
+<td class="org-left"><a href="https://github.com/SciTools/cartopy">repository</a> / <a href="https://scitools.org.uk/cartopy/docs/latest/">webpage</a></td>
+<td class="org-left"><a href="https://www.gnu.org/licenses/lgpl-3.0.html">GPLv3</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">PyLint</td>
+<td class="org-right">2.3.1</td>
+<td class="org-left"><a href="https://github.com/PyCQA/pylint">repository</a> / <a href="https://www.pylint.org/">webpage</a></td>
+<td class="org-left"><a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GPLv2</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">CppLint</td>
+<td class="org-right">1.4.4</td>
+<td class="org-left"><a href="https://github.com/cpplint/cpplint">repository</a> / <a href="https://pypi.org/project/cpplint/">webpage</a></td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/cpplint/cpplint/master/LICENSE">Google</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Python</td>
+<td class="org-right">3.6.8</td>
+<td class="org-left"><a href="https://github.com/python/">repository</a> / <a href="https://www.python.org/">webpage</a></td>
+<td class="org-left"><a href="https://docs.python.org/3/license.html">PSF</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">CMake</td>
+<td class="org-right">3.10.2</td>
+<td class="org-left"><a href="https://gitlab.kitware.com/cmake/cmake">repository</a> / <a href="https://cmake.org/">webpage</a></td>
+<td class="org-left"><a href="https://gitlab.kitware.com/cmake/cmake/raw/master/Copyright.txt">BSD</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">FFMpeg</td>
+<td class="org-right">3.4.6</td>
+<td class="org-left"><a href="https://github.com/FFmpeg/FFmpeg">repository</a> / <a href="https://ffmpeg.org/">webpage</a></td>
+<td class="org-left"><a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">LGPLv2.1</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Emacs</td>
+<td class="org-right">26.2</td>
+<td class="org-left"><a href="https://github.com/emacs-mirror/emacs">repository</a> / <a href="https://www.gnu.org/software/emacs/">webpage</a></td>
+<td class="org-left"><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

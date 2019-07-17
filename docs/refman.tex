@@ -1,0 +1,202 @@
+\documentclass[twoside, 12pt]{article}
+
+% Packages required by doxygen
+\usepackage{calc, titleps, kantlipsum, doxygen, graphicx, makeidx, multirow}
+\usepackage{multicol, textcomp, amssymb, sectsty, geometry, natbib}
+\usepackage{amsmath, ifpdf, fancyhdr, caption, textcomp}
+\usepackage[titles]{tocloft}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage[export]{adjustbox}
+\usepackage[utf8]{inputenc}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+\usepackage[pdftex,pagebackref=true]{hyperref}
+
+% Font selection
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+\newcommand{\project}{\textsc{Collaborate~}}
+\newcommand{\cpp}{C\texttt{++}~}
+\newcommand{\cppeleven}{C\texttt{++}11~}
+
+% Page & text layout
+\geometry{a4paper, top=3cm, bottom=1.75cm, left=1.75cm, right=1.75cm}
+\widowpenalties 1 10000
+\raggedbottom
+\tolerance=0
+\hfuzz=15pt
+\hbadness=10000
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\makeatletter
+\renewcommand{\paragraph}{
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{
+    \normalfont\normalsize\bfseries\SS@parafont
+  }
+}
+\renewcommand{\subparagraph}{
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{
+    \normalfont\normalsize\bfseries\SS@subparafont
+  }
+}
+\makeatother
+
+% Indices & bibliography
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, unicode}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{
+  \newpage{\pagestyle{empty}\cleardoublepage}
+}
+
+% Captions
+\captionsetup{
+  labelsep=space,
+  justification=centering,
+  font={bf},
+  singlelinecheck=off,
+  skip=4pt,position=top
+}
+
+%% -----------------------------------------------------------------------------
+
+\begin{document}
+
+\sloppy
+\hypersetup{pageanchor=false, bookmarksnumbered=true, pdfencoding=unicode}
+
+%% --- Title ---
+
+\begin{titlepage}
+\vspace*{5cm}
+{\Huge\project} \\
+\noindent\rule{\textwidth}{4pt}
+Version 1.0
+\hfill
+July 6, 2019 \\
+\mbox{}
+\vfill
+{\large ElectroScience Laboratory \hfill The Ohio State University} \\
+\noindent\rule{\textwidth}{2pt}
+\end{titlepage}
+
+\pagenumbering{gobble}
+
+%% --- License ---
+
+\mbox{}
+\vfill
+
+Copyright (C) 2019  Ryan Linnabary
+
+\project is free software, licensed under version 3 of the GNU Lesser General
+Public License. See \texttt{https://www.gnu.org/licenses/} for details.
+
+Sections of this document were assembled from comments in the source code using
+Doxygen documentation tools.  All illustrations were created by the developers
+using \project analysis software or associated software dependencies.
+
+This research was sponsored by the NASA Advanced Information Systems Technology
+Program \texttt{NNH16ZDA001N-AIST} and took place at the ElectroScience
+Laboratory facility at The Ohio State University.
+
+Permission is granted to copy, distribute and/or modify this document under the
+terms of the GNU Free Documentation License, Version 1.3 or any later version
+published by the Free Software Foundation; with no Invariant Sections, no
+Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included
+in the section entitled "GNU Free Documentation License".
+
+\newpage
+
+%% --- Table of Contents ---
+
+\tableofcontents
+\hypersetup{pageanchor=true}
+
+\newpage
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\renewcommand{\headheight}{15pt}
+\fancyhead[LO,RE]{\rightmark}
+\fancyhead[LE,RO]{\thepage}
+\cfoot{}
+
+\pagenumbering{arabic}
+
+\input{python_args}
+
+%% --- Data Structures ---
+
+\section{\cpp Classes}
+\input{classosse_1_1collaborate_1_1_antenna_dipole}
+\input{classosse_1_1collaborate_1_1_antenna_helical}
+\input{classosse_1_1collaborate_1_1_antenna_isotropic}
+\input{classosse_1_1collaborate_1_1_antenna_patch}
+\input{classosse_1_1collaborate_1_1_antenna}
+\input{classosse_1_1collaborate_1_1_attitude_matrix}
+\input{classosse_1_1collaborate_1_1_battery}
+\input{classosse_1_1collaborate_1_1_channel}
+\input{classosse_1_1collaborate_1_1_data_logger}
+\input{classosse_1_1collaborate_1_1_data_processor_sink}
+\input{classosse_1_1collaborate_1_1_data_processor_source}
+\input{classosse_1_1collaborate_1_1_data_processor_template}
+\input{classosse_1_1collaborate_1_1_data_processor}
+\input{classosse_1_1collaborate_1_1_earth_data}
+\input{classosse_1_1collaborate_1_1_event_logger}
+\input{classosse_1_1collaborate_1_1_geodetic}
+\input{classosse_1_1collaborate_1_1_graph_unweighted}
+\input{classosse_1_1collaborate_1_1_graph_weighted}
+\input{classosse_1_1collaborate_1_1_graph}
+\input{classosse_1_1collaborate_1_1_modem_uhf_deploy}
+\input{classosse_1_1collaborate_1_1_modem_uhf_station}
+\input{classosse_1_1collaborate_1_1_modem}
+\input{classosse_1_1collaborate_1_1_node}
+\input{classosse_1_1collaborate_1_1_observing_system_alpha}
+\input{classosse_1_1collaborate_1_1_observing_system}
+\input{classosse_1_1collaborate_1_1_orbital_state}
+\input{classosse_1_1collaborate_1_1_packet_forward}
+\input{classosse_1_1collaborate_1_1_packet_raw}
+\input{classosse_1_1collaborate_1_1_packet_return}
+\input{classosse_1_1collaborate_1_1_packet}
+\input{classosse_1_1collaborate_1_1_platform_earth}
+\input{classosse_1_1collaborate_1_1_platform_orbit}
+\input{classosse_1_1collaborate_1_1_platform}
+\input{classosse_1_1collaborate_1_1_reference_frame}
+\input{classosse_1_1collaborate_1_1_scheduler_alpha}
+\input{classosse_1_1collaborate_1_1_scheduler}
+\input{classosse_1_1collaborate_1_1_sensor_cloud_radar}
+\input{classosse_1_1collaborate_1_1_sensor_optical_imager}
+\input{classosse_1_1collaborate_1_1_sensor_rain_radar}
+\input{classosse_1_1collaborate_1_1_sensor}
+\input{classosse_1_1collaborate_1_1_simulation_clock}
+\input{classosse_1_1collaborate_1_1_solar_panel}
+\input{classosse_1_1collaborate_1_1_subsystem_comm}
+\input{classosse_1_1collaborate_1_1_subsystem_power}
+\input{classosse_1_1collaborate_1_1_subsystem_sensing}
+\input{classosse_1_1collaborate_1_1_sun}
+\input{classosse_1_1collaborate_1_1_tree}
+\input{classosse_1_1collaborate_1_1_vector}
+\input{structosse_1_1collaborate_1_1_channel_1_1_log_buffer}
+\input{structosse_1_1collaborate_1_1_node_1_1_log_buffer}
+\input{structosse_1_1collaborate_1_1_node_1_1_partial_log}
+\input{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer}
+\input{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event}
+\input{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event}
+\input{structosse_1_1collaborate_1_1_subsystem_sensing_1_1_log_buffer}
+\input{structosse_1_1collaborate_1_1_tree_1_1_branch}
+
+%% --- End ---
+
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{section}{Index}
+\printindex
+
+\end{document}

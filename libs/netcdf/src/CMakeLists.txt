@@ -1,0 +1,11 @@
+# Create the makefiles for the netcdf library
+cmake_minimum_required(VERSION 2.8)
+set(LIB_NAME osse_netcdf)
+file(GLOB SRCS *.cpp)
+file(GLOB INCS ../include/netcdf/*.h)
+add_library(${LIB_NAME} SHARED ${SRCS} ${INCS})
+include_directories("${PROJECT_SOURCE_DIR}/libs/netcdf/include/")
+link_directories("/usr/lib/x86_64-linux-gnu/")
+target_link_libraries(${LIB_NAME} "libnetcdf.so")
+install(TARGETS ${LIB_NAME} DESTINATION lib)
+install(FILES ${INCS} DESTINATION include/netcdf/)

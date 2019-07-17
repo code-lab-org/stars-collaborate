@@ -1,0 +1,14 @@
+__pycache__/
+callgrind.out.*
+*.tmp
+*.user
+*-build
+docs/refman/
+*.js
+simple.out
+intermediate.out
+advanced.out
+compile_commands.json
+docs/cpp_html
+docs/py_html
+docs/doxygen/log.txt

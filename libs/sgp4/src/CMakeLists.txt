@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+set(LIB_NAME osse_sgp4)
+file(GLOB SRCS *.cpp)
+file(GLOB INCS ../include/sgp4/*.h)
+include_directories("${PROJECT_SOURCE_DIR}/libs/sgp4/include/")
+add_library(${LIB_NAME} SHARED ${SRCS} ${INCS})
+install(TARGETS ${LIB_NAME} DESTINATION lib)
+install(FILES ${INCS} DESTINATION include/sgp4/)

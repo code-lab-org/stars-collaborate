@@ -1,0 +1,11 @@
+doxypypy
+pylint
+cpplint
+scipy
+cython
+netcdf4
+matplotlib
+pypdf2
+pandas
+scikit-learn
+pillow
