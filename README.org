@@ -3,3 +3,49 @@
 [[https://ryananan.github.io/collaborate/][Webpage]]
 
 Simulation Library for Autonomous and Collaborative Satellite Sensor Networks
+
+** Motivation
+   Future Earth-observation missions will involve intelligent networks of
+   diverse sensor platforms which coordinate to make Earth observations.
+
+   Small satellite constellations and new science instruments will facilitate
+   high-density /(faster revisit time)/ and multi-dimensional /(temporal and
+   spatial)/ measurements.
+
+   *Collaborative communication* is key to enabling coordinated observations.
+
+   *Challenge* -- Adaptive remote sensing with constrained resources introduces
+   a complex decision-making space.
+
+   *Questions* -- How do we maximize the science return from measurements?  How
+   do we prepare for the next-generation of Earth observation missions?
+
+   *Approach* -- New simulation tools -- a software library for adaptive and
+   collaborative observing-system simulation experiments /(OSSEs)/.
+
+   _New Software Library Features_ \vspace{-8pt}
+   - Rapid simulation development and constellation design
+   - Coordination among diverse sensor platforms
+   - Facilitate algorithm development /(adaptive sensor reconfiguration, system
+     resource management, delay-tolerant networking)/
+   - Produce simulation data /(events, telemetry, networking, etc.)/
+   - Open-source, modular, and freely available for integration with larger
+     OSSEs
+** What is COLLABORATE?
+   *Open Source (GPL) Software Package*
+   #
+   _Three Main Components_
+   1. *\cpp Library*
+      - Code for developing novel observing-system simulation experiments
+   2. *\cpp Example Programs*
+      - Demonstrate library capabilities
+      - Execute these to produce /Simulation Result Files/
+   3. *Python Utilities*
+      - Process /Simulation Result Files/ \rightarrow /Analysis Files/
+      - Open-source third-party packages /(Pandas, Cartopy, NetCDF, Matplotlib,
+        Numpy, etc.)/
+** COLLABORATE \cpp Library
+   *Functional Capabilities*
+   - Use classes to create objects /(object-oriented)/
+   - Propagate physical position and orientation of satellites
+   - Model realistic communication links, routes, and sensing
