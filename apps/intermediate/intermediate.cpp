@@ -65,7 +65,7 @@ void IntermediateObservingSystemSimulation() {
   SubsystemComm comm(&comm_antenna, &uhf_modem);
   AntennaHelical sensing_antenna(30, 0, 0, 0);
   SensorCloudRadar cloud_radar("input/nc4/", 100);
-  SubsystemSsensing cloud(&sensing_antenna, &cloud_radar);
+  SubsystemSensing cloud(&sensing_antenna, &cloud_radar);
 
   // Launch
   std::string tle_path = "input/tle/cubesat.tle";
