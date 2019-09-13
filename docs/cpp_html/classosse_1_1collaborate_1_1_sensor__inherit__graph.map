@@ -1,0 +1,5 @@
+<map id="osse::collaborate::Sensor" name="osse::collaborate::Sensor">
+<area shape="rect" id="node2" href="$classosse_1_1collaborate_1_1_sensor_cloud_radar.html" title="Measures total cloud optical depth. " alt="" coords="5,292,157,384"/>
+<area shape="rect" id="node3" href="$classosse_1_1collaborate_1_1_sensor_optical_imager.html" title="Obtains optical images of Earth&#39;s surface. " alt="" coords="182,292,346,384"/>
+<area shape="rect" id="node4" href="$classosse_1_1collaborate_1_1_sensor_rain_radar.html" title="Measures total precipitation. " alt="" coords="370,292,515,384"/>
+</map>

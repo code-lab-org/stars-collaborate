@@ -9,6 +9,6 @@ simple.out
 intermediate.out
 advanced.out
 compile_commands.json
-docs/cpp_html
-docs/py_html
+# docs/cpp_html
+# docs/py_html
 docs/doxygen/log.txt

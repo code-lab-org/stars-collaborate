@@ -1,0 +1,5 @@
+<map id="osse::collaborate::Packet" name="osse::collaborate::Packet">
+<area shape="rect" id="node2" href="$classosse_1_1collaborate_1_1_packet_forward.html" title="A packet of control data. " alt="" coords="5,512,195,868"/>
+<area shape="rect" id="node3" href="$classosse_1_1collaborate_1_1_packet_raw.html" title="A packet of raw measurement data. " alt="" coords="219,263,389,1117"/>
+<area shape="rect" id="node4" href="$classosse_1_1collaborate_1_1_packet_return.html" title="A packet of return data. " alt="" coords="413,541,595,839"/>
+</map>

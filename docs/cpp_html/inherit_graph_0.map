@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classosse_1_1collaborate_1_1_antenna.html" title="Abstract antenna. " alt="" coords="5,104,135,145"/>
+<area shape="rect" id="node2" href="$classosse_1_1collaborate_1_1_antenna_dipole.html" title="An approximation of a dipole antenna. " alt="" coords="183,5,312,47"/>
+<area shape="rect" id="node3" href="$classosse_1_1collaborate_1_1_antenna_helical.html" title="An approximation of a helical antenna (more directional than patch) " alt="" coords="183,71,312,112"/>
+<area shape="rect" id="node4" href="$classosse_1_1collaborate_1_1_antenna_isotropic.html" title="An isotropic antenna. " alt="" coords="183,136,312,177"/>
+<area shape="rect" id="node5" href="$classosse_1_1collaborate_1_1_antenna_patch.html" title="An approximation of a patch antenna. " alt="" coords="183,201,312,243"/>
+</map>

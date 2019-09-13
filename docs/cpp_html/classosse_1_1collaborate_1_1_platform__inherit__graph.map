@@ -1,0 +1,4 @@
+<map id="osse::collaborate::Platform" name="osse::collaborate::Platform">
+<area shape="rect" id="node2" href="$classosse_1_1collaborate_1_1_platform_earth.html" title="Propogates the position of a stationary object on Earth&#39;s surface. " alt="" coords="5,211,157,347"/>
+<area shape="rect" id="node3" href="$classosse_1_1collaborate_1_1_platform_orbit.html" title="Propogates the position of a satellite. " alt="" coords="181,189,333,369"/>
+</map>

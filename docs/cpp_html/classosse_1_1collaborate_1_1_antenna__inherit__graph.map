@@ -1,0 +1,6 @@
+<map id="osse::collaborate::Antenna" name="osse::collaborate::Antenna">
+<area shape="rect" id="node2" href="$classosse_1_1collaborate_1_1_antenna_dipole.html" title="An approximation of a dipole antenna. " alt="" coords="5,277,135,384"/>
+<area shape="rect" id="node3" href="$classosse_1_1collaborate_1_1_antenna_helical.html" title="An approximation of a helical antenna (more directional than patch) " alt="" coords="159,277,290,384"/>
+<area shape="rect" id="node4" href="$classosse_1_1collaborate_1_1_antenna_isotropic.html" title="An isotropic antenna. " alt="" coords="315,277,455,384"/>
+<area shape="rect" id="node5" href="$classosse_1_1collaborate_1_1_antenna_patch.html" title="An approximation of a patch antenna. " alt="" coords="479,277,608,384"/>
+</map>

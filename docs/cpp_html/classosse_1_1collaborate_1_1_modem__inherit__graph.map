@@ -1,0 +1,4 @@
+<map id="osse::collaborate::Modem" name="osse::collaborate::Modem">
+<area shape="rect" id="node2" href="$classosse_1_1collaborate_1_1_modem_uhf_deploy.html" title="Concrete UHF modem (deployed on a satellite) " alt="" coords="5,453,152,545"/>
+<area shape="rect" id="node3" href="$classosse_1_1collaborate_1_1_modem_uhf_station.html" title="Concrete UHF modem (base station) " alt="" coords="176,453,323,545"/>
+</map>
