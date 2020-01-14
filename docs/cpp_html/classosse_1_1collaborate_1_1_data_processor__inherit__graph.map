@@ -1,5 +1,5 @@
 <map id="osse::collaborate::DataProcessor" name="osse::collaborate::DataProcessor">
-<area shape="rect" id="node2" href="$classosse_1_1collaborate_1_1_data_processor_sink.html" title="A sink satellite&#39;s internal data processor. " alt="" coords="5,182,160,303"/>
-<area shape="rect" id="node3" href="$classosse_1_1collaborate_1_1_data_processor_source.html" title="A source/informer satellite&#39;s internal data processor. " alt="" coords="184,175,355,311"/>
-<area shape="rect" id="node4" href="$classosse_1_1collaborate_1_1_data_processor_template.html" title="A template satellite&#39;s internal data processor. " alt="" coords="379,182,562,303"/>
+<area shape="rect" id="node2" href="$classosse_1_1collaborate_1_1_data_processor_sink.html" title="A sink satellite&#39;s internal data processor. " alt="" coords="5,182,175,303"/>
+<area shape="rect" id="node3" href="$classosse_1_1collaborate_1_1_data_processor_source.html" title="A source/informer satellite&#39;s internal data processor. " alt="" coords="199,175,384,311"/>
+<area shape="rect" id="node4" href="$classosse_1_1collaborate_1_1_data_processor_template.html" title="A template satellite&#39;s internal data processor. " alt="" coords="408,182,609,303"/>
 </map>
