@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Ryan Linnabary
+// Copyright (C) 2020 Ryan Linnabary & Andrew O'Brien
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -69,26 +69,26 @@ void SimpleObservingSystemSimulation() {
   SensorCloudRadar cloud_radar("input/nc4/", 10);
   SubsystemSensing cloud(&sensing_antenna, &cloud_radar);
 
-  // 14-degrees inclination
-  std::array<std::string, 3> tle_24 = {"OTB",
-    "1 44341U 19036C   20274.41019148  .00000266  00000-0  13014-4 0  9995",
-    "2 44341  23.9969 171.3205 0011795 212.7603 147.2156 14.52874730 67414"};
+  // GPM-CORE
+  std::array<std::string, 3> tle_24 = {"GPM-CORE",
+    "1 39574U 14009C   20312.76104295  .00004698  00000-0  72484-4 0  9990",
+    "2 39574  65.0076  24.2122 0010842 281.7979  78.1951 15.55503858380338"};
   PlatformOrbit p_24 = PlatformOrbit(tle_24);
   std::vector<PlatformOrbit> c_24 = p_24.Duplicate(1, 3, 3, 1, 7, 0);
   system.Launch(c_24, 0, false, comm, cloud, power_ss, &processor, &data_log);
 
-  // 53-degrees inclination
-  std::array<std::string, 3> tle_53 = {"STARLINK-1734",
-    "1 46325U 20062A   20275.00001157 -.00572715  00000-0 -21069-2 0  9999",
-    "2 46325  52.9902 288.5922 0001157 302.6125  14.8206 15.88817287  5650"};
+  // AQUA
+  std::array<std::string, 3> tle_53 = {"AQUA",
+    "1 27424U 02022A   20312.79398764  .00000128  00000-0  38470-4 0  9993",
+    "2 27424  98.2043 251.3049 0000174 299.8763 144.9516 14.57114090984796"};
   PlatformOrbit p_53 = PlatformOrbit(tle_53);
   std::vector<PlatformOrbit> c_53 = p_53.Duplicate(4, 11, 1, 1, 0, 0);
   system.Launch(c_53, 1, false, comm, cloud, power_ss, &processor, &data_log);
 
-  // 75-degrees inclination
-  std::array<std::string, 3> tle_75 = {"COSMOS 2487",
-    "1 39194U 13032A   20275.18856465  .00005516  00000-0  13162-3 0  9997",
-    "2 39194  74.7119 184.2588 0003289 286.7839  73.3012 15.41739372406365"};
+  // CALIPSO
+  std::array<std::string, 3> tle_75 = {"CALIPSO",
+    "1 29108U 06016B   20312.84538492  .00000175  00000-0  44027-4 0  9998",
+    "2 29108  98.2464 259.4918 0001363  80.9207 279.2148 14.62458176773275"};
   PlatformOrbit p_75 = PlatformOrbit(tle_75);
   std::vector<PlatformOrbit> c_75 = p_75.Duplicate(1, 5, 1, 2, 0, 7);
   system.Launch(c_75, 2, false, comm, cloud, power_ss, &processor, &data_log);
