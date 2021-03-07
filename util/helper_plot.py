@@ -690,7 +690,7 @@ def scatter_small_red(axes, lats, lons):
                  s=0.5,
                  zorder=10,
                  marker='o',
-                 transform=ccrs.Geodetic())
+                 transform=ccrs.PlateCarree())
 
 
 def write_clock(clock):
