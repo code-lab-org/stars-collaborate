@@ -68,7 +68,7 @@ void AdvancedObservingSystemSimulation() {
   SensorCloudRadar cloud_radar("input/nc4/", 300);
   SubsystemSensing cloud(&sensing_antenna, &cloud_radar);
   SensorRainRadar rain_radar("input/nc4/", 50);
-  SubsystemSensing rain(&sensing_antenna, &cloud_radar);
+  SubsystemSensing rain(&sensing_antenna, &rain_radar);
 
   // Launch
   std::string tle_path = "input/tle/cubesat.tle";
