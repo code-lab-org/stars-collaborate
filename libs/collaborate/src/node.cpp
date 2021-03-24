@@ -260,6 +260,7 @@ void Node::BufferDataLog() {
   log_buffer_.mode[counter] = mode;
   log_buffer_.latitude[counter] = geo[0];
   log_buffer_.longitude[counter] = geo[1];
+  log_buffer_.altitude[counter] = geo[2];
   SolarPanel panel = subsystem_power_.solar_panels()[0];
   panel.Update(orbital_state_.body_frame(),
                orbital_state_.orbit_frame(),
@@ -297,6 +298,11 @@ void Node::Flush() {
   data_log_->LogParameter(index_,
                           "longitude",
                           log_buffer_.longitude,
+                          index,
+                          count);
+  data_log_->LogParameter(index_,
+                          "altitude",
+                          log_buffer_.altitude,
                           index,
                           count);
   data_log_->LogParameter(index_,

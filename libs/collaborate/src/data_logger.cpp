@@ -55,6 +55,7 @@ void DataLogger::Simulation(const uint16_t& _num_nodes,
     group.addVar("index", "ushort", "time");
     group.addVar("latitude", "double", "time");
     group.addVar("longitude", "double", "time");
+    group.addVar("altitude", "double", "time");
     group.addVar("mode", "uint64", "time");
     group.addVar("num_neighbors", "ushort", "time");
   }

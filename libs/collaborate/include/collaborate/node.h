@@ -53,6 +53,8 @@ class Node {
     double latitude_;
     /// @brief Longitude (degrees)
     double longitude_;
+    /// @brief Altitude (m)
+    double altitude_;
     /// @brief Battery energy stored
     double energy_;
     /// @brief Charging status
@@ -78,6 +80,8 @@ class Node {
     double latitude[kLogBufferSize];
     /// @brief Longitude (degrees)
     double longitude[kLogBufferSize];
+    /// @brief Altitude (m)
+    double altitude[kLogBufferSize];
     /// @brief Battery energy stored
     double energy[kLogBufferSize];
     /// @brief Charging status

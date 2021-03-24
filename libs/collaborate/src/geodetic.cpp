@@ -91,7 +91,7 @@ Vector Geodetic::ToVector(const SimulationClock& _simulation_clock) const {
 }
 
 std::vector<double> Geodetic::ObtainLog() const {
-  return {latitude_rad_, longitude_rad_};
+  return {latitude_rad_, longitude_rad_, altitude_m_};
 }
 
 double Geodetic::CalculateLatitudeRad(const Vector& _position_m_rad,
