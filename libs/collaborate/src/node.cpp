@@ -65,7 +65,7 @@ Node::Node(const std::string& _name,
       num_neighbors_(0),
       clock_(_clock),
       event_log_(_event_log),
-      log_buffer_({0, {}, {}, {}, {}, {}, {}, {}, {}, {}}),
+      log_buffer_({0, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}}),
       data_log_(_data_log),
       num_logs_(0) {
 }
