@@ -55,7 +55,7 @@ void SubsystemSensing::Measure(const uint16_t& _informer_index) {
 }
 
 bool SubsystemSensing::Update(const SimulationClock& _clock,
-                              const Vector& _position_m_rad) {
+                              const Vector& _position_m_rad, const int _node_index) {
   if (active_) {
     sensor_->Update(_clock);
     // From intersection with Earth's surface
@@ -82,7 +82,7 @@ bool SubsystemSensing::Update(const SimulationClock& _clock,
                      measurement,
                      0,
                      stream.str(),
-                     informer_index_);
+                     _node_index);
     LoadData(packet.payload());
     buffer_.elapsed_s.push_back(_clock.elapsed_s());
     buffer_.year.push_back(_clock.date_time().Year());
@@ -97,11 +97,11 @@ bool SubsystemSensing::Update(const SimulationClock& _clock,
     buffer_.altitude_m.push_back(place_rad_m.altitude_m());
     buffer_.measurement.push_back(measurement);
     buffer_.resolution_m.push_back(0);
-    buffer_.index.push_back(informer_index_);
+    buffer_.index.push_back(_node_index);
     if (elapsed_s_ < expiration_s_) {
       elapsed_s_ += _clock.last_increment_s();
     } else {
-      Flush(_clock);
+      Flush(_clock, _node_index);
       active_ = false;
       complete_ = true;
       expiration_s_ = std::numeric_limits<uint64_t>::max();
@@ -111,7 +111,7 @@ bool SubsystemSensing::Update(const SimulationClock& _clock,
   return active_;
 }
 
-void SubsystemSensing::Flush(const SimulationClock& _clock) {
+void SubsystemSensing::Flush(const SimulationClock& _clock, const int _node_index) {
   std::stringstream stream;
   std::string str = sensor_->kVariable();
   str.erase(std::remove(str.begin(), str.end(), ' '), str.end());
@@ -124,7 +124,7 @@ void SubsystemSensing::Flush(const SimulationClock& _clock) {
          << std::fixed
          << std::setw(5)
          << std::setfill('0')
-         << informer_index_
+         << _node_index
          << "_"
          << str
          << "_measure.nc4";

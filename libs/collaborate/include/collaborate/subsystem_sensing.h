@@ -75,7 +75,7 @@ class SubsystemSensing {
   /// @param[in] _clock The simulation clock
   /// @param[in] _position_m_rad The position of the node
   /// @returns active_
-  bool Update(const SimulationClock& _clock, const Vector& _position_m_rad);
+  bool Update(const SimulationClock& _clock, const Vector& _position_m_rad, const int _node_index);
   /// @brief Calculates a new attitude frame for the antenna
   /// @param _orbit_frame Satellite orbit frame
   /// @param _body_frame Satellite body frame
@@ -120,7 +120,7 @@ class SubsystemSensing {
  private:
   /// @brief Output the logged data to a netcdf file
   /// @param[in] _clock The simulation clock
-  void Flush(const SimulationClock& _clock);
+  void Flush(const SimulationClock& _clock, const int _node_index);
   /// @brief The sensor
   Sensor* sensor_;
   /// @brief The time limit for activity

@@ -125,7 +125,7 @@ void Node::UpdateMeasurement() {
       ++plan;
     }
   }
-  sensing_if_.Update(*clock_, orbital_state_.position_m_rad());
+  sensing_if_.Update(*clock_, orbital_state_.position_m_rad(), index_);
   if (sensing_if_.complete()) {
     kDataProcessor_->Compute(ReadRawBuffer(sensing_if_.data_buffer()),
                              index_,
