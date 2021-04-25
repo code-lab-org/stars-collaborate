@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Ryan Linnabary
+// Copyright (C) 2019 The Ohio State University
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -39,7 +39,14 @@
 namespace osse {
 namespace collaborate {
 
-SchedulerAlpha::SchedulerAlpha(SimulationClock* _clock) : Scheduler(_clock) {
+SchedulerAlpha::SchedulerAlpha(SimulationClock* _clock) :
+    Scheduler(_clock),
+    flag_(false) {
+}
+
+SchedulerAlpha::SchedulerAlpha(SimulationClock* _clock, const bool& _flag) :
+    Scheduler(_clock),
+    flag_(_flag) {
 }
 
 void SchedulerAlpha::Update(const std::vector<Node*>& _nodes,
@@ -353,9 +360,9 @@ std::vector<uint16_t> SchedulerAlpha::FindGainsFrom(
     rx_node->Update(_offset_s, true, false, false, false, false, false);
     Vector tx_pos = tx_node->orbital_state().position_m_rad();
     Vector rx_pos = rx_node->orbital_state().position_m_rad();
-    if (earth::Visible(tx_pos, rx_pos)) {
+    if (flag_ || earth::Visible(tx_pos, rx_pos)) {
       Channel channel(tx_node, rx_node);
-      channel.Update(*clock_);
+      channel.Update(*clock_, flag_);
       if (channel.open()) {
         rx_possible.push_back(rx_index);
       }
@@ -372,7 +379,7 @@ uint64_t SchedulerAlpha::Confirm(Node* _tx_node,
   uint64_t result_s = std::numeric_limits<uint64_t>::max();
   uint64_t s = _original_s;
   Channel channel(_tx_node, _rx_node);
-  channel.Update(*clock_);
+  channel.Update(*clock_, flag_);
   uint64_t earliest_s = 0;
   if (_original_s > _duration_s) {
     earliest_s = _original_s - _duration_s;
@@ -384,7 +391,7 @@ uint64_t SchedulerAlpha::Confirm(Node* _tx_node,
   while (s > earliest_s && channel.open()) {
     _tx_node->Update(s, true, false, false, false, false, false);
     _rx_node->Update(s, true, false, false, false, false, false);
-    channel.Update(*clock_);
+    channel.Update(*clock_, flag_);
     --s;
   }
   // Catch if it went too far
@@ -392,14 +399,14 @@ uint64_t SchedulerAlpha::Confirm(Node* _tx_node,
     ++s;
     _tx_node->Update(s, true, false, false, false, false, false);
     _rx_node->Update(s, true, false, false, false, false, false);
-    channel.Update(*clock_);
+    channel.Update(*clock_, flag_);
   }
   uint64_t start_s = s;
   // Foreward
   s += _duration_s;
   _tx_node->Update(s, true, false, false, false, false, false);
   _rx_node->Update(s, true, false, false, false, false, false);
-  channel.Update(*clock_);
+  channel.Update(*clock_, flag_);
   if (channel.open()) {
     result_s = start_s;
   }

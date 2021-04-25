@@ -3,12 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-09-13 Fri 16:05 -->
+<!-- 2021-04-21 Wed 10:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Collaborate</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="Ryan Linnabary" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -161,6 +160,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -186,7 +198,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -235,53 +247,53 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0d54bef">1. Introduction</a>
+<li><a href="#org9e2cd2d">1. Introduction</a>
 <ul>
-<li><a href="#org2ad6d42">1.1. Summary</a></li>
-<li><a href="#org6007a8d">1.2. Author</a></li>
-<li><a href="#org68c2b95">1.3. Sponsor</a></li>
-<li><a href="#org9e4d4db">1.4. Source Code &amp; Documentation</a></li>
-<li><a href="#org3b99d18">1.5. Applications</a></li>
-<li><a href="#org59a9917">1.6. Publications</a></li>
+<li><a href="#org1a1fdfe">1.1. Summary</a></li>
+<li><a href="#orgd2fc127">1.2. Author</a></li>
+<li><a href="#org43904e4">1.3. Sponsor</a></li>
+<li><a href="#orgd3042cc">1.4. Source Code &amp; Documentation</a></li>
+<li><a href="#orgaea3e2d">1.5. Applications</a></li>
+<li><a href="#org1b3efa8">1.6. Publications</a></li>
 </ul>
 </li>
-<li><a href="#orge9c733f">2. Work Flow</a></li>
-<li><a href="#orgb5350ca">3. Development Environment</a>
+<li><a href="#org1d2800b">2. Work Flow</a></li>
+<li><a href="#orgecae4a9">3. Development Environment</a>
 <ul>
-<li><a href="#orga86127c">3.1. Option 1: Docker</a></li>
-<li><a href="#org8d5f798">3.2. Option 2: Local Machine</a>
+<li><a href="#orgf8d85af">3.1. Option 1: Docker</a></li>
+<li><a href="#orgd420ba8">3.2. Option 2: Local Machine</a>
 <ul>
-<li><a href="#orgdae5b77">3.2.1. Disk Image</a></li>
-<li><a href="#orgc068548">3.2.2. Installation</a></li>
-<li><a href="#org31e12e9">3.2.3. Dependencies</a></li>
+<li><a href="#org69e5a7f">3.2.1. Disk Image</a></li>
+<li><a href="#org5f8df31">3.2.2. Installation</a></li>
+<li><a href="#orgbbe2c96">3.2.3. Dependencies</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgad2842b">4. Build the Project</a></li>
-<li><a href="#org18585eb">5. Condition the Input Data</a></li>
-<li><a href="#org5090923">6. Command-Line Documentation</a>
+<li><a href="#orgb3c20fd">4. Build the Project</a></li>
+<li><a href="#org70786ea">5. Condition the Input Data</a></li>
+<li><a href="#org38ef8d5">6. Command-Line Documentation</a>
 <ul>
-<li><a href="#orgdcd3cb6">6.1. PyDoc</a></li>
-<li><a href="#org6be9b32">6.2. Python Help</a></li>
+<li><a href="#org7e804a4">6.1. PyDoc</a></li>
+<li><a href="#org18f73c6">6.2. Python Help</a></li>
 </ul>
 </li>
-<li><a href="#orgb3981fd">7. Simple Example</a></li>
-<li><a href="#org9fc59bc">8. Intermediate Example</a></li>
-<li><a href="#org702bcec">9. Advanced Example</a></li>
-<li><a href="#org4669fcd">10. Library Details</a>
+<li><a href="#org4cb4898">7. Simple Example</a></li>
+<li><a href="#org0d0f872">8. Intermediate Example</a></li>
+<li><a href="#org3339e7f">9. Advanced Example</a></li>
+<li><a href="#org29030c3">10. Library Details</a>
 <ul>
-<li><a href="#orgbe772b2">10.1. License</a></li>
-<li><a href="#orgeec6618">10.2. Structure</a></li>
-<li><a href="#orgbf9d9c0">10.3. Profiling</a></li>
-<li><a href="#orgdf75170">10.4. Testing</a>
+<li><a href="#orge989215">10.1. License</a></li>
+<li><a href="#org339aeed">10.2. Structure</a></li>
+<li><a href="#org4c892db">10.3. Profiling</a></li>
+<li><a href="#orgbf292cc">10.4. Testing</a>
 <ul>
-<li><a href="#org3e8caaa">10.4.1. Simple Example</a></li>
-<li><a href="#org20d0861">10.4.2. Intermediate Example</a></li>
-<li><a href="#org78e2806">10.4.3. Advanced Example</a></li>
+<li><a href="#org5386187">10.4.1. Simple Example</a></li>
+<li><a href="#org36dbba6">10.4.2. Intermediate Example</a></li>
+<li><a href="#org7151115">10.4.3. Advanced Example</a></li>
 </ul>
 </li>
-<li><a href="#orgfa24074">10.5. Development Tools</a></li>
+<li><a href="#org9f8202f">10.5. Development Tools</a></li>
 </ul>
 </li>
 </ul>
@@ -293,12 +305,12 @@ for the JavaScript code in this tag.
 </p>
 </div>
 <hr />
-<div id="outline-container-org0d54bef" class="outline-2">
-<h2 id="org0d54bef"><span class="section-number-2">1</span> Introduction</h2>
+<div id="outline-container-org9e2cd2d" class="outline-2">
+<h2 id="org9e2cd2d"><span class="section-number-2">1</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org2ad6d42" class="outline-3">
-<h3 id="org2ad6d42"><span class="section-number-3">1.1</span> Summary</h3>
+<div id="outline-container-org1a1fdfe" class="outline-3">
+<h3 id="org1a1fdfe"><span class="section-number-3">1.1</span> Summary</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li><span class="underline">Collaborative Networks of Small Satellites</span> will form future Earth-observing
@@ -314,34 +326,34 @@ systems and enable <span class="underline">New Observing Strategies</span>.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6007a8d" class="outline-3">
-<h3 id="org6007a8d"><span class="section-number-3">1.2</span> Author</h3>
+<div id="outline-container-orgd2fc127" class="outline-3">
+<h3 id="orgd2fc127"><span class="section-number-3">1.2</span> Author</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
-Ryan Linnabary - linnabary.24@osu.edu
+The Ohio State University
 </p>
 </div>
 </div>
-<div id="outline-container-org68c2b95" class="outline-3">
-<h3 id="org68c2b95"><span class="section-number-3">1.3</span> Sponsor</h3>
+<div id="outline-container-org43904e4" class="outline-3">
+<h3 id="org43904e4"><span class="section-number-3">1.3</span> Sponsor</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 NASA Advanced Information Systems Technology Program NNH16ZDA001N-AIST
 </p>
 </div>
 </div>
-<div id="outline-container-org9e4d4db" class="outline-3">
-<h3 id="org9e4d4db"><span class="section-number-3">1.4</span> Source Code &amp; Documentation</h3>
+<div id="outline-container-orgd3042cc" class="outline-3">
+<h3 id="orgd3042cc"><span class="section-number-3">1.4</span> Source Code &amp; Documentation</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
-The complete source code is available on <a href="https://github.com/linnabary/collaborate">Github</a>.  Complete Doxygen API
-documentation is available for the <a href="https://linnabary.github.io/collaborate/cpp_html/index.html">C++ Library</a> and <a href="https://linnabary.github.io/collaborate/py_html/index.html">Python Tools</a>. There is
-also a <a href="https://linnabary.github.io/collaborate/refman.pdf">User Manual</a>.
+The complete source code is available on Github.  Complete Doxygen API
+documentation is available for the C++ LIbrary and Python Tools. There is
+also a User Manual.
 </p>
 </div>
 </div>
-<div id="outline-container-org3b99d18" class="outline-3">
-<h3 id="org3b99d18"><span class="section-number-3">1.5</span> Applications</h3>
+<div id="outline-container-orgaea3e2d" class="outline-3">
+<h3 id="orgaea3e2d"><span class="section-number-3">1.5</span> Applications</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 Collaborate is a software library and toolset for simulating collaborative
@@ -361,47 +373,55 @@ autonomous small-satellite sensor networks.
 </ul>
 </div>
 </div>
-<div id="outline-container-org59a9917" class="outline-3">
-<h3 id="org59a9917"><span class="section-number-3">1.6</span> Publications</h3>
+<div id="outline-container-org1b3efa8" class="outline-3">
+<h3 id="org1b3efa8"><span class="section-number-3">1.6</span> Publications</h3>
 <div class="outline-text-3" id="text-1-6">
 <blockquote>
+<ol class="org-ol">
+<li>L., et. al., /&ldquo;Software Library for Simulation of Collaborative</li>
+</ol>
 <p>
-Ryan Linnabary, et. al., <i>"Software Library for Simulation of Collaborative
-Sensor Networks for Navigation and Sensing"</i>, Consortium of Ohio Universities
+Sensor Networks for Navigation and Sensing&ldquo;/, Consortium of Ohio Universities
 on Navigation and Timekeeping (COUNT), April 3 2019, Columbus,
-OH.  [<a href="https://linnabary.github.io/collaborate/publications/count_abstract.pdf">Abstract</a>|<a href="https://linnabary.github.io/collaborate/publications/count_poster.pdf">Poster</a>]
+OH.
 </p>
 </blockquote>
 <blockquote>
+<ol class="org-ol">
+<li>L., et. al., /&ldquo;Using Cognitive Communications to Increase the</li>
+</ol>
 <p>
-Ryan Linnabary, et. al., <i>"Using Cognitive Communications to Increase the
-Operational Value of Collaborative Networks of Satellites"</i>, IEEE Cognitive
+Operational Value of Collaborative Networks of Satellites&ldquo;/, IEEE Cognitive
 Communications for Aerospace Applications Workshop (IEEE-CCAAW), June 26
-2019, Cleveland, OH.  [<a href="https://linnabary.github.io/collaborate/publications/ccaaw_paper.pdf">Paper</a>|<a href="https://linnabary.github.io/collaborate/publications/ccaaw_slides.pdf">Slides</a>]
+2019, Cleveland, OH.
 </p>
 </blockquote>
 <blockquote>
+<ol class="org-ol">
+<li>L., et. al., /&ldquo;Open Source Software for Simulating Collaborative</li>
+</ol>
 <p>
-Ryan Linnabary, et. al., <i>"Open Source Software for Simulating Collaborative
-Networks of Autonomous Adaptive Sensors"</i>, in Proceedings of the IEEE
+Networks of Autonomous Adaptive Sensors&ldquo;/, in Proceedings of the IEEE
 International Geoscience and Remote Sensing Symposium (IGARSS) 2019,
-Yokahama, Japan.  [<a href="https://linnabary.github.io/collaborate/publications/igarss_paper.pdf">Paper</a>|<a href="https://linnabary.github.io/collaborate/publications/igarss_slides.pdf">Slides</a>]
+Yokahama, Japan.
 </p>
 </blockquote>
 <blockquote>
+<ol class="org-ol">
+<li>L., et. al., /&ldquo;Open Source Software for Simulating Collaborative</li>
+</ol>
 <p>
-Ryan Linnabary, et. al., <i>"Open Source Software for Simulating Collaborative
-Networks of Autonomous Adaptive Sensors"</i>, ElectroScience Laboratory
+Networks of Autonomous Adaptive Sensors&ldquo;/, ElectroScience Laboratory
 Consortium on Electromagnetics and Radio Frequencies (ESL-CERF), August 5
-2019, Columbus, OH.  [<a href="https://linnabary.github.io/collaborate/publications/cerf_slide.pdf">Slide</a>|<a href="https://linnabary.github.io/collaborate/publications/cerf_poster.pdf">Poster</a>]
+2019, Columbus, OH.
 </p>
 </blockquote>
 <hr />
 </div>
 </div>
 </div>
-<div id="outline-container-orge9c733f" class="outline-2">
-<h2 id="orge9c733f"><span class="section-number-2">2</span> Work Flow</h2>
+<div id="outline-container-org1d2800b" class="outline-2">
+<h2 id="org1d2800b"><span class="section-number-2">2</span> Work Flow</h2>
 <div class="outline-text-2" id="text-2">
 
 <div class="figure">
@@ -417,12 +437,12 @@ visualized or analyzed using the included Python scripts.
 <hr />
 </div>
 </div>
-<div id="outline-container-orgb5350ca" class="outline-2">
-<h2 id="orgb5350ca"><span class="section-number-2">3</span> Development Environment</h2>
+<div id="outline-container-orgecae4a9" class="outline-2">
+<h2 id="orgecae4a9"><span class="section-number-2">3</span> Development Environment</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orga86127c" class="outline-3">
-<h3 id="orga86127c"><span class="section-number-3">3.1</span> Option 1: Docker</h3>
+<div id="outline-container-orgf8d85af" class="outline-3">
+<h3 id="orgf8d85af"><span class="section-number-3">3.1</span> Option 1: Docker</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 <i>Time</i>: 12 min.
@@ -438,7 +458,7 @@ Install git.  Clone this repository in the home directory.
 </p>
 <pre class="example">
 ~ $ sudo apt install git
-~ $ git clone https://github.com/linnabary/collaborate.git
+~ $ git clone &lt;repository&gt;
 </pre>
 <p>
 Install Docker.
@@ -447,13 +467,13 @@ Install Docker.
 ~ $ sudo apt install docker.io
 </pre>
 <p>
-Build the Docker image using the <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/env/docker/build.sh">image build script</a>.
+Build the Docker image using the image build script.
 </p>
 <pre class="example">
 ~ $ sudo ./collaborate/env/docker/build.sh
 </pre>
 <p>
-Run the Docker container using the <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/env/docker/run.sh">container run script</a>.
+Run the Docker container using the container run script.
 </p>
 <pre class="example">
 ~ $ sudo ./collaborate/env/docker/run.sh
@@ -462,12 +482,12 @@ root@collaborate-test:~/collaborate#
 <hr />
 </div>
 </div>
-<div id="outline-container-org8d5f798" class="outline-3">
-<h3 id="org8d5f798"><span class="section-number-3">3.2</span> Option 2: Local Machine</h3>
+<div id="outline-container-orgd420ba8" class="outline-3">
+<h3 id="orgd420ba8"><span class="section-number-3">3.2</span> Option 2: Local Machine</h3>
 <div class="outline-text-3" id="text-3-2">
 </div>
-<div id="outline-container-orgdae5b77" class="outline-4">
-<h4 id="orgdae5b77"><span class="section-number-4">3.2.1</span> Disk Image</h4>
+<div id="outline-container-org69e5a7f" class="outline-4">
+<h4 id="org69e5a7f"><span class="section-number-4">3.2.1</span> Disk Image</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <p>
 <i>Time</i>: 5 min.
@@ -482,8 +502,8 @@ Install wget and download Ubuntu 18.04.
 </pre>
 </div>
 </div>
-<div id="outline-container-orgc068548" class="outline-4">
-<h4 id="orgc068548"><span class="section-number-4">3.2.2</span> Installation</h4>
+<div id="outline-container-org5f8df31" class="outline-4">
+<h4 id="org5f8df31"><span class="section-number-4">3.2.2</span> Installation</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <p>
 <span class="underline">Option 2-A: Virtual Machine</span>
@@ -537,8 +557,8 @@ install.
 </p>
 </div>
 </div>
-<div id="outline-container-org31e12e9" class="outline-4">
-<h4 id="org31e12e9"><span class="section-number-4">3.2.3</span> Dependencies</h4>
+<div id="outline-container-orgbbe2c96" class="outline-4">
+<h4 id="orgbbe2c96"><span class="section-number-4">3.2.3</span> Dependencies</h4>
 <div class="outline-text-4" id="text-3-2-3">
 <p>
 <i>Time</i>: 25 min.
@@ -552,16 +572,16 @@ directory.
 ~ $ sudo apt install update
 ~ $ sudo apt install upgrade
 ~ $ sudo apt install git
-~ $ git clone https://github.com/linnabary/collaborate.git
+~ $ git clone &lt;repository&gt;
 </pre>
 <p>
-Download C++ dependencies listed in <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/env/local/apt.txt">apt.txt</a>.
+Download C++ dependencies listed in apt.txt.
 </p>
 <pre class="example">
 ~ $ cat collaborate/env/local/apt.txt | xargs sudo apt install -y
 </pre>
 <p>
-Download Python3 dependencies listed in <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/env/local/py.txt">py.txt</a>.
+Download Python3 dependencies listed in py.txt.
 </p>
 <pre class="example">
 ~ $ cat collaborate/env/local/py.txt | xargs sudo -H pip3 install
@@ -579,15 +599,15 @@ Execute the following to set up the <code>PYTHONPATH</code> environment variable
 </div>
 </div>
 </div>
-<div id="outline-container-orgad2842b" class="outline-2">
-<h2 id="orgad2842b"><span class="section-number-2">4</span> Build the Project</h2>
+<div id="outline-container-orgb3c20fd" class="outline-2">
+<h2 id="orgb3c20fd"><span class="section-number-2">4</span> Build the Project</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 <i>Time</i>: 5 min.
 </p>
 
 <p>
-The following <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/sys/build.sh">project build script</a> will build the project with CMake.  If you
+The following project build script will build the project with CMake.  If you
 set either of the variables CPPLINT, PYLINT, DOXYGEN to true, it will also
 check code style conformance and generate documentation.
 </p>
@@ -605,7 +625,7 @@ to completely rebuild the project (file names or folder names were changed).
 <p>
 In-between simulations, it may be useful to empty the directories <code>output</code>
 and <code>analysis</code> so that new simulation results do not clobber the old ones.
-The <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/sys/clean.sh">clean script</a> accomplishes this, but <i>does not prompt for confirmation</i>.
+The clean script accomplishes this, but <i>does not prompt for confirmation</i>.
 </p>
 <pre class="example">
 ~/collaborate $ ./sys/clean.sh
@@ -613,12 +633,12 @@ The <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/sys/
 <hr />
 </div>
 </div>
-<div id="outline-container-org18585eb" class="outline-2">
-<h2 id="org18585eb"><span class="section-number-2">5</span> Condition the Input Data</h2>
+<div id="outline-container-org70786ea" class="outline-2">
+<h2 id="org70786ea"><span class="section-number-2">5</span> Condition the Input Data</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Since the repository can not track large files, the input NetCDF data has been
-broken-up into smaller files.  Run the <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/util/combine.py">combine script</a> to merge these files
+broken-up into smaller files.  Run the combine script to merge these files
 together before running any example programs.  This needs to be done only
 once.
 </p>
@@ -628,15 +648,15 @@ once.
 <hr />
 </div>
 </div>
-<div id="outline-container-org5090923" class="outline-2">
-<h2 id="org5090923"><span class="section-number-2">6</span> Command-Line Documentation</h2>
+<div id="outline-container-org38ef8d5" class="outline-2">
+<h2 id="org38ef8d5"><span class="section-number-2">6</span> Command-Line Documentation</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 <i>Time</i>: 1 min.
 </p>
 </div>
-<div id="outline-container-orgdcd3cb6" class="outline-3">
-<h3 id="orgdcd3cb6"><span class="section-number-3">6.1</span> PyDoc</h3>
+<div id="outline-container-org7e804a4" class="outline-3">
+<h3 id="org7e804a4"><span class="section-number-3">6.1</span> PyDoc</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 Python modules are accessible using the program <code>pydoc3</code>.
@@ -646,8 +666,8 @@ Python modules are accessible using the program <code>pydoc3</code>.
 </pre>
 </div>
 </div>
-<div id="outline-container-org6be9b32" class="outline-3">
-<h3 id="org6be9b32"><span class="section-number-3">6.2</span> Python Help</h3>
+<div id="outline-container-org18f73c6" class="outline-3">
+<h3 id="org18f73c6"><span class="section-number-3">6.2</span> Python Help</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 Python script arguments can be referenced by passing <code>-h</code> or <code>--help</code>.
@@ -659,15 +679,15 @@ Python script arguments can be referenced by passing <code>-h</code> or <code>--
 </div>
 </div>
 </div>
-<div id="outline-container-orgb3981fd" class="outline-2">
-<h2 id="orgb3981fd"><span class="section-number-2">7</span> Simple Example</h2>
+<div id="outline-container-org4cb4898" class="outline-2">
+<h2 id="org4cb4898"><span class="section-number-2">7</span> Simple Example</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 <i>Time</i>: 2 min.
 </p>
 
 <p>
-The simple simulation <i>(source: <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/apps/simple/simple.cpp">simple.cpp</a>)</i> will produce simulation data in
+The simple simulation <i>(source: simple.cpp)</i> will produce simulation data in
 the <code>output</code> folder.
 </p>
 <pre class="example">
@@ -700,11 +720,11 @@ figure instead.
 
 <p>
 <i>Note</i>: The first time a Python script reads a <code>.nc4</code> file, it is archived to
-a <code>.pkl</code> file.  Additional "runs" will access the <code>.pkl</code> file to save time.
+a <code>.pkl</code> file.  Additional &ldquo;runs&rdquo; will access the <code>.pkl</code> file to save time.
 </p>
 
 <p>
-Run the <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_antenna.py">antenna plot script</a> to view the dipole's gain pattern (passing <code>-f</code>
+Run the antenna plot script to view the dipole&rsquo;s gain pattern (passing <code>-f</code>
 for an interactive 3D plot).
 </p>
 <pre class="example">
@@ -717,7 +737,7 @@ for an interactive 3D plot).
 </div>
 
 <p>
-Run the <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_series.py">series plot script</a> to graph satellite parameters in time.
+Run the series plot script to graph satellite parameters in time.
 </p>
 <pre class="example">
 ~/collaborate $ util/plot_series.py -f
@@ -730,8 +750,8 @@ Run the <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/
 <hr />
 </div>
 </div>
-<div id="outline-container-org9fc59bc" class="outline-2">
-<h2 id="org9fc59bc"><span class="section-number-2">8</span> Intermediate Example</h2>
+<div id="outline-container-org0d0f872" class="outline-2">
+<h2 id="org0d0f872"><span class="section-number-2">8</span> Intermediate Example</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 <i>Time</i>: 4 min.
@@ -744,7 +764,7 @@ Remove output and analysis files.
 ~/collaborate $ ./sys/clean.sh
 </pre>
 <p>
-The intermediate simulation <i>(source: <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/apps/intermediate/intermediate.cpp">intermediate.cpp</a>)</i> will produce
+The intermediate simulation <i>(source: intermediate.cpp)</i> will produce
 simulation data in the <code>output</code> folder, including measurement logs.
 </p>
 <pre class="example">
@@ -758,7 +778,7 @@ network.nc4
 </pre>
 
 <p>
-Run the <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_map.py">map plot script</a> to view the initial positions of the satellites
+Run the map plot script to view the initial positions of the satellites
 (passing <code>-u</code> to include the line-of-sight <i>contact graph</i>).
 </p>
 <pre class="example">
@@ -775,7 +795,7 @@ Preparing equirectangular projection
 
 <p>
 This contact graph can also be viewed as an image with the
-<a href="https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_network.py">network plot script</a>.
+network plot script.
 </p>
 <pre class="example">
 ~/collaborate $ util/plot_network.py -f
@@ -787,7 +807,7 @@ This contact graph can also be viewed as an image with the
 </div>
 
 <p>
-Use the <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/util/animate_network.py">network animation script</a> to visualize instantaneous line-of-sight
+Use the network animation script to visualize instantaneous line-of-sight
 distances.
 </p>
 <pre class="example">
@@ -798,7 +818,7 @@ distances.
 </video>
 
 <p>
-Run the <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/util/animate_map.py">map animation script</a> to visualize satellite motion.  This works best
+Run the map animation script to visualize satellite motion.  This works best
 without opening a figure (writing to an MP4 file instead).
 </p>
 <pre class="example">
@@ -813,7 +833,7 @@ Status:
 Watch Video</video>
 
 <p>
-Run the <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_data.py">data plot script</a> with an additional argument to view the first frame
+Run the data plot script with an additional argument to view the first frame
 of <code>"TAUTOT"</code> + <code>"PRECTOT"</code> together.
 </p>
 <pre class="example">
@@ -827,8 +847,8 @@ of <code>"TAUTOT"</code> + <code>"PRECTOT"</code> together.
 <hr />
 </div>
 </div>
-<div id="outline-container-org702bcec" class="outline-2">
-<h2 id="org702bcec"><span class="section-number-2">9</span> Advanced Example</h2>
+<div id="outline-container-org3339e7f" class="outline-2">
+<h2 id="org3339e7f"><span class="section-number-2">9</span> Advanced Example</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 <i>Time</i>: 20 min.
@@ -841,7 +861,7 @@ Remove output and analysis files.
 ~/collaborate $ ./sys/clean.sh
 </pre>
 <p>
-The advanced simulation <i>(source: <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/apps/advanced/advanced.cpp">advanced.cpp</a>)</i> will produce simulation data
+The advanced simulation <i>(source: advanced.cpp)</i> will produce simulation data
 to the <code>output</code> folder, including measurement and communication logs..
 </p>
 <pre class="example">
@@ -858,7 +878,7 @@ tree_0_47_7459.tex
 tree_3_165_5359.tex
 </pre>
 <p>
-Run the <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_measurement.py">measurement plot script</a> to plot a map and graph of a measurement.
+Run the measurement plot script to plot a map and graph of a measurement.
 These files are created in <code>analysis</code> unless otherwise specified.
 </p>
 <pre class="example">
@@ -872,7 +892,7 @@ These files are created in <code>analysis</code> unless otherwise specified.
 
 <p>
 Low-level communication channel parameters can be plotted using the
-<a href="https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_channel.py">channel plot script</a>.
+channel plot script.
 </p>
 <pre class="example">
 ~/collaborate $ util/plot_channel.py -f
@@ -900,23 +920,21 @@ LaTeX to generate a PDF plot.
 <hr />
 </div>
 </div>
-<div id="outline-container-org4669fcd" class="outline-2">
-<h2 id="org4669fcd"><span class="section-number-2">10</span> Library Details</h2>
+<div id="outline-container-org29030c3" class="outline-2">
+<h2 id="org29030c3"><span class="section-number-2">10</span> Library Details</h2>
 <div class="outline-text-2" id="text-10">
 </div>
-<div id="outline-container-orgbe772b2" class="outline-3">
-<h3 id="orgbe772b2"><span class="section-number-3">10.1</span> License</h3>
+<div id="outline-container-orge989215" class="outline-3">
+<h3 id="orge989215"><span class="section-number-3">10.1</span> License</h3>
 <div class="outline-text-3" id="text-10-1">
 <p>
-This project is licensed under <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/LICENSE.txt">LGPL v3.0</a> and contains code protected by other
+This project is licensed under LGPL v3.0 and contains code protected by other
 compatible free-software licenses.
 </p>
-<table border="2" cellspacing="0" cellpadding="6" rules="all" frame="border" width="100%">
+<table border="2" cellspacing="0" cellpadding="6" rules="all" frame="border" width="100%" max-width="100%">
 
 
 <colgroup>
-<col  class="org-left" />
-
 <col  class="org-left" />
 
 <col  class="org-left" />
@@ -932,7 +950,6 @@ compatible free-software licenses.
 <th scope="col" class="org-left"><b>Directory</b></th>
 <th scope="col" class="org-left"><b>Language</b></th>
 <th scope="col" class="org-left"><b>License</b></th>
-<th scope="col" class="org-left"><b>Copyright</b></th>
 <th scope="col" class="org-left"><b>Author</b></th>
 <th scope="col" class="org-left"><b>Repository</b></th>
 </tr>
@@ -941,18 +958,16 @@ compatible free-software licenses.
 <tr>
 <td class="org-left">libs/collaborate</td>
 <td class="org-left">C++</td>
-<td class="org-left"><a href="https://raw.githubusercontent.com/linnabary/collaborate/master/LICENSE.txt">LGPL v3.0</a></td>
-<td class="org-left"><a href="https://raw.githubusercontent.com/linnabary/collaborate/master/COPYRIGHT.txt">Link</a></td>
-<td class="org-left">Ryan Linnabary</td>
-<td class="org-left"><a href="https://github.com/linnabary/collaborate">linnabary/collaborate</a></td>
+<td class="org-left">LGPL v3.0</td>
+<td class="org-left">The Ohio State University</td>
+<td class="org-left">&#xa0;</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
 <td class="org-left">libs/sgp4</td>
 <td class="org-left">C++</td>
-<td class="org-left"><a href="https://raw.githubusercontent.com/linnabary/collaborate/master/libs/sgp4/LICENSE.txt">Apache 2.0</a></td>
-<td class="org-left"><a href="https://raw.githubusercontent.com/linnabary/collaborate/master/libs/sgp4/COPYRIGHT.txt">Link</a></td>
+<td class="org-left">Apache 2.0</td>
 <td class="org-left">Daniel Warner</td>
 <td class="org-left"><a href="https://github.com/dnwrnr/sgp4">dnwrnr/sgp4</a></td>
 </tr>
@@ -961,8 +976,7 @@ compatible free-software licenses.
 <tr>
 <td class="org-left">libs/spdlog</td>
 <td class="org-left">C++</td>
-<td class="org-left"><a href="https://raw.githubusercontent.com/linnabary/collaborate/master/libs/spdlog/LICENSE.txt">MIT</a></td>
-<td class="org-left"><a href="https://raw.githubusercontent.com/linnabary/collaborate/master/libs/spdlog/COPYRIGHT.txt">Link</a></td>
+<td class="org-left">MIT</td>
 <td class="org-left">Gabi Melman</td>
 <td class="org-left"><a href="https://github.com/gabime/spdlog">gabime/spdlog</a></td>
 </tr>
@@ -971,8 +985,7 @@ compatible free-software licenses.
 <tr>
 <td class="org-left">libs/nlohmann</td>
 <td class="org-left">C++</td>
-<td class="org-left"><a href="https://raw.githubusercontent.com/linnabary/collaborate/master/libs/nlohmann/LICENSE.txt">MIT</a></td>
-<td class="org-left"><a href="https://raw.githubusercontent.com/linnabary/collaborate/master/libs/nlohmann/COPYRIGHT.txt">Link</a></td>
+<td class="org-left">MIT</td>
 <td class="org-left">Niels Lohmann</td>
 <td class="org-left"><a href="https://github.com/nlohmann/json">nlohmann/json</a></td>
 </tr>
@@ -981,8 +994,7 @@ compatible free-software licenses.
 <tr>
 <td class="org-left">libs/netcdf</td>
 <td class="org-left">C++</td>
-<td class="org-left"><a href="https://raw.githubusercontent.com/linnabary/collaborate/master/libs/netcdf/LICENSE.txt">UniData</a></td>
-<td class="org-left"><a href="https://raw.githubusercontent.com/linnabary/collaborate/master/libs/netcdf/COPYRIGHT.txt">Link</a></td>
+<td class="org-left">Unidata</td>
 <td class="org-left">Unidata</td>
 <td class="org-left"><a href="https://github.com/Unidata/netCDF-cxx4">unidata/netcdf-cxx4</a></td>
 </tr>
@@ -991,20 +1003,19 @@ compatible free-software licenses.
 <tr>
 <td class="org-left">util</td>
 <td class="org-left">Python</td>
-<td class="org-left"><a href="https://raw.githubusercontent.com/linnabary/collaborate/master/LICENSE.txt">LGPL v3.0</a></td>
-<td class="org-left"><a href="https://raw.githubusercontent.com/linnabary/collaborate/master/COPYRIGHT.txt">Link</a></td>
-<td class="org-left">Ryan Linnabary</td>
-<td class="org-left"><a href="https://github.com/linnabary/collaborate">linnabary/collaborate</a></td>
+<td class="org-left">LGPL v3.0</td>
+<td class="org-left">The Ohio State University</td>
+<td class="org-left">&#xa0;</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<div id="outline-container-orgeec6618" class="outline-3">
-<h3 id="orgeec6618"><span class="section-number-3">10.2</span> Structure</h3>
+<div id="outline-container-org339aeed" class="outline-3">
+<h3 id="org339aeed"><span class="section-number-3">10.2</span> Structure</h3>
 <div class="outline-text-3" id="text-10-2">
 <p>
-The C++ library's class hierarchy provides an object-oriented system for
+The C++ library&rsquo;s class hierarchy provides an object-oriented system for
 observing system simulation experiments.  The following illustration shows how
 the most prevalent abstract classes interact with, and depend on, one another.
 </p>
@@ -1015,13 +1026,13 @@ the most prevalent abstract classes interact with, and depend on, one another.
 </div>
 </div>
 </div>
-<div id="outline-container-orgbf9d9c0" class="outline-3">
-<h3 id="orgbf9d9c0"><span class="section-number-3">10.3</span> Profiling</h3>
+<div id="outline-container-org4c892db" class="outline-3">
+<h3 id="org4c892db"><span class="section-number-3">10.3</span> Profiling</h3>
 <div class="outline-text-3" id="text-10-3">
 <p>
-The call-graph below was created with Valgrind <i>(source: <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/sys/profile.sh">profile.sh</a>)</i>.  It
+The call-graph below was created with Valgrind <i>(source: profile.sh)</i>.  It
 shows the most common function calls (&gt;5% CPU) for the program
-<a href="https://raw.githubusercontent.com/linnabary/collaborate/master/apps/simple/simple.cpp">simple.cpp</a>.
+simple.cpp.
 </p>
 <pre class="example">
 ~/collaborate $ ./sys/profile.sh ./simple.out
@@ -1036,18 +1047,18 @@ callgrind.out.10081
 </div>
 </div>
 </div>
-<div id="outline-container-orgdf75170" class="outline-3">
-<h3 id="orgdf75170"><span class="section-number-3">10.4</span> Testing</h3>
+<div id="outline-container-orgbf292cc" class="outline-3">
+<h3 id="orgbf292cc"><span class="section-number-3">10.4</span> Testing</h3>
 <div class="outline-text-3" id="text-10-4">
 <p>
 The Valgrind tool <code>memcheck</code> is used to evaluate memory behavior.
 </p>
 </div>
-<div id="outline-container-org3e8caaa" class="outline-4">
-<h4 id="org3e8caaa"><span class="section-number-4">10.4.1</span> Simple Example</h4>
+<div id="outline-container-org5386187" class="outline-4">
+<h4 id="org5386187"><span class="section-number-4">10.4.1</span> Simple Example</h4>
 <div class="outline-text-4" id="text-10-4-1">
 <p>
-Testing memory behavior for <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/apps/simple/simple.cpp">simple.cpp</a>:
+Testing memory behavior for simple.cpp:
 </p>
 <pre class="example">
 ./sys/memcheck.sh ./simple.out
@@ -1074,11 +1085,11 @@ Testing memory behavior for <a href="https://raw.githubusercontent.com/linnabary
 </pre>
 </div>
 </div>
-<div id="outline-container-org20d0861" class="outline-4">
-<h4 id="org20d0861"><span class="section-number-4">10.4.2</span> Intermediate Example</h4>
+<div id="outline-container-org36dbba6" class="outline-4">
+<h4 id="org36dbba6"><span class="section-number-4">10.4.2</span> Intermediate Example</h4>
 <div class="outline-text-4" id="text-10-4-2">
 <p>
-Testing memory behavior for <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/apps/intermediate/intermediate.cpp">intermediate.cpp</a>:
+Testing memory behavior for intermediate.cpp:
 </p>
 <pre class="example">
 ./sys/memcheck.sh ./intermediate.out
@@ -1105,11 +1116,11 @@ Testing memory behavior for <a href="https://raw.githubusercontent.com/linnabary
 </pre>
 </div>
 </div>
-<div id="outline-container-org78e2806" class="outline-4">
-<h4 id="org78e2806"><span class="section-number-4">10.4.3</span> Advanced Example</h4>
+<div id="outline-container-org7151115" class="outline-4">
+<h4 id="org7151115"><span class="section-number-4">10.4.3</span> Advanced Example</h4>
 <div class="outline-text-4" id="text-10-4-3">
 <p>
-Testing memory behavior for <a href="https://raw.githubusercontent.com/linnabary/collaborate/master/apps/advanced/advanced.cpp">advanced.cpp</a>:
+Testing memory behavior for advanced.cpp:
 </p>
 <pre class="example">
 ./sys/memcheck.sh ./advanced.out
@@ -1137,13 +1148,13 @@ Testing memory behavior for <a href="https://raw.githubusercontent.com/linnabary
 </div>
 </div>
 </div>
-<div id="outline-container-orgfa24074" class="outline-3">
-<h3 id="orgfa24074"><span class="section-number-3">10.5</span> Development Tools</h3>
+<div id="outline-container-org9f8202f" class="outline-3">
+<h3 id="org9f8202f"><span class="section-number-3">10.5</span> Development Tools</h3>
 <div class="outline-text-3" id="text-10-5">
 <p>
 The following software tools were used in the creation of this project.
 </p>
-<table border="2" cellspacing="0" cellpadding="6" rules="all" frame="border" width="100%">
+<table border="2" cellspacing="0" cellpadding="6" rules="all" frame="border" width="100%" max-width="100%">
 
 
 <colgroup>

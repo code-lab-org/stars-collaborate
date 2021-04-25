@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Ryan Linnabary
+// Copyright (C) 2019 The Ohio State University
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -47,6 +47,19 @@ class ObservingSystemAlpha : public ObservingSystem {
                        Scheduler* _collaborate,
                        EventLogger* _event_log,
                        DataLogger* _network_log);
+  /// @brief Constructor
+  /// @param[in] _sun Star at the center of the solar system
+  /// @param[in] _clock Simulation clock
+  /// @param[in] _collaborate Autonomous network collaborate
+  /// @param[in] _event_log Event logger
+  /// @param[in] _network_log Network logger
+  /// @param[in] _flag Flag
+  ObservingSystemAlpha(Sun* _sun,
+                       SimulationClock* _clock,
+                       Scheduler* _collaborate,
+                       EventLogger* _event_log,
+                       DataLogger* _network_log,
+                       const bool& _flag);
   /// @brief Generates random list of samples to start with
   /// @param[in] _span_s Total time span of the simulation
   void Seed(const uint64_t& _span_s);
@@ -54,6 +67,10 @@ class ObservingSystemAlpha : public ObservingSystem {
   /// @param[in] _span_s Total time span of the simulation
   /// @param[in] _constellation Constellation
   void SeedMany(const uint64_t& _span_s, const uint16_t& _constellation);
+  /// @brief Generates random list of samples to start with for a constellation
+  /// @param[in] _span_s Total time span of the simulation
+  /// @param[in] _constellation Constellation
+  void SeedManyMore(const uint64_t& _span_s, const uint16_t& _constellation);
   /// @brief Update everything
   void Update();
   /// @brief Calculate all lines of sight between satellites and write log
@@ -68,6 +85,8 @@ class ObservingSystemAlpha : public ObservingSystem {
   GraphUnweighted unweighted_;
   /// @brief An adjacency attitude_matrix
   std::vector<Channel> channels_;
+  /// @brief Flag
+  bool flag_;
 };
 
 }  // namespace collaborate

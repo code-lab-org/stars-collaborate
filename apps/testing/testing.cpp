@@ -1,4 +1,4 @@
-// Copyright (C) 2020 Ryan Linnabary & Andrew O'Brien
+// Copyright (C) 2020 Andrew O'Brien
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by

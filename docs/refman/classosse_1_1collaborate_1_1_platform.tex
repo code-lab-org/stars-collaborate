@@ -1,0 +1,128 @@
+\hypertarget{classosse_1_1collaborate_1_1_platform}{}\subsection{osse\+:\+:collaborate\+:\+:Platform Class Reference}
+\label{classosse_1_1collaborate_1_1_platform}\index{osse\+::collaborate\+::\+Platform@{osse\+::collaborate\+::\+Platform}}
+
+
+Propogates a node\textquotesingle{}s position.  
+
+
+
+
+{\ttfamily \#include $<$platform.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Platform\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classosse_1_1collaborate_1_1_platform__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_platform_aca95bfbb4f84285f1767d575a3e4c2ec}{Platform} (const std\+::string \&\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} \hyperlink{classosse_1_1collaborate_1_1_platform_ad7070fcb9d91b22f25dbe0211ba0cc73}{Predict\+Orbital\+State} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const uint64\+\_\+t \&\+\_\+time\+\_\+s) const =0
+\begin{DoxyCompactList}\small\item\em Get the orbital\+\_\+state of an object the current clock time. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classosse_1_1collaborate_1_1_platform_a15881a343059315acdaf018e0c2470d8}{Predict\+Orbital\+State} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const uint64\+\_\+t \&\+\_\+time\+\_\+s, \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} $\ast$\+\_\+orbital\+\_\+state) const =0
+\begin{DoxyCompactList}\small\item\em Update the orbital\+\_\+state of an object the current clock time. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classosse_1_1collaborate_1_1_platform_a87b0b2589a6246dfd90ba3168ebf285c}{k\+Name} () const
+\begin{DoxyCompactList}\small\item\em Gets k\+Name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_a00a6267a955519320627877310f90b97}\label{classosse_1_1collaborate_1_1_platform_a00a6267a955519320627877310f90b97}} 
+const std\+::string \hyperlink{classosse_1_1collaborate_1_1_platform_a00a6267a955519320627877310f90b97}{k\+Name\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name of the platform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Propogates a node\textquotesingle{}s position. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_aca95bfbb4f84285f1767d575a3e4c2ec}\label{classosse_1_1collaborate_1_1_platform_aca95bfbb4f84285f1767d575a3e4c2ec}} 
+\index{osse\+::collaborate\+::\+Platform@{osse\+::collaborate\+::\+Platform}!Platform@{Platform}}
+\index{Platform@{Platform}!osse\+::collaborate\+::\+Platform@{osse\+::collaborate\+::\+Platform}}
+\paragraph{\texorpdfstring{Platform()}{Platform()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Platform\+::\+Platform (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+name} & The name of the platform \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_a87b0b2589a6246dfd90ba3168ebf285c}\label{classosse_1_1collaborate_1_1_platform_a87b0b2589a6246dfd90ba3168ebf285c}} 
+\index{osse\+::collaborate\+::\+Platform@{osse\+::collaborate\+::\+Platform}!k\+Name@{k\+Name}}
+\index{k\+Name@{k\+Name}!osse\+::collaborate\+::\+Platform@{osse\+::collaborate\+::\+Platform}}
+\paragraph{\texorpdfstring{k\+Name()}{kName()}}
+{\footnotesize\ttfamily std\+::string osse\+::collaborate\+::\+Platform\+::k\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets k\+Name. 
+
+\begin{DoxyReturn}{Returns}
+k\+Name\+\_\+ Name of the platform 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_ad7070fcb9d91b22f25dbe0211ba0cc73}\label{classosse_1_1collaborate_1_1_platform_ad7070fcb9d91b22f25dbe0211ba0cc73}} 
+\index{osse\+::collaborate\+::\+Platform@{osse\+::collaborate\+::\+Platform}!Predict\+Orbital\+State@{Predict\+Orbital\+State}}
+\index{Predict\+Orbital\+State@{Predict\+Orbital\+State}!osse\+::collaborate\+::\+Platform@{osse\+::collaborate\+::\+Platform}}
+\paragraph{\texorpdfstring{Predict\+Orbital\+State()}{PredictOrbitalState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} osse\+::collaborate\+::\+Platform\+::\+Predict\+Orbital\+State (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const uint64\+\_\+t \&}]{\+\_\+time\+\_\+s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the orbital\+\_\+state of an object the current clock time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+time\+\_\+s} & Time offset from the current time (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} of an object at the current clock time 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a6741aa8faec9968fd8353214d2022648}{osse\+::collaborate\+::\+Platform\+Orbit}, and \hyperlink{classosse_1_1collaborate_1_1_platform_earth_aff04ed83ab0ae2f7b3bcb1019588efcd}{osse\+::collaborate\+::\+Platform\+Earth}.
+
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_a15881a343059315acdaf018e0c2470d8}\label{classosse_1_1collaborate_1_1_platform_a15881a343059315acdaf018e0c2470d8}} 
+\index{osse\+::collaborate\+::\+Platform@{osse\+::collaborate\+::\+Platform}!Predict\+Orbital\+State@{Predict\+Orbital\+State}}
+\index{Predict\+Orbital\+State@{Predict\+Orbital\+State}!osse\+::collaborate\+::\+Platform@{osse\+::collaborate\+::\+Platform}}
+\paragraph{\texorpdfstring{Predict\+Orbital\+State()}{PredictOrbitalState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void osse\+::collaborate\+::\+Platform\+::\+Predict\+Orbital\+State (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const uint64\+\_\+t \&}]{\+\_\+time\+\_\+s,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} $\ast$}]{\+\_\+orbital\+\_\+state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Update the orbital\+\_\+state of an object the current clock time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+time\+\_\+s} & Time offset from the current time (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+orbital\+\_\+state} & \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} of an object \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a2b97a4133cb7d82d3ea62a3470f87d72}{osse\+::collaborate\+::\+Platform\+Orbit}, and \hyperlink{classosse_1_1collaborate_1_1_platform_earth_ab49f25fe5d37334918483cfdcef3471a}{osse\+::collaborate\+::\+Platform\+Earth}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/platform.\+h\item 
+libs/collaborate/src/platform.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\hypertarget{attitude__matrix_8h_source}{}\subsection{attitude\+\_\+matrix.\+h}
+\label{attitude__matrix_8h_source}\index{libs/collaborate/include/collaborate/attitude\+\_\+matrix.\+h@{libs/collaborate/include/collaborate/attitude\+\_\+matrix.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_ATTITUDE\_MATRIX\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_ATTITUDE\_MATRIX\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <array>}
+00020 \textcolor{preprocessor}{#include <string>}
+00021 
+00022 \textcolor{preprocessor}{#include "collaborate/vector.h"}
+00023 
+00024 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00025 \textcolor{keyword}{namespace }collaborate \{
+00026 
+\Hypertarget{attitude__matrix_8h_source_l00039}\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix}{00039} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix}{AttitudeMatrix} \{
+00040  \textcolor{keyword}{public}:
+\Hypertarget{attitude__matrix_8h_source_l00042}\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a7d700f1773cb534bd9f807149ab6d8f7}{00042}   \textcolor{keyword}{static} constexpr uint8\_t \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a7d700f1773cb534bd9f807149ab6d8f7}{kColumns} = 3;
+\Hypertarget{attitude__matrix_8h_source_l00044}\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_ac9df4bd3f06ab890e74afe62d1891344}{00044}   \textcolor{keyword}{typedef} std::array<double, kColumns> \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_ac9df4bd3f06ab890e74afe62d1891344}{Row};
+\Hypertarget{attitude__matrix_8h_source_l00046}\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}{00046}   \textcolor{keyword}{typedef} std::array<Row, kColumns> \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}{Array};
+00066   \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0b360f9d96986756913036ff54f376d1}{AttitudeMatrix}(\textcolor{keywordtype}{double} \_r0c0,
+00067                  \textcolor{keywordtype}{double} \_r0c1,
+00068                  \textcolor{keywordtype}{double} \_r0c2,
+00069                  \textcolor{keywordtype}{double} \_r1c0,
+00070                  \textcolor{keywordtype}{double} \_r1c1,
+00071                  \textcolor{keywordtype}{double} \_r1c2,
+00072                  \textcolor{keywordtype}{double} \_r2c0,
+00073                  \textcolor{keywordtype}{double} \_r2c1,
+00074                  \textcolor{keywordtype}{double} \_r2c2);
+00104   \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0b360f9d96986756913036ff54f376d1}{AttitudeMatrix}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_x\_axis,
+00105                  \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_y\_axis,
+00106                  \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_z\_axis);
+00129   \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0b360f9d96986756913036ff54f376d1}{AttitudeMatrix}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_roll\_rad,
+00130                  \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_pitch\_rad,
+00131                  \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_yaw\_rad);
+\Hypertarget{attitude__matrix_8h_source_l00151}\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_afc7bdadbaea2ac55fbec218ea17ce6a3}{00151}   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_afc7bdadbaea2ac55fbec218ea17ce6a3}{TransformVector}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_vector)\textcolor{keyword}{ const }\{
+00152     \textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}(((\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{m\_}[0][0] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}{x\_m}())
+00153                    + (\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{m\_}[0][1] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}{y\_m}())
+00154                    + (\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{m\_}[0][2] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}{z\_m}())),
+00155                   ((\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{m\_}[1][0] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}{x\_m}())
+00156                    + (\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{m\_}[1][1] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}{y\_m}())
+00157                    + (\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{m\_}[1][2] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}{z\_m}())),
+00158                   ((\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{m\_}[2][0] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}{x\_m}())
+00159                    + (\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{m\_}[2][1] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}{y\_m}())
+00160                    + (\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{m\_}[2][2] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}{z\_m}())));
+00161   \}
+\Hypertarget{attitude__matrix_8h_source_l00177}\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a55ac57cf36bee476974db1cfe7bcd7e1}{00177}   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a55ac57cf36bee476974db1cfe7bcd7e1}{InvertVector}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_vector)\textcolor{keyword}{ const }\{
+00178     \textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}(((\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}{i\_}[0][0] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}{x\_m}())
+00179                    + (\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}{i\_}[0][1] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}{y\_m}())
+00180                    + (\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}{i\_}[0][2] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}{z\_m}())),
+00181                   ((\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}{i\_}[1][0] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}{x\_m}())
+00182                    + (\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}{i\_}[1][1] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}{y\_m}())
+00183                    + (\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}{i\_}[1][2] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}{z\_m}())),
+00184                   ((\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}{i\_}[2][0] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}{x\_m}())
+00185                    + (\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}{i\_}[2][1] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}{y\_m}())
+00186                    + (\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}{i\_}[2][2] * \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}{z\_m}())));
+00187   \}
+00190   std::string \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_af8945f566ab44170c579b16662004bd2}{ToString}() \textcolor{keyword}{const};
+00191 
+00192  \textcolor{keyword}{private}:
+\Hypertarget{attitude__matrix_8h_source_l00196}\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a424b4876cf18be58ccee7386d91314d7}{00196}   Row \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a424b4876cf18be58ccee7386d91314d7}{operator[] }(\textcolor{keywordtype}{int} \_column)\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{m\_}[\_column];\}
+00227   Array \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_aa7f28a273aa54589393f1f92024bccaa}{AttitudeMatrixFromAxes}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_x\_axis,
+00228                                \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_y\_axis,
+00229                                \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_z\_axis) \textcolor{keyword}{const};
+00253   Array \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4c9220dfc49995fadcfce4f9f71ee33d}{AttitudeMatrixFromAngles}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_roll\_rad,
+00254                                  \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_pitch\_rad,
+00255                                  \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_yaw\_rad) \textcolor{keyword}{const};
+00274   Array \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_afd089287837320e37d29552e894505f4}{InverseOfAttitudeMatrix}() \textcolor{keyword}{const};
+00282   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_aaa2fd8ea9b1aac6ba462bf0a24b28774}{AttitudeMatrixDeterminant}() \textcolor{keyword}{const};
+\Hypertarget{attitude__matrix_8h_source_l00284}\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{00284}   Array \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{m\_};
+\Hypertarget{attitude__matrix_8h_source_l00286}\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}{00286}   Array \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}{i\_};
+00287 \};
+00288 
+00292 \textcolor{keyword}{inline} std::ostream& operator<<(std::ostream& strm,
+00293                                 \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix}{AttitudeMatrix}& \_attitude\_matrix) \{
+00294   \textcolor{keywordflow}{return} strm << \_attitude\_matrix.\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_af8945f566ab44170c579b16662004bd2}{ToString}();
+00295 \}
+00296 
+00297 \}  \textcolor{comment}{// namespace collaborate}
+00298 \}  \textcolor{comment}{// namespace osse}
+00299 
+00300 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_ATTITUDE\_MATRIX\_H\_}
+\end{DoxyCode}

@@ -1,0 +1,286 @@
+\hypertarget{classosse_1_1collaborate_1_1_data_logger}{}\subsection{osse\+:\+:collaborate\+:\+:Data\+Logger Class Reference}
+\label{classosse_1_1collaborate_1_1_data_logger}\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+
+
+An interface to the netcdf library.  
+
+
+
+
+{\ttfamily \#include $<$data\+\_\+logger.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_data_logger_a7f51038008c542dc5eb65575b30d9932}{Data\+Logger} (const std\+::string \&\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_data_logger_a8ac81bf337fd501a4dd1cefd7943b863}{Simulation} (const uint16\+\_\+t \&\+\_\+num\+\_\+nodes, const uint64\+\_\+t \&\+\_\+ticks)
+\begin{DoxyCompactList}\small\item\em Sets up the netcdf file for logging node data. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_data_logger_a4bd4ae8e64651aa52952ed1f758f51a7}{Measurement} (const uint64\+\_\+t \&\+\_\+ticks)
+\begin{DoxyCompactList}\small\item\em Sets up the netcdf file for logging measurement data. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_data_logger_a8a0d8ce2e134ad2f16850d3412cd68e2}{Channel} (const uint64\+\_\+t \&\+\_\+ticks)
+\begin{DoxyCompactList}\small\item\em Sets up the netcdf file for logging communication parameters. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classosse_1_1collaborate_1_1_data_logger_a2aa58d2cca89973b14894ad93b5ebb12}{Log\+Parameter} (const int \&\+\_\+node\+\_\+index, const std\+::string \&\+\_\+variable, const T $\ast$\+\_\+values, const uint64\+\_\+t \&\+\_\+index, const uint64\+\_\+t \&\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Logs a buffer of node data. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classosse_1_1collaborate_1_1_data_logger_a40510224c3d75bb5d40fe68a3b9a278c}{Log\+Series} (const std\+::string \&\+\_\+variable, const T $\ast$\+\_\+values, const uint64\+\_\+t \&\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Logs a buffer of time series data. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_data_logger_a5c69d3fc5aa12053eebc1b5406f8bf6a}{Unweighted\+Network} (const uint16\+\_\+t \&\+\_\+num\+\_\+nodes, const uint64\+\_\+t \&\+\_\+ticks)
+\begin{DoxyCompactList}\small\item\em Setup for unweighted network log. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_data_logger_ac056c731698a952e787e79a6cbb6129f}{Weighted\+Network} (const uint16\+\_\+t \&\+\_\+num\+\_\+nodes, const uint64\+\_\+t \&\+\_\+ticks)
+\begin{DoxyCompactList}\small\item\em Setup for weighted network log. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_data_logger_ad185f66e5e4bc3b3097c784604afbe80}{Log\+Date\+Time} (const std\+::string \&\+\_\+variable, const int $\ast$\+\_\+values, const uint64\+\_\+t \&\+\_\+index, const uint64\+\_\+t \&\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Logs date and time data. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_data_logger_aef191bf287c09ccf4047addcf481c95b}{Log\+Antenna} (const uint64\+\_\+t \&\+\_\+theta\+\_\+ticks, const uint64\+\_\+t \&\+\_\+phi\+\_\+ticks, const double $\ast$\+\_\+gain\+\_\+array)
+\begin{DoxyCompactList}\small\item\em Logs antenna gain pattern. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_data_logger_a024bca9bbbf41aeb8842308bc4feb3f2}{Log\+Unweighted\+Graph} (const uint64\+\_\+t \&\+\_\+tick, const bool $\ast$\+\_\+edges, const uint16\+\_\+t \+\_\+num\+\_\+nodes)
+\begin{DoxyCompactList}\small\item\em Logs unweighted graph. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_data_logger_a07727a2859558a395ab390b3b4d3dccb}{Log\+Weighted\+Graph} (const uint64\+\_\+t \&\+\_\+tick, const double $\ast$\+\_\+edges, const uint16\+\_\+t \+\_\+num\+\_\+nodes)
+\begin{DoxyCompactList}\small\item\em Logs weighted graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_a2eb3f81ae43ad620401c3ef93ffe690b}\label{classosse_1_1collaborate_1_1_data_logger_a2eb3f81ae43ad620401c3ef93ffe690b}} 
+void \hyperlink{classosse_1_1collaborate_1_1_data_logger_a2eb3f81ae43ad620401c3ef93ffe690b}{Log\+Measurement} ()
+\begin{DoxyCompactList}\small\item\em Logs measurement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_aec7391008520ecbda02f46169823ce2a}\label{classosse_1_1collaborate_1_1_data_logger_aec7391008520ecbda02f46169823ce2a}} 
+void \hyperlink{classosse_1_1collaborate_1_1_data_logger_aec7391008520ecbda02f46169823ce2a}{Log\+Communication} ()
+\begin{DoxyCompactList}\small\item\em Logs communication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_ad24528379ccc57084cdc857c69744e37}\label{classosse_1_1collaborate_1_1_data_logger_ad24528379ccc57084cdc857c69744e37}} 
+net\+C\+D\+F\+::\+Nc\+File \hyperlink{classosse_1_1collaborate_1_1_data_logger_ad24528379ccc57084cdc857c69744e37}{ncfile\+\_\+}
+\begin{DoxyCompactList}\small\item\em Net\+C\+DF file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_aba3561b8bf7fde66ba88062a3d96a5de}\label{classosse_1_1collaborate_1_1_data_logger_aba3561b8bf7fde66ba88062a3d96a5de}} 
+std\+::vector$<$ net\+C\+D\+F\+::\+Nc\+Group $>$ \hyperlink{classosse_1_1collaborate_1_1_data_logger_aba3561b8bf7fde66ba88062a3d96a5de}{groups\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of Net\+C\+DF groups. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An interface to the netcdf library. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_a7f51038008c542dc5eb65575b30d9932}\label{classosse_1_1collaborate_1_1_data_logger_a7f51038008c542dc5eb65575b30d9932}} 
+\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}!Data\+Logger@{Data\+Logger}}
+\index{Data\+Logger@{Data\+Logger}!osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+\paragraph{\texorpdfstring{Data\+Logger()}{DataLogger()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Data\+Logger\+::\+Data\+Logger (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+path} & File sink path \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_a8a0d8ce2e134ad2f16850d3412cd68e2}\label{classosse_1_1collaborate_1_1_data_logger_a8a0d8ce2e134ad2f16850d3412cd68e2}} 
+\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}!Channel@{Channel}}
+\index{Channel@{Channel}!osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+\paragraph{\texorpdfstring{Channel()}{Channel()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Data\+Logger\+::\+Channel (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+ticks }\end{DoxyParamCaption})}
+
+
+
+Sets up the netcdf file for logging communication parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+ticks} & Number of simulation ticks \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_aef191bf287c09ccf4047addcf481c95b}\label{classosse_1_1collaborate_1_1_data_logger_aef191bf287c09ccf4047addcf481c95b}} 
+\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}!Log\+Antenna@{Log\+Antenna}}
+\index{Log\+Antenna@{Log\+Antenna}!osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+\paragraph{\texorpdfstring{Log\+Antenna()}{LogAntenna()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Data\+Logger\+::\+Log\+Antenna (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+theta\+\_\+ticks,  }\item[{const uint64\+\_\+t \&}]{\+\_\+phi\+\_\+ticks,  }\item[{const double $\ast$}]{\+\_\+gain\+\_\+array }\end{DoxyParamCaption})}
+
+
+
+Logs antenna gain pattern. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+theta\+\_\+ticks} & Number of theta values \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+phi\+\_\+ticks} & Number of phi values \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+gain\+\_\+array} & Array of gain values \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_ad185f66e5e4bc3b3097c784604afbe80}\label{classosse_1_1collaborate_1_1_data_logger_ad185f66e5e4bc3b3097c784604afbe80}} 
+\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}!Log\+Date\+Time@{Log\+Date\+Time}}
+\index{Log\+Date\+Time@{Log\+Date\+Time}!osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+\paragraph{\texorpdfstring{Log\+Date\+Time()}{LogDateTime()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Data\+Logger\+::\+Log\+Date\+Time (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+variable,  }\item[{const int $\ast$}]{\+\_\+values,  }\item[{const uint64\+\_\+t \&}]{\+\_\+index,  }\item[{const uint64\+\_\+t \&}]{\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Logs date and time data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+variable} & Net\+C\+DF variable name \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+values} & Integer values \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+index} & Index in the Net\+C\+DF variable \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+count} & Count of elements to transfer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_a2aa58d2cca89973b14894ad93b5ebb12}\label{classosse_1_1collaborate_1_1_data_logger_a2aa58d2cca89973b14894ad93b5ebb12}} 
+\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}!Log\+Parameter@{Log\+Parameter}}
+\index{Log\+Parameter@{Log\+Parameter}!osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+\paragraph{\texorpdfstring{Log\+Parameter()}{LogParameter()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void osse\+::collaborate\+::\+Data\+Logger\+::\+Log\+Parameter (\begin{DoxyParamCaption}\item[{const int \&}]{\+\_\+node\+\_\+index,  }\item[{const std\+::string \&}]{\+\_\+variable,  }\item[{const T $\ast$}]{\+\_\+values,  }\item[{const uint64\+\_\+t \&}]{\+\_\+index,  }\item[{const uint64\+\_\+t \&}]{\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logs a buffer of node data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+node\+\_\+index} & Index of the source node \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+variable} & Net\+C\+DF variable name \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+values} & Array of values \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+index} & Index in Net\+C\+DF variable \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+count} & Count of elements to transfer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_a40510224c3d75bb5d40fe68a3b9a278c}\label{classosse_1_1collaborate_1_1_data_logger_a40510224c3d75bb5d40fe68a3b9a278c}} 
+\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}!Log\+Series@{Log\+Series}}
+\index{Log\+Series@{Log\+Series}!osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+\paragraph{\texorpdfstring{Log\+Series()}{LogSeries()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void osse\+::collaborate\+::\+Data\+Logger\+::\+Log\+Series (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+variable,  }\item[{const T $\ast$}]{\+\_\+values,  }\item[{const uint64\+\_\+t \&}]{\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logs a buffer of time series data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+variable} & Net\+C\+DF variable name \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+values} & Array of values \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+count} & Count of elements to transfer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_a024bca9bbbf41aeb8842308bc4feb3f2}\label{classosse_1_1collaborate_1_1_data_logger_a024bca9bbbf41aeb8842308bc4feb3f2}} 
+\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}!Log\+Unweighted\+Graph@{Log\+Unweighted\+Graph}}
+\index{Log\+Unweighted\+Graph@{Log\+Unweighted\+Graph}!osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+\paragraph{\texorpdfstring{Log\+Unweighted\+Graph()}{LogUnweightedGraph()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Data\+Logger\+::\+Log\+Unweighted\+Graph (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+tick,  }\item[{const bool $\ast$}]{\+\_\+edges,  }\item[{const uint16\+\_\+t}]{\+\_\+num\+\_\+nodes }\end{DoxyParamCaption})}
+
+
+
+Logs unweighted graph. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tick} & Tick of the simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+edges} & Edge flags \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+nodes} & Number of nodes in network \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_a07727a2859558a395ab390b3b4d3dccb}\label{classosse_1_1collaborate_1_1_data_logger_a07727a2859558a395ab390b3b4d3dccb}} 
+\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}!Log\+Weighted\+Graph@{Log\+Weighted\+Graph}}
+\index{Log\+Weighted\+Graph@{Log\+Weighted\+Graph}!osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+\paragraph{\texorpdfstring{Log\+Weighted\+Graph()}{LogWeightedGraph()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Data\+Logger\+::\+Log\+Weighted\+Graph (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+tick,  }\item[{const double $\ast$}]{\+\_\+edges,  }\item[{const uint16\+\_\+t}]{\+\_\+num\+\_\+nodes }\end{DoxyParamCaption})}
+
+
+
+Logs weighted graph. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tick} & Tick of the simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+edges} & Edge weightes \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+nodes} & Number of nodes in network \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_a4bd4ae8e64651aa52952ed1f758f51a7}\label{classosse_1_1collaborate_1_1_data_logger_a4bd4ae8e64651aa52952ed1f758f51a7}} 
+\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}!Measurement@{Measurement}}
+\index{Measurement@{Measurement}!osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+\paragraph{\texorpdfstring{Measurement()}{Measurement()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Data\+Logger\+::\+Measurement (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+ticks }\end{DoxyParamCaption})}
+
+
+
+Sets up the netcdf file for logging measurement data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+ticks} & Number of simulation ticks \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_a8ac81bf337fd501a4dd1cefd7943b863}\label{classosse_1_1collaborate_1_1_data_logger_a8ac81bf337fd501a4dd1cefd7943b863}} 
+\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+\paragraph{\texorpdfstring{Simulation()}{Simulation()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Data\+Logger\+::\+Simulation (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+num\+\_\+nodes,  }\item[{const uint64\+\_\+t \&}]{\+\_\+ticks }\end{DoxyParamCaption})}
+
+
+
+Sets up the netcdf file for logging node data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+nodes} & Number of nodes \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+ticks} & Number of simulation ticks \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_a5c69d3fc5aa12053eebc1b5406f8bf6a}\label{classosse_1_1collaborate_1_1_data_logger_a5c69d3fc5aa12053eebc1b5406f8bf6a}} 
+\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}!Unweighted\+Network@{Unweighted\+Network}}
+\index{Unweighted\+Network@{Unweighted\+Network}!osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+\paragraph{\texorpdfstring{Unweighted\+Network()}{UnweightedNetwork()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Data\+Logger\+::\+Unweighted\+Network (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+num\+\_\+nodes,  }\item[{const uint64\+\_\+t \&}]{\+\_\+ticks }\end{DoxyParamCaption})}
+
+
+
+Setup for unweighted network log. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+nodes} & Number of nodes in network \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+ticks} & Number of ticks in simulation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_logger_ac056c731698a952e787e79a6cbb6129f}\label{classosse_1_1collaborate_1_1_data_logger_ac056c731698a952e787e79a6cbb6129f}} 
+\index{osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}!Weighted\+Network@{Weighted\+Network}}
+\index{Weighted\+Network@{Weighted\+Network}!osse\+::collaborate\+::\+Data\+Logger@{osse\+::collaborate\+::\+Data\+Logger}}
+\paragraph{\texorpdfstring{Weighted\+Network()}{WeightedNetwork()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Data\+Logger\+::\+Weighted\+Network (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+num\+\_\+nodes,  }\item[{const uint64\+\_\+t \&}]{\+\_\+ticks }\end{DoxyParamCaption})}
+
+
+
+Setup for weighted network log. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+nodes} & Number of nodes in network \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+ticks} & Number of ticks in simulation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/data\+\_\+logger.\+h\item 
+libs/collaborate/src/data\+\_\+logger.\+cpp\end{DoxyCompactItemize}

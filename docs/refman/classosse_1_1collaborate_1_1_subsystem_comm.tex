@@ -1,0 +1,412 @@
+\hypertarget{classosse_1_1collaborate_1_1_subsystem_comm}{}\subsection{osse\+:\+:collaborate\+:\+:Subsystem\+Comm Class Reference}
+\label{classosse_1_1collaborate_1_1_subsystem_comm}\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+
+
+An interface for RF communication.  
+
+
+
+
+{\ttfamily \#include $<$subsystem\+\_\+comm.\+h$>$}
+
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event}{Communication\+Event}
+\begin{DoxyCompactList}\small\item\em A plan to transfer a packet to another node. \end{DoxyCompactList}\item 
+struct \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event}{Feedback\+Event}
+\begin{DoxyCompactList}\small\item\em A plan to feedback a packet to the original node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}\label{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}} 
+enum \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{k\+Mode} \{ {\bfseries Free}, 
+{\bfseries Transmitting}, 
+{\bfseries Receiving}
+ \}\begin{DoxyCompactList}\small\item\em Possible modes of operation. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_abda28dad95a597a9a43053ef2bb62e5c}\label{classosse_1_1collaborate_1_1_subsystem_comm_abda28dad95a597a9a43053ef2bb62e5c}} 
+typedef struct \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event}{osse\+::collaborate\+::\+Subsystem\+Comm\+::\+Communication\+Event} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_abda28dad95a597a9a43053ef2bb62e5c}{Communication\+Event}
+\begin{DoxyCompactList}\small\item\em A plan to transfer a packet to another node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a679a4916e89a9dfce191486c1b93505d}\label{classosse_1_1collaborate_1_1_subsystem_comm_a679a4916e89a9dfce191486c1b93505d}} 
+typedef struct \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event}{osse\+::collaborate\+::\+Subsystem\+Comm\+::\+Feedback\+Event} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a679a4916e89a9dfce191486c1b93505d}{Feedback\+Event}
+\begin{DoxyCompactList}\small\item\em A plan to feedback a packet to the original node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a4723a445928f1dccc2734fae58cfaa3e}{Subsystem\+Comm} (const \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} $\ast$\+\_\+antenna, const \hyperlink{classosse_1_1collaborate_1_1_modem}{Modem} $\ast$\+\_\+modem)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ab3675c014fa2575e699a43f870c1d4f0}{Update} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock)
+\begin{DoxyCompactList}\small\item\em Update the communication interface. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ae3626e8fd31433972e7b69aa25fb9375}{Required\+Transfer\+DurationS} () const
+\begin{DoxyCompactList}\small\item\em Calculate the required transfer duration (seconds) \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a7c3f63458bc096bbe875aea53d2bf748}{Required\+Transfer\+DurationS} (const uint64\+\_\+t \&\+\_\+buffer\+\_\+size\+\_\+bytes) const
+\begin{DoxyCompactList}\small\item\em Calculate the required transfer duration (seconds) \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a19ba433f23b428c1864f33e3b8588639}{Calculate\+Power\+DrainW} ()
+\begin{DoxyCompactList}\small\item\em Calculate the power consumed during operation. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ae50e83fd95a6bf1b918a0971833f9615}{Add\+To\+Storage} (\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event}{Communication\+Event} \+\_\+event)
+\begin{DoxyCompactList}\small\item\em Adds a planned event to storage for later. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a8167af09faf10dec260295c1542de585}{Add\+To\+Storage} (\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event}{Feedback\+Event} \+\_\+feedback\+\_\+event)
+\begin{DoxyCompactList}\small\item\em Adds a planned event to storage for later. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a8f806bb513c9b15ce8f8a345856ca33b}{Orient\+Antenna} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+orbit\+\_\+frame, const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+body\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Calculates a new attitude frame for the antenna. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5177011bf7857dcb5d202ab460d2fc54}{Load\+Data} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload)
+\begin{DoxyCompactList}\small\item\em Adds data to the data buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a9ab6002b3bf8b3a8ac28735d017577bc}\label{classosse_1_1collaborate_1_1_subsystem_comm_a9ab6002b3bf8b3a8ac28735d017577bc}} 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a9ab6002b3bf8b3a8ac28735d017577bc}{Erase\+Data\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Empties data buffer. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a2679fccc19316e5fd32ff6e0786a0262}{set\+\_\+data\+\_\+buffer} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+data\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Set data buffer. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a1279c0e9906325a8aff5a04de1af15d8}{k\+Antenna} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna}. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a8e4f0338a3fb3d26a620316938c02cbd}{antenna\+\_\+frame} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} reference frame. \end{DoxyCompactList}\item 
+const std\+::vector$<$ uint8\+\_\+t $>$ \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ab42ca920118cc2a528ef7dd8360f6e64}{data\+\_\+buffer} () const
+\begin{DoxyCompactList}\small\item\em Get Data buffer. \end{DoxyCompactList}\item 
+const bool \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a217614042fd340158f7c7538e7bec530}{active} () const
+\begin{DoxyCompactList}\small\item\em Activity status. \end{DoxyCompactList}\item 
+const uint64\+\_\+t \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a688d10c873c2a5992b88ed5b9ba6b369}{elapsed\+\_\+s} () const
+\begin{DoxyCompactList}\small\item\em Get time counter (seconds) \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a25bea17a1d9e372e0e8da1dfe999fd75}{set\+\_\+mode} (const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{k\+Mode} \&\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Set mode of operation. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{k\+Mode} \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_adaba2e0c3b3704a4ece62137d609adff}{mode} () const
+\begin{DoxyCompactList}\small\item\em Get mode of operation. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_modem}{Modem} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a8c5aa0a02bc95da7ad3cbd6063d0ed61}{k\+Modem} () const
+\begin{DoxyCompactList}\small\item\em Get k\+Modem. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event}{Communication\+Event} $>$ \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a9c9e0f1c881dd90275186b5146236849}{storage} ()
+\begin{DoxyCompactList}\small\item\em Get list of control packets. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event}{Feedback\+Event} $>$ \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a99c728f5a45dc285197f5cd68708cb14}{feedback\+\_\+storage} ()
+\begin{DoxyCompactList}\small\item\em Get list of return packets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_acc7ee59253e419de39e922b76492d8a6}\label{classosse_1_1collaborate_1_1_subsystem_comm_acc7ee59253e419de39e922b76492d8a6}} 
+const \hyperlink{classosse_1_1collaborate_1_1_modem}{Modem} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_acc7ee59253e419de39e922b76492d8a6}{k\+Modem\+\_\+}
+\begin{DoxyCompactList}\small\item\em The modem. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_aa77240c5f4126b123fd87ab8754bf68a}\label{classosse_1_1collaborate_1_1_subsystem_comm_aa77240c5f4126b123fd87ab8754bf68a}} 
+std\+::vector$<$ \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event}{Communication\+Event} $>$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_aa77240c5f4126b123fd87ab8754bf68a}{storage\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of control packets. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a5a75c07913f0a8346125c25062c6ccec}\label{classosse_1_1collaborate_1_1_subsystem_comm_a5a75c07913f0a8346125c25062c6ccec}} 
+\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{k\+Mode} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5a75c07913f0a8346125c25062c6ccec}{mode\+\_\+}
+\begin{DoxyCompactList}\small\item\em The mode of operation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_adc9776db966b5a37b3a1ad61fc935ca7}\label{classosse_1_1collaborate_1_1_subsystem_comm_adc9776db966b5a37b3a1ad61fc935ca7}} 
+std\+::vector$<$ \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event}{Feedback\+Event} $>$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_adc9776db966b5a37b3a1ad61fc935ca7}{feedback\+\_\+storage\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of return packets. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a1dedea563a1dd4d0683b4f90b69363a1}\label{classosse_1_1collaborate_1_1_subsystem_comm_a1dedea563a1dd4d0683b4f90b69363a1}} 
+const \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a1dedea563a1dd4d0683b4f90b69363a1}{k\+Antenna\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a5d10fed86dac2ed01a39d797387ebb53}\label{classosse_1_1collaborate_1_1_subsystem_comm_a5d10fed86dac2ed01a39d797387ebb53}} 
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5d10fed86dac2ed01a39d797387ebb53}{antenna\+\_\+frame\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} reference frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a595907bebe0c1409623d06332e1a3ae8}\label{classosse_1_1collaborate_1_1_subsystem_comm_a595907bebe0c1409623d06332e1a3ae8}} 
+std\+::vector$<$ uint8\+\_\+t $>$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a595907bebe0c1409623d06332e1a3ae8}{data\+\_\+buffer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Data buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a18a8993ec6cb817a7e10784d62212f26}\label{classosse_1_1collaborate_1_1_subsystem_comm_a18a8993ec6cb817a7e10784d62212f26}} 
+bool \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a18a8993ec6cb817a7e10784d62212f26}{active\+\_\+}
+\begin{DoxyCompactList}\small\item\em Activity status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_ac9e22a265eb605a22ee793bc8254890c}\label{classosse_1_1collaborate_1_1_subsystem_comm_ac9e22a265eb605a22ee793bc8254890c}} 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ac9e22a265eb605a22ee793bc8254890c}{elapsed\+\_\+s\+\_\+}
+\begin{DoxyCompactList}\small\item\em Get time counter (seconds) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An interface for RF communication. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a4723a445928f1dccc2734fae58cfaa3e}\label{classosse_1_1collaborate_1_1_subsystem_comm_a4723a445928f1dccc2734fae58cfaa3e}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!Subsystem\+Comm@{Subsystem\+Comm}}
+\index{Subsystem\+Comm@{Subsystem\+Comm}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{Subsystem\+Comm()}{SubsystemComm()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Subsystem\+Comm\+::\+Subsystem\+Comm (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} $\ast$}]{\+\_\+antenna,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_modem}{Modem} $\ast$}]{\+\_\+modem }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+antenna} & \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+modem} & \hyperlink{classosse_1_1collaborate_1_1_modem}{Modem} \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a217614042fd340158f7c7538e7bec530}\label{classosse_1_1collaborate_1_1_subsystem_comm_a217614042fd340158f7c7538e7bec530}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!active@{active}}
+\index{active@{active}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{active()}{active()}}
+{\footnotesize\ttfamily const bool\& osse\+::collaborate\+::\+Subsystem\+Comm\+::active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Activity status. 
+
+\begin{DoxyReturn}{Returns}
+active\+\_\+ Activity status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_ae50e83fd95a6bf1b918a0971833f9615}\label{classosse_1_1collaborate_1_1_subsystem_comm_ae50e83fd95a6bf1b918a0971833f9615}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!Add\+To\+Storage@{Add\+To\+Storage}}
+\index{Add\+To\+Storage@{Add\+To\+Storage}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{Add\+To\+Storage()}{AddToStorage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Comm\+::\+Add\+To\+Storage (\begin{DoxyParamCaption}\item[{\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event}{Subsystem\+Comm\+::\+Communication\+Event}}]{\+\_\+event }\end{DoxyParamCaption})}
+
+
+
+Adds a planned event to storage for later. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+event} & Planned commmunication event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a8167af09faf10dec260295c1542de585}\label{classosse_1_1collaborate_1_1_subsystem_comm_a8167af09faf10dec260295c1542de585}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!Add\+To\+Storage@{Add\+To\+Storage}}
+\index{Add\+To\+Storage@{Add\+To\+Storage}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{Add\+To\+Storage()}{AddToStorage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Comm\+::\+Add\+To\+Storage (\begin{DoxyParamCaption}\item[{\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event}{Subsystem\+Comm\+::\+Feedback\+Event}}]{\+\_\+feedback\+\_\+event }\end{DoxyParamCaption})}
+
+
+
+Adds a planned event to storage for later. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+feedback\+\_\+event} & Planned feedback event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a8e4f0338a3fb3d26a620316938c02cbd}\label{classosse_1_1collaborate_1_1_subsystem_comm_a8e4f0338a3fb3d26a620316938c02cbd}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!antenna\+\_\+frame@{antenna\+\_\+frame}}
+\index{antenna\+\_\+frame@{antenna\+\_\+frame}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{antenna\+\_\+frame()}{antenna\_frame()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} osse\+::collaborate\+::\+Subsystem\+Comm\+::antenna\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} reference frame. 
+
+\begin{DoxyReturn}{Returns}
+antenna\+\_\+frame\+\_\+ \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} reference frame 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a19ba433f23b428c1864f33e3b8588639}\label{classosse_1_1collaborate_1_1_subsystem_comm_a19ba433f23b428c1864f33e3b8588639}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!Calculate\+Power\+DrainW@{Calculate\+Power\+DrainW}}
+\index{Calculate\+Power\+DrainW@{Calculate\+Power\+DrainW}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{Calculate\+Power\+Drain\+W()}{CalculatePowerDrainW()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Subsystem\+Comm\+::\+Calculate\+Power\+DrainW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculate the power consumed during operation. 
+
+\begin{DoxyReturn}{Returns}
+Power consumed during operation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_ab42ca920118cc2a528ef7dd8360f6e64}\label{classosse_1_1collaborate_1_1_subsystem_comm_ab42ca920118cc2a528ef7dd8360f6e64}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!data\+\_\+buffer@{data\+\_\+buffer}}
+\index{data\+\_\+buffer@{data\+\_\+buffer}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{data\+\_\+buffer()}{data\_buffer()}}
+{\footnotesize\ttfamily const std\+::vector$<$uint8\+\_\+t$>$\& osse\+::collaborate\+::\+Subsystem\+Comm\+::data\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Data buffer. 
+
+\begin{DoxyReturn}{Returns}
+data\+\_\+buffer\+\_\+ Data buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a688d10c873c2a5992b88ed5b9ba6b369}\label{classosse_1_1collaborate_1_1_subsystem_comm_a688d10c873c2a5992b88ed5b9ba6b369}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!elapsed\+\_\+s@{elapsed\+\_\+s}}
+\index{elapsed\+\_\+s@{elapsed\+\_\+s}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{elapsed\+\_\+s()}{elapsed\_s()}}
+{\footnotesize\ttfamily const uint64\+\_\+t\& osse\+::collaborate\+::\+Subsystem\+Comm\+::elapsed\+\_\+s (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get time counter (seconds) 
+
+\begin{DoxyReturn}{Returns}
+elapsed\+\_\+s\+\_\+ Time counter (seconds) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a99c728f5a45dc285197f5cd68708cb14}\label{classosse_1_1collaborate_1_1_subsystem_comm_a99c728f5a45dc285197f5cd68708cb14}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!feedback\+\_\+storage@{feedback\+\_\+storage}}
+\index{feedback\+\_\+storage@{feedback\+\_\+storage}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{feedback\+\_\+storage()}{feedback\_storage()}}
+{\footnotesize\ttfamily const std\+::vector$<$\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event}{Feedback\+Event}$>$\& osse\+::collaborate\+::\+Subsystem\+Comm\+::feedback\+\_\+storage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get list of return packets. 
+
+\begin{DoxyReturn}{Returns}
+feedback\+\_\+storage\+\_\+ List of return packets 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a1279c0e9906325a8aff5a04de1af15d8}\label{classosse_1_1collaborate_1_1_subsystem_comm_a1279c0e9906325a8aff5a04de1af15d8}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!k\+Antenna@{k\+Antenna}}
+\index{k\+Antenna@{k\+Antenna}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{k\+Antenna()}{kAntenna()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna}$\ast$ osse\+::collaborate\+::\+Subsystem\+Comm\+::k\+Antenna (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna}. 
+
+\begin{DoxyReturn}{Returns}
+k\+Antenna\+\_\+ \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a8c5aa0a02bc95da7ad3cbd6063d0ed61}\label{classosse_1_1collaborate_1_1_subsystem_comm_a8c5aa0a02bc95da7ad3cbd6063d0ed61}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!k\+Modem@{k\+Modem}}
+\index{k\+Modem@{k\+Modem}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{k\+Modem()}{kModem()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_modem}{Modem}$\ast$ osse\+::collaborate\+::\+Subsystem\+Comm\+::k\+Modem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get k\+Modem. 
+
+\begin{DoxyReturn}{Returns}
+k\+Modem\+\_\+ \hyperlink{classosse_1_1collaborate_1_1_modem}{Modem} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a5177011bf7857dcb5d202ab460d2fc54}\label{classosse_1_1collaborate_1_1_subsystem_comm_a5177011bf7857dcb5d202ab460d2fc54}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!Load\+Data@{Load\+Data}}
+\index{Load\+Data@{Load\+Data}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{Load\+Data()}{LoadData()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Comm\+::\+Load\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload }\end{DoxyParamCaption})}
+
+
+
+Adds data to the data buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_adaba2e0c3b3704a4ece62137d609adff}\label{classosse_1_1collaborate_1_1_subsystem_comm_adaba2e0c3b3704a4ece62137d609adff}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!mode@{mode}}
+\index{mode@{mode}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{mode()}{mode()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{k\+Mode}\& osse\+::collaborate\+::\+Subsystem\+Comm\+::mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get mode of operation. 
+
+\begin{DoxyReturn}{Returns}
+mode\+\_\+ Mode of operation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a8f806bb513c9b15ce8f8a345856ca33b}\label{classosse_1_1collaborate_1_1_subsystem_comm_a8f806bb513c9b15ce8f8a345856ca33b}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!Orient\+Antenna@{Orient\+Antenna}}
+\index{Orient\+Antenna@{Orient\+Antenna}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{Orient\+Antenna()}{OrientAntenna()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Comm\+::\+Orient\+Antenna (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+orbit\+\_\+frame,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+body\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Calculates a new attitude frame for the antenna. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+orbit\+\_\+frame} & Satellite orbit frame \\
+\hline
+{\em \+\_\+body\+\_\+frame} & Satellite body frame \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_ae3626e8fd31433972e7b69aa25fb9375}\label{classosse_1_1collaborate_1_1_subsystem_comm_ae3626e8fd31433972e7b69aa25fb9375}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!Required\+Transfer\+DurationS@{Required\+Transfer\+DurationS}}
+\index{Required\+Transfer\+DurationS@{Required\+Transfer\+DurationS}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{Required\+Transfer\+Duration\+S()}{RequiredTransferDurationS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint64\+\_\+t osse\+::collaborate\+::\+Subsystem\+Comm\+::\+Required\+Transfer\+DurationS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Calculate the required transfer duration (seconds) 
+
+\begin{DoxyReturn}{Returns}
+Required transfer duration (seconds) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a7c3f63458bc096bbe875aea53d2bf748}\label{classosse_1_1collaborate_1_1_subsystem_comm_a7c3f63458bc096bbe875aea53d2bf748}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!Required\+Transfer\+DurationS@{Required\+Transfer\+DurationS}}
+\index{Required\+Transfer\+DurationS@{Required\+Transfer\+DurationS}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{Required\+Transfer\+Duration\+S()}{RequiredTransferDurationS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint64\+\_\+t osse\+::collaborate\+::\+Subsystem\+Comm\+::\+Required\+Transfer\+DurationS (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+buffer\+\_\+size\+\_\+bytes }\end{DoxyParamCaption}) const}
+
+
+
+Calculate the required transfer duration (seconds) 
+
+\begin{DoxyReturn}{Returns}
+Required transfer duration (seconds) 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+buffer\+\_\+size\+\_\+bytes} & Number of bytes in a predicted buffer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a2679fccc19316e5fd32ff6e0786a0262}\label{classosse_1_1collaborate_1_1_subsystem_comm_a2679fccc19316e5fd32ff6e0786a0262}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!set\+\_\+data\+\_\+buffer@{set\+\_\+data\+\_\+buffer}}
+\index{set\+\_\+data\+\_\+buffer@{set\+\_\+data\+\_\+buffer}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{set\+\_\+data\+\_\+buffer()}{set\_data\_buffer()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Comm\+::set\+\_\+data\+\_\+buffer (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+data\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Set data buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+buffer} & Data buffer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a25bea17a1d9e372e0e8da1dfe999fd75}\label{classosse_1_1collaborate_1_1_subsystem_comm_a25bea17a1d9e372e0e8da1dfe999fd75}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!set\+\_\+mode@{set\+\_\+mode}}
+\index{set\+\_\+mode@{set\+\_\+mode}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{set\+\_\+mode()}{set\_mode()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Comm\+::set\+\_\+mode (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{k\+Mode} \&}]{\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Set mode of operation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+mode} & Mode of operation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_a9c9e0f1c881dd90275186b5146236849}\label{classosse_1_1collaborate_1_1_subsystem_comm_a9c9e0f1c881dd90275186b5146236849}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!storage@{storage}}
+\index{storage@{storage}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{storage()}{storage()}}
+{\footnotesize\ttfamily const std\+::vector$<$\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event}{Communication\+Event}$>$\& osse\+::collaborate\+::\+Subsystem\+Comm\+::storage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get list of control packets. 
+
+\begin{DoxyReturn}{Returns}
+storage\+\_\+ List of control packets 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_comm_ab3675c014fa2575e699a43f870c1d4f0}\label{classosse_1_1collaborate_1_1_subsystem_comm_ab3675c014fa2575e699a43f870c1d4f0}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}!Update@{Update}}
+\index{Update@{Update}!osse\+::collaborate\+::\+Subsystem\+Comm@{osse\+::collaborate\+::\+Subsystem\+Comm}}
+\paragraph{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily uint16\+\_\+t osse\+::collaborate\+::\+Subsystem\+Comm\+::\+Update (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock }\end{DoxyParamCaption})}
+
+
+
+Update the communication interface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Target receiver index if one has been selected 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/subsystem\+\_\+comm.\+h\item 
+libs/collaborate/src/subsystem\+\_\+comm.\+cpp\end{DoxyCompactItemize}

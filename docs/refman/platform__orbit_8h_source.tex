@@ -1,0 +1,67 @@
+\hypertarget{platform__orbit_8h_source}{}\subsection{platform\+\_\+orbit.\+h}
+\label{platform__orbit_8h_source}\index{libs/collaborate/include/collaborate/platform\+\_\+orbit.\+h@{libs/collaborate/include/collaborate/platform\+\_\+orbit.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PLATFORM\_ORBIT\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PLATFORM\_ORBIT\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <array>}
+00020 \textcolor{preprocessor}{#include <cstdint>}
+00021 \textcolor{preprocessor}{#include <string>}
+00022 \textcolor{preprocessor}{#include <vector>}
+00023 
+00024 \textcolor{preprocessor}{#include "sgp4/sgp4.h"}
+00025 
+00026 \textcolor{preprocessor}{#include "collaborate/orbital\_state.h"}
+00027 \textcolor{preprocessor}{#include "collaborate/platform.h"}
+00028 \textcolor{preprocessor}{#include "collaborate/simulation\_clock.h"}
+00029 
+00030 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00031 \textcolor{keyword}{namespace }collaborate \{
+00032 
+\Hypertarget{platform__orbit_8h_source_l00037}\hyperlink{classosse_1_1collaborate_1_1_platform_orbit}{00037} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_platform_orbit}{PlatformOrbit} : \textcolor{keyword}{public} \hyperlink{classosse_1_1collaborate_1_1_platform}{Platform} \{
+00038  \textcolor{keyword}{public}:
+\Hypertarget{platform__orbit_8h_source_l00040}\hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a50b5b9308298c2a17db06a92b82abe85}{00040}   \textcolor{keyword}{static} constexpr \textcolor{keywordtype}{int} \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a50b5b9308298c2a17db06a92b82abe85}{kNumElements} = 3;
+\Hypertarget{platform__orbit_8h_source_l00042}\hyperlink{classosse_1_1collaborate_1_1_platform_orbit_aeb5892b2982d26547cead0beebc81fe0}{00042}   \textcolor{keyword}{typedef} std::array<std::string, kNumElements> \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_aeb5892b2982d26547cead0beebc81fe0}{TwoLineElementSet};
+00045   \textcolor{keyword}{explicit} \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a7883ef54a0b5d13497fd6d21c3bd2ebf}{PlatformOrbit}(\textcolor{keyword}{const} TwoLineElementSet& \_tle);
+00050   \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{OrbitalState} \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a6741aa8faec9968fd8353214d2022648}{PredictOrbitalState}(\textcolor{keyword}{const} 
+      \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_simulation\_clock,
+00051                                    \textcolor{keyword}{const} uint64\_t& \_time\_s) \textcolor{keyword}{const};
+00056   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a6741aa8faec9968fd8353214d2022648}{PredictOrbitalState}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_simulation\_clock,
+00057                            \textcolor{keyword}{const} uint64\_t& \_time\_s,
+00058                            \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{OrbitalState}* \_orbital\_state) \textcolor{keyword}{const};
+00067   std::vector<PlatformOrbit> \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a7c11526ed7a47023520c8fbf3605b4c4}{Duplicate}(\textcolor{keyword}{const} uint16\_t& \_orbit\_planes,
+00068                                        \textcolor{keyword}{const} uint16\_t& \_groups\_per\_plane,
+00069                                        \textcolor{keyword}{const} uint16\_t& \_sats\_in\_train,
+00070                                        \textcolor{keyword}{const} uint16\_t& \_sats\_in\_tandem,
+00071                                        \textcolor{keyword}{const} uint16\_t& \_train\_angle,
+00072                                        \textcolor{keyword}{const} uint16\_t& \_tandem\_angle) \textcolor{keyword}{const};
+\Hypertarget{platform__orbit_8h_source_l00075}\hyperlink{classosse_1_1collaborate_1_1_platform_orbit_ae0b1dac3159bb4f278091b73221cad93}{00075}   \textcolor{keyword}{const} TwoLineElementSet& \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_ae0b1dac3159bb4f278091b73221cad93}{kTle}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a997543f1020cfa000918286b774c4aa8}{kTle\_};\}
+00076 
+00077  \textcolor{keyword}{private}:
+\Hypertarget{platform__orbit_8h_source_l00079}\hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a997543f1020cfa000918286b774c4aa8}{00079}   \textcolor{keyword}{const} TwoLineElementSet \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a997543f1020cfa000918286b774c4aa8}{kTle\_};
+\Hypertarget{platform__orbit_8h_source_l00081}\hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a5653e1ae6b7a6274f0ecfdb423b25606}{00081}   \textcolor{keyword}{const} sgp4::SGP4 \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a5653e1ae6b7a6274f0ecfdb423b25606}{kModel\_};
+00082 \};
+00083 
+00088 std::vector<PlatformOrbit> PlatformOrbitList(\textcolor{keyword}{const} std::string& \_path);
+00089 
+00090 \}  \textcolor{comment}{// namespace collaborate}
+00091 \}  \textcolor{comment}{// namespace osse}
+00092 
+00093 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PLATFORM\_ORBIT\_H\_}
+\end{DoxyCode}

@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 # Add some basic metadata.
-LABEL version="0.0" maintainer="Ryan Linnabary" email="linnabary.24@osu.edu"
+LABEL version="0.0" maintainer="The Ohio State University"
 
 # Avoiding an Installation Prompt
 ENV TZ=US/Eastern

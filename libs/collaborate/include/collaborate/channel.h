@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Ryan Linnabary
+// Copyright (C) 2019 The Ohio State University
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -96,7 +96,8 @@ class Channel {
   void Start();
   /// @brief Updates member variables and performs fake transfers
   /// @param[in] _clock SimulationClock
-  void Update(const SimulationClock& _clock);
+  /// @param[in] _flag Flag
+  void Update(const SimulationClock& _clock, const bool& _flag);
   /// @brief Calculates expected transfer duration (seconds)
   /// @returns Expected transfer duration (seconds)
   uint64_t PredictTransferDurationS() const;

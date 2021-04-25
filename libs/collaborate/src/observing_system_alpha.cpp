@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Ryan Linnabary
+// Copyright (C) 2019 The Ohio State University
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -36,7 +36,20 @@ ObservingSystemAlpha::ObservingSystemAlpha(Sun* _sun,
                                            DataLogger* _network_log)
     : ObservingSystem(_sun, _clock, _scheduler, _event_log),
       unweighted_(GraphUnweighted(_network_log)),
-      channels_(std::vector<Channel>()) {
+      channels_(std::vector<Channel>()),
+      flag_(false) {
+}
+
+ObservingSystemAlpha::ObservingSystemAlpha(Sun* _sun,
+                                           SimulationClock* _clock,
+                                           Scheduler* _scheduler,
+                                           EventLogger* _event_log,
+                                           DataLogger* _network_log,
+                                           const bool& _flag)
+    : ObservingSystem(_sun, _clock, _scheduler, _event_log),
+      unweighted_(GraphUnweighted(_network_log)),
+      channels_(std::vector<Channel>()),
+      flag_(_flag) {
 }
 
 void ObservingSystemAlpha::Seed(const uint64_t& _span_s) {
@@ -66,6 +79,26 @@ void ObservingSystemAlpha::SeedMany(const uint64_t& _span_s,
     while (time_s < (_span_s - duration_s)) {
       source->PlanMeasurement(time_s, std::numeric_limits<uint16_t>::max());
       time_s += duration_s + 400;
+      num_samples_++;
+    }
+  }
+  event_log_->log()->info("[{}] Planning {} samples", *clock_, num_samples_);
+}
+
+void ObservingSystemAlpha::SeedManyMore(const uint64_t& _span_s,
+                                        const uint16_t& _constellation) {
+  std::vector<Node*> sources;
+  for (auto &node : nodes_) {
+    if (node->constellation() == _constellation) {
+      sources.push_back(node);
+    }
+  }
+  for (auto &source : sources) {
+    uint64_t time_s = 10;
+    uint64_t duration_s = source->sensing_if().sensor()->kDurationS();
+    while (time_s < (_span_s - duration_s)) {
+      source->PlanMeasurement(time_s, std::numeric_limits<uint16_t>::max());
+      time_s += duration_s + 10;
       num_samples_++;
     }
   }
@@ -117,7 +150,7 @@ void ObservingSystemAlpha::ArbitrateCommunication() {
   for (auto &node : nodes_) {
     if (node->target_index() != std::numeric_limits<uint16_t>::max()) {
       Channel channel(node, nodes_[node->target_index()]);
-      channel.Update(*clock_);
+      channel.Update(*clock_, flag_);
       channel.Start();
       channels_.push_back(channel);
       unweighted_.SetEdge(node->index(), node->target_index(), true);
@@ -125,7 +158,7 @@ void ObservingSystemAlpha::ArbitrateCommunication() {
   }
   auto channel = channels_.begin();
   while (channel != channels_.end()) {
-    (*channel).Update(*clock_);
+    (*channel).Update(*clock_, flag_);
     bool success = (*channel).success_flag();
     bool error = (*channel).error_flag();
     if (success || error || !(*channel).active()) {

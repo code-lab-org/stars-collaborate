@@ -1,0 +1,88 @@
+\hypertarget{simulation__clock_8h_source}{}\subsection{simulation\+\_\+clock.\+h}
+\label{simulation__clock_8h_source}\index{libs/collaborate/include/collaborate/simulation\+\_\+clock.\+h@{libs/collaborate/include/collaborate/simulation\+\_\+clock.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SIMULATION\_CLOCK\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SIMULATION\_CLOCK\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <cstdint>}
+00020 \textcolor{preprocessor}{#include <ostream>}
+00021 \textcolor{preprocessor}{#include <string>}
+00022 
+00023 \textcolor{preprocessor}{#include "sgp4/date\_time.h"}
+00024 
+00025 \textcolor{preprocessor}{#include "collaborate/data\_logger.h"}
+00026 
+00027 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00028 \textcolor{keyword}{namespace }collaborate \{
+00029 
+\Hypertarget{simulation__clock_8h_source_l00032}\hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{00032} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock} \{
+00033  \textcolor{keyword}{public}:
+\Hypertarget{simulation__clock_8h_source_l00035}\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a026eab97f275ec2d672f40b0b0bb7a3d}{00035}   \textcolor{keyword}{static} constexpr \textcolor{keywordtype}{int} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a026eab97f275ec2d672f40b0b0bb7a3d}{kLogBufferSize} = 1000;
+\Hypertarget{simulation__clock_8h_source_l00037}\hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer}{00037}   \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer}{LogBuffer} \{
+\Hypertarget{simulation__clock_8h_source_l00039}\hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_ada8cccf621cc1aecfaa081d283f9fbba}{00039}     \textcolor{keywordtype}{int} \hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_ada8cccf621cc1aecfaa081d283f9fbba}{counter};
+\Hypertarget{simulation__clock_8h_source_l00041}\hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_a82d13a7e8ac77ec33badef7c8873dba8}{00041}     \textcolor{keywordtype}{int} \hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_a82d13a7e8ac77ec33badef7c8873dba8}{year}[\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a026eab97f275ec2d672f40b0b0bb7a3d}{kLogBufferSize}];
+\Hypertarget{simulation__clock_8h_source_l00043}\hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_a61fdca2f5d3c18f8d14620929eed3fbf}{00043}     \textcolor{keywordtype}{int} \hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_a61fdca2f5d3c18f8d14620929eed3fbf}{month}[\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a026eab97f275ec2d672f40b0b0bb7a3d}{kLogBufferSize}];
+\Hypertarget{simulation__clock_8h_source_l00045}\hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_a33fad29c4e9288d60f3f7f9281edc2dd}{00045}     \textcolor{keywordtype}{int} \hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_a33fad29c4e9288d60f3f7f9281edc2dd}{day}[\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a026eab97f275ec2d672f40b0b0bb7a3d}{kLogBufferSize}];
+\Hypertarget{simulation__clock_8h_source_l00047}\hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_ac4ee173e0f2102ebb46a89120678096d}{00047}     \textcolor{keywordtype}{int} \hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_ac4ee173e0f2102ebb46a89120678096d}{hour}[\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a026eab97f275ec2d672f40b0b0bb7a3d}{kLogBufferSize}];
+\Hypertarget{simulation__clock_8h_source_l00049}\hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_a87b9d9ad576d00925c25feae0cf249da}{00049}     \textcolor{keywordtype}{int} \hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_a87b9d9ad576d00925c25feae0cf249da}{minute}[\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a026eab97f275ec2d672f40b0b0bb7a3d}{kLogBufferSize}];
+\Hypertarget{simulation__clock_8h_source_l00051}\hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_ae570f2683f0566f734ab3eb85122fdd4}{00051}     \textcolor{keywordtype}{int} \hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_ae570f2683f0566f734ab3eb85122fdd4}{second}[\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a026eab97f275ec2d672f40b0b0bb7a3d}{kLogBufferSize}];
+\Hypertarget{simulation__clock_8h_source_l00053}\hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_af9184076cb81bdf080d59df2d3df38a6}{00053}     \textcolor{keywordtype}{int} \hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer_af9184076cb81bdf080d59df2d3df38a6}{microsecond}[\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a026eab97f275ec2d672f40b0b0bb7a3d}{kLogBufferSize}];
+00054   \} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_add9ec31a41ed5f7d75967e98396c021d}{LogBuffer};
+00057   \textcolor{keyword}{explicit} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a538621acdc4673f7463f2fa16622f7b9}{SimulationClock}(\hyperlink{classosse_1_1collaborate_1_1_data_logger}{DataLogger}* \_data\_log);
+00063   \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a538621acdc4673f7463f2fa16622f7b9}{SimulationClock}(\hyperlink{classosse_1_1collaborate_1_1_data_logger}{DataLogger}* \_data\_log,
+00064                   \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \_year,
+00065                   \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \_month,
+00066                   \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \_day);
+00075   \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a538621acdc4673f7463f2fa16622f7b9}{SimulationClock}(\hyperlink{classosse_1_1collaborate_1_1_data_logger}{DataLogger}* \_data\_log,
+00076                   \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \_year,
+00077                   \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \_month,
+00078                   \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \_day,
+00079                   \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \_hour,
+00080                   \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \_minute,
+00081                   \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \_second);
+00084   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_aabf56af06948df891086681c1651cbfe}{Tick}(\textcolor{keyword}{const} uint64\_t& \_seconds);
+00087   std::string \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a10001235cd019861c226e6d8814da638}{ToString}() \textcolor{keyword}{const};
+\Hypertarget{simulation__clock_8h_source_l00090}\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a089b6bf38ec18dde18a1aff638154269}{00090}   \textcolor{keyword}{const} sgp4::DateTime& \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a089b6bf38ec18dde18a1aff638154269}{date\_time}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_acb2239fb1e6689a6c6355c0886e2d90a}{date\_time\_};\}
+\Hypertarget{simulation__clock_8h_source_l00093}\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a067a244986cc830bc796316db4b98358}{00093}   \textcolor{keyword}{const} uint64\_t& \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a067a244986cc830bc796316db4b98358}{last\_increment\_s}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_acbc4c82a635383514e306a2ec83b23e1}{last\_increment\_s\_};\}
+\Hypertarget{simulation__clock_8h_source_l00096}\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a7c4d4f02803231b0d06a80081d73c206}{00096}   \textcolor{keyword}{const} uint64\_t& \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a7c4d4f02803231b0d06a80081d73c206}{elapsed\_s}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a7168d8bf983c08e204648d8cb168133f}{elapsed\_s\_};\}
+\Hypertarget{simulation__clock_8h_source_l00099}\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a0791fb7aeb5fb252f8a57e572dab823a}{00099}   \textcolor{keyword}{const} uint64\_t& \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a0791fb7aeb5fb252f8a57e572dab823a}{ticks}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_ae7097d8c3a0afb5d83525aaeebcd72fd}{ticks\_};\}
+00101   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a2d9985044f9f5c90a87c38bb16e25c2a}{Buffer}();
+00103   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_ac9d66ec221a35419d5ccc2aecfcf3cc9}{Flush}();
+00104 
+00105  \textcolor{keyword}{private}:
+\Hypertarget{simulation__clock_8h_source_l00107}\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_acb2239fb1e6689a6c6355c0886e2d90a}{00107}   sgp4::DateTime \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_acb2239fb1e6689a6c6355c0886e2d90a}{date\_time\_};
+\Hypertarget{simulation__clock_8h_source_l00109}\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_acbc4c82a635383514e306a2ec83b23e1}{00109}   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_acbc4c82a635383514e306a2ec83b23e1}{last\_increment\_s\_};
+\Hypertarget{simulation__clock_8h_source_l00111}\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a7168d8bf983c08e204648d8cb168133f}{00111}   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a7168d8bf983c08e204648d8cb168133f}{elapsed\_s\_};
+\Hypertarget{simulation__clock_8h_source_l00113}\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_ae7097d8c3a0afb5d83525aaeebcd72fd}{00113}   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_ae7097d8c3a0afb5d83525aaeebcd72fd}{ticks\_};
+\Hypertarget{simulation__clock_8h_source_l00115}\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a99bb1f5a13702f64b1b553ef6eacdbf6}{00115}   \hyperlink{classosse_1_1collaborate_1_1_data_logger}{DataLogger}* \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a99bb1f5a13702f64b1b553ef6eacdbf6}{data\_log\_};
+\Hypertarget{simulation__clock_8h_source_l00117}\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a9c5e6f891b9cdec50f0ec280444458d0}{00117}   \hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer}{LogBuffer} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a9c5e6f891b9cdec50f0ec280444458d0}{log\_buffer\_};
+00118 \};
+00119 
+00123 \textcolor{keyword}{inline} std::ostream& operator<<(std::ostream& strm,
+00124                                 \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_simulation\_clock) \{
+00125   \textcolor{keywordflow}{return} strm << \_simulation\_clock.\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a10001235cd019861c226e6d8814da638}{ToString}();
+00126 \}
+00127 
+00128 
+00129 \}  \textcolor{comment}{// namespace collaborate}
+00130 \}  \textcolor{comment}{// namespace osse}
+00131 
+00132 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SIMULATION\_CLOCK\_H\_}
+\end{DoxyCode}

@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Ryan Linnabary
+// Copyright (C) 2019 The Ohio State University
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -82,7 +82,8 @@ bool SubsystemSensing::Update(const SimulationClock& _clock,
                      measurement,
                      0,
                      stream.str(),
-                     _node_index);
+                     // _node_index);  // informer_index_);
+                     informer_index_);
     LoadData(packet.payload());
     buffer_.elapsed_s.push_back(_clock.elapsed_s());
     buffer_.year.push_back(_clock.date_time().Year());
@@ -97,7 +98,8 @@ bool SubsystemSensing::Update(const SimulationClock& _clock,
     buffer_.altitude_m.push_back(place_rad_m.altitude_m());
     buffer_.measurement.push_back(measurement);
     buffer_.resolution_m.push_back(0);
-    buffer_.index.push_back(_node_index);
+    // buffer_.index.push_back(_node_index);  // (informer_index_);
+    buffer_.index.push_back(informer_index_);
     if (elapsed_s_ < expiration_s_) {
       elapsed_s_ += _clock.last_increment_s();
     } else {

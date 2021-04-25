@@ -1,0 +1,97 @@
+\hypertarget{classosse_1_1collaborate_1_1_antenna_helical}{}\subsection{osse\+:\+:collaborate\+:\+:Antenna\+Helical Class Reference}
+\label{classosse_1_1collaborate_1_1_antenna_helical}\index{osse\+::collaborate\+::\+Antenna\+Helical@{osse\+::collaborate\+::\+Antenna\+Helical}}
+
+
+An approximation of a helical antenna (more directional than patch)  
+
+
+
+
+{\ttfamily \#include $<$antenna\+\_\+helical.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Antenna\+Helical\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classosse_1_1collaborate_1_1_antenna_helical__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_antenna_helical_a2984fb54d37462763ca923c0ba5d4893}{Antenna\+Helical} (const double \&\+\_\+max\+\_\+gain\+\_\+db, const double \&\+\_\+roll\+\_\+rad, const double \&\+\_\+pitch\+\_\+rad, const double \&\+\_\+yaw\+\_\+rad)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_antenna_helical_ac405a2e34ec76610b88d8f1fb407658d}{Gain\+Db} (const double \&\+\_\+theta\+\_\+rad, const double \&\+\_\+phi\+\_\+rad) const
+\begin{DoxyCompactList}\small\item\em Obtain directional gain (decibels) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+An approximation of a helical antenna (more directional than patch) 
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=0.5\textwidth]{helical}}
+\end{DoxyImageNoCaption}
+
+
+\[ g = g_{max}\cos^{50}{\theta}~~~(decibels) \] 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_helical_a2984fb54d37462763ca923c0ba5d4893}\label{classosse_1_1collaborate_1_1_antenna_helical_a2984fb54d37462763ca923c0ba5d4893}} 
+\index{osse\+::collaborate\+::\+Antenna\+Helical@{osse\+::collaborate\+::\+Antenna\+Helical}!Antenna\+Helical@{Antenna\+Helical}}
+\index{Antenna\+Helical@{Antenna\+Helical}!osse\+::collaborate\+::\+Antenna\+Helical@{osse\+::collaborate\+::\+Antenna\+Helical}}
+\paragraph{\texorpdfstring{Antenna\+Helical()}{AntennaHelical()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Antenna\+Helical\+::\+Antenna\+Helical (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+max\+\_\+gain\+\_\+db,  }\item[{const double \&}]{\+\_\+roll\+\_\+rad,  }\item[{const double \&}]{\+\_\+pitch\+\_\+rad,  }\item[{const double \&}]{\+\_\+yaw\+\_\+rad }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+max\+\_\+gain\+\_\+db} & Maximum gain (decibels) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+roll\+\_\+rad} & Roll angle to host body reference frame (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+pitch\+\_\+rad} & Pitch angle to host body reference frame (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+yaw\+\_\+rad} & Yaw angle to host body reference frame (radians) \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_helical_ac405a2e34ec76610b88d8f1fb407658d}\label{classosse_1_1collaborate_1_1_antenna_helical_ac405a2e34ec76610b88d8f1fb407658d}} 
+\index{osse\+::collaborate\+::\+Antenna\+Helical@{osse\+::collaborate\+::\+Antenna\+Helical}!Gain\+Db@{Gain\+Db}}
+\index{Gain\+Db@{Gain\+Db}!osse\+::collaborate\+::\+Antenna\+Helical@{osse\+::collaborate\+::\+Antenna\+Helical}}
+\paragraph{\texorpdfstring{Gain\+Db()}{GainDb()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Antenna\+Helical\+::\+Gain\+Db (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+theta\+\_\+rad,  }\item[{const double \&}]{\+\_\+phi\+\_\+rad }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Obtain directional gain (decibels) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+theta\+\_\+rad} & Altitude angle from positive z-\/axis (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+phi\+\_\+rad} & Azimuth angle (radians) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Directional gain (decibels)
+\end{DoxyReturn}
+\[ g = g_{max}\cos^{50}{\theta}~~~(decibels) \] 
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_antenna_a67214b4b28f3d48931c8fb435cc1f85d}{osse\+::collaborate\+::\+Antenna}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/antenna\+\_\+helical.\+h\item 
+libs/collaborate/src/antenna\+\_\+helical.\+cpp\end{DoxyCompactItemize}

@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2019 Ryan Linnabary
+# Copyright (C) 2019 Andrew O'Brien
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -42,11 +42,9 @@ docker run \
        -e HOME="/workspace" \
        -e DISPLAY="$DISPLAY" \
        -e XAUTHORITY="/workspace/.Xauthority" \
-       -e MANPATH="${MANPATH}:/workspace/collaborate/docs/man/" \
-       -e PYTHONPATH="${PYTHONPATH}:/workspace/collaborate/util/" \
        -v /var/lib/sss/pipes/:/var/lib/sss/pipes/:rw \
        -v /var/lib/sss/mc/:/var/lib/sss/mc/:ro \
        -v /tmp/.X11-unix:/tmp/.X11-unix \
        -v "$HOME":/workspace \
-       -w /workspace/collaborate \
+       -w /workspace/stars-collaborate \
        collaborate

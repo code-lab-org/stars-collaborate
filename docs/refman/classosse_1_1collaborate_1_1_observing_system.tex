@@ -1,0 +1,219 @@
+\hypertarget{classosse_1_1collaborate_1_1_observing_system}{}\subsection{osse\+:\+:collaborate\+:\+:Observing\+System Class Reference}
+\label{classosse_1_1collaborate_1_1_observing_system}\index{osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}}
+
+
+Abstract satellite network.  
+
+
+
+
+{\ttfamily \#include $<$observing\+\_\+system.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Observing\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classosse_1_1collaborate_1_1_observing_system__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_observing_system_a9cde3752308908b32f882ea8c529e7e2}{Observing\+System} (\hyperlink{classosse_1_1collaborate_1_1_sun}{Sun} $\ast$\+\_\+sun, \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} $\ast$\+\_\+clock, \hyperlink{classosse_1_1collaborate_1_1_scheduler}{Scheduler} $\ast$\+\_\+scheduler, \hyperlink{classosse_1_1collaborate_1_1_event_logger}{Event\+Logger} $\ast$\+\_\+event\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_a552670acae91c52b06296a0118e7871b}\label{classosse_1_1collaborate_1_1_observing_system_a552670acae91c52b06296a0118e7871b}} 
+\hyperlink{classosse_1_1collaborate_1_1_observing_system_a552670acae91c52b06296a0118e7871b}{$\sim$\+Observing\+System} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classosse_1_1collaborate_1_1_observing_system_ae324ec9fd51b8e65afd80292748b406c}{Seed\+Many} (const uint64\+\_\+t \&\+\_\+span\+\_\+s, const uint16\+\_\+t \&\+\_\+constellation)=0
+\begin{DoxyCompactList}\small\item\em Generates random list of samples to start with. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_a8ebba43b54a5c7bb28e7721e7b1f8d9b}\label{classosse_1_1collaborate_1_1_observing_system_a8ebba43b54a5c7bb28e7721e7b1f8d9b}} 
+virtual void \hyperlink{classosse_1_1collaborate_1_1_observing_system_a8ebba43b54a5c7bb28e7721e7b1f8d9b}{Update} ()=0
+\begin{DoxyCompactList}\small\item\em Update the nodes and protocol. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_observing_system_af0d0030fd4d55ca3ac12bd65074d5b7d}{Launch} (const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_platform_orbit}{Platform\+Orbit} $>$ \&\+\_\+orbits, const uint16\+\_\+t \&\+\_\+constellation, const bool \&\+\_\+separate, const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm}{Subsystem\+Comm} \&\+\_\+comm\+\_\+if, const \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing}{Subsystem\+Sensing} \&\+\_\+sensing\+\_\+if, const \hyperlink{classosse_1_1collaborate_1_1_subsystem_power}{Subsystem\+Power} \&\+\_\+subsystem\+\_\+power, \hyperlink{classosse_1_1collaborate_1_1_data_processor}{Data\+Processor} $\ast$\+\_\+data\+\_\+processor, \hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$\+\_\+data\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Make new nodes from a list of platforms. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_observing_system_a083b14c76f2e4af95d0228435b0644a4}{Place} (const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_platform_earth}{Platform\+Earth} $>$ \&\+\_\+earths, const uint16\+\_\+t \&\+\_\+constellation, const bool \&\+\_\+separate, const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm}{Subsystem\+Comm} \&\+\_\+comm\+\_\+if, const \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing}{Subsystem\+Sensing} \&\+\_\+sensing\+\_\+if, const \hyperlink{classosse_1_1collaborate_1_1_subsystem_power}{Subsystem\+Power} \&\+\_\+subsystem\+\_\+power, \hyperlink{classosse_1_1collaborate_1_1_data_processor}{Data\+Processor} $\ast$\+\_\+data\+\_\+processor, \hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$\+\_\+data\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Make new nodes from a list of platforms. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$ $>$ \hyperlink{classosse_1_1collaborate_1_1_observing_system_ab870ae4c9e01fdf97682908857d882ed}{nodes} () const
+\begin{DoxyCompactList}\small\item\em Get the earth\+\_\+data of nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_a11c8616261fcf49fe02cddcfb662712c}\label{classosse_1_1collaborate_1_1_observing_system_a11c8616261fcf49fe02cddcfb662712c}} 
+void \hyperlink{classosse_1_1collaborate_1_1_observing_system_a11c8616261fcf49fe02cddcfb662712c}{Complete} () const
+\begin{DoxyCompactList}\small\item\em Logs the nodes at the end. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_scheduler}{Scheduler} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_observing_system_aaf4978922f6cdc6f361905a0523ce8a5}{scheduler} ()
+\begin{DoxyCompactList}\small\item\em Get the scheduler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_afd35e353e3bfa35992269ec9310995d8}\label{classosse_1_1collaborate_1_1_observing_system_afd35e353e3bfa35992269ec9310995d8}} 
+void \hyperlink{classosse_1_1collaborate_1_1_observing_system_afd35e353e3bfa35992269ec9310995d8}{Log\+Nodes} () const
+\begin{DoxyCompactList}\small\item\em Logs the nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_a4aba07ee9f871dbc59e1a9cee69b3df1}\label{classosse_1_1collaborate_1_1_observing_system_a4aba07ee9f871dbc59e1a9cee69b3df1}} 
+const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_observing_system_a4aba07ee9f871dbc59e1a9cee69b3df1}{clock\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_ab806285bde05f87bdb89c7636eb20bd8}\label{classosse_1_1collaborate_1_1_observing_system_ab806285bde05f87bdb89c7636eb20bd8}} 
+\hyperlink{classosse_1_1collaborate_1_1_scheduler}{Scheduler} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_observing_system_ab806285bde05f87bdb89c7636eb20bd8}{scheduler\+\_\+}
+\begin{DoxyCompactList}\small\item\em Autonomous network scheduler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_a61f8db4cc88e53cc644e43424aa6e9e4}\label{classosse_1_1collaborate_1_1_observing_system_a61f8db4cc88e53cc644e43424aa6e9e4}} 
+std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$ $>$ \hyperlink{classosse_1_1collaborate_1_1_observing_system_a61f8db4cc88e53cc644e43424aa6e9e4}{nodes\+\_\+}
+\begin{DoxyCompactList}\small\item\em Ordered list of nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_a44cdbb8ac2fc877e3e0efee778e3fc22}\label{classosse_1_1collaborate_1_1_observing_system_a44cdbb8ac2fc877e3e0efee778e3fc22}} 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_observing_system_a44cdbb8ac2fc877e3e0efee778e3fc22}{num\+\_\+samples\+\_\+}
+\begin{DoxyCompactList}\small\item\em Number of samples seeded. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_ac3f97c3eb20163b20076f35ce78175ee}\label{classosse_1_1collaborate_1_1_observing_system_ac3f97c3eb20163b20076f35ce78175ee}} 
+\hyperlink{classosse_1_1collaborate_1_1_event_logger}{Event\+Logger} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_observing_system_ac3f97c3eb20163b20076f35ce78175ee}{event\+\_\+log\+\_\+}
+\begin{DoxyCompactList}\small\item\em Event logger. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_aa6de5a15a22658a10220b163ee1d21d0}\label{classosse_1_1collaborate_1_1_observing_system_aa6de5a15a22658a10220b163ee1d21d0}} 
+\hyperlink{classosse_1_1collaborate_1_1_sun}{Sun} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_observing_system_aa6de5a15a22658a10220b163ee1d21d0}{sun\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_sun}{Sun}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Abstract satellite network. 
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth]{map}}
+\end{DoxyImageNoCaption}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_a9cde3752308908b32f882ea8c529e7e2}\label{classosse_1_1collaborate_1_1_observing_system_a9cde3752308908b32f882ea8c529e7e2}} 
+\index{osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}!Observing\+System@{Observing\+System}}
+\index{Observing\+System@{Observing\+System}!osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}}
+\paragraph{\texorpdfstring{Observing\+System()}{ObservingSystem()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Observing\+System\+::\+Observing\+System (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_sun}{Sun} $\ast$}]{\+\_\+sun,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} $\ast$}]{\+\_\+clock,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_scheduler}{Scheduler} $\ast$}]{\+\_\+scheduler,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_event_logger}{Event\+Logger} $\ast$}]{\+\_\+event\+\_\+log }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+sun} & Star at the center of the solar system \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+scheduler} & \hyperlink{classosse_1_1collaborate_1_1_scheduler}{Scheduler} \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+event\+\_\+log} & Event log \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_af0d0030fd4d55ca3ac12bd65074d5b7d}\label{classosse_1_1collaborate_1_1_observing_system_af0d0030fd4d55ca3ac12bd65074d5b7d}} 
+\index{osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}!Launch@{Launch}}
+\index{Launch@{Launch}!osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}}
+\paragraph{\texorpdfstring{Launch()}{Launch()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Observing\+System\+::\+Launch (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_platform_orbit}{Platform\+Orbit} $>$ \&}]{\+\_\+orbits,  }\item[{const uint16\+\_\+t \&}]{\+\_\+constellation,  }\item[{const bool \&}]{\+\_\+separate,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm}{Subsystem\+Comm} \&}]{\+\_\+comm\+\_\+if,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing}{Subsystem\+Sensing} \&}]{\+\_\+sensing\+\_\+if,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_subsystem_power}{Subsystem\+Power} \&}]{\+\_\+subsystem\+\_\+power,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_data_processor}{Data\+Processor} $\ast$}]{\+\_\+data\+\_\+processor,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$}]{\+\_\+data\+\_\+log }\end{DoxyParamCaption})}
+
+
+
+Make new nodes from a list of platforms. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+orbits} & List of orbits \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+constellation} & Starting constellation identifier \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+separate} & Whether the nodess are separate constellations \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+comm\+\_\+if} & Communication interface \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+sensing\+\_\+if} & Sensing interface \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+subsystem\+\_\+power} & Power subsystem \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+processor} & Data processor \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+log} & Data logger \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_ab870ae4c9e01fdf97682908857d882ed}\label{classosse_1_1collaborate_1_1_observing_system_ab870ae4c9e01fdf97682908857d882ed}} 
+\index{osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}!nodes@{nodes}}
+\index{nodes@{nodes}!osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}}
+\paragraph{\texorpdfstring{nodes()}{nodes()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classosse_1_1collaborate_1_1_node}{Node}$\ast$$>$ osse\+::collaborate\+::\+Observing\+System\+::nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the earth\+\_\+data of nodes. 
+
+\begin{DoxyReturn}{Returns}
+nodes\+\_\+ The earth\+\_\+data of nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_a083b14c76f2e4af95d0228435b0644a4}\label{classosse_1_1collaborate_1_1_observing_system_a083b14c76f2e4af95d0228435b0644a4}} 
+\index{osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}!Place@{Place}}
+\index{Place@{Place}!osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}}
+\paragraph{\texorpdfstring{Place()}{Place()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Observing\+System\+::\+Place (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_platform_earth}{Platform\+Earth} $>$ \&}]{\+\_\+earths,  }\item[{const uint16\+\_\+t \&}]{\+\_\+constellation,  }\item[{const bool \&}]{\+\_\+separate,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm}{Subsystem\+Comm} \&}]{\+\_\+comm\+\_\+if,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing}{Subsystem\+Sensing} \&}]{\+\_\+sensing\+\_\+if,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_subsystem_power}{Subsystem\+Power} \&}]{\+\_\+subsystem\+\_\+power,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_data_processor}{Data\+Processor} $\ast$}]{\+\_\+data\+\_\+processor,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$}]{\+\_\+data\+\_\+log }\end{DoxyParamCaption})}
+
+
+
+Make new nodes from a list of platforms. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+earths} & List of earth platforms \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+constellation} & Starting constellation identifier \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+separate} & Whether the nodess are separate constellations \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+comm\+\_\+if} & The communication interface \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+sensing\+\_\+if} & Sensing interface \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+subsystem\+\_\+power} & Power subsystem \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+processor} & Data processor \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+log} & Data logger \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_aaf4978922f6cdc6f361905a0523ce8a5}\label{classosse_1_1collaborate_1_1_observing_system_aaf4978922f6cdc6f361905a0523ce8a5}} 
+\index{osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}!scheduler@{scheduler}}
+\index{scheduler@{scheduler}!osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}}
+\paragraph{\texorpdfstring{scheduler()}{scheduler()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_scheduler}{Scheduler}$\ast$ osse\+::collaborate\+::\+Observing\+System\+::scheduler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the scheduler. 
+
+\begin{DoxyReturn}{Returns}
+scheduler\+\_\+ \hyperlink{classosse_1_1collaborate_1_1_scheduler}{Scheduler} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_observing_system_ae324ec9fd51b8e65afd80292748b406c}\label{classosse_1_1collaborate_1_1_observing_system_ae324ec9fd51b8e65afd80292748b406c}} 
+\index{osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}!Seed\+Many@{Seed\+Many}}
+\index{Seed\+Many@{Seed\+Many}!osse\+::collaborate\+::\+Observing\+System@{osse\+::collaborate\+::\+Observing\+System}}
+\paragraph{\texorpdfstring{Seed\+Many()}{SeedMany()}}
+{\footnotesize\ttfamily virtual void osse\+::collaborate\+::\+Observing\+System\+::\+Seed\+Many (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+span\+\_\+s,  }\item[{const uint16\+\_\+t \&}]{\+\_\+constellation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Generates random list of samples to start with. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+span\+\_\+s} & Total time span of the simulation (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+constellation} & Constellation \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_a6f6e7a1f24d7890c9da666e9e90ecb2b}{osse\+::collaborate\+::\+Observing\+System\+Alpha}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/observing\+\_\+system.\+h\item 
+libs/collaborate/src/observing\+\_\+system.\+cpp\end{DoxyCompactItemize}

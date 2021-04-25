@@ -1,0 +1,286 @@
+\hypertarget{classosse_1_1collaborate_1_1_attitude_matrix}{}\subsection{osse\+:\+:collaborate\+:\+:Attitude\+Matrix Class Reference}
+\label{classosse_1_1collaborate_1_1_attitude_matrix}\index{osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}}
+
+
+A 2D (3x3) matrix for reference frame and attitude transformations.  
+
+
+
+
+{\ttfamily \#include $<$attitude\+\_\+matrix.\+h$>$}
+
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_ac9df4bd3f06ab890e74afe62d1891344}\label{classosse_1_1collaborate_1_1_attitude_matrix_ac9df4bd3f06ab890e74afe62d1891344}} 
+typedef std\+::array$<$ double, \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a7d700f1773cb534bd9f807149ab6d8f7}{k\+Columns} $>$ \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_ac9df4bd3f06ab890e74afe62d1891344}{Row}
+\begin{DoxyCompactList}\small\item\em A row if an Array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}\label{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}} 
+typedef std\+::array$<$ \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_ac9df4bd3f06ab890e74afe62d1891344}{Row}, \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a7d700f1773cb534bd9f807149ab6d8f7}{k\+Columns} $>$ \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}{Array}
+\begin{DoxyCompactList}\small\item\em Underlying (wrapped) array of matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0b360f9d96986756913036ff54f376d1}{Attitude\+Matrix} (double \+\_\+r0c0, double \+\_\+r0c1, double \+\_\+r0c2, double \+\_\+r1c0, double \+\_\+r1c1, double \+\_\+r1c2, double \+\_\+r2c0, double \+\_\+r2c1, double \+\_\+r2c2)
+\begin{DoxyCompactList}\small\item\em Constructor from explicit values. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a6a1587b50904e9ee723c512869cfad36}{Attitude\+Matrix} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+x\+\_\+axis, const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+y\+\_\+axis, const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+z\+\_\+axis)
+\begin{DoxyCompactList}\small\item\em Constructor From Axes. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5edb54306470ebb06558a0910622a75f}{Attitude\+Matrix} (const double \&\+\_\+roll\+\_\+rad, const double \&\+\_\+pitch\+\_\+rad, const double \&\+\_\+yaw\+\_\+rad)
+\begin{DoxyCompactList}\small\item\em Constructor From Angles. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_afc7bdadbaea2ac55fbec218ea17ce6a3}{Transform\+Vector} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+vector) const
+\begin{DoxyCompactList}\small\item\em Transforms a vector to a new coordinate system. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a55ac57cf36bee476974db1cfe7bcd7e1}{Invert\+Vector} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+vector) const
+\begin{DoxyCompactList}\small\item\em Performs an inverse transformation on a vector. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_af8945f566ab44170c579b16662004bd2}{To\+String} () const
+\begin{DoxyCompactList}\small\item\em Outputs the matrix to a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_a7d700f1773cb534bd9f807149ab6d8f7}\label{classosse_1_1collaborate_1_1_attitude_matrix_a7d700f1773cb534bd9f807149ab6d8f7}} 
+static constexpr uint8\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a7d700f1773cb534bd9f807149ab6d8f7}{k\+Columns} = 3
+\begin{DoxyCompactList}\small\item\em The number of columns in an Array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_ac9df4bd3f06ab890e74afe62d1891344}{Row} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a424b4876cf18be58ccee7386d91314d7}{operator\mbox{[}$\,$\mbox{]}} (int \+\_\+column) const
+\begin{DoxyCompactList}\small\item\em Overloads the \mbox{[}\mbox{]} operator to access a row. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}{Array} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_aa7f28a273aa54589393f1f92024bccaa}{Attitude\+Matrix\+From\+Axes} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+x\+\_\+axis, const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+y\+\_\+axis, const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+z\+\_\+axis) const
+\begin{DoxyCompactList}\small\item\em Calculate From Axes. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}{Array} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4c9220dfc49995fadcfce4f9f71ee33d}{Attitude\+Matrix\+From\+Angles} (const double \&\+\_\+roll\+\_\+rad, const double \&\+\_\+pitch\+\_\+rad, const double \&\+\_\+yaw\+\_\+rad) const
+\begin{DoxyCompactList}\small\item\em Calculate From Angles. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}{Array} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_afd089287837320e37d29552e894505f4}{Inverse\+Of\+Attitude\+Matrix} () const
+\begin{DoxyCompactList}\small\item\em Calculate the inverse matrix. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_aaa2fd8ea9b1aac6ba462bf0a24b28774}{Attitude\+Matrix\+Determinant} () const
+\begin{DoxyCompactList}\small\item\em Calculate the determinant of the matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}\label{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}} 
+\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}{Array} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a4431d81104329938ee7ba9dfc0b156e3}{m\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix}{Attitude\+Matrix}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}\label{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}} 
+\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}{Array} \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a5c07ebb15fdf22ee7d47c0055068217a}{i\+\_\+}
+\begin{DoxyCompactList}\small\item\em Inverse matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+A 2D (3x3) matrix for reference frame and attitude transformations. 
+
+\[ {\bf{M}} = \begin{bmatrix} m_{0,0} & m_{0,1} & m_{0,2} \\ m_{1,0} & m_{1,1} & m_{1,2} \\ m_{2,0} & m_{2,1} & m_{2,2} \end{bmatrix} \] \[ \bf{I} = \bf{M}^{-1} \] 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_a0b360f9d96986756913036ff54f376d1}\label{classosse_1_1collaborate_1_1_attitude_matrix_a0b360f9d96986756913036ff54f376d1}} 
+\index{osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}!Attitude\+Matrix@{Attitude\+Matrix}}
+\index{Attitude\+Matrix@{Attitude\+Matrix}!osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}}
+\paragraph{\texorpdfstring{Attitude\+Matrix()}{AttitudeMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Attitude\+Matrix\+::\+Attitude\+Matrix (\begin{DoxyParamCaption}\item[{double}]{\+\_\+r0c0,  }\item[{double}]{\+\_\+r0c1,  }\item[{double}]{\+\_\+r0c2,  }\item[{double}]{\+\_\+r1c0,  }\item[{double}]{\+\_\+r1c1,  }\item[{double}]{\+\_\+r1c2,  }\item[{double}]{\+\_\+r2c0,  }\item[{double}]{\+\_\+r2c1,  }\item[{double}]{\+\_\+r2c2 }\end{DoxyParamCaption})}
+
+
+
+Constructor from explicit values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+r0c0} & Row 0, Column 0 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+r0c1} & Row 0, Column 1 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+r0c2} & Row 0, Column 2 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+r1c0} & Row 1, Column 0 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+r1c1} & Row 1, Column 1 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+r1c2} & Row 1, Column 2 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+r2c0} & Row 2, Column 0 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+r2c1} & Row 2, Column 1 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+r2c2} & Row 2, Column 2\\
+\hline
+\end{DoxyParams}
+\[ {\bf{M}} = \begin{bmatrix} r_0c_0 & r_0c_1 & r_0c_2 \\ r_1c_0 & r_1c_1 & r_1c_2 \\ r_2c_0 & r_2c_1 & r_2c_2 \end{bmatrix} \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_a6a1587b50904e9ee723c512869cfad36}\label{classosse_1_1collaborate_1_1_attitude_matrix_a6a1587b50904e9ee723c512869cfad36}} 
+\index{osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}!Attitude\+Matrix@{Attitude\+Matrix}}
+\index{Attitude\+Matrix@{Attitude\+Matrix}!osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}}
+\paragraph{\texorpdfstring{Attitude\+Matrix()}{AttitudeMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Attitude\+Matrix\+::\+Attitude\+Matrix (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+x\+\_\+axis,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+y\+\_\+axis,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+z\+\_\+axis }\end{DoxyParamCaption})}
+
+
+
+Constructor From Axes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+x\+\_\+axis} & X axis \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+y\+\_\+axis} & Y axis \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+z\+\_\+axis} & Z axis\\
+\hline
+\end{DoxyParams}
+\[ X = Roll~Axis \] \[ Y = Pitch~Axis \] \[ Z = Yaw~Axis \] \[ \psi = Roll = \sin^{-1}{-Y_Z}\ (\mathrm{mod}\ \pi) ~~~ (radians) \] \[ \theta = Pitch = \tan^{-1}{\frac{X_Z}{Z_Z}}\ (\mathrm{mod}\ 2\pi)~~~(radians) \] \[ \phi = Yaw = \tan^{-1}{\frac{Y_X}{Y_Y}}\ (\mathrm{mod}\ 2\pi) ~~~ (radians) \] \[ {\bf{M}} = \begin{bmatrix} \cos{\psi}\cos{\theta}+\sin{\psi}\sin{\phi}\sin{\theta} & \sin{\psi}\cos{\phi} & -\cos{\psi}\sin{\theta}+\sin{\psi}\sin{\phi}\cos{\theta} \\ -\sin{\psi}\cos{\theta}+\cos{\psi}\sin{\phi}\sin{\theta} & \cos{\psi}\cos{\phi} & \sin{\psi}\sin{\theta}+\cos{\psi}\sin{\phi}\cos{\theta} \\ \cos{\psi}\sin{\phi} & -\sin{\phi} & \cos{\phi}\cos{\theta} \end{bmatrix} \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_a5edb54306470ebb06558a0910622a75f}\label{classosse_1_1collaborate_1_1_attitude_matrix_a5edb54306470ebb06558a0910622a75f}} 
+\index{osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}!Attitude\+Matrix@{Attitude\+Matrix}}
+\index{Attitude\+Matrix@{Attitude\+Matrix}!osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}}
+\paragraph{\texorpdfstring{Attitude\+Matrix()}{AttitudeMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Attitude\+Matrix\+::\+Attitude\+Matrix (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+roll\+\_\+rad,  }\item[{const double \&}]{\+\_\+pitch\+\_\+rad,  }\item[{const double \&}]{\+\_\+yaw\+\_\+rad }\end{DoxyParamCaption})}
+
+
+
+Constructor From Angles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+roll\+\_\+rad} & Roll angle about the x axis (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+pitch\+\_\+rad} & Pitch angle about the x axis (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+yaw\+\_\+rad} & Yaw angle about the x axis (radians)\\
+\hline
+\end{DoxyParams}
+\[ \psi = Roll ~~~ (radians) \] \[ \theta = Pitch ~~~ (radians) \] \[ \phi = Yaw ~~~ (radians) \] \[ {\bf{M}} = \begin{bmatrix} \cos{\psi}\cos{\theta}+\sin{\psi}\sin{\phi}\sin{\theta} & \sin{\psi}\cos{\phi} & -\cos{\psi}\sin{\theta}+\sin{\psi}\sin{\phi}\cos{\theta} \\ -\sin{\psi}\cos{\theta}+\cos{\psi}\sin{\phi}\sin{\theta} & \cos{\psi}\cos{\phi} & \sin{\psi}\sin{\theta}+\cos{\psi}\sin{\phi}\cos{\theta} \\ \cos{\psi}\sin{\phi} & -\sin{\phi} & \cos{\phi}\cos{\theta} \end{bmatrix} \] 
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_aaa2fd8ea9b1aac6ba462bf0a24b28774}\label{classosse_1_1collaborate_1_1_attitude_matrix_aaa2fd8ea9b1aac6ba462bf0a24b28774}} 
+\index{osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}!Attitude\+Matrix\+Determinant@{Attitude\+Matrix\+Determinant}}
+\index{Attitude\+Matrix\+Determinant@{Attitude\+Matrix\+Determinant}!osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}}
+\paragraph{\texorpdfstring{Attitude\+Matrix\+Determinant()}{AttitudeMatrixDeterminant()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Attitude\+Matrix\+::\+Attitude\+Matrix\+Determinant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculate the determinant of the matrix. 
+
+\begin{DoxyReturn}{Returns}
+Determinant
+\end{DoxyReturn}
+\[ \det{{\bf{M}}} = \] \[ (m_{0,0} (m_{1,1}m_{2,2} - m_{1,2}m_{2,1})) \] \[ -(m_{0,1} (m_{1,0}m_{2,2} - m_{2,0}m_{1,2})) \] \[ +(m_{0,2} (m_{1,0}m_{2,1} - m_{1,1}m_{2,0})) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_a4c9220dfc49995fadcfce4f9f71ee33d}\label{classosse_1_1collaborate_1_1_attitude_matrix_a4c9220dfc49995fadcfce4f9f71ee33d}} 
+\index{osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}!Attitude\+Matrix\+From\+Angles@{Attitude\+Matrix\+From\+Angles}}
+\index{Attitude\+Matrix\+From\+Angles@{Attitude\+Matrix\+From\+Angles}!osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}}
+\paragraph{\texorpdfstring{Attitude\+Matrix\+From\+Angles()}{AttitudeMatrixFromAngles()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}{Attitude\+Matrix\+::\+Array} osse\+::collaborate\+::\+Attitude\+Matrix\+::\+Attitude\+Matrix\+From\+Angles (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+roll\+\_\+rad,  }\item[{const double \&}]{\+\_\+pitch\+\_\+rad,  }\item[{const double \&}]{\+\_\+yaw\+\_\+rad }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculate From Angles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+roll\+\_\+rad} & Roll angle about the x axis (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+pitch\+\_\+rad} & Pitch angle about the x axis (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+yaw\+\_\+rad} & Yaw angle about the x axis (radians) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An attitude matrix calculated from angles
+\end{DoxyReturn}
+\[ \psi = Roll ~~~ (radians) \] \[ \theta = Pitch ~~~ (radians) \] \[ \phi = Yaw ~~~ (radians) \] \[ {\bf{M}} = \begin{bmatrix} \cos{\psi}\cos{\theta}+\sin{\psi}\sin{\phi}\sin{\theta} & \sin{\psi}\cos{\phi} & -\cos{\psi}\sin{\theta}+\sin{\psi}\sin{\phi}\cos{\theta} \\ -\sin{\psi}\cos{\theta}+\cos{\psi}\sin{\phi}\sin{\theta} & \cos{\psi}\cos{\phi} & \sin{\psi}\sin{\theta}+\cos{\psi}\sin{\phi}\cos{\theta} \\ \cos{\psi}\sin{\phi} & -\sin{\phi} & \cos{\phi}\cos{\theta} \end{bmatrix} \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_aa7f28a273aa54589393f1f92024bccaa}\label{classosse_1_1collaborate_1_1_attitude_matrix_aa7f28a273aa54589393f1f92024bccaa}} 
+\index{osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}!Attitude\+Matrix\+From\+Axes@{Attitude\+Matrix\+From\+Axes}}
+\index{Attitude\+Matrix\+From\+Axes@{Attitude\+Matrix\+From\+Axes}!osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}}
+\paragraph{\texorpdfstring{Attitude\+Matrix\+From\+Axes()}{AttitudeMatrixFromAxes()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}{Attitude\+Matrix\+::\+Array} osse\+::collaborate\+::\+Attitude\+Matrix\+::\+Attitude\+Matrix\+From\+Axes (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+x\+\_\+axis,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+y\+\_\+axis,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+z\+\_\+axis }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculate From Axes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+x\+\_\+axis} & X axis \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+y\+\_\+axis} & Y axis \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+z\+\_\+axis} & Z axis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An attitude matrix calculated from axes
+\end{DoxyReturn}
+\[ X = Roll~Axis \] \[ Y = Pitch~Axis \] \[ Z = Yaw~Axis \] \[ \psi = Roll = \sin^{-1}{-Y_Z}\ (\mathrm{mod}\ \pi) ~~~ (radians) \] \[ \theta = Pitch = \tan^{-1}{\frac{X_Z}{Z_Z}}\ (\mathrm{mod}\ 2\pi)~~~(radians) \] \[ \phi = Yaw = \tan^{-1}{\frac{Y_X}{Y_Y}}\ (\mathrm{mod}\ 2\pi) ~~~ (radians) \] \[ {\bf{M}} = \begin{bmatrix} \cos{\psi}\cos{\theta}+\sin{\psi}\sin{\phi}\sin{\theta} & \sin{\psi}\cos{\phi} & -\cos{\psi}\sin{\theta}+\sin{\psi}\sin{\phi}\cos{\theta} \\ -\sin{\psi}\cos{\theta}+\cos{\psi}\sin{\phi}\sin{\theta} & \cos{\psi}\cos{\phi} & \sin{\psi}\sin{\theta}+\cos{\psi}\sin{\phi}\cos{\theta} \\ \cos{\psi}\sin{\phi} & -\sin{\phi} & \cos{\phi}\cos{\theta} \end{bmatrix} \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_afd089287837320e37d29552e894505f4}\label{classosse_1_1collaborate_1_1_attitude_matrix_afd089287837320e37d29552e894505f4}} 
+\index{osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}!Inverse\+Of\+Attitude\+Matrix@{Inverse\+Of\+Attitude\+Matrix}}
+\index{Inverse\+Of\+Attitude\+Matrix@{Inverse\+Of\+Attitude\+Matrix}!osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}}
+\paragraph{\texorpdfstring{Inverse\+Of\+Attitude\+Matrix()}{InverseOfAttitudeMatrix()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_a0200c3caaa4dc8e80288a9608ef7ccd3}{Attitude\+Matrix\+::\+Array} osse\+::collaborate\+::\+Attitude\+Matrix\+::\+Inverse\+Of\+Attitude\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculate the inverse matrix. 
+
+\begin{DoxyReturn}{Returns}
+Inverse matrix
+\end{DoxyReturn}
+\[ {\bf{I}} = \left(\frac{1}{\det{{\bf{M}}}}\right) \begin{bmatrix} m_{1,1} m_{2,2} - m_{1,2} m_{2,1} & m_{0,2} m_{2,1} - m_{0,1} m_{2,2} & m_{0,1} m_{1,2} - m_{0,2} m_{1,1} \\ m_{1,2} m_{2,0} - m_{1,0} m_{2,2} & m_{0,0} m_{2,2} - m_{0,2} m_{2,0} & m_{0,2} m_{1,0} - m_{0,0} m_{1,2} \\ m_{1,0} m_{2,1} - m_{1,1} m_{2,0} & m_{0,1} m_{2,0} - m_{0,0} m_{2,1} & m_{0,0} m_{1,1} - m_{0,1} m_{1,0} \end{bmatrix} \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_a55ac57cf36bee476974db1cfe7bcd7e1}\label{classosse_1_1collaborate_1_1_attitude_matrix_a55ac57cf36bee476974db1cfe7bcd7e1}} 
+\index{osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}!Invert\+Vector@{Invert\+Vector}}
+\index{Invert\+Vector@{Invert\+Vector}!osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}}
+\paragraph{\texorpdfstring{Invert\+Vector()}{InvertVector()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Attitude\+Matrix\+::\+Invert\+Vector (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+vector }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs an inverse transformation on a vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+vector} & \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inverted vector
+\end{DoxyReturn}
+\[ {\bf{I}}\vec{v} = {\bf{M}}^{-1} \begin{bmatrix} v_{0,0} \\ v_{1,0} \\ v_{2,0} \end{bmatrix} = \vec{i} = \begin{bmatrix} i_{0,0} \\ i_{1,0} \\ i_{2,0} \end{bmatrix} \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_a424b4876cf18be58ccee7386d91314d7}\label{classosse_1_1collaborate_1_1_attitude_matrix_a424b4876cf18be58ccee7386d91314d7}} 
+\index{osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}}
+\paragraph{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix_ac9df4bd3f06ab890e74afe62d1891344}{Row} osse\+::collaborate\+::\+Attitude\+Matrix\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{\+\_\+column }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Overloads the \mbox{[}\mbox{]} operator to access a row. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+column} & The number of the column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Row 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_af8945f566ab44170c579b16662004bd2}\label{classosse_1_1collaborate_1_1_attitude_matrix_af8945f566ab44170c579b16662004bd2}} 
+\index{osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}}
+\paragraph{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily std\+::string osse\+::collaborate\+::\+Attitude\+Matrix\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Outputs the matrix to a string. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix}{Attitude\+Matrix} as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_attitude_matrix_afc7bdadbaea2ac55fbec218ea17ce6a3}\label{classosse_1_1collaborate_1_1_attitude_matrix_afc7bdadbaea2ac55fbec218ea17ce6a3}} 
+\index{osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}!Transform\+Vector@{Transform\+Vector}}
+\index{Transform\+Vector@{Transform\+Vector}!osse\+::collaborate\+::\+Attitude\+Matrix@{osse\+::collaborate\+::\+Attitude\+Matrix}}
+\paragraph{\texorpdfstring{Transform\+Vector()}{TransformVector()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Attitude\+Matrix\+::\+Transform\+Vector (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+vector }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transforms a vector to a new coordinate system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+vector} & \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Transformed vector
+\end{DoxyReturn}
+\[ {\bf M}\vec{v} = \begin{bmatrix} M_{0,0} & M_{0,1} & M_{0,2} \\ M_{1,0} & M_{1,1} & M_{1,2} \\ M_{2,0} & M_{2,1} & M_{2,2} \end{bmatrix} \begin{bmatrix} v_{0,0} \\ v_{1,0} \\ v_{2,0} \end{bmatrix} = \vec{t} = \begin{bmatrix} t_{0,0} \\ t_{1,0} \\ t_{2,0} \end{bmatrix} \] 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/attitude\+\_\+matrix.\+h\item 
+libs/collaborate/src/attitude\+\_\+matrix.\+cpp\end{DoxyCompactItemize}

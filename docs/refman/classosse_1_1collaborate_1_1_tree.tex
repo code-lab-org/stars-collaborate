@@ -1,0 +1,378 @@
+\hypertarget{classosse_1_1collaborate_1_1_tree}{}\subsection{osse\+:\+:collaborate\+:\+:Tree Class Reference}
+\label{classosse_1_1collaborate_1_1_tree}\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+
+
+A tree.  
+
+
+
+
+{\ttfamily \#include $<$tree.\+h$>$}
+
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}
+\begin{DoxyCompactList}\small\item\em A node of the tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_a3481f1f1188d31e86f8a9b212c9a7ec7}\label{classosse_1_1collaborate_1_1_tree_a3481f1f1188d31e86f8a9b212c9a7ec7}} 
+typedef struct \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{osse\+::collaborate\+::\+Tree\+::\+Branch} \hyperlink{classosse_1_1collaborate_1_1_tree_a3481f1f1188d31e86f8a9b212c9a7ec7}{Branch}
+\begin{DoxyCompactList}\small\item\em A node of the tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_tree_a5255f4310921f9caa8ba8710e090ac90}{Tree} (\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+root, const uint16\+\_\+t \&\+\_\+height, \hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+target)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_ac36c59a5b59c87a0681ab5712326d4ff}\label{classosse_1_1collaborate_1_1_tree_ac36c59a5b59c87a0681ab5712326d4ff}} 
+\hyperlink{classosse_1_1collaborate_1_1_tree_ac36c59a5b59c87a0681ab5712326d4ff}{$\sim$\+Tree} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_tree_a04a5fa19a165dd354966e59f48c0c681}{Delete\+Subtree} (\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$\+\_\+branch)
+\begin{DoxyCompactList}\small\item\em Deletes a subtree. \end{DoxyCompactList}\item 
+\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_tree_adfe5d9fa445a38113939f33b61b37a08}{Create\+Root} (\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+root\+\_\+identity)
+\begin{DoxyCompactList}\small\item\em Creates a root node. \end{DoxyCompactList}\item 
+\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_tree_a85ed28c9682af666d94633d9d3b92f04}{Add\+Child} (\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$\+\_\+parent, \hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+identity, const uint64\+\_\+t \&\+\_\+rx\+\_\+time\+\_\+s)
+\begin{DoxyCompactList}\small\item\em Add a child to the tree. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$ $>$ \hyperlink{classosse_1_1collaborate_1_1_tree_ab7365c9a23acf7aac1070e0a9ee0c5d7}{Ancestry} (\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$\+\_\+branch) const
+\begin{DoxyCompactList}\small\item\em Obtain list of direct parents (back to root node) \end{DoxyCompactList}\item 
+\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_tree_a39e23eba696e4dbf520d9ad42c2c227d}{Search\+Specific} (\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+identity, const uint64\+\_\+t \&\+\_\+rx\+\_\+time\+\_\+s) const
+\begin{DoxyCompactList}\small\item\em Perform a B\+FS on the tree to find a node with specified rx time. \end{DoxyCompactList}\item 
+\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_tree_acb3448871b41ab199db72e3cdd4e23c2}{Breadth\+First\+Search} (\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+identity) const
+\begin{DoxyCompactList}\small\item\em Perform a B\+FS on the tree to find a node. \end{DoxyCompactList}\item 
+bool \hyperlink{classosse_1_1collaborate_1_1_tree_a1147a0288752f6af47f3b058b4e4d134}{Has\+Child} (\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$\+\_\+branch, \hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+identity) const
+\begin{DoxyCompactList}\small\item\em Determine if a node is a current child of a node. \end{DoxyCompactList}\item 
+bool \hyperlink{classosse_1_1collaborate_1_1_tree_ad93736258a744c9820176d4ee8172f8a}{Is\+Leaf} (\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$\+\_\+branch) const
+\begin{DoxyCompactList}\small\item\em Determine if a node has no children. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_tree_aa0f69e21e7eacd90468ae534d83b0575}{Log} (const std\+::string \&\+\_\+path) const
+\begin{DoxyCompactList}\small\item\em Write the tree to a La\+TeX Tikz file. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_tree_a7f289086d7ce1eb5bf8e500460ad3685}{set\+\_\+root} (\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$\+\_\+root)
+\begin{DoxyCompactList}\small\item\em Set the root tree node. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_tree_ac4f62119ebc24b84843a1772c993165b}{set\+\_\+height} (const uint16\+\_\+t \&\+\_\+height)
+\begin{DoxyCompactList}\small\item\em Set the height. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_tree_a6f95ca3aa1b76df2ddb562d11ea8d093}{set\+\_\+target} (\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+target)
+\begin{DoxyCompactList}\small\item\em Set the target node. \end{DoxyCompactList}\item 
+\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_tree_a65d78ce80c9efa9af095d9081d6abc80}{root} () const
+\begin{DoxyCompactList}\small\item\em Get the root tree node. \end{DoxyCompactList}\item 
+const uint64\+\_\+t \& \hyperlink{classosse_1_1collaborate_1_1_tree_aef931848873af9beaccf80423935c474}{size} () const
+\begin{DoxyCompactList}\small\item\em Get the number of tree nodes in the tree. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \& \hyperlink{classosse_1_1collaborate_1_1_tree_a8c64f27fc4a0c5d206dccb45169c8f42}{height} () const
+\begin{DoxyCompactList}\small\item\em Get the height. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_tree_a59e323729df69811feb9a8b958a5d31b}{target} () const
+\begin{DoxyCompactList}\small\item\em Get the target node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_ae7ddeb236660d03a04ba54305f8b4e6c}\label{classosse_1_1collaborate_1_1_tree_ae7ddeb236660d03a04ba54305f8b4e6c}} 
+\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_tree_ae7ddeb236660d03a04ba54305f8b4e6c}{root\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root tree node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_ab00727db7df6cd7cc78557958ad135b1}\label{classosse_1_1collaborate_1_1_tree_ab00727db7df6cd7cc78557958ad135b1}} 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_tree_ab00727db7df6cd7cc78557958ad135b1}{size\+\_\+}
+\begin{DoxyCompactList}\small\item\em Number of tree nodes in the tree. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_a303d866c9d61c5e1d253b69db6bc9e12}\label{classosse_1_1collaborate_1_1_tree_a303d866c9d61c5e1d253b69db6bc9e12}} 
+uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_tree_a303d866c9d61c5e1d253b69db6bc9e12}{height\+\_\+}
+\begin{DoxyCompactList}\small\item\em Height. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_ae901e4b982b2bf68e1f7922996cfe42e}\label{classosse_1_1collaborate_1_1_tree_ae901e4b982b2bf68e1f7922996cfe42e}} 
+\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_tree_ae901e4b982b2bf68e1f7922996cfe42e}{target\+\_\+}
+\begin{DoxyCompactList}\small\item\em Target node;. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+A tree. 
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth]{tree}}
+\end{DoxyImageNoCaption}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_a5255f4310921f9caa8ba8710e090ac90}\label{classosse_1_1collaborate_1_1_tree_a5255f4310921f9caa8ba8710e090ac90}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{Tree()}{Tree()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+root,  }\item[{const uint16\+\_\+t \&}]{\+\_\+height,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+target }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+root} & Root node \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+height} & Maximum levels in the tree \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+target} & Target node \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_a85ed28c9682af666d94633d9d3b92f04}\label{classosse_1_1collaborate_1_1_tree_a85ed28c9682af666d94633d9d3b92f04}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!Add\+Child@{Add\+Child}}
+\index{Add\+Child@{Add\+Child}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{Add\+Child()}{AddChild()}}
+{\footnotesize\ttfamily \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Tree\+::\+Branch} $\ast$ osse\+::collaborate\+::\+Tree\+::\+Add\+Child (\begin{DoxyParamCaption}\item[{\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$}]{\+\_\+parent,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+identity,  }\item[{const uint64\+\_\+t \&}]{\+\_\+rx\+\_\+time\+\_\+s }\end{DoxyParamCaption})}
+
+
+
+Add a child to the tree. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+parent} & Parent branch \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+identity} & New satellite node to add \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+rx\+\_\+time\+\_\+s} & Message receive time of the new node (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New branch child 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_ab7365c9a23acf7aac1070e0a9ee0c5d7}\label{classosse_1_1collaborate_1_1_tree_ab7365c9a23acf7aac1070e0a9ee0c5d7}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!Ancestry@{Ancestry}}
+\index{Ancestry@{Ancestry}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{Ancestry()}{Ancestry()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Tree\+::\+Branch} $\ast$ $>$ osse\+::collaborate\+::\+Tree\+::\+Ancestry (\begin{DoxyParamCaption}\item[{\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Tree\+::\+Branch} $\ast$}]{\+\_\+branch }\end{DoxyParamCaption}) const}
+
+
+
+Obtain list of direct parents (back to root node) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+branch} & Lowest node in the ancestry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of direct parents, back to the root 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_acb3448871b41ab199db72e3cdd4e23c2}\label{classosse_1_1collaborate_1_1_tree_acb3448871b41ab199db72e3cdd4e23c2}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!Breadth\+First\+Search@{Breadth\+First\+Search}}
+\index{Breadth\+First\+Search@{Breadth\+First\+Search}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{Breadth\+First\+Search()}{BreadthFirstSearch()}}
+{\footnotesize\ttfamily \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Tree\+::\+Branch} $\ast$ osse\+::collaborate\+::\+Tree\+::\+Breadth\+First\+Search (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+identity }\end{DoxyParamCaption}) const}
+
+
+
+Perform a B\+FS on the tree to find a node. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+identity} & \hyperlink{classosse_1_1collaborate_1_1_node}{Node} to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+First branch found from top down and left to right 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_adfe5d9fa445a38113939f33b61b37a08}\label{classosse_1_1collaborate_1_1_tree_adfe5d9fa445a38113939f33b61b37a08}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!Create\+Root@{Create\+Root}}
+\index{Create\+Root@{Create\+Root}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{Create\+Root()}{CreateRoot()}}
+{\footnotesize\ttfamily \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Tree\+::\+Branch} $\ast$ osse\+::collaborate\+::\+Tree\+::\+Create\+Root (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+root\+\_\+identity }\end{DoxyParamCaption})}
+
+
+
+Creates a root node. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+root\+\_\+identity} & The root identity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A root node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_a04a5fa19a165dd354966e59f48c0c681}\label{classosse_1_1collaborate_1_1_tree_a04a5fa19a165dd354966e59f48c0c681}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!Delete\+Subtree@{Delete\+Subtree}}
+\index{Delete\+Subtree@{Delete\+Subtree}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{Delete\+Subtree()}{DeleteSubtree()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Tree\+::\+Delete\+Subtree (\begin{DoxyParamCaption}\item[{\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Tree\+::\+Branch} $\ast$}]{\+\_\+branch }\end{DoxyParamCaption})}
+
+
+
+Deletes a subtree. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+branch} & Root of the substree \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_a1147a0288752f6af47f3b058b4e4d134}\label{classosse_1_1collaborate_1_1_tree_a1147a0288752f6af47f3b058b4e4d134}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!Has\+Child@{Has\+Child}}
+\index{Has\+Child@{Has\+Child}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{Has\+Child()}{HasChild()}}
+{\footnotesize\ttfamily bool osse\+::collaborate\+::\+Tree\+::\+Has\+Child (\begin{DoxyParamCaption}\item[{\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Tree\+::\+Branch} $\ast$}]{\+\_\+branch,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+identity }\end{DoxyParamCaption}) const}
+
+
+
+Determine if a node is a current child of a node. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+branch} & \hyperlink{classosse_1_1collaborate_1_1_tree}{Tree} node parent \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+identity} & \hyperlink{classosse_1_1collaborate_1_1_node}{Node} child \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the child exists 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_a8c64f27fc4a0c5d206dccb45169c8f42}\label{classosse_1_1collaborate_1_1_tree_a8c64f27fc4a0c5d206dccb45169c8f42}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!height@{height}}
+\index{height@{height}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily const uint16\+\_\+t\& osse\+::collaborate\+::\+Tree\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the height. 
+
+\begin{DoxyReturn}{Returns}
+height\+\_\+ Height 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_ad93736258a744c9820176d4ee8172f8a}\label{classosse_1_1collaborate_1_1_tree_ad93736258a744c9820176d4ee8172f8a}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!Is\+Leaf@{Is\+Leaf}}
+\index{Is\+Leaf@{Is\+Leaf}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{Is\+Leaf()}{IsLeaf()}}
+{\footnotesize\ttfamily bool osse\+::collaborate\+::\+Tree\+::\+Is\+Leaf (\begin{DoxyParamCaption}\item[{\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$}]{\+\_\+branch }\end{DoxyParamCaption}) const}
+
+
+
+Determine if a node has no children. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+branch} & \hyperlink{classosse_1_1collaborate_1_1_tree}{Tree} node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether it is a leaf 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_aa0f69e21e7eacd90468ae534d83b0575}\label{classosse_1_1collaborate_1_1_tree_aa0f69e21e7eacd90468ae534d83b0575}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!Log@{Log}}
+\index{Log@{Log}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Tree\+::\+Log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+path }\end{DoxyParamCaption}) const}
+
+
+
+Write the tree to a La\+TeX Tikz file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+path} & Path to the log file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_a65d78ce80c9efa9af095d9081d6abc80}\label{classosse_1_1collaborate_1_1_tree_a65d78ce80c9efa9af095d9081d6abc80}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!root@{root}}
+\index{root@{root}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{root()}{root()}}
+{\footnotesize\ttfamily \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}$\ast$ osse\+::collaborate\+::\+Tree\+::root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the root tree node. 
+
+\begin{DoxyReturn}{Returns}
+root\+\_\+ Root tree node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_a39e23eba696e4dbf520d9ad42c2c227d}\label{classosse_1_1collaborate_1_1_tree_a39e23eba696e4dbf520d9ad42c2c227d}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!Search\+Specific@{Search\+Specific}}
+\index{Search\+Specific@{Search\+Specific}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{Search\+Specific()}{SearchSpecific()}}
+{\footnotesize\ttfamily \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Tree\+::\+Branch} $\ast$ osse\+::collaborate\+::\+Tree\+::\+Search\+Specific (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+identity,  }\item[{const uint64\+\_\+t \&}]{\+\_\+rx\+\_\+time\+\_\+s }\end{DoxyParamCaption}) const}
+
+
+
+Perform a B\+FS on the tree to find a node with specified rx time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+identity} & \hyperlink{classosse_1_1collaborate_1_1_node}{Node} to search for \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+rx\+\_\+time\+\_\+s} & Message receive time of the new node (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Specific branch found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_ac4f62119ebc24b84843a1772c993165b}\label{classosse_1_1collaborate_1_1_tree_ac4f62119ebc24b84843a1772c993165b}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!set\+\_\+height@{set\+\_\+height}}
+\index{set\+\_\+height@{set\+\_\+height}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{set\+\_\+height()}{set\_height()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Tree\+::set\+\_\+height (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the height. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+height} & Height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_a7f289086d7ce1eb5bf8e500460ad3685}\label{classosse_1_1collaborate_1_1_tree_a7f289086d7ce1eb5bf8e500460ad3685}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!set\+\_\+root@{set\+\_\+root}}
+\index{set\+\_\+root@{set\+\_\+root}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{set\+\_\+root()}{set\_root()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Tree\+::set\+\_\+root (\begin{DoxyParamCaption}\item[{\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} $\ast$}]{\+\_\+root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the root tree node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+root} & Root tree node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_a6f95ca3aa1b76df2ddb562d11ea8d093}\label{classosse_1_1collaborate_1_1_tree_a6f95ca3aa1b76df2ddb562d11ea8d093}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!set\+\_\+target@{set\+\_\+target}}
+\index{set\+\_\+target@{set\+\_\+target}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{set\+\_\+target()}{set\_target()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Tree\+::set\+\_\+target (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the target node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+target} & Target node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_aef931848873af9beaccf80423935c474}\label{classosse_1_1collaborate_1_1_tree_aef931848873af9beaccf80423935c474}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!size@{size}}
+\index{size@{size}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily const uint64\+\_\+t\& osse\+::collaborate\+::\+Tree\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the number of tree nodes in the tree. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+ Number of tree nodes in the tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_tree_a59e323729df69811feb9a8b958a5d31b}\label{classosse_1_1collaborate_1_1_tree_a59e323729df69811feb9a8b958a5d31b}} 
+\index{osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}!target@{target}}
+\index{target@{target}!osse\+::collaborate\+::\+Tree@{osse\+::collaborate\+::\+Tree}}
+\paragraph{\texorpdfstring{target()}{target()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_node}{Node}$\ast$ osse\+::collaborate\+::\+Tree\+::target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the target node. 
+
+\begin{DoxyReturn}{Returns}
+target\+\_\+ Target node 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/tree.\+h\item 
+libs/collaborate/src/tree.\+cpp\end{DoxyCompactItemize}

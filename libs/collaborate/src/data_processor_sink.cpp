@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Ryan Linnabary
+// Copyright (C) 2019 The Ohio State University
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -54,8 +54,8 @@ void DataProcessorSink::Compute(
     if (middle.name().find("PRECTOT") != std::string::npos) {
       is_rain = true;
     }
-    success = ((is_rain && measurement > rain_threshold)
-               || (!is_rain && measurement < opt_threshold));
+    success = ((is_rain && (measurement > rain_threshold))
+               || (!is_rain && (measurement < opt_threshold)));
     if (success) {
       _feedback->push_back(std::make_pair(true, middle.informer_index()));
     } else {

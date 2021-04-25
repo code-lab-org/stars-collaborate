@@ -1,0 +1,117 @@
+\hypertarget{classosse_1_1collaborate_1_1_battery}{}\subsection{osse\+:\+:collaborate\+:\+:Battery Class Reference}
+\label{classosse_1_1collaborate_1_1_battery}\index{osse\+::collaborate\+::\+Battery@{osse\+::collaborate\+::\+Battery}}
+
+
+A battery.  
+
+
+
+
+{\ttfamily \#include $<$battery.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_battery_aa7cf9b637b12ead425d0643e325e3b85}{Battery} (const double \&\+\_\+cell\+\_\+amp\+\_\+hr, const double \&\+\_\+num\+\_\+cells, const double \&\+\_\+voltage\+\_\+v, const double \&\+\_\+charging\+\_\+efficiency\+\_\+percent)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_battery_aaba13e6f12650d1503fccb96119f5871}{Introduce\+Energy} (const double \&\+\_\+energy\+\_\+w\+\_\+hr)
+\begin{DoxyCompactList}\small\item\em Add or subtract from total energy. \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_battery_a98033b5ec818bc5d243b76f87713f8e1}{k\+Charge\+Efficiency\+Percent} () const
+\begin{DoxyCompactList}\small\item\em Get charge efficiency (percent) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_battery_ace47f7e90f5edd460e93438013104012}{energy\+\_\+w\+\_\+hr} () const
+\begin{DoxyCompactList}\small\item\em Get Energy stored in the battery (Watt hours) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_battery_a66a6e5481749e19f7d0ffc48f57fd93d}\label{classosse_1_1collaborate_1_1_battery_a66a6e5481749e19f7d0ffc48f57fd93d}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_battery_a66a6e5481749e19f7d0ffc48f57fd93d}{k\+Capacity\+W\+Hr\+\_\+}
+\begin{DoxyCompactList}\small\item\em Capacity of battery (Watt hours) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_battery_a3d18940f0a60fc606e590f718eff1248}\label{classosse_1_1collaborate_1_1_battery_a3d18940f0a60fc606e590f718eff1248}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_battery_a3d18940f0a60fc606e590f718eff1248}{k\+Charge\+Efficiency\+Percent\+\_\+}
+\begin{DoxyCompactList}\small\item\em Charge efficiency (percent) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_battery_a8e45c42076a5adfbb55122872bc28bcc}\label{classosse_1_1collaborate_1_1_battery_a8e45c42076a5adfbb55122872bc28bcc}} 
+double \hyperlink{classosse_1_1collaborate_1_1_battery_a8e45c42076a5adfbb55122872bc28bcc}{energy\+\_\+w\+\_\+hr\+\_\+}
+\begin{DoxyCompactList}\small\item\em Energy stored in battery (Watt hours) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+A battery. 
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth]{power}}
+\end{DoxyImageNoCaption}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_battery_aa7cf9b637b12ead425d0643e325e3b85}\label{classosse_1_1collaborate_1_1_battery_aa7cf9b637b12ead425d0643e325e3b85}} 
+\index{osse\+::collaborate\+::\+Battery@{osse\+::collaborate\+::\+Battery}!Battery@{Battery}}
+\index{Battery@{Battery}!osse\+::collaborate\+::\+Battery@{osse\+::collaborate\+::\+Battery}}
+\paragraph{\texorpdfstring{Battery()}{Battery()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Battery\+::\+Battery (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+cell\+\_\+amp\+\_\+hr,  }\item[{const double \&}]{\+\_\+num\+\_\+cells,  }\item[{const double \&}]{\+\_\+voltage\+\_\+v,  }\item[{const double \&}]{\+\_\+charging\+\_\+efficiency\+\_\+percent }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+cell\+\_\+amp\+\_\+hr} & Cell capacity (Amp hours) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+cells} & Number of cells in battery \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+voltage\+\_\+v} & Full charge voltage (Volts) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+charging\+\_\+efficiency\+\_\+percent} & Charge efficiency (percent)\\
+\hline
+\end{DoxyParams}
+\[ Q_{capacity} = n_{cells} * Q_{cell} * V ~~~ (Watt \cdot hour) \] 
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_battery_ace47f7e90f5edd460e93438013104012}\label{classosse_1_1collaborate_1_1_battery_ace47f7e90f5edd460e93438013104012}} 
+\index{osse\+::collaborate\+::\+Battery@{osse\+::collaborate\+::\+Battery}!energy\+\_\+w\+\_\+hr@{energy\+\_\+w\+\_\+hr}}
+\index{energy\+\_\+w\+\_\+hr@{energy\+\_\+w\+\_\+hr}!osse\+::collaborate\+::\+Battery@{osse\+::collaborate\+::\+Battery}}
+\paragraph{\texorpdfstring{energy\+\_\+w\+\_\+hr()}{energy\_w\_hr()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Battery\+::energy\+\_\+w\+\_\+hr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Energy stored in the battery (Watt hours) 
+
+\begin{DoxyReturn}{Returns}
+energy\+\_\+watt\+\_\+hr\+\_\+ Energy stored in the battery (Watt hours) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_battery_aaba13e6f12650d1503fccb96119f5871}\label{classosse_1_1collaborate_1_1_battery_aaba13e6f12650d1503fccb96119f5871}} 
+\index{osse\+::collaborate\+::\+Battery@{osse\+::collaborate\+::\+Battery}!Introduce\+Energy@{Introduce\+Energy}}
+\index{Introduce\+Energy@{Introduce\+Energy}!osse\+::collaborate\+::\+Battery@{osse\+::collaborate\+::\+Battery}}
+\paragraph{\texorpdfstring{Introduce\+Energy()}{IntroduceEnergy()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Battery\+::\+Introduce\+Energy (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+energy\+\_\+w\+\_\+hr }\end{DoxyParamCaption})}
+
+
+
+Add or subtract from total energy. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+energy\+\_\+w\+\_\+hr} & Energy (Watt hours) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_battery_a98033b5ec818bc5d243b76f87713f8e1}\label{classosse_1_1collaborate_1_1_battery_a98033b5ec818bc5d243b76f87713f8e1}} 
+\index{osse\+::collaborate\+::\+Battery@{osse\+::collaborate\+::\+Battery}!k\+Charge\+Efficiency\+Percent@{k\+Charge\+Efficiency\+Percent}}
+\index{k\+Charge\+Efficiency\+Percent@{k\+Charge\+Efficiency\+Percent}!osse\+::collaborate\+::\+Battery@{osse\+::collaborate\+::\+Battery}}
+\paragraph{\texorpdfstring{k\+Charge\+Efficiency\+Percent()}{kChargeEfficiencyPercent()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Battery\+::k\+Charge\+Efficiency\+Percent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get charge efficiency (percent) 
+
+\begin{DoxyReturn}{Returns}
+k\+Charge\+Efficiency\+Percent\+\_\+ Charge efficiency (percent) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/battery.\+h\item 
+libs/collaborate/src/battery.\+cpp\end{DoxyCompactItemize}

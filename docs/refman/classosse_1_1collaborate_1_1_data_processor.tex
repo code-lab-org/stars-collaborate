@@ -1,0 +1,93 @@
+\hypertarget{classosse_1_1collaborate_1_1_data_processor}{}\subsection{osse\+:\+:collaborate\+:\+:Data\+Processor Class Reference}
+\label{classosse_1_1collaborate_1_1_data_processor}\index{osse\+::collaborate\+::\+Data\+Processor@{osse\+::collaborate\+::\+Data\+Processor}}
+
+
+A satellite\textquotesingle{}s internal data processor.  
+
+
+
+
+{\ttfamily \#include $<$data\+\_\+processor.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Data\+Processor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classosse_1_1collaborate_1_1_data_processor__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_processor_ac967fe6b10b12e0eede67fc26001202e}\label{classosse_1_1collaborate_1_1_data_processor_ac967fe6b10b12e0eede67fc26001202e}} 
+\hyperlink{classosse_1_1collaborate_1_1_data_processor_ac967fe6b10b12e0eede67fc26001202e}{Data\+Processor} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classosse_1_1collaborate_1_1_data_processor_af984306eb4619e7d5823a7293fe568cb}{Compute} (const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_packet_raw}{Packet\+Raw} $>$ \&\+\_\+raw\+\_\+packets, const uint16\+\_\+t \&\+\_\+source\+\_\+index, const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ $\ast$\+\_\+min\+\_\+list, std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ $\ast$\+\_\+max\+\_\+list, std\+::vector$<$ std\+::pair$<$ bool, uint16\+\_\+t $>$$>$ $\ast$\+\_\+feedback) const =0
+\begin{DoxyCompactList}\small\item\em Processes a sensor measurement. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classosse_1_1collaborate_1_1_data_processor_a4efa75369a65d2a6011093facfcac44a}{Regression} (const bool \&\+\_\+success, const uint16\+\_\+t \&\+\_\+constellation)=0
+\begin{DoxyCompactList}\small\item\em Adapts thresholds in response to feedback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+A satellite\textquotesingle{}s internal data processor. 
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_processor_af984306eb4619e7d5823a7293fe568cb}\label{classosse_1_1collaborate_1_1_data_processor_af984306eb4619e7d5823a7293fe568cb}} 
+\index{osse\+::collaborate\+::\+Data\+Processor@{osse\+::collaborate\+::\+Data\+Processor}!Compute@{Compute}}
+\index{Compute@{Compute}!osse\+::collaborate\+::\+Data\+Processor@{osse\+::collaborate\+::\+Data\+Processor}}
+\paragraph{\texorpdfstring{Compute()}{Compute()}}
+{\footnotesize\ttfamily virtual void osse\+::collaborate\+::\+Data\+Processor\+::\+Compute (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_packet_raw}{Packet\+Raw} $>$ \&}]{\+\_\+raw\+\_\+packets,  }\item[{const uint16\+\_\+t \&}]{\+\_\+source\+\_\+index,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ $\ast$}]{\+\_\+min\+\_\+list,  }\item[{std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ $\ast$}]{\+\_\+max\+\_\+list,  }\item[{std\+::vector$<$ std\+::pair$<$ bool, uint16\+\_\+t $>$$>$ $\ast$}]{\+\_\+feedback }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Processes a sensor measurement. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+raw\+\_\+packets} & List of raw measurement packets \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+source\+\_\+index} & Index of source node \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+min\+\_\+list} & List of minimal suggestions \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+max\+\_\+list} & List of maximum suggestions \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+feedback} & List of feedback target node indices \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classosse_1_1collaborate_1_1_data_processor_source_a625d453c95bf1491290afdd0b85d4681}{osse\+::collaborate\+::\+Data\+Processor\+Source}, \hyperlink{classosse_1_1collaborate_1_1_data_processor_sink_a42b27e2e378f110add6f55406bdbfdd4}{osse\+::collaborate\+::\+Data\+Processor\+Sink}, and \hyperlink{classosse_1_1collaborate_1_1_data_processor_template_a01a3532d55daf656a30232dab91e293e}{osse\+::collaborate\+::\+Data\+Processor\+Template}.
+
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_processor_a4efa75369a65d2a6011093facfcac44a}\label{classosse_1_1collaborate_1_1_data_processor_a4efa75369a65d2a6011093facfcac44a}} 
+\index{osse\+::collaborate\+::\+Data\+Processor@{osse\+::collaborate\+::\+Data\+Processor}!Regression@{Regression}}
+\index{Regression@{Regression}!osse\+::collaborate\+::\+Data\+Processor@{osse\+::collaborate\+::\+Data\+Processor}}
+\paragraph{\texorpdfstring{Regression()}{Regression()}}
+{\footnotesize\ttfamily virtual void osse\+::collaborate\+::\+Data\+Processor\+::\+Regression (\begin{DoxyParamCaption}\item[{const bool \&}]{\+\_\+success,  }\item[{const uint16\+\_\+t \&}]{\+\_\+constellation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adapts thresholds in response to feedback. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+success} & Whether the measurement exceeded the threshold \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+constellation} & Constellation of the target satellite \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classosse_1_1collaborate_1_1_data_processor_source_ae9b24ff12942f0c667064a349d12fa9b}{osse\+::collaborate\+::\+Data\+Processor\+Source}, \hyperlink{classosse_1_1collaborate_1_1_data_processor_sink_a6f6dce42dffb76a6218f8d2be8bae9c4}{osse\+::collaborate\+::\+Data\+Processor\+Sink}, and \hyperlink{classosse_1_1collaborate_1_1_data_processor_template_a3cf1401b98a7e06852f3f46d464308ea}{osse\+::collaborate\+::\+Data\+Processor\+Template}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/data\+\_\+processor.\+h\item 
+libs/collaborate/src/data\+\_\+processor.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,52 @@
+\hypertarget{data__processor_8h_source}{}\subsection{data\+\_\+processor.\+h}
+\label{data__processor_8h_source}\index{libs/collaborate/include/collaborate/data\+\_\+processor.\+h@{libs/collaborate/include/collaborate/data\+\_\+processor.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_DATA\_PROCESSOR\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_DATA\_PROCESSOR\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <cstdint>}
+00020 \textcolor{preprocessor}{#include <utility>}
+00021 \textcolor{preprocessor}{#include <vector>}
+00022 
+00023 \textcolor{preprocessor}{#include "collaborate/geodetic.h"}
+00024 \textcolor{preprocessor}{#include "collaborate/packet\_raw.h"}
+00025 \textcolor{preprocessor}{#include "collaborate/simulation\_clock.h"}
+00026 
+00027 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00028 \textcolor{keyword}{namespace }collaborate \{
+00029 
+\Hypertarget{data__processor_8h_source_l00032}\hyperlink{classosse_1_1collaborate_1_1_data_processor}{00032} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_data_processor}{DataProcessor} \{
+00033  \textcolor{keyword}{public}:
+00035   \hyperlink{classosse_1_1collaborate_1_1_data_processor_ac967fe6b10b12e0eede67fc26001202e}{DataProcessor}();
+00043   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_data_processor_af984306eb4619e7d5823a7293fe568cb}{Compute}(
+00044       \textcolor{keyword}{const} std::vector<PacketRaw>& \_raw\_packets,
+00045       \textcolor{keyword}{const} uint16\_t& \_source\_index,
+00046       \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_clock,
+00047       std::vector<Geodetic>* \_min\_list,
+00048       std::vector<Geodetic>* \_max\_list,
+00049       std::vector<std::pair<bool, uint16\_t>>* \_feedback) \textcolor{keyword}{const} = 0;
+00053   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_data_processor_a4efa75369a65d2a6011093facfcac44a}{Regression}(\textcolor{keyword}{const} \textcolor{keywordtype}{bool}& \_success,
+00054                           \textcolor{keyword}{const} uint16\_t& \_constellation) = 0;
+00055 \};
+00056 
+00057 \}  \textcolor{comment}{// namespace collaborate}
+00058 \}  \textcolor{comment}{// namespace osse}
+00059 
+00060 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_DATA\_PROCESSOR\_H\_}
+\end{DoxyCode}

@@ -1,0 +1,51 @@
+\hypertarget{platform_8h_source}{}\subsection{platform.\+h}
+\label{platform_8h_source}\index{libs/collaborate/include/collaborate/platform.\+h@{libs/collaborate/include/collaborate/platform.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PLATFORM\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PLATFORM\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <cstdint>}
+00020 \textcolor{preprocessor}{#include <string>}
+00021 
+00022 \textcolor{preprocessor}{#include "collaborate/orbital\_state.h"}
+00023 \textcolor{preprocessor}{#include "collaborate/simulation\_clock.h"}
+00024 
+00025 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00026 \textcolor{keyword}{namespace }collaborate \{
+00027 
+\Hypertarget{platform_8h_source_l00030}\hyperlink{classosse_1_1collaborate_1_1_platform}{00030} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_platform}{Platform} \{
+00031  \textcolor{keyword}{public}:
+00034   \textcolor{keyword}{explicit} \hyperlink{classosse_1_1collaborate_1_1_platform_aca95bfbb4f84285f1767d575a3e4c2ec}{Platform}(\textcolor{keyword}{const} std::string& \_name);
+00039   \textcolor{keyword}{virtual} \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{OrbitalState} \hyperlink{classosse_1_1collaborate_1_1_platform_ad7070fcb9d91b22f25dbe0211ba0cc73}{PredictOrbitalState}(\textcolor{keyword}{const} 
+      \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_clock,
+00040                                            \textcolor{keyword}{const} uint64\_t& \_time\_s) \textcolor{keyword}{const} = 0;
+00045   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_platform_ad7070fcb9d91b22f25dbe0211ba0cc73}{PredictOrbitalState}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_clock,
+00046                                    \textcolor{keyword}{const} uint64\_t& \_time\_s,
+00047                                    \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{OrbitalState}* \_orbital\_state) \textcolor{keyword}{const} = 0;
+\Hypertarget{platform_8h_source_l00050}\hyperlink{classosse_1_1collaborate_1_1_platform_a87b0b2589a6246dfd90ba3168ebf285c}{00050}   std::string \hyperlink{classosse_1_1collaborate_1_1_platform_a87b0b2589a6246dfd90ba3168ebf285c}{kName}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_platform_a00a6267a955519320627877310f90b97}{kName\_};\}
+00051 
+00052  \textcolor{keyword}{private}:
+\Hypertarget{platform_8h_source_l00054}\hyperlink{classosse_1_1collaborate_1_1_platform_a00a6267a955519320627877310f90b97}{00054}   \textcolor{keyword}{const} std::string \hyperlink{classosse_1_1collaborate_1_1_platform_a00a6267a955519320627877310f90b97}{kName\_};
+00055 \};
+00056 
+00057 \}  \textcolor{comment}{// namespace collaborate}
+00058 \}  \textcolor{comment}{// namespace osse}
+00059 
+00060 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PLATFORM\_H\_}
+\end{DoxyCode}

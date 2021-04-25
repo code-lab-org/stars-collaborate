@@ -1,0 +1,97 @@
+\hypertarget{classosse_1_1collaborate_1_1_antenna_dipole}{}\subsection{osse\+:\+:collaborate\+:\+:Antenna\+Dipole Class Reference}
+\label{classosse_1_1collaborate_1_1_antenna_dipole}\index{osse\+::collaborate\+::\+Antenna\+Dipole@{osse\+::collaborate\+::\+Antenna\+Dipole}}
+
+
+An approximation of a dipole antenna.  
+
+
+
+
+{\ttfamily \#include $<$antenna\+\_\+dipole.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Antenna\+Dipole\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classosse_1_1collaborate_1_1_antenna_dipole__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_antenna_dipole_ab3146ec94f0d032743c5277d1f56b3d2}{Antenna\+Dipole} (const double \&\+\_\+max\+\_\+gain\+\_\+db, const double \&\+\_\+roll\+\_\+rad, const double \&\+\_\+pitch\+\_\+rad, const double \&\+\_\+yaw\+\_\+rad)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_antenna_dipole_a46aab376eb3bb44ae47beceef79db8df}{Gain\+Db} (const double \&\+\_\+theta\+\_\+rad, const double \&\+\_\+phi\+\_\+rad) const
+\begin{DoxyCompactList}\small\item\em Obtain directional gain (decibels) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+An approximation of a dipole antenna. 
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=0.5\textwidth]{dipole}}
+\end{DoxyImageNoCaption}
+
+
+\[ g = g_{max}\sin^2{\theta}~~~(decibels) \] 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_dipole_ab3146ec94f0d032743c5277d1f56b3d2}\label{classosse_1_1collaborate_1_1_antenna_dipole_ab3146ec94f0d032743c5277d1f56b3d2}} 
+\index{osse\+::collaborate\+::\+Antenna\+Dipole@{osse\+::collaborate\+::\+Antenna\+Dipole}!Antenna\+Dipole@{Antenna\+Dipole}}
+\index{Antenna\+Dipole@{Antenna\+Dipole}!osse\+::collaborate\+::\+Antenna\+Dipole@{osse\+::collaborate\+::\+Antenna\+Dipole}}
+\paragraph{\texorpdfstring{Antenna\+Dipole()}{AntennaDipole()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Antenna\+Dipole\+::\+Antenna\+Dipole (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+max\+\_\+gain\+\_\+db,  }\item[{const double \&}]{\+\_\+roll\+\_\+rad,  }\item[{const double \&}]{\+\_\+pitch\+\_\+rad,  }\item[{const double \&}]{\+\_\+yaw\+\_\+rad }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+max\+\_\+gain\+\_\+db} & The maximum gain (decibels) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+roll\+\_\+rad} & Roll angle to host body frame (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+pitch\+\_\+rad} & Pitch angle to host body frame (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+yaw\+\_\+rad} & Yaw angle to host body frame (radians) \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_dipole_a46aab376eb3bb44ae47beceef79db8df}\label{classosse_1_1collaborate_1_1_antenna_dipole_a46aab376eb3bb44ae47beceef79db8df}} 
+\index{osse\+::collaborate\+::\+Antenna\+Dipole@{osse\+::collaborate\+::\+Antenna\+Dipole}!Gain\+Db@{Gain\+Db}}
+\index{Gain\+Db@{Gain\+Db}!osse\+::collaborate\+::\+Antenna\+Dipole@{osse\+::collaborate\+::\+Antenna\+Dipole}}
+\paragraph{\texorpdfstring{Gain\+Db()}{GainDb()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Antenna\+Dipole\+::\+Gain\+Db (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+theta\+\_\+rad,  }\item[{const double \&}]{\+\_\+phi\+\_\+rad }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Obtain directional gain (decibels) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+theta\+\_\+rad} & Altitude angle from positive z-\/axis (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+phi\+\_\+rad} & Azimuth angle (radians) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Directional gain (decibels)
+\end{DoxyReturn}
+\[ g = g_{max}\sin^2{\theta}~~~(decibels) \] 
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_antenna_a67214b4b28f3d48931c8fb435cc1f85d}{osse\+::collaborate\+::\+Antenna}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/antenna\+\_\+dipole.\+h\item 
+libs/collaborate/src/antenna\+\_\+dipole.\+cpp\end{DoxyCompactItemize}

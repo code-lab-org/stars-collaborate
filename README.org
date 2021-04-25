@@ -1,7 +1,5 @@
 #+TITLE: Collaborate
 
-[[https://linnabary.github.io/collaborate/][Webpage]]
-
 Simulation Library for Autonomous and Collaborative Satellite Sensor Networks
 
 ** Motivation

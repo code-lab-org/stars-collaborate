@@ -133,9 +133,9 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosse_1_1collaborate_1_1_channel.html#ab8e91e0798d0a4270669b3bffd7bf0a4">Start</a> ()</td></tr>
 <tr class="memdesc:ab8e91e0798d0a4270669b3bffd7bf0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts fake transmission of data. <br /></td></tr>
 <tr class="separator:ab8e91e0798d0a4270669b3bffd7bf0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a170515a9276331db455c2a019dc4c6d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosse_1_1collaborate_1_1_channel.html#a170515a9276331db455c2a019dc4c6d0">Update</a> (const <a class="el" href="classosse_1_1collaborate_1_1_simulation_clock.html">SimulationClock</a> &amp;_clock)</td></tr>
-<tr class="memdesc:a170515a9276331db455c2a019dc4c6d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates member variables and performs fake transfers.  <a href="#a170515a9276331db455c2a019dc4c6d0">More...</a><br /></td></tr>
-<tr class="separator:a170515a9276331db455c2a019dc4c6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7ff16e5dcde4bd51ef2e602568d4eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosse_1_1collaborate_1_1_channel.html#adf7ff16e5dcde4bd51ef2e602568d4eb">Update</a> (const <a class="el" href="classosse_1_1collaborate_1_1_simulation_clock.html">SimulationClock</a> &amp;_clock, const bool &amp;_flag)</td></tr>
+<tr class="memdesc:adf7ff16e5dcde4bd51ef2e602568d4eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates member variables and performs fake transfers.  <a href="#adf7ff16e5dcde4bd51ef2e602568d4eb">More...</a><br /></td></tr>
+<tr class="separator:adf7ff16e5dcde4bd51ef2e602568d4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44c51b493f2c32e35fbc2104168dd98d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosse_1_1collaborate_1_1_channel.html#a44c51b493f2c32e35fbc2104168dd98d">PredictTransferDurationS</a> () const</td></tr>
 <tr class="memdesc:a44c51b493f2c32e35fbc2104168dd98d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates expected transfer duration (seconds)  <a href="#a44c51b493f2c32e35fbc2104168dd98d">More...</a><br /></td></tr>
 <tr class="separator:a44c51b493f2c32e35fbc2104168dd98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -742,8 +742,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="a170515a9276331db455c2a019dc4c6d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a170515a9276331db455c2a019dc4c6d0">&#9670;&nbsp;</a></span>Update()</h2>
+<a id="adf7ff16e5dcde4bd51ef2e602568d4eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7ff16e5dcde4bd51ef2e602568d4eb">&#9670;&nbsp;</a></span>Update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -752,8 +752,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="memname">void osse::collaborate::Channel::Update </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classosse_1_1collaborate_1_1_simulation_clock.html">SimulationClock</a> &amp;&#160;</td>
-          <td class="paramname"><em>_clock</em></td><td>)</td>
+          <td class="paramname"><em>_clock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const bool &amp;&#160;</td>
+          <td class="paramname"><em>_flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -762,6 +772,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">_clock</td><td><a class="el" href="classosse_1_1collaborate_1_1_simulation_clock.html" title="A clock for maintaining the current simulation time. ">SimulationClock</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_flag</td><td>Flag </td></tr>
   </table>
   </dd>
 </dl>

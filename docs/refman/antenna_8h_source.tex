@@ -1,0 +1,53 @@
+\hypertarget{antenna_8h_source}{}\subsection{antenna.\+h}
+\label{antenna_8h_source}\index{libs/collaborate/include/collaborate/antenna.\+h@{libs/collaborate/include/collaborate/antenna.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_ANTENNA\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_ANTENNA\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <string>}
+00020 
+00021 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00022 \textcolor{keyword}{namespace }collaborate \{
+00023 
+\Hypertarget{antenna_8h_source_l00028}\hyperlink{classosse_1_1collaborate_1_1_antenna}{00028} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} \{
+00029  \textcolor{keyword}{public}:
+00035   \hyperlink{classosse_1_1collaborate_1_1_antenna_a0f871800c6102bc92a2bda159f43b240}{Antenna}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_max\_gain\_db,
+00036           \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_roll\_rad,
+00037           \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_pitch\_rad,
+00038           \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_yaw\_rad);
+00043   \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_antenna_a67214b4b28f3d48931c8fb435cc1f85d}{GainDb}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_theta\_rad,
+00044                         \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_phi\_rad) \textcolor{keyword}{const} = 0;
+00047   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_antenna_ae24d52fa84fd3acff597c56259f4aba6}{Log}(\textcolor{keyword}{const} std::string& \_path) \textcolor{keyword}{const};
+\Hypertarget{antenna_8h_source_l00050}\hyperlink{classosse_1_1collaborate_1_1_antenna_a0666d28c6d44c193d4abd844a04044b4}{00050}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_antenna_a0666d28c6d44c193d4abd844a04044b4}{kMaxGainDb}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_antenna_a3bb8d000dfd0dbd4713cc1c4fbc8772e}{kMaxGainDb\_};\}
+\Hypertarget{antenna_8h_source_l00053}\hyperlink{classosse_1_1collaborate_1_1_antenna_ac6602825c2e7282bc89f01b45f3289b7}{00053}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_antenna_ac6602825c2e7282bc89f01b45f3289b7}{kRollRad}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_antenna_aff899094f1534787d2ce4899a6d1babb}{kRollRad\_};\}
+\Hypertarget{antenna_8h_source_l00056}\hyperlink{classosse_1_1collaborate_1_1_antenna_a3216890f8adcd7f52bbf9af7fef2f45f}{00056}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_antenna_a3216890f8adcd7f52bbf9af7fef2f45f}{kPitchRad}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_antenna_a05c6fd112ee735a371ed48f0a9b3701f}{kPitchRad\_};\}
+\Hypertarget{antenna_8h_source_l00059}\hyperlink{classosse_1_1collaborate_1_1_antenna_a79acbd84d9ad9a739ec0a8c60b49bc93}{00059}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_antenna_a79acbd84d9ad9a739ec0a8c60b49bc93}{kYawRad}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_antenna_abb5b0f5a06d029eba6029f143588c99b}{kYawRad\_};\}
+00060 
+00061  \textcolor{keyword}{protected}:
+\Hypertarget{antenna_8h_source_l00063}\hyperlink{classosse_1_1collaborate_1_1_antenna_a3bb8d000dfd0dbd4713cc1c4fbc8772e}{00063}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_antenna_a3bb8d000dfd0dbd4713cc1c4fbc8772e}{kMaxGainDb\_};
+\Hypertarget{antenna_8h_source_l00065}\hyperlink{classosse_1_1collaborate_1_1_antenna_aff899094f1534787d2ce4899a6d1babb}{00065}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_antenna_aff899094f1534787d2ce4899a6d1babb}{kRollRad\_};
+\Hypertarget{antenna_8h_source_l00067}\hyperlink{classosse_1_1collaborate_1_1_antenna_a05c6fd112ee735a371ed48f0a9b3701f}{00067}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_antenna_a05c6fd112ee735a371ed48f0a9b3701f}{kPitchRad\_};
+\Hypertarget{antenna_8h_source_l00069}\hyperlink{classosse_1_1collaborate_1_1_antenna_abb5b0f5a06d029eba6029f143588c99b}{00069}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_antenna_abb5b0f5a06d029eba6029f143588c99b}{kYawRad\_};
+00070 \};
+00071 
+00072 \}  \textcolor{comment}{// namespace collaborate}
+00073 \}  \textcolor{comment}{// namespace osse}
+00074 
+00075 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_ANTENNA\_H\_}
+\end{DoxyCode}

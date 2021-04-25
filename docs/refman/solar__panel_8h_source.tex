@@ -1,0 +1,61 @@
+\hypertarget{solar__panel_8h_source}{}\subsection{solar\+\_\+panel.\+h}
+\label{solar__panel_8h_source}\index{libs/collaborate/include/collaborate/solar\+\_\+panel.\+h@{libs/collaborate/include/collaborate/solar\+\_\+panel.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SOLAR\_PANEL\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SOLAR\_PANEL\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include "collaborate/reference\_frame.h"}
+00020 \textcolor{preprocessor}{#include "collaborate/vector.h"}
+00021 \textcolor{preprocessor}{#include "collaborate/sun.h"}
+00022 
+00023 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00024 \textcolor{keyword}{namespace }collaborate \{
+00025 
+\Hypertarget{solar__panel_8h_source_l00030}\hyperlink{classosse_1_1collaborate_1_1_solar_panel}{00030} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_solar_panel}{SolarPanel} \{
+00031  \textcolor{keyword}{public}:
+\Hypertarget{solar__panel_8h_source_l00033}\hyperlink{classosse_1_1collaborate_1_1_solar_panel_a955f766fe850b04209aa6878473dbd5e}{00033}   \textcolor{keyword}{static} constexpr \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a955f766fe850b04209aa6878473dbd5e}{kSolarIrradianceWPerM2} = 1332;
+00041   \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a060136ae41f3ce295647564b92450e1c}{SolarPanel}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_efficiency\_percent,
+00042              \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_surface\_area\_m2,
+00043              \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_roll\_rad,
+00044              \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_pitch\_rad,
+00045              \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_yaw\_rad,
+00046              \hyperlink{classosse_1_1collaborate_1_1_sun}{Sun}* \_sun);
+00054   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_solar_panel_ac32a08edad4d388bc8bc859a1bc0a513}{RxPowerW}() \textcolor{keyword}{const};
+00065   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a800aa0d521177fcf9b5175c3f6f6529d}{Update}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame}& \_body\_frame,
+00066               \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame}& \_orbit\_frame,
+00067               \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_position\_m\_rad);
+\Hypertarget{solar__panel_8h_source_l00070}\hyperlink{classosse_1_1collaborate_1_1_solar_panel_ab7c233e3e84dea59e532d0353a0f6038}{00070}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_solar_panel_ab7c233e3e84dea59e532d0353a0f6038}{effective\_area\_m2}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_solar_panel_ab229ffc8235cb471fd15e78d8d0cb68e}{effective\_area\_m2\_};\}
+00071 
+00072  \textcolor{keyword}{private}:
+\Hypertarget{solar__panel_8h_source_l00074}\hyperlink{classosse_1_1collaborate_1_1_solar_panel_abbab629e0b4d2a6a48e0745b9e250873}{00074}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_solar_panel_abbab629e0b4d2a6a48e0745b9e250873}{kEfficiencyPercent\_};
+\Hypertarget{solar__panel_8h_source_l00076}\hyperlink{classosse_1_1collaborate_1_1_solar_panel_ac97b97d9099a7d224605717af1974de1}{00076}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_solar_panel_ac97b97d9099a7d224605717af1974de1}{kSurfaceAreaM2\_};
+\Hypertarget{solar__panel_8h_source_l00078}\hyperlink{classosse_1_1collaborate_1_1_solar_panel_a31a0bcb804b07d0bc4dc5683ce072409}{00078}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a31a0bcb804b07d0bc4dc5683ce072409}{kRollRad\_};
+\Hypertarget{solar__panel_8h_source_l00080}\hyperlink{classosse_1_1collaborate_1_1_solar_panel_a974ef9d81d8aadcec9b2f5734830c228}{00080}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a974ef9d81d8aadcec9b2f5734830c228}{kPitchRad\_};
+\Hypertarget{solar__panel_8h_source_l00082}\hyperlink{classosse_1_1collaborate_1_1_solar_panel_a37c98f5e1c13ab13b81e195abcca91a5}{00082}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a37c98f5e1c13ab13b81e195abcca91a5}{kYawRad\_};
+\Hypertarget{solar__panel_8h_source_l00084}\hyperlink{classosse_1_1collaborate_1_1_solar_panel_ad99923d6f3d925443fb29b97cb05f781}{00084}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_sun}{Sun}* \hyperlink{classosse_1_1collaborate_1_1_solar_panel_ad99923d6f3d925443fb29b97cb05f781}{kSun\_};
+\Hypertarget{solar__panel_8h_source_l00086}\hyperlink{classosse_1_1collaborate_1_1_solar_panel_ab229ffc8235cb471fd15e78d8d0cb68e}{00086}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_solar_panel_ab229ffc8235cb471fd15e78d8d0cb68e}{effective\_area\_m2\_};
+\Hypertarget{solar__panel_8h_source_l00088}\hyperlink{classosse_1_1collaborate_1_1_solar_panel_a4d0770f4bfd51e69538539700d32ecb3}{00088}   \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame} \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a4d0770f4bfd51e69538539700d32ecb3}{attitude\_};
+00089 \};
+00090 
+00091 \}  \textcolor{comment}{// namespace collaborate}
+00092 \}  \textcolor{comment}{// namespace osse}
+00093 
+00094 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SOLAR\_PANEL\_H\_}
+\end{DoxyCode}

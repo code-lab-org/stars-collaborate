@@ -1,0 +1,97 @@
+\hypertarget{classosse_1_1collaborate_1_1_graph}{}\subsection{osse\+:\+:collaborate\+:\+:Graph Class Reference}
+\label{classosse_1_1collaborate_1_1_graph}\index{osse\+::collaborate\+::\+Graph@{osse\+::collaborate\+::\+Graph}}
+
+
+Abstract graph.  
+
+
+
+
+{\ttfamily \#include $<$graph.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Graph\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classosse_1_1collaborate_1_1_graph__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_graph_aa6e69d08b74393ecfa68cbf915d7eabc}{Graph} (\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$\+\_\+data\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classosse_1_1collaborate_1_1_graph_abaef7c4642242e096d2bbfc74b8d1d07}{Log} (const uint16\+\_\+t \&\+\_\+num\+\_\+nodes, const uint64\+\_\+t \&\+\_\+tick) const =0
+\begin{DoxyCompactList}\small\item\em Writes graph to a binary file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_a92b99db1a453e58d1fb3fc134a8fd8ba}\label{classosse_1_1collaborate_1_1_graph_a92b99db1a453e58d1fb3fc134a8fd8ba}} 
+virtual void \hyperlink{classosse_1_1collaborate_1_1_graph_a92b99db1a453e58d1fb3fc134a8fd8ba}{Clear} ()=0
+\begin{DoxyCompactList}\small\item\em Clears all edges. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_a063285c7a14ce7499b355cac87d1900a}\label{classosse_1_1collaborate_1_1_graph_a063285c7a14ce7499b355cac87d1900a}} 
+static constexpr uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_graph_a063285c7a14ce7499b355cac87d1900a}{k\+Max\+Nodes} = 200
+\begin{DoxyCompactList}\small\item\em Maximum number of nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_a9c9828305d419d29fc1eed87a4520cd5}\label{classosse_1_1collaborate_1_1_graph_a9c9828305d419d29fc1eed87a4520cd5}} 
+static constexpr uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_graph_a9c9828305d419d29fc1eed87a4520cd5}{k\+Size} = std\+::pow(\hyperlink{classosse_1_1collaborate_1_1_graph_a063285c7a14ce7499b355cac87d1900a}{k\+Max\+Nodes}, 2)
+\begin{DoxyCompactList}\small\item\em Maximum size of of a graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_a33e2d89c03913f2bb033a215b5f1efa6}\label{classosse_1_1collaborate_1_1_graph_a33e2d89c03913f2bb033a215b5f1efa6}} 
+\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_graph_a33e2d89c03913f2bb033a215b5f1efa6}{data\+\_\+log\+\_\+}
+\begin{DoxyCompactList}\small\item\em Data logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Abstract graph. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_aa6e69d08b74393ecfa68cbf915d7eabc}\label{classosse_1_1collaborate_1_1_graph_aa6e69d08b74393ecfa68cbf915d7eabc}} 
+\index{osse\+::collaborate\+::\+Graph@{osse\+::collaborate\+::\+Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!osse\+::collaborate\+::\+Graph@{osse\+::collaborate\+::\+Graph}}
+\paragraph{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$}]{\+\_\+data\+\_\+log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+log} & Data logger \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_abaef7c4642242e096d2bbfc74b8d1d07}\label{classosse_1_1collaborate_1_1_graph_abaef7c4642242e096d2bbfc74b8d1d07}} 
+\index{osse\+::collaborate\+::\+Graph@{osse\+::collaborate\+::\+Graph}!Log@{Log}}
+\index{Log@{Log}!osse\+::collaborate\+::\+Graph@{osse\+::collaborate\+::\+Graph}}
+\paragraph{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily virtual void osse\+::collaborate\+::\+Graph\+::\+Log (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+num\+\_\+nodes,  }\item[{const uint64\+\_\+t \&}]{\+\_\+tick }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Writes graph to a binary file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+nodes} & Number of nodes (rows and columns) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+tick} & The simulation clock tick \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_ab55668685b7bde8d3553cedeb95efab3}{osse\+::collaborate\+::\+Graph\+Weighted}, and \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_a06fa72fc5e51142a242fdf535af96078}{osse\+::collaborate\+::\+Graph\+Unweighted}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/graph.\+h\item 
+libs/collaborate/src/graph.\+cpp\end{DoxyCompactItemize}

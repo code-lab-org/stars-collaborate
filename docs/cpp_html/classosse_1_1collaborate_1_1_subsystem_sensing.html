@@ -131,9 +131,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ab0187c0ebdf98d98190c5cbeff49b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosse_1_1collaborate_1_1_subsystem_sensing.html#a7ab0187c0ebdf98d98190c5cbeff49b2">Measure</a> (const uint16_t &amp;_informer_index)</td></tr>
 <tr class="memdesc:a7ab0187c0ebdf98d98190c5cbeff49b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures for a specified time.  <a href="#a7ab0187c0ebdf98d98190c5cbeff49b2">More...</a><br /></td></tr>
 <tr class="separator:a7ab0187c0ebdf98d98190c5cbeff49b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae41f1e2f6d4bc158d975c9168e5c6c5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosse_1_1collaborate_1_1_subsystem_sensing.html#ae41f1e2f6d4bc158d975c9168e5c6c5d">Update</a> (const <a class="el" href="classosse_1_1collaborate_1_1_simulation_clock.html">SimulationClock</a> &amp;_clock, const <a class="el" href="classosse_1_1collaborate_1_1_vector.html">Vector</a> &amp;_position_m_rad)</td></tr>
-<tr class="memdesc:ae41f1e2f6d4bc158d975c9168e5c6c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a measurement from the earth_data.  <a href="#ae41f1e2f6d4bc158d975c9168e5c6c5d">More...</a><br /></td></tr>
-<tr class="separator:ae41f1e2f6d4bc158d975c9168e5c6c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e63167e5a5fc6c646febeb263a4b22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosse_1_1collaborate_1_1_subsystem_sensing.html#aa2e63167e5a5fc6c646febeb263a4b22">Update</a> (const <a class="el" href="classosse_1_1collaborate_1_1_simulation_clock.html">SimulationClock</a> &amp;_clock, const <a class="el" href="classosse_1_1collaborate_1_1_vector.html">Vector</a> &amp;_position_m_rad, const int _node_index)</td></tr>
+<tr class="memdesc:aa2e63167e5a5fc6c646febeb263a4b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a measurement from the earth_data.  <a href="#aa2e63167e5a5fc6c646febeb263a4b22">More...</a><br /></td></tr>
+<tr class="separator:aa2e63167e5a5fc6c646febeb263a4b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd60540872a1fad85bf8ec99e82f1e4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosse_1_1collaborate_1_1_subsystem_sensing.html#abd60540872a1fad85bf8ec99e82f1e4d">OrientAntenna</a> (const <a class="el" href="classosse_1_1collaborate_1_1_reference_frame.html">ReferenceFrame</a> &amp;_orbit_frame, const <a class="el" href="classosse_1_1collaborate_1_1_reference_frame.html">ReferenceFrame</a> &amp;_body_frame)</td></tr>
 <tr class="memdesc:abd60540872a1fad85bf8ec99e82f1e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates a new attitude frame for the antenna.  <a href="#abd60540872a1fad85bf8ec99e82f1e4d">More...</a><br /></td></tr>
 <tr class="separator:abd60540872a1fad85bf8ec99e82f1e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,9 +177,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:aba580b30f7655214be16a675d54eb7fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosse_1_1collaborate_1_1_subsystem_sensing.html#aba580b30f7655214be16a675d54eb7fb">Flush</a> (const <a class="el" href="classosse_1_1collaborate_1_1_simulation_clock.html">SimulationClock</a> &amp;_clock)</td></tr>
-<tr class="memdesc:aba580b30f7655214be16a675d54eb7fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the logged data to a netcdf file.  <a href="#aba580b30f7655214be16a675d54eb7fb">More...</a><br /></td></tr>
-<tr class="separator:aba580b30f7655214be16a675d54eb7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56cb5fced3dd63c0f2d14fed8a4f1cf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosse_1_1collaborate_1_1_subsystem_sensing.html#a56cb5fced3dd63c0f2d14fed8a4f1cf7">Flush</a> (const <a class="el" href="classosse_1_1collaborate_1_1_simulation_clock.html">SimulationClock</a> &amp;_clock, const int _node_index)</td></tr>
+<tr class="memdesc:a56cb5fced3dd63c0f2d14fed8a4f1cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the logged data to a netcdf file.  <a href="#a56cb5fced3dd63c0f2d14fed8a4f1cf7">More...</a><br /></td></tr>
+<tr class="separator:a56cb5fced3dd63c0f2d14fed8a4f1cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -433,8 +433,8 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 
 </div>
 </div>
-<a id="aba580b30f7655214be16a675d54eb7fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba580b30f7655214be16a675d54eb7fb">&#9670;&nbsp;</a></span>Flush()</h2>
+<a id="a56cb5fced3dd63c0f2d14fed8a4f1cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56cb5fced3dd63c0f2d14fed8a4f1cf7">&#9670;&nbsp;</a></span>Flush()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -446,8 +446,18 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
           <td class="memname">void osse::collaborate::SubsystemSensing::Flush </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classosse_1_1collaborate_1_1_simulation_clock.html">SimulationClock</a> &amp;&#160;</td>
-          <td class="paramname"><em>_clock</em></td><td>)</td>
+          <td class="paramname"><em>_clock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>_node_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -461,6 +471,7 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">_clock</td><td>The simulation clock </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_node_index</td><td>Unknown </td></tr>
   </table>
   </dd>
 </dl>
@@ -672,8 +683,8 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 
 </div>
 </div>
-<a id="ae41f1e2f6d4bc158d975c9168e5c6c5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae41f1e2f6d4bc158d975c9168e5c6c5d">&#9670;&nbsp;</a></span>Update()</h2>
+<a id="aa2e63167e5a5fc6c646febeb263a4b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e63167e5a5fc6c646febeb263a4b22">&#9670;&nbsp;</a></span>Update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -688,7 +699,13 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classosse_1_1collaborate_1_1_vector.html">Vector</a> &amp;&#160;</td>
-          <td class="paramname"><em>_position_m_rad</em>&#160;</td>
+          <td class="paramname"><em>_position_m_rad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>_node_index</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -703,6 +720,7 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">_clock</td><td>The simulation clock </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">_position_m_rad</td><td>The position of the node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_node_index</td><td>Unknown </td></tr>
   </table>
   </dd>
 </dl>

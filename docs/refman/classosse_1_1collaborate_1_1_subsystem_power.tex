@@ -1,0 +1,142 @@
+\hypertarget{classosse_1_1collaborate_1_1_subsystem_power}{}\subsection{osse\+:\+:collaborate\+:\+:Subsystem\+Power Class Reference}
+\label{classosse_1_1collaborate_1_1_subsystem_power}\index{osse\+::collaborate\+::\+Subsystem\+Power@{osse\+::collaborate\+::\+Subsystem\+Power}}
+
+
+{\ttfamily \#include $<$subsystem\+\_\+power.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a7dafdf11fd2f0d904353e2f385c905bc}{Subsystem\+Power} (const \hyperlink{classosse_1_1collaborate_1_1_battery}{Battery} \&\+\_\+battery, const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_solar_panel}{Solar\+Panel} $>$ \+\_\+solar\+\_\+panels, const double \&\+\_\+idle\+\_\+power\+\_\+w)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_aba48698154d6b98d97c067fcb8c5f924}{Update} (const bool \&\+\_\+charge, const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+simulation\+\_\+clock, const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+body\+\_\+frame, const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+orbit\+\_\+frame, const double \&\+\_\+power\+\_\+drain\+\_\+w, const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+position\+\_\+m\+\_\+rad)
+\begin{DoxyCompactList}\small\item\em Updates the system\textquotesingle{}s net energy stored. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_battery}{Battery} \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a609e653cc6c7e4a91ebd250219fabe95}{battery} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classosse_1_1collaborate_1_1_battery}{Battery}. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_solar_panel}{Solar\+Panel} $>$ \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a2167155fe0eea9b74d5603899b4b4183}{solar\+\_\+panels} () const
+\begin{DoxyCompactList}\small\item\em Get Panels. \end{DoxyCompactList}\item 
+const bool \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a21f180c076d8f5f5fd6004bc917b2571}{charging} () const
+\begin{DoxyCompactList}\small\item\em Get whether the system is charging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_power_ae707a132f821afa47c5448a4d4ff98b5}\label{classosse_1_1collaborate_1_1_subsystem_power_ae707a132f821afa47c5448a4d4ff98b5}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_ae707a132f821afa47c5448a4d4ff98b5}{k\+Secs\+Per\+Hr} = 3600
+\begin{DoxyCompactList}\small\item\em Number of seconds per hour. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_power_a456586081b9c7ebc53f40eefc60ae60b}\label{classosse_1_1collaborate_1_1_subsystem_power_a456586081b9c7ebc53f40eefc60ae60b}} 
+bool \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a456586081b9c7ebc53f40eefc60ae60b}{charging\+\_\+}
+\begin{DoxyCompactList}\small\item\em Whether the system is charging. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_power_acee674aab89035d6e9620b89755aac4d}\label{classosse_1_1collaborate_1_1_subsystem_power_acee674aab89035d6e9620b89755aac4d}} 
+\hyperlink{classosse_1_1collaborate_1_1_battery}{Battery} \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_acee674aab89035d6e9620b89755aac4d}{battery\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_battery}{Battery}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_power_a82c6cd20990c6be2b18de988772eea7c}\label{classosse_1_1collaborate_1_1_subsystem_power_a82c6cd20990c6be2b18de988772eea7c}} 
+std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_solar_panel}{Solar\+Panel} $>$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a82c6cd20990c6be2b18de988772eea7c}{solar\+\_\+panels\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of solar panels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_power_a9a4dc2c6177007e21e0e2c1613e58c9f}\label{classosse_1_1collaborate_1_1_subsystem_power_a9a4dc2c6177007e21e0e2c1613e58c9f}} 
+double \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a9a4dc2c6177007e21e0e2c1613e58c9f}{idle\+\_\+power\+\_\+w\+\_\+}
+\begin{DoxyCompactList}\small\item\em Idle consumed power. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+  
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth]{power}}
+\end{DoxyImageNoCaption}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_power_a7dafdf11fd2f0d904353e2f385c905bc}\label{classosse_1_1collaborate_1_1_subsystem_power_a7dafdf11fd2f0d904353e2f385c905bc}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Power@{osse\+::collaborate\+::\+Subsystem\+Power}!Subsystem\+Power@{Subsystem\+Power}}
+\index{Subsystem\+Power@{Subsystem\+Power}!osse\+::collaborate\+::\+Subsystem\+Power@{osse\+::collaborate\+::\+Subsystem\+Power}}
+\paragraph{\texorpdfstring{Subsystem\+Power()}{SubsystemPower()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Subsystem\+Power\+::\+Subsystem\+Power (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_battery}{Battery} \&}]{\+\_\+battery,  }\item[{const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_solar_panel}{Solar\+Panel} $>$}]{\+\_\+solar\+\_\+panels,  }\item[{const double \&}]{\+\_\+idle\+\_\+power\+\_\+w }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+battery} & \hyperlink{classosse_1_1collaborate_1_1_battery}{Battery} \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+solar\+\_\+panels} & Solar panels \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+idle\+\_\+power\+\_\+w} & Idle power consumed \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_power_a609e653cc6c7e4a91ebd250219fabe95}\label{classosse_1_1collaborate_1_1_subsystem_power_a609e653cc6c7e4a91ebd250219fabe95}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Power@{osse\+::collaborate\+::\+Subsystem\+Power}!battery@{battery}}
+\index{battery@{battery}!osse\+::collaborate\+::\+Subsystem\+Power@{osse\+::collaborate\+::\+Subsystem\+Power}}
+\paragraph{\texorpdfstring{battery()}{battery()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_battery}{Battery}\& osse\+::collaborate\+::\+Subsystem\+Power\+::battery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get \hyperlink{classosse_1_1collaborate_1_1_battery}{Battery}. 
+
+\begin{DoxyReturn}{Returns}
+battery\+\_\+ \hyperlink{classosse_1_1collaborate_1_1_battery}{Battery} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_power_a21f180c076d8f5f5fd6004bc917b2571}\label{classosse_1_1collaborate_1_1_subsystem_power_a21f180c076d8f5f5fd6004bc917b2571}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Power@{osse\+::collaborate\+::\+Subsystem\+Power}!charging@{charging}}
+\index{charging@{charging}!osse\+::collaborate\+::\+Subsystem\+Power@{osse\+::collaborate\+::\+Subsystem\+Power}}
+\paragraph{\texorpdfstring{charging()}{charging()}}
+{\footnotesize\ttfamily const bool\& osse\+::collaborate\+::\+Subsystem\+Power\+::charging (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get whether the system is charging. 
+
+\begin{DoxyReturn}{Returns}
+charging\+\_\+ Whether the system is charging 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_power_a2167155fe0eea9b74d5603899b4b4183}\label{classosse_1_1collaborate_1_1_subsystem_power_a2167155fe0eea9b74d5603899b4b4183}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Power@{osse\+::collaborate\+::\+Subsystem\+Power}!solar\+\_\+panels@{solar\+\_\+panels}}
+\index{solar\+\_\+panels@{solar\+\_\+panels}!osse\+::collaborate\+::\+Subsystem\+Power@{osse\+::collaborate\+::\+Subsystem\+Power}}
+\paragraph{\texorpdfstring{solar\+\_\+panels()}{solar\_panels()}}
+{\footnotesize\ttfamily const std\+::vector$<$\hyperlink{classosse_1_1collaborate_1_1_solar_panel}{Solar\+Panel}$>$\& osse\+::collaborate\+::\+Subsystem\+Power\+::solar\+\_\+panels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Panels. 
+
+\begin{DoxyReturn}{Returns}
+solar\+\_\+panels\+\_\+ Panels 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_power_aba48698154d6b98d97c067fcb8c5f924}\label{classosse_1_1collaborate_1_1_subsystem_power_aba48698154d6b98d97c067fcb8c5f924}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Power@{osse\+::collaborate\+::\+Subsystem\+Power}!Update@{Update}}
+\index{Update@{Update}!osse\+::collaborate\+::\+Subsystem\+Power@{osse\+::collaborate\+::\+Subsystem\+Power}}
+\paragraph{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Power\+::\+Update (\begin{DoxyParamCaption}\item[{const bool \&}]{\+\_\+charge,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+simulation\+\_\+clock,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+body\+\_\+frame,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+orbit\+\_\+frame,  }\item[{const double \&}]{\+\_\+power\+\_\+drain\+\_\+w,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+position\+\_\+m\+\_\+rad }\end{DoxyParamCaption})}
+
+
+
+Updates the system\textquotesingle{}s net energy stored. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+charge} & Whether to charge the battery \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+simulation\+\_\+clock} & Simulation simulation\+\_\+clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+body\+\_\+frame} & Host body reference\+\_\+frame \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+orbit\+\_\+frame} & Host orbit reference\+\_\+frame \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+power\+\_\+drain\+\_\+w} & Power drained since last update \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+position\+\_\+m\+\_\+rad} & Host\textquotesingle{}s position (meters and radians) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/subsystem\+\_\+power.\+h\item 
+libs/collaborate/src/subsystem\+\_\+power.\+cpp\end{DoxyCompactItemize}

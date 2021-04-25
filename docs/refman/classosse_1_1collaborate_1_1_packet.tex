@@ -1,0 +1,213 @@
+\hypertarget{classosse_1_1collaborate_1_1_packet}{}\subsection{osse\+:\+:collaborate\+:\+:Packet Class Reference}
+\label{classosse_1_1collaborate_1_1_packet}\index{osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}}
+
+
+An abstract container for information.  
+
+
+
+
+{\ttfamily \#include $<$packet.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Packet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classosse_1_1collaborate_1_1_packet__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_aecb3018048e1845ea9e45dcd008cc0df}\label{classosse_1_1collaborate_1_1_packet_aecb3018048e1845ea9e45dcd008cc0df}} 
+\hyperlink{classosse_1_1collaborate_1_1_packet_aecb3018048e1845ea9e45dcd008cc0df}{Packet} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+const std\+::vector$<$ uint8\+\_\+t $>$ \& \hyperlink{classosse_1_1collaborate_1_1_packet_a6034dd26382166bf4feeed7cecda3e54}{payload} () const
+\begin{DoxyCompactList}\small\item\em Get payload. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_packet_a83e5d92a626c5adb0958c0faf7bbbf87}{Packet} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload)
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classosse_1_1collaborate_1_1_packet_a7ebfc5903ba6bf302e2f4a33340e7155}{Pack} (const T \&\+\_\+value, std\+::vector$<$ uint8\+\_\+t $>$ $\ast$\+\_\+payload) const
+\begin{DoxyCompactList}\small\item\em Inserts a generic value into the payload. \end{DoxyCompactList}\item 
+bool \hyperlink{classosse_1_1collaborate_1_1_packet_acf78e5e563ba07643fb1969dc332b1fb}{Unpack\+Bool} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload, const uint16\+\_\+t \&\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Unpacks a boolean value from the \+\_\+payload. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_packet_a454166985d9b63b553cb6174417c4dde}{Unpack\+U\+Int16T} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload, const uint16\+\_\+t \&\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Unpacks a short unsigned integer from the \+\_\+payload. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_packet_ab84b122670543d85df644041129568df}{Unpack\+U\+Int64T} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload, const uint16\+\_\+t \&\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Unpacks a long unsigned integer from the payload. \end{DoxyCompactList}\item 
+int \hyperlink{classosse_1_1collaborate_1_1_packet_a7c786b41b594b51377b0a70ce3a61259}{Unpack\+Integer} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload, const uint16\+\_\+t \&\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Unpacks an integer from the payload. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_packet_aa7678be22b45d54b28f1b85594638d60}{Unpack\+Double} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload, const uint16\+\_\+t \&\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Unpacks a double from the payload. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_a1917bbaba5a0fb4757947d2626287410}\label{classosse_1_1collaborate_1_1_packet_a1917bbaba5a0fb4757947d2626287410}} 
+std\+::vector$<$ uint8\+\_\+t $>$ \hyperlink{classosse_1_1collaborate_1_1_packet_a1917bbaba5a0fb4757947d2626287410}{payload\+\_\+}
+\begin{DoxyCompactList}\small\item\em Data contents (a vector of bytes) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An abstract container for information. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_a83e5d92a626c5adb0958c0faf7bbbf87}\label{classosse_1_1collaborate_1_1_packet_a83e5d92a626c5adb0958c0faf7bbbf87}} 
+\index{osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}!Packet@{Packet}}
+\index{Packet@{Packet}!osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}}
+\paragraph{\texorpdfstring{Packet()}{Packet()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Packet\+::\+Packet (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+Default Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & The payload \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_a7ebfc5903ba6bf302e2f4a33340e7155}\label{classosse_1_1collaborate_1_1_packet_a7ebfc5903ba6bf302e2f4a33340e7155}} 
+\index{osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}!Pack@{Pack}}
+\index{Pack@{Pack}!osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}}
+\paragraph{\texorpdfstring{Pack()}{Pack()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void osse\+::collaborate\+::\+Packet\+::\+Pack (\begin{DoxyParamCaption}\item[{const T \&}]{\+\_\+value,  }\item[{std\+::vector$<$ uint8\+\_\+t $>$ $\ast$}]{\+\_\+payload }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Inserts a generic value into the payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+value} & Value \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_a6034dd26382166bf4feeed7cecda3e54}\label{classosse_1_1collaborate_1_1_packet_a6034dd26382166bf4feeed7cecda3e54}} 
+\index{osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}!payload@{payload}}
+\index{payload@{payload}!osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}}
+\paragraph{\texorpdfstring{payload()}{payload()}}
+{\footnotesize\ttfamily const std\+::vector$<$uint8\+\_\+t$>$\& osse\+::collaborate\+::\+Packet\+::payload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get payload. 
+
+\begin{DoxyReturn}{Returns}
+payload\+\_\+ Payload 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_acf78e5e563ba07643fb1969dc332b1fb}\label{classosse_1_1collaborate_1_1_packet_acf78e5e563ba07643fb1969dc332b1fb}} 
+\index{osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}!Unpack\+Bool@{Unpack\+Bool}}
+\index{Unpack\+Bool@{Unpack\+Bool}!osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}}
+\paragraph{\texorpdfstring{Unpack\+Bool()}{UnpackBool()}}
+{\footnotesize\ttfamily bool osse\+::collaborate\+::\+Packet\+::\+Unpack\+Bool (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload,  }\item[{const uint16\+\_\+t \&}]{\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Unpacks a boolean value from the \+\_\+payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+index} & Index in the payload vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unpacked boolean value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_aa7678be22b45d54b28f1b85594638d60}\label{classosse_1_1collaborate_1_1_packet_aa7678be22b45d54b28f1b85594638d60}} 
+\index{osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}!Unpack\+Double@{Unpack\+Double}}
+\index{Unpack\+Double@{Unpack\+Double}!osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}}
+\paragraph{\texorpdfstring{Unpack\+Double()}{UnpackDouble()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Packet\+::\+Unpack\+Double (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload,  }\item[{const uint16\+\_\+t \&}]{\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Unpacks a double from the payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+index} & Index in the payload vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unpacked double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_a7c786b41b594b51377b0a70ce3a61259}\label{classosse_1_1collaborate_1_1_packet_a7c786b41b594b51377b0a70ce3a61259}} 
+\index{osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}!Unpack\+Integer@{Unpack\+Integer}}
+\index{Unpack\+Integer@{Unpack\+Integer}!osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}}
+\paragraph{\texorpdfstring{Unpack\+Integer()}{UnpackInteger()}}
+{\footnotesize\ttfamily int osse\+::collaborate\+::\+Packet\+::\+Unpack\+Integer (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload,  }\item[{const uint16\+\_\+t \&}]{\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Unpacks an integer from the payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+index} & Index in the payload vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unpacked integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_a454166985d9b63b553cb6174417c4dde}\label{classosse_1_1collaborate_1_1_packet_a454166985d9b63b553cb6174417c4dde}} 
+\index{osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}!Unpack\+U\+Int16T@{Unpack\+U\+Int16T}}
+\index{Unpack\+U\+Int16T@{Unpack\+U\+Int16T}!osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}}
+\paragraph{\texorpdfstring{Unpack\+U\+Int16\+T()}{UnpackUInt16T()}}
+{\footnotesize\ttfamily uint16\+\_\+t osse\+::collaborate\+::\+Packet\+::\+Unpack\+U\+Int16T (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload,  }\item[{const uint16\+\_\+t \&}]{\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Unpacks a short unsigned integer from the \+\_\+payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+index} & Index in the payload vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unpacked short unsigned integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_ab84b122670543d85df644041129568df}\label{classosse_1_1collaborate_1_1_packet_ab84b122670543d85df644041129568df}} 
+\index{osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}!Unpack\+U\+Int64T@{Unpack\+U\+Int64T}}
+\index{Unpack\+U\+Int64T@{Unpack\+U\+Int64T}!osse\+::collaborate\+::\+Packet@{osse\+::collaborate\+::\+Packet}}
+\paragraph{\texorpdfstring{Unpack\+U\+Int64\+T()}{UnpackUInt64T()}}
+{\footnotesize\ttfamily uint64\+\_\+t osse\+::collaborate\+::\+Packet\+::\+Unpack\+U\+Int64T (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload,  }\item[{const uint16\+\_\+t \&}]{\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Unpacks a long unsigned integer from the payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+index} & Index in the payload vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unpacked long unsigned integer 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/packet.\+h\item 
+libs/collaborate/src/packet.\+cpp\end{DoxyCompactItemize}

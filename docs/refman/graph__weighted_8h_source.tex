@@ -1,0 +1,55 @@
+\hypertarget{graph__weighted_8h_source}{}\subsection{graph\+\_\+weighted.\+h}
+\label{graph__weighted_8h_source}\index{libs/collaborate/include/collaborate/graph\+\_\+weighted.\+h@{libs/collaborate/include/collaborate/graph\+\_\+weighted.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_GRAPH\_WEIGHTED\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_GRAPH\_WEIGHTED\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <array>}
+00020 \textcolor{preprocessor}{#include <cstdint>}
+00021 \textcolor{preprocessor}{#include <memory>}
+00022 \textcolor{preprocessor}{#include <string>}
+00023 \textcolor{preprocessor}{#include <vector>}
+00024 
+00025 \textcolor{preprocessor}{#include "collaborate/data\_logger.h"}
+00026 \textcolor{preprocessor}{#include "collaborate/graph.h"}
+00027 
+00028 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00029 \textcolor{keyword}{namespace }collaborate \{
+00030 
+\Hypertarget{graph__weighted_8h_source_l00047}\hyperlink{classosse_1_1collaborate_1_1_graph_weighted}{00047} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_graph_weighted}{GraphWeighted} : \textcolor{keyword}{public} \hyperlink{classosse_1_1collaborate_1_1_graph}{Graph} \{
+00048  \textcolor{keyword}{public}:
+\Hypertarget{graph__weighted_8h_source_l00050}\hyperlink{classosse_1_1collaborate_1_1_graph_weighted_aa604a648e701d85c8deb818f13b64097}{00050}   \textcolor{keyword}{typedef} std::array<double, Graph::kSize> \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_aa604a648e701d85c8deb818f13b64097}{Edges};
+00053   \textcolor{keyword}{explicit} \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a983e8d0efd6bba488b979b546cb078ff}{GraphWeighted}(\hyperlink{classosse_1_1collaborate_1_1_data_logger}{DataLogger}* \_data\_log);
+00055   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a485197f02e24b37e2e2e47136548aa3d}{Clear}();
+00059   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_ab55668685b7bde8d3553cedeb95efab3}{Log}(\textcolor{keyword}{const} uint16\_t& \_num\_nodes, \textcolor{keyword}{const} uint64\_t& \_tick) \textcolor{keyword}{const};
+00064   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a20ad6c253cec6b39d5d2cee4aa5ea073}{SetEdge}(\textcolor{keyword}{const} uint16\_t& \_row,
+00065                \textcolor{keyword}{const} uint16\_t& \_col,
+00066                \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_value);
+00071   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a10d1d7bb90d63fa8461e044ca5b2bd20}{GetEdge}(\textcolor{keyword}{const} uint16\_t& \_row, \textcolor{keyword}{const} uint16\_t& \_col) \textcolor{keyword}{const};
+00076   std::vector<uint16\_t> \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a657a68399222496d6664418061fe2108}{Dijkstra}(\textcolor{keyword}{const} uint16\_t& \_start, \textcolor{keyword}{const} uint16\_t& \_end);
+00077 
+00078 
+\Hypertarget{graph__weighted_8h_source_l00080}\hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a60944e002d7910e9de5d2bba3ea87e74}{00080}   std::unique\_ptr<Edges> \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a60944e002d7910e9de5d2bba3ea87e74}{edges\_};
+00081 \};
+00082 
+00083 \}  \textcolor{comment}{// namespace collaborate}
+00084 \}  \textcolor{comment}{// namespace osse}
+00085 
+00086 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_GRAPH\_WEIGHTED\_H\_}
+\end{DoxyCode}

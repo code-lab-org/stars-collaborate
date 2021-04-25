@@ -1,0 +1,539 @@
+\hypertarget{classosse_1_1collaborate_1_1_packet_raw}{}\subsection{osse\+:\+:collaborate\+:\+:Packet\+Raw Class Reference}
+\label{classosse_1_1collaborate_1_1_packet_raw}\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+
+
+A packet of raw measurement data.  
+
+
+
+
+{\ttfamily \#include $<$packet\+\_\+raw.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Packet\+Raw\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classosse_1_1collaborate_1_1_packet_raw__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_packet_raw_a77d54b0f3adb1e32ab58ee5104bae39d}{Packet\+Raw} (std\+::vector$<$ uint8\+\_\+t $>$ \+\_\+payload)
+\begin{DoxyCompactList}\small\item\em Constructor from payload. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_packet_raw_a16cbaab494437fb520a9600cd4819319}{Packet\+Raw} (const uint64\+\_\+t \&\+\_\+elapsed\+\_\+s, const int \&\+\_\+year, const int \&\+\_\+month, const int \&\+\_\+day, const int \&\+\_\+hour, const int \&\+\_\+minute, const int \&\+\_\+second, const int \&\+\_\+microsecond, const double \&\+\_\+latitude\+\_\+rad, const double \&\+\_\+longitude\+\_\+rad, const double \&\+\_\+altitude\+\_\+m, const double \&\+\_\+measurement, const double \&\+\_\+resolution\+\_\+radius\+\_\+m, const std\+::string \&\+\_\+name, const uint16\+\_\+t \&\+\_\+informer\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Constructor from data members. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a838d1364ab1defdff4abcabf5369827a}{To\+String} () const
+\begin{DoxyCompactList}\small\item\em Converts the packet to a string. \end{DoxyCompactList}\item 
+const uint64\+\_\+t \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_ae6ee78a3e857b59dc78351ebd18f032e}{elapsed\+\_\+s} () const
+\begin{DoxyCompactList}\small\item\em Get Year. \end{DoxyCompactList}\item 
+const int \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a0e67ebb309b3564df39c6f2f366f4563}{year} () const
+\begin{DoxyCompactList}\small\item\em Get Year. \end{DoxyCompactList}\item 
+const int \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a1aec62b6f1c6ca8a332cbc1a9c299e25}{month} () const
+\begin{DoxyCompactList}\small\item\em Get Month. \end{DoxyCompactList}\item 
+const int \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a4c492fb013220d09d08a6635c12ec055}{day} () const
+\begin{DoxyCompactList}\small\item\em Get Day. \end{DoxyCompactList}\item 
+const int \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a265e1fc70e832947969c3d3b28b627cf}{hour} () const
+\begin{DoxyCompactList}\small\item\em Get Hour. \end{DoxyCompactList}\item 
+const int \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_ac8dab9ede92438259281e25bed6a72af}{minute} () const
+\begin{DoxyCompactList}\small\item\em Get Minute. \end{DoxyCompactList}\item 
+const int \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a889491ddfb2a3602bae83ca547f7c45e}{second} () const
+\begin{DoxyCompactList}\small\item\em Get Second. \end{DoxyCompactList}\item 
+const int \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_ae1988405764da791632e1d272b321873}{microsecond} () const
+\begin{DoxyCompactList}\small\item\em Get Microsecond. \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_ad5e2fab8d02a3a1219c7d9c0efeda5d3}{latitude\+\_\+rad} () const
+\begin{DoxyCompactList}\small\item\em Get Latitude (radians) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a3ce663da9c6fb9dbff2238acc6a88841}{longitude\+\_\+rad} () const
+\begin{DoxyCompactList}\small\item\em Get Longitude (radians) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a0df4fa194dac316e9ca1e8e6e9beec0b}{altitude\+\_\+m} () const
+\begin{DoxyCompactList}\small\item\em Get Altitude (meters) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a2a99f3e00c4b1fdf018d3499cc1b73ca}{measurement} () const
+\begin{DoxyCompactList}\small\item\em Get Measurement. \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a82b6da77df7720c9c3cd12cc9b6b58c4}{resolution\+\_\+radius\+\_\+m} () const
+\begin{DoxyCompactList}\small\item\em Get Resolution radius (meters) \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a3ed74a42ebc594d47cf3ab92b7b5b44b}{name} () const
+\begin{DoxyCompactList}\small\item\em Get Variable name of the data-\/set. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \& \hyperlink{classosse_1_1collaborate_1_1_packet_raw_ab0a721308e65ca879e2976b75c8f891c}{informer\+\_\+index} () const
+\begin{DoxyCompactList}\small\item\em Get informer index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a3f648bbe36363c7698b578199a7cbfc0}\label{classosse_1_1collaborate_1_1_packet_raw_a3f648bbe36363c7698b578199a7cbfc0}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a3f648bbe36363c7698b578199a7cbfc0}{k\+Packet\+Raw\+Size\+Bytes} = 108
+\begin{DoxyCompactList}\small\item\em Maximum size of a route. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a50219d73527e1d6a31377669eb0b3f58}\label{classosse_1_1collaborate_1_1_packet_raw_a50219d73527e1d6a31377669eb0b3f58}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a50219d73527e1d6a31377669eb0b3f58}{k\+Max\+String\+Size} = 30
+\begin{DoxyCompactList}\small\item\em Maximum size of a route. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a3db4ef65002f75dc8d97ed7fe3f3d18e}\label{classosse_1_1collaborate_1_1_packet_raw_a3db4ef65002f75dc8d97ed7fe3f3d18e}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a3db4ef65002f75dc8d97ed7fe3f3d18e}{k\+Num\+Elements} = 15
+\begin{DoxyCompactList}\small\item\em Number of element in a raw packet. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a6a658f02c532fb118a0e012b9798f377}\label{classosse_1_1collaborate_1_1_packet_raw_a6a658f02c532fb118a0e012b9798f377}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a6a658f02c532fb118a0e012b9798f377}{k\+Elapsed\+S\+Index} = 0
+\begin{DoxyCompactList}\small\item\em Index of elapsed (seconds) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a857add1a85328c254eb9c40a22e41ae0}\label{classosse_1_1collaborate_1_1_packet_raw_a857add1a85328c254eb9c40a22e41ae0}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a857add1a85328c254eb9c40a22e41ae0}{k\+Year\+Index} = 8
+\begin{DoxyCompactList}\small\item\em Index of year. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_ad47437ecc1509e90f6e1a5429d237781}\label{classosse_1_1collaborate_1_1_packet_raw_ad47437ecc1509e90f6e1a5429d237781}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_ad47437ecc1509e90f6e1a5429d237781}{k\+Month\+Index} = 12
+\begin{DoxyCompactList}\small\item\em Index of month. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a2abd178ab813f4af78f9e2752733bbc7}\label{classosse_1_1collaborate_1_1_packet_raw_a2abd178ab813f4af78f9e2752733bbc7}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a2abd178ab813f4af78f9e2752733bbc7}{k\+Day\+Index} = 16
+\begin{DoxyCompactList}\small\item\em Index of day. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_af2c2f936795fd48c743f614ff8d02914}\label{classosse_1_1collaborate_1_1_packet_raw_af2c2f936795fd48c743f614ff8d02914}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_af2c2f936795fd48c743f614ff8d02914}{k\+Hour\+Index} = 20
+\begin{DoxyCompactList}\small\item\em Index of hour. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a8d2b97ce74708071e45701a4993cbd41}\label{classosse_1_1collaborate_1_1_packet_raw_a8d2b97ce74708071e45701a4993cbd41}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a8d2b97ce74708071e45701a4993cbd41}{k\+Minute\+Index} = 24
+\begin{DoxyCompactList}\small\item\em Index of minute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_ab5d403de98f465bae40299dacdb03e52}\label{classosse_1_1collaborate_1_1_packet_raw_ab5d403de98f465bae40299dacdb03e52}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_ab5d403de98f465bae40299dacdb03e52}{k\+Second\+Index} = 28
+\begin{DoxyCompactList}\small\item\em Index of second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a6222188bd78bce81a9b862e861ec5e6c}\label{classosse_1_1collaborate_1_1_packet_raw_a6222188bd78bce81a9b862e861ec5e6c}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a6222188bd78bce81a9b862e861ec5e6c}{k\+Microsecond\+Index} = 32
+\begin{DoxyCompactList}\small\item\em Index of microsecond. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a2f76ff5a4311b920ce08eaf3cfde80d1}\label{classosse_1_1collaborate_1_1_packet_raw_a2f76ff5a4311b920ce08eaf3cfde80d1}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a2f76ff5a4311b920ce08eaf3cfde80d1}{k\+Latitude\+Rad\+Index} = 36
+\begin{DoxyCompactList}\small\item\em Index of latitude (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a59838866a3feca3649ca2bff73ce7303}\label{classosse_1_1collaborate_1_1_packet_raw_a59838866a3feca3649ca2bff73ce7303}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a59838866a3feca3649ca2bff73ce7303}{k\+Longitude\+Rad\+Index} = 44
+\begin{DoxyCompactList}\small\item\em Index of longitude (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a4583fb60c6c3f67e7372c65275fb5f24}\label{classosse_1_1collaborate_1_1_packet_raw_a4583fb60c6c3f67e7372c65275fb5f24}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a4583fb60c6c3f67e7372c65275fb5f24}{k\+Altitude\+M\+Index} = 52
+\begin{DoxyCompactList}\small\item\em Index of altitude (meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a7534cb7d4618f3cbb8465242cfeef31f}\label{classosse_1_1collaborate_1_1_packet_raw_a7534cb7d4618f3cbb8465242cfeef31f}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a7534cb7d4618f3cbb8465242cfeef31f}{k\+Measurement\+Index} = 60
+\begin{DoxyCompactList}\small\item\em Index of measurement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_acdee71ea96e7eb2209d7eadbc9a5bab9}\label{classosse_1_1collaborate_1_1_packet_raw_acdee71ea96e7eb2209d7eadbc9a5bab9}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_acdee71ea96e7eb2209d7eadbc9a5bab9}{k\+Resolution\+Rad\+M\+Index} = 68
+\begin{DoxyCompactList}\small\item\em Index of resolution radius (meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a1afb43ab4b4f42e732d849b512c736f9}\label{classosse_1_1collaborate_1_1_packet_raw_a1afb43ab4b4f42e732d849b512c736f9}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a1afb43ab4b4f42e732d849b512c736f9}{k\+Name\+Index} = 76
+\begin{DoxyCompactList}\small\item\em Index of name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a135c68a815cb05e9f670d3f3e4a1a70f}\label{classosse_1_1collaborate_1_1_packet_raw_a135c68a815cb05e9f670d3f3e4a1a70f}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a135c68a815cb05e9f670d3f3e4a1a70f}{k\+Informer\+Index\+Index} = 106
+\begin{DoxyCompactList}\small\item\em Index of informer index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a9f38c8bdbccf25e869a0d0dbf02c312a}{Pack\+All} (const uint64\+\_\+t \&\+\_\+elapsed\+\_\+s, const int \&\+\_\+year, const int \&\+\_\+month, const int \&\+\_\+day, const int \&\+\_\+hour, const int \&\+\_\+minute, const int \&\+\_\+second, const int \&\+\_\+microsecond, const double \&\+\_\+latitude\+\_\+rad, const double \&\+\_\+longitude\+\_\+rad, const double \&\+\_\+altitude\+\_\+m, const double \&\+\_\+measurement, const double \&\+\_\+resolution\+\_\+radius\+\_\+m, const std\+::string \&\+\_\+name, const uint16\+\_\+t \&\+\_\+informer\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Inserts data members into the payload. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a0a3698124ebe1bb48f2cf3158035ea3d}{Pack\+String} (const std\+::string \&\+\_\+string, std\+::vector$<$ uint8\+\_\+t $>$ $\ast$\+\_\+payload) const
+\begin{DoxyCompactList}\small\item\em Inserts a string into the payload. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a852c9461111a6dff32bf1374d8bf27e0}{Unpack\+String} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload, const uint16\+\_\+t \&\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Unpacks a string from the payload. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_aad8310207b7e3d74633874497145331d}\label{classosse_1_1collaborate_1_1_packet_raw_aad8310207b7e3d74633874497145331d}} 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_packet_raw_aad8310207b7e3d74633874497145331d}{elapsed\+\_\+s\+\_\+}
+\begin{DoxyCompactList}\small\item\em Time elapsed since the beginning of the simulation (seconds) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_ac5502a36a4d412da7c1bcf23d1d603df}\label{classosse_1_1collaborate_1_1_packet_raw_ac5502a36a4d412da7c1bcf23d1d603df}} 
+int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_ac5502a36a4d412da7c1bcf23d1d603df}{year\+\_\+}
+\begin{DoxyCompactList}\small\item\em Year. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_ae8f7fb3902fbe0c792ecfc8bb22014e0}\label{classosse_1_1collaborate_1_1_packet_raw_ae8f7fb3902fbe0c792ecfc8bb22014e0}} 
+int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_ae8f7fb3902fbe0c792ecfc8bb22014e0}{month\+\_\+}
+\begin{DoxyCompactList}\small\item\em Month. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_ab0890b912acf38237e5a2908b69a017c}\label{classosse_1_1collaborate_1_1_packet_raw_ab0890b912acf38237e5a2908b69a017c}} 
+int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_ab0890b912acf38237e5a2908b69a017c}{day\+\_\+}
+\begin{DoxyCompactList}\small\item\em Day. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_aca4527edca0a59fd3c3b3ec48a07141e}\label{classosse_1_1collaborate_1_1_packet_raw_aca4527edca0a59fd3c3b3ec48a07141e}} 
+int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_aca4527edca0a59fd3c3b3ec48a07141e}{hour\+\_\+}
+\begin{DoxyCompactList}\small\item\em Hour. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a0a2c0a65eb82d4acf99a00753052de5d}\label{classosse_1_1collaborate_1_1_packet_raw_a0a2c0a65eb82d4acf99a00753052de5d}} 
+int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a0a2c0a65eb82d4acf99a00753052de5d}{minute\+\_\+}
+\begin{DoxyCompactList}\small\item\em Minute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_acdf9d0290dfab43b432724a2fbd5670e}\label{classosse_1_1collaborate_1_1_packet_raw_acdf9d0290dfab43b432724a2fbd5670e}} 
+int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_acdf9d0290dfab43b432724a2fbd5670e}{second\+\_\+}
+\begin{DoxyCompactList}\small\item\em Second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a418a22291fbbc1b3166c3a077b9a743b}\label{classosse_1_1collaborate_1_1_packet_raw_a418a22291fbbc1b3166c3a077b9a743b}} 
+int \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a418a22291fbbc1b3166c3a077b9a743b}{microsecond\+\_\+}
+\begin{DoxyCompactList}\small\item\em Microsecond. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a0bbdb8e9b57399738c8d04e7d0cae90d}\label{classosse_1_1collaborate_1_1_packet_raw_a0bbdb8e9b57399738c8d04e7d0cae90d}} 
+double \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a0bbdb8e9b57399738c8d04e7d0cae90d}{latitude\+\_\+rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Latitude (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_aab2ff3e58e1ede0d22bf2d9147cdae66}\label{classosse_1_1collaborate_1_1_packet_raw_aab2ff3e58e1ede0d22bf2d9147cdae66}} 
+double \hyperlink{classosse_1_1collaborate_1_1_packet_raw_aab2ff3e58e1ede0d22bf2d9147cdae66}{longitude\+\_\+rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Longitude (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a76922089ea935ad79f0db38c4ced3e82}\label{classosse_1_1collaborate_1_1_packet_raw_a76922089ea935ad79f0db38c4ced3e82}} 
+double \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a76922089ea935ad79f0db38c4ced3e82}{altitude\+\_\+m\+\_\+}
+\begin{DoxyCompactList}\small\item\em Altitude (meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_aee4f3243d23cd7d42da0bc57f1d6ddf9}\label{classosse_1_1collaborate_1_1_packet_raw_aee4f3243d23cd7d42da0bc57f1d6ddf9}} 
+double \hyperlink{classosse_1_1collaborate_1_1_packet_raw_aee4f3243d23cd7d42da0bc57f1d6ddf9}{measurement\+\_\+}
+\begin{DoxyCompactList}\small\item\em Measurement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_ab2b10a2c86557025014f3d342ceadeae}\label{classosse_1_1collaborate_1_1_packet_raw_ab2b10a2c86557025014f3d342ceadeae}} 
+double \hyperlink{classosse_1_1collaborate_1_1_packet_raw_ab2b10a2c86557025014f3d342ceadeae}{resolution\+\_\+radius\+\_\+m\+\_\+}
+\begin{DoxyCompactList}\small\item\em Resolution radius (meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a814de948d41567761f87343d28984843}\label{classosse_1_1collaborate_1_1_packet_raw_a814de948d41567761f87343d28984843}} 
+std\+::string \hyperlink{classosse_1_1collaborate_1_1_packet_raw_a814de948d41567761f87343d28984843}{name\+\_\+}
+\begin{DoxyCompactList}\small\item\em Variable name of the data-\/set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_af7a667ad506f25e2050ffb1d862efbd9}\label{classosse_1_1collaborate_1_1_packet_raw_af7a667ad506f25e2050ffb1d862efbd9}} 
+uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_packet_raw_af7a667ad506f25e2050ffb1d862efbd9}{informer\+\_\+index\+\_\+}
+\begin{DoxyCompactList}\small\item\em Informer index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+A packet of raw measurement data. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a77d54b0f3adb1e32ab58ee5104bae39d}\label{classosse_1_1collaborate_1_1_packet_raw_a77d54b0f3adb1e32ab58ee5104bae39d}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!Packet\+Raw@{Packet\+Raw}}
+\index{Packet\+Raw@{Packet\+Raw}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{Packet\+Raw()}{PacketRaw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Packet\+Raw\+::\+Packet\+Raw (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$}]{\+\_\+payload }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor from payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a16cbaab494437fb520a9600cd4819319}\label{classosse_1_1collaborate_1_1_packet_raw_a16cbaab494437fb520a9600cd4819319}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!Packet\+Raw@{Packet\+Raw}}
+\index{Packet\+Raw@{Packet\+Raw}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{Packet\+Raw()}{PacketRaw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Packet\+Raw\+::\+Packet\+Raw (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+elapsed\+\_\+s,  }\item[{const int \&}]{\+\_\+year,  }\item[{const int \&}]{\+\_\+month,  }\item[{const int \&}]{\+\_\+day,  }\item[{const int \&}]{\+\_\+hour,  }\item[{const int \&}]{\+\_\+minute,  }\item[{const int \&}]{\+\_\+second,  }\item[{const int \&}]{\+\_\+microsecond,  }\item[{const double \&}]{\+\_\+latitude\+\_\+rad,  }\item[{const double \&}]{\+\_\+longitude\+\_\+rad,  }\item[{const double \&}]{\+\_\+altitude\+\_\+m,  }\item[{const double \&}]{\+\_\+measurement,  }\item[{const double \&}]{\+\_\+resolution\+\_\+radius\+\_\+m,  }\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const uint16\+\_\+t \&}]{\+\_\+informer\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Constructor from data members. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+elapsed\+\_\+s} & Time elapsed in the simulation (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+year} & Year \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+month} & Month \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+day} & Day \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+hour} & Hour \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+minute} & Minute \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+second} & Second \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+microsecond} & Microsecond \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+latitude\+\_\+rad} & Latitude (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+longitude\+\_\+rad} & Longitude (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+altitude\+\_\+m} & Altitude (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+measurement} & Measurement \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+resolution\+\_\+radius\+\_\+m} & Resolution (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+name} & Variable name of data set \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+informer\+\_\+index} & Informer index index \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a0df4fa194dac316e9ca1e8e6e9beec0b}\label{classosse_1_1collaborate_1_1_packet_raw_a0df4fa194dac316e9ca1e8e6e9beec0b}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!altitude\+\_\+m@{altitude\+\_\+m}}
+\index{altitude\+\_\+m@{altitude\+\_\+m}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{altitude\+\_\+m()}{altitude\_m()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Packet\+Raw\+::altitude\+\_\+m (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Altitude (meters) 
+
+\begin{DoxyReturn}{Returns}
+altitude\+\_\+m\+\_\+ Altitude (meters) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a4c492fb013220d09d08a6635c12ec055}\label{classosse_1_1collaborate_1_1_packet_raw_a4c492fb013220d09d08a6635c12ec055}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!day@{day}}
+\index{day@{day}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{day()}{day()}}
+{\footnotesize\ttfamily const int\& osse\+::collaborate\+::\+Packet\+Raw\+::day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Day. 
+
+\begin{DoxyReturn}{Returns}
+day\+\_\+ Day 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_ae6ee78a3e857b59dc78351ebd18f032e}\label{classosse_1_1collaborate_1_1_packet_raw_ae6ee78a3e857b59dc78351ebd18f032e}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!elapsed\+\_\+s@{elapsed\+\_\+s}}
+\index{elapsed\+\_\+s@{elapsed\+\_\+s}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{elapsed\+\_\+s()}{elapsed\_s()}}
+{\footnotesize\ttfamily const uint64\+\_\+t\& osse\+::collaborate\+::\+Packet\+Raw\+::elapsed\+\_\+s (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Year. 
+
+\begin{DoxyReturn}{Returns}
+year\+\_\+ Year 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a265e1fc70e832947969c3d3b28b627cf}\label{classosse_1_1collaborate_1_1_packet_raw_a265e1fc70e832947969c3d3b28b627cf}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!hour@{hour}}
+\index{hour@{hour}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{hour()}{hour()}}
+{\footnotesize\ttfamily const int\& osse\+::collaborate\+::\+Packet\+Raw\+::hour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Hour. 
+
+\begin{DoxyReturn}{Returns}
+hour\+\_\+ Hour 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_ab0a721308e65ca879e2976b75c8f891c}\label{classosse_1_1collaborate_1_1_packet_raw_ab0a721308e65ca879e2976b75c8f891c}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!informer\+\_\+index@{informer\+\_\+index}}
+\index{informer\+\_\+index@{informer\+\_\+index}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{informer\+\_\+index()}{informer\_index()}}
+{\footnotesize\ttfamily const uint16\+\_\+t\& osse\+::collaborate\+::\+Packet\+Raw\+::informer\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get informer index. 
+
+\begin{DoxyReturn}{Returns}
+informer\+\_\+index\+\_\+index\+\_\+ Informer index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_ad5e2fab8d02a3a1219c7d9c0efeda5d3}\label{classosse_1_1collaborate_1_1_packet_raw_ad5e2fab8d02a3a1219c7d9c0efeda5d3}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!latitude\+\_\+rad@{latitude\+\_\+rad}}
+\index{latitude\+\_\+rad@{latitude\+\_\+rad}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{latitude\+\_\+rad()}{latitude\_rad()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Packet\+Raw\+::latitude\+\_\+rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Latitude (radians) 
+
+\begin{DoxyReturn}{Returns}
+latitude\+\_\+rad\+\_\+ Latitude (radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a3ce663da9c6fb9dbff2238acc6a88841}\label{classosse_1_1collaborate_1_1_packet_raw_a3ce663da9c6fb9dbff2238acc6a88841}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!longitude\+\_\+rad@{longitude\+\_\+rad}}
+\index{longitude\+\_\+rad@{longitude\+\_\+rad}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{longitude\+\_\+rad()}{longitude\_rad()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Packet\+Raw\+::longitude\+\_\+rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Longitude (radians) 
+
+\begin{DoxyReturn}{Returns}
+longitude\+\_\+rad\+\_\+ Longitude (radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a2a99f3e00c4b1fdf018d3499cc1b73ca}\label{classosse_1_1collaborate_1_1_packet_raw_a2a99f3e00c4b1fdf018d3499cc1b73ca}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!measurement@{measurement}}
+\index{measurement@{measurement}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{measurement()}{measurement()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Packet\+Raw\+::measurement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Measurement. 
+
+\begin{DoxyReturn}{Returns}
+measurement\+\_\+ Measurement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_ae1988405764da791632e1d272b321873}\label{classosse_1_1collaborate_1_1_packet_raw_ae1988405764da791632e1d272b321873}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!microsecond@{microsecond}}
+\index{microsecond@{microsecond}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{microsecond()}{microsecond()}}
+{\footnotesize\ttfamily const int\& osse\+::collaborate\+::\+Packet\+Raw\+::microsecond (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Microsecond. 
+
+\begin{DoxyReturn}{Returns}
+microsecond\+\_\+ Microsecond 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_ac8dab9ede92438259281e25bed6a72af}\label{classosse_1_1collaborate_1_1_packet_raw_ac8dab9ede92438259281e25bed6a72af}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!minute@{minute}}
+\index{minute@{minute}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{minute()}{minute()}}
+{\footnotesize\ttfamily const int\& osse\+::collaborate\+::\+Packet\+Raw\+::minute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Minute. 
+
+\begin{DoxyReturn}{Returns}
+minute\+\_\+ Minute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a1aec62b6f1c6ca8a332cbc1a9c299e25}\label{classosse_1_1collaborate_1_1_packet_raw_a1aec62b6f1c6ca8a332cbc1a9c299e25}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!month@{month}}
+\index{month@{month}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{month()}{month()}}
+{\footnotesize\ttfamily const int\& osse\+::collaborate\+::\+Packet\+Raw\+::month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Month. 
+
+\begin{DoxyReturn}{Returns}
+month\+\_\+ Month 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a3ed74a42ebc594d47cf3ab92b7b5b44b}\label{classosse_1_1collaborate_1_1_packet_raw_a3ed74a42ebc594d47cf3ab92b7b5b44b}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!name@{name}}
+\index{name@{name}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& osse\+::collaborate\+::\+Packet\+Raw\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Variable name of the data-\/set. 
+
+\begin{DoxyReturn}{Returns}
+name\+\_\+ Variable name of the data-\/set 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a9f38c8bdbccf25e869a0d0dbf02c312a}\label{classosse_1_1collaborate_1_1_packet_raw_a9f38c8bdbccf25e869a0d0dbf02c312a}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!Pack\+All@{Pack\+All}}
+\index{Pack\+All@{Pack\+All}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{Pack\+All()}{PackAll()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint8\+\_\+t $>$ osse\+::collaborate\+::\+Packet\+Raw\+::\+Pack\+All (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+elapsed\+\_\+s,  }\item[{const int \&}]{\+\_\+year,  }\item[{const int \&}]{\+\_\+month,  }\item[{const int \&}]{\+\_\+day,  }\item[{const int \&}]{\+\_\+hour,  }\item[{const int \&}]{\+\_\+minute,  }\item[{const int \&}]{\+\_\+second,  }\item[{const int \&}]{\+\_\+microsecond,  }\item[{const double \&}]{\+\_\+latitude\+\_\+rad,  }\item[{const double \&}]{\+\_\+longitude\+\_\+rad,  }\item[{const double \&}]{\+\_\+altitude\+\_\+m,  }\item[{const double \&}]{\+\_\+measurement,  }\item[{const double \&}]{\+\_\+resolution\+\_\+radius\+\_\+m,  }\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const uint16\+\_\+t \&}]{\+\_\+informer\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Inserts data members into the payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+elapsed\+\_\+s} & Time elapsed in the simulation (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+year} & Year \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+month} & Month \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+day} & Day \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+hour} & Hour \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+minute} & Minute \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+second} & Second \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+microsecond} & Microsecond \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+latitude\+\_\+rad} & Latitude (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+longitude\+\_\+rad} & Longitude (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+altitude\+\_\+m} & Altitude (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+measurement} & Measurement \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+resolution\+\_\+radius\+\_\+m} & Resolution (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+name} & Variable name of data set \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+informer\+\_\+index} & Informer index index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Serialized version of the raw packet 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a0a3698124ebe1bb48f2cf3158035ea3d}\label{classosse_1_1collaborate_1_1_packet_raw_a0a3698124ebe1bb48f2cf3158035ea3d}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!Pack\+String@{Pack\+String}}
+\index{Pack\+String@{Pack\+String}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{Pack\+String()}{PackString()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Packet\+Raw\+::\+Pack\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+string,  }\item[{std\+::vector$<$ uint8\+\_\+t $>$ $\ast$}]{\+\_\+payload }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Inserts a string into the payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+string} & String \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a82b6da77df7720c9c3cd12cc9b6b58c4}\label{classosse_1_1collaborate_1_1_packet_raw_a82b6da77df7720c9c3cd12cc9b6b58c4}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!resolution\+\_\+radius\+\_\+m@{resolution\+\_\+radius\+\_\+m}}
+\index{resolution\+\_\+radius\+\_\+m@{resolution\+\_\+radius\+\_\+m}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{resolution\+\_\+radius\+\_\+m()}{resolution\_radius\_m()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Packet\+Raw\+::resolution\+\_\+radius\+\_\+m (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Resolution radius (meters) 
+
+\begin{DoxyReturn}{Returns}
+resolution\+\_\+radius\+\_\+m\+\_\+ Resolution radius (meters) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a889491ddfb2a3602bae83ca547f7c45e}\label{classosse_1_1collaborate_1_1_packet_raw_a889491ddfb2a3602bae83ca547f7c45e}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!second@{second}}
+\index{second@{second}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{second()}{second()}}
+{\footnotesize\ttfamily const int\& osse\+::collaborate\+::\+Packet\+Raw\+::second (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Second. 
+
+\begin{DoxyReturn}{Returns}
+second\+\_\+ Second 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a838d1364ab1defdff4abcabf5369827a}\label{classosse_1_1collaborate_1_1_packet_raw_a838d1364ab1defdff4abcabf5369827a}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily std\+::string osse\+::collaborate\+::\+Packet\+Raw\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Converts the packet to a string. 
+
+\begin{DoxyReturn}{Returns}
+The packet as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a852c9461111a6dff32bf1374d8bf27e0}\label{classosse_1_1collaborate_1_1_packet_raw_a852c9461111a6dff32bf1374d8bf27e0}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!Unpack\+String@{Unpack\+String}}
+\index{Unpack\+String@{Unpack\+String}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{Unpack\+String()}{UnpackString()}}
+{\footnotesize\ttfamily std\+::string osse\+::collaborate\+::\+Packet\+Raw\+::\+Unpack\+String (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload,  }\item[{const uint16\+\_\+t \&}]{\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unpacks a string from the payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+index} & Index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unpacked string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_raw_a0e67ebb309b3564df39c6f2f366f4563}\label{classosse_1_1collaborate_1_1_packet_raw_a0e67ebb309b3564df39c6f2f366f4563}} 
+\index{osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}!year@{year}}
+\index{year@{year}!osse\+::collaborate\+::\+Packet\+Raw@{osse\+::collaborate\+::\+Packet\+Raw}}
+\paragraph{\texorpdfstring{year()}{year()}}
+{\footnotesize\ttfamily const int\& osse\+::collaborate\+::\+Packet\+Raw\+::year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Year. 
+
+\begin{DoxyReturn}{Returns}
+year\+\_\+ Year 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/packet\+\_\+raw.\+h\item 
+libs/collaborate/src/packet\+\_\+raw.\+cpp\end{DoxyCompactItemize}

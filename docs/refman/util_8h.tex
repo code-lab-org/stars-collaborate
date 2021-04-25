@@ -1,0 +1,199 @@
+\hypertarget{util_8h}{}\subsection{libs/collaborate/include/collaborate/util.h File Reference}
+\label{util_8h}\index{libs/collaborate/include/collaborate/util.\+h@{libs/collaborate/include/collaborate/util.\+h}}
+
+
+Provides numeric constants and utilities.  
+
+
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$complex$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for util.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{util_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{util_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{util_8h_a8d1f6a2e0aa4520710c2d90b8a12b945}\label{util_8h_a8d1f6a2e0aa4520710c2d90b8a12b945}} 
+typedef std\+::complex$<$ double $>$ \hyperlink{util_8h_a8d1f6a2e0aa4520710c2d90b8a12b945}{osse\+::collaborate\+::util\+::\+Complex}
+\begin{DoxyCompactList}\small\item\em Double-\/precision complex number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{util_8h_a975407298bb80f7f2272702fa7bfe14d}\label{util_8h_a975407298bb80f7f2272702fa7bfe14d}} 
+typedef std\+::vector$<$ Complex $>$ \hyperlink{util_8h_a975407298bb80f7f2272702fa7bfe14d}{osse\+::collaborate\+::util\+::\+Polynomial}
+\begin{DoxyCompactList}\small\item\em Double-\/precision complex polynomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{util_8h_a87b98378be06910f70a7d2467f45df07}{osse\+::collaborate\+::util\+::\+String\+From\+Double} (const double \&\+\_\+input, const uint8\+\_\+t \&\+\_\+characteristic, const uint8\+\_\+t \&\+\_\+mantissa)
+\begin{DoxyCompactList}\small\item\em Produces a string from a double-\/precision number. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{util_8h_ad1a5ca6ae403ff11e3e628b74727d36a}{osse\+::collaborate\+::util\+::\+Random\+Number\+Between} (const uint64\+\_\+t \&\+\_\+minimum, const uint64\+\_\+t \&\+\_\+maximum)
+\begin{DoxyCompactList}\small\item\em Generates a random number between two values (inclusive) \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{util_8h_a06000e3e4538d7949b83b78663da9554}{osse\+::collaborate\+::util\+::\+Index} (const uint64\+\_\+t \&\+\_\+row, const uint64\+\_\+t \&\+\_\+column, const uint64\+\_\+t \&\+\_\+num\+\_\+columns)
+\begin{DoxyCompactList}\small\item\em Calculates the index in a 1-\/D array as if it were 2-\/D. \end{DoxyCompactList}\item 
+double \hyperlink{util_8h_a8f96efc8962a36fc0f5f4c4513bb1ed6}{osse\+::collaborate\+::util\+::\+Minimum\+Root} (const Polynomial \&\+\_\+coefficients)
+\begin{DoxyCompactList}\small\item\em Finds minimum positive root of a truncated polynomial (4th degree) \end{DoxyCompactList}\item 
+Polynomial \hyperlink{util_8h_ac5254bd53737bca048d12dbda092ddc7}{osse\+::collaborate\+::util\+::\+Complex\+Roots} (const Polynomial \&\+\_\+coefficients)
+\begin{DoxyCompactList}\small\item\em Finds the complex roots of a truncated polynomial (4th degree) \end{DoxyCompactList}\item 
+void \hyperlink{util_8h_ac3a132af1e7f25403fc93320ed288ef9}{osse\+::collaborate\+::util\+::\+Laguerre} (const Polynomial \&\+\_\+coefficients, const int \&\+\_\+degree, Complex $\ast$\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Provides the acute angle between two proper real lines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{util_8h_aafd53d7ece71a9ace600ad244ddb72ac}\label{util_8h_aafd53d7ece71a9ace600ad244ddb72ac}} 
+constexpr double \hyperlink{util_8h_aafd53d7ece71a9ace600ad244ddb72ac}{osse\+::collaborate\+::util\+::k\+Pi\+Rad} = M\+\_\+\+PI
+\begin{DoxyCompactList}\small\item\em Pi (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{util_8h_ab41b2319cbabaf576c9ba15dcba9c0aa}\label{util_8h_ab41b2319cbabaf576c9ba15dcba9c0aa}} 
+constexpr double \hyperlink{util_8h_ab41b2319cbabaf576c9ba15dcba9c0aa}{osse\+::collaborate\+::util\+::k\+Pi\+By\+Two\+Rad} = M\+\_\+\+P\+I\+\_\+2
+\begin{DoxyCompactList}\small\item\em Pi divided by 2 (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{util_8h_a3a79aec93e2780fa996a064802dc9c5d}\label{util_8h_a3a79aec93e2780fa996a064802dc9c5d}} 
+constexpr double \hyperlink{util_8h_a3a79aec93e2780fa996a064802dc9c5d}{osse\+::collaborate\+::util\+::k\+Two\+Pi\+Rad} = 2 $\ast$ M\+\_\+\+PI
+\begin{DoxyCompactList}\small\item\em Pi multiplied by 2 (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{util_8h_ad1122acb7e2ee33cb490199c5992f3ff}\label{util_8h_ad1122acb7e2ee33cb490199c5992f3ff}} 
+constexpr double \hyperlink{util_8h_ad1122acb7e2ee33cb490199c5992f3ff}{osse\+::collaborate\+::util\+::k\+Bits\+Per\+Byte} = C\+H\+A\+R\+\_\+\+B\+IT
+\begin{DoxyCompactList}\small\item\em Number of bits per byte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Provides numeric constants and utilities. 
+
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{util_8h_file_ac5254bd53737bca048d12dbda092ddc7}\label{util_8h_file_ac5254bd53737bca048d12dbda092ddc7}} 
+\index{util.\+h@{util.\+h}!Complex\+Roots@{Complex\+Roots}}
+\index{Complex\+Roots@{Complex\+Roots}!util.\+h@{util.\+h}}
+\paragraph{\texorpdfstring{Complex\+Roots()}{ComplexRoots()}}
+{\footnotesize\ttfamily Polynomial osse\+::collaborate\+::util\+::\+Complex\+Roots (\begin{DoxyParamCaption}\item[{const \hyperlink{util_8h_a975407298bb80f7f2272702fa7bfe14d}{Polynomial} \&}]{\+\_\+coefficients }\end{DoxyParamCaption})}
+
+
+
+Finds the complex roots of a truncated polynomial (4th degree) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+coefficients} & Coefficients of polynomial \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Complex roots of a polynomial 
+\end{DoxyReturn}
+\mbox{\Hypertarget{util_8h_file_a06000e3e4538d7949b83b78663da9554}\label{util_8h_file_a06000e3e4538d7949b83b78663da9554}} 
+\index{util.\+h@{util.\+h}!Index@{Index}}
+\index{Index@{Index}!util.\+h@{util.\+h}}
+\paragraph{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily uint64\+\_\+t osse\+::collaborate\+::util\+::\+Index (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+row,  }\item[{const uint64\+\_\+t \&}]{\+\_\+column,  }\item[{const uint64\+\_\+t \&}]{\+\_\+num\+\_\+columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the index in a 1-\/D array as if it were 2-\/D. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+row} & Row \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+column} & Column \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+columns} & Number of columns \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{util_8h_file_ac3a132af1e7f25403fc93320ed288ef9}\label{util_8h_file_ac3a132af1e7f25403fc93320ed288ef9}} 
+\index{util.\+h@{util.\+h}!Laguerre@{Laguerre}}
+\index{Laguerre@{Laguerre}!util.\+h@{util.\+h}}
+\paragraph{\texorpdfstring{Laguerre()}{Laguerre()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::util\+::\+Laguerre (\begin{DoxyParamCaption}\item[{const \hyperlink{util_8h_a975407298bb80f7f2272702fa7bfe14d}{Polynomial} \&}]{\+\_\+coefficients,  }\item[{const int \&}]{\+\_\+degree,  }\item[{\hyperlink{util_8h_a8d1f6a2e0aa4520710c2d90b8a12b945}{Complex} $\ast$}]{\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Provides the acute angle between two proper real lines. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+coefficients} & Coefficients of polynomial \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+degree} & Degree of polynomial \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+value} & Current root \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{util_8h_file_a8f96efc8962a36fc0f5f4c4513bb1ed6}\label{util_8h_file_a8f96efc8962a36fc0f5f4c4513bb1ed6}} 
+\index{util.\+h@{util.\+h}!Minimum\+Root@{Minimum\+Root}}
+\index{Minimum\+Root@{Minimum\+Root}!util.\+h@{util.\+h}}
+\paragraph{\texorpdfstring{Minimum\+Root()}{MinimumRoot()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::util\+::\+Minimum\+Root (\begin{DoxyParamCaption}\item[{const \hyperlink{util_8h_a975407298bb80f7f2272702fa7bfe14d}{Polynomial} \&}]{\+\_\+coefficients }\end{DoxyParamCaption})}
+
+
+
+Finds minimum positive root of a truncated polynomial (4th degree) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+coefficients} & Coefficients of polynomial \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Minimum positive root of a truncated polynomial (4th degree) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{util_8h_file_ad1a5ca6ae403ff11e3e628b74727d36a}\label{util_8h_file_ad1a5ca6ae403ff11e3e628b74727d36a}} 
+\index{util.\+h@{util.\+h}!Random\+Number\+Between@{Random\+Number\+Between}}
+\index{Random\+Number\+Between@{Random\+Number\+Between}!util.\+h@{util.\+h}}
+\paragraph{\texorpdfstring{Random\+Number\+Between()}{RandomNumberBetween()}}
+{\footnotesize\ttfamily uint64\+\_\+t osse\+::collaborate\+::util\+::\+Random\+Number\+Between (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+minimum,  }\item[{const uint64\+\_\+t \&}]{\+\_\+maximum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates a random number between two values (inclusive) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+minimum} & The minimum number \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+maximum} & The maximum number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Random number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{util_8h_file_a87b98378be06910f70a7d2467f45df07}\label{util_8h_file_a87b98378be06910f70a7d2467f45df07}} 
+\index{util.\+h@{util.\+h}!String\+From\+Double@{String\+From\+Double}}
+\index{String\+From\+Double@{String\+From\+Double}!util.\+h@{util.\+h}}
+\paragraph{\texorpdfstring{String\+From\+Double()}{StringFromDouble()}}
+{\footnotesize\ttfamily std\+::string osse\+::collaborate\+::util\+::\+String\+From\+Double (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+input,  }\item[{const uint8\+\_\+t \&}]{\+\_\+characteristic,  }\item[{const uint8\+\_\+t \&}]{\+\_\+mantissa }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Produces a string from a double-\/precision number. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+input} & Input double-\/precision number \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+characteristic} & Number of digits before the decimal point \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+mantissa} & Number of digits after the decimal point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representation 
+\end{DoxyReturn}

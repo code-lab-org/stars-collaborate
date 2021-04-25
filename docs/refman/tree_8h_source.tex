@@ -1,0 +1,73 @@
+\hypertarget{tree_8h_source}{}\subsection{tree.\+h}
+\label{tree_8h_source}\index{libs/collaborate/include/collaborate/tree.\+h@{libs/collaborate/include/collaborate/tree.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_TREE\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_TREE\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <cstdint>}
+00020 \textcolor{preprocessor}{#include <string>}
+00021 \textcolor{preprocessor}{#include <vector>}
+00022 
+00023 \textcolor{preprocessor}{#include "collaborate/node.h"}
+00024 
+00025 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00026 \textcolor{keyword}{namespace }collaborate \{
+00027 
+\Hypertarget{tree_8h_source_l00032}\hyperlink{classosse_1_1collaborate_1_1_tree}{00032} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_tree}{Tree} \{
+00033  \textcolor{keyword}{public}:
+\Hypertarget{tree_8h_source_l00035}\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{00035}   \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch} \{
+\Hypertarget{tree_8h_source_l00037}\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch_afecb0b159e3237922a98f19fabe253d4}{00037}     \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch_afecb0b159e3237922a98f19fabe253d4}{parent};
+\Hypertarget{tree_8h_source_l00039}\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch_a6a203234c56628ffa2e00c02feb56889}{00039}     std::vector<Branch*> \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch_a6a203234c56628ffa2e00c02feb56889}{children};
+\Hypertarget{tree_8h_source_l00041}\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch_adc93639463bcedf30093971acb1ffed7}{00041}     uint16\_t \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch_adc93639463bcedf30093971acb1ffed7}{level};
+\Hypertarget{tree_8h_source_l00043}\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch_ad91a67cf892b961fdfaf2fd2351166b9}{00043}     \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch_ad91a67cf892b961fdfaf2fd2351166b9}{identity};
+\Hypertarget{tree_8h_source_l00045}\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch_aea50b889decbfbf82feb1298e3f73d5f}{00045}     uint64\_t \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch_aea50b889decbfbf82feb1298e3f73d5f}{rx\_time\_s};
+00046   \} \hyperlink{classosse_1_1collaborate_1_1_tree_a3481f1f1188d31e86f8a9b212c9a7ec7}{Branch};
+00051   \hyperlink{classosse_1_1collaborate_1_1_tree_a5255f4310921f9caa8ba8710e090ac90}{Tree}(\hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_root, \textcolor{keyword}{const} uint16\_t& \_height, \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_target);
+00053   \hyperlink{classosse_1_1collaborate_1_1_tree_ac36c59a5b59c87a0681ab5712326d4ff}{~Tree}();
+00056   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_tree_a04a5fa19a165dd354966e59f48c0c681}{DeleteSubtree}(\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \_branch);
+00060   \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \hyperlink{classosse_1_1collaborate_1_1_tree_adfe5d9fa445a38113939f33b61b37a08}{CreateRoot}(\hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_root\_identity);
+00066   \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \hyperlink{classosse_1_1collaborate_1_1_tree_a85ed28c9682af666d94633d9d3b92f04}{AddChild}(\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \_parent,
+00067                    \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_identity,
+00068                    \textcolor{keyword}{const} uint64\_t& \_rx\_time\_s);
+00072   std::vector<Branch*> \hyperlink{classosse_1_1collaborate_1_1_tree_ab7365c9a23acf7aac1070e0a9ee0c5d7}{Ancestry}(\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \_branch) \textcolor{keyword}{const};
+00077   \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \hyperlink{classosse_1_1collaborate_1_1_tree_a39e23eba696e4dbf520d9ad42c2c227d}{SearchSpecific}(\hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_identity, \textcolor{keyword}{const} uint64\_t& \_rx\_time\_s) \textcolor{keyword}{const};
+00081   \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \hyperlink{classosse_1_1collaborate_1_1_tree_acb3448871b41ab199db72e3cdd4e23c2}{BreadthFirstSearch}(\hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_identity) \textcolor{keyword}{const};
+00086   \textcolor{keywordtype}{bool} \hyperlink{classosse_1_1collaborate_1_1_tree_a1147a0288752f6af47f3b058b4e4d134}{HasChild}(\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \_branch, \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_identity) \textcolor{keyword}{const};
+00090   \textcolor{keywordtype}{bool} \hyperlink{classosse_1_1collaborate_1_1_tree_ad93736258a744c9820176d4ee8172f8a}{IsLeaf}(\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \_branch) \textcolor{keyword}{const};
+00093   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_tree_aa0f69e21e7eacd90468ae534d83b0575}{Log}(\textcolor{keyword}{const} std::string& \_path) \textcolor{keyword}{const};
+\Hypertarget{tree_8h_source_l00096}\hyperlink{classosse_1_1collaborate_1_1_tree_a7f289086d7ce1eb5bf8e500460ad3685}{00096}   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_tree_a7f289086d7ce1eb5bf8e500460ad3685}{set\_root}(\hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \_root) \{\hyperlink{classosse_1_1collaborate_1_1_tree_ae7ddeb236660d03a04ba54305f8b4e6c}{root\_} = \_root;\}
+\Hypertarget{tree_8h_source_l00099}\hyperlink{classosse_1_1collaborate_1_1_tree_ac4f62119ebc24b84843a1772c993165b}{00099}   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_tree_ac4f62119ebc24b84843a1772c993165b}{set\_height}(\textcolor{keyword}{const} uint16\_t& \_height) \{\hyperlink{classosse_1_1collaborate_1_1_tree_a303d866c9d61c5e1d253b69db6bc9e12}{height\_} = \_height;\}
+\Hypertarget{tree_8h_source_l00102}\hyperlink{classosse_1_1collaborate_1_1_tree_a6f95ca3aa1b76df2ddb562d11ea8d093}{00102}   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_tree_a6f95ca3aa1b76df2ddb562d11ea8d093}{set\_target}(\hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_target) \{\hyperlink{classosse_1_1collaborate_1_1_tree_ae901e4b982b2bf68e1f7922996cfe42e}{target\_} = \_target;\}
+\Hypertarget{tree_8h_source_l00105}\hyperlink{classosse_1_1collaborate_1_1_tree_a65d78ce80c9efa9af095d9081d6abc80}{00105}   \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \hyperlink{classosse_1_1collaborate_1_1_tree_a65d78ce80c9efa9af095d9081d6abc80}{root}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_tree_ae7ddeb236660d03a04ba54305f8b4e6c}{root\_};\}
+\Hypertarget{tree_8h_source_l00108}\hyperlink{classosse_1_1collaborate_1_1_tree_aef931848873af9beaccf80423935c474}{00108}   \textcolor{keyword}{const} uint64\_t& \hyperlink{classosse_1_1collaborate_1_1_tree_aef931848873af9beaccf80423935c474}{size}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_tree_ab00727db7df6cd7cc78557958ad135b1}{size\_};\}
+\Hypertarget{tree_8h_source_l00111}\hyperlink{classosse_1_1collaborate_1_1_tree_a8c64f27fc4a0c5d206dccb45169c8f42}{00111}   \textcolor{keyword}{const} uint16\_t& \hyperlink{classosse_1_1collaborate_1_1_tree_a8c64f27fc4a0c5d206dccb45169c8f42}{height}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_tree_a303d866c9d61c5e1d253b69db6bc9e12}{height\_};\}
+\Hypertarget{tree_8h_source_l00114}\hyperlink{classosse_1_1collaborate_1_1_tree_a59e323729df69811feb9a8b958a5d31b}{00114}   \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \hyperlink{classosse_1_1collaborate_1_1_tree_a59e323729df69811feb9a8b958a5d31b}{target}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_tree_ae901e4b982b2bf68e1f7922996cfe42e}{target\_};\}
+00115 
+00116  \textcolor{keyword}{private}:
+\Hypertarget{tree_8h_source_l00118}\hyperlink{classosse_1_1collaborate_1_1_tree_ae7ddeb236660d03a04ba54305f8b4e6c}{00118}   \hyperlink{structosse_1_1collaborate_1_1_tree_1_1_branch}{Branch}* \hyperlink{classosse_1_1collaborate_1_1_tree_ae7ddeb236660d03a04ba54305f8b4e6c}{root\_};
+\Hypertarget{tree_8h_source_l00120}\hyperlink{classosse_1_1collaborate_1_1_tree_ab00727db7df6cd7cc78557958ad135b1}{00120}   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_tree_ab00727db7df6cd7cc78557958ad135b1}{size\_};
+\Hypertarget{tree_8h_source_l00122}\hyperlink{classosse_1_1collaborate_1_1_tree_a303d866c9d61c5e1d253b69db6bc9e12}{00122}   uint16\_t \hyperlink{classosse_1_1collaborate_1_1_tree_a303d866c9d61c5e1d253b69db6bc9e12}{height\_};
+\Hypertarget{tree_8h_source_l00124}\hyperlink{classosse_1_1collaborate_1_1_tree_ae901e4b982b2bf68e1f7922996cfe42e}{00124}   \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \hyperlink{classosse_1_1collaborate_1_1_tree_ae901e4b982b2bf68e1f7922996cfe42e}{target\_};
+00125 \};
+00126 
+00127 \}  \textcolor{comment}{// namespace collaborate}
+00128 \}  \textcolor{comment}{// namespace osse}
+00129 
+00130 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_TREE\_H\_}
+\end{DoxyCode}

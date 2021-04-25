@@ -1,0 +1,179 @@
+\hypertarget{classosse_1_1collaborate_1_1_platform_orbit}{}\subsection{osse\+:\+:collaborate\+:\+:Platform\+Orbit Class Reference}
+\label{classosse_1_1collaborate_1_1_platform_orbit}\index{osse\+::collaborate\+::\+Platform\+Orbit@{osse\+::collaborate\+::\+Platform\+Orbit}}
+
+
+Propogates the position of a satellite.  
+
+
+
+
+{\ttfamily \#include $<$platform\+\_\+orbit.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Platform\+Orbit\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classosse_1_1collaborate_1_1_platform_orbit__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_orbit_aeb5892b2982d26547cead0beebc81fe0}\label{classosse_1_1collaborate_1_1_platform_orbit_aeb5892b2982d26547cead0beebc81fe0}} 
+typedef std\+::array$<$ std\+::string, \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a50b5b9308298c2a17db06a92b82abe85}{k\+Num\+Elements} $>$ \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_aeb5892b2982d26547cead0beebc81fe0}{Two\+Line\+Element\+Set}
+\begin{DoxyCompactList}\small\item\em A two-\/line element set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a7883ef54a0b5d13497fd6d21c3bd2ebf}{Platform\+Orbit} (const \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_aeb5892b2982d26547cead0beebc81fe0}{Two\+Line\+Element\+Set} \&\+\_\+tle)
+\begin{DoxyCompactList}\small\item\em Constructor from T\+LE. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a6741aa8faec9968fd8353214d2022648}{Predict\+Orbital\+State} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+simulation\+\_\+clock, const uint64\+\_\+t \&\+\_\+time\+\_\+s) const
+\begin{DoxyCompactList}\small\item\em Get the orbital\+\_\+state of an object the current clock time. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a2b97a4133cb7d82d3ea62a3470f87d72}{Predict\+Orbital\+State} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+simulation\+\_\+clock, const uint64\+\_\+t \&\+\_\+time\+\_\+s, \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} $\ast$\+\_\+orbital\+\_\+state) const
+\begin{DoxyCompactList}\small\item\em Update the orbital\+\_\+state of an object the current clock time. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_platform_orbit}{Platform\+Orbit} $>$ \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a7c11526ed7a47023520c8fbf3605b4c4}{Duplicate} (const uint16\+\_\+t \&\+\_\+orbit\+\_\+planes, const uint16\+\_\+t \&\+\_\+groups\+\_\+per\+\_\+plane, const uint16\+\_\+t \&\+\_\+sats\+\_\+in\+\_\+train, const uint16\+\_\+t \&\+\_\+sats\+\_\+in\+\_\+tandem, const uint16\+\_\+t \&\+\_\+train\+\_\+angle, const uint16\+\_\+t \&\+\_\+tandem\+\_\+angle) const
+\begin{DoxyCompactList}\small\item\em Makes a pattern of orbits based on this. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_aeb5892b2982d26547cead0beebc81fe0}{Two\+Line\+Element\+Set} \& \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_ae0b1dac3159bb4f278091b73221cad93}{k\+Tle} () const
+\begin{DoxyCompactList}\small\item\em Get Array of T\+LE strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_orbit_a50b5b9308298c2a17db06a92b82abe85}\label{classosse_1_1collaborate_1_1_platform_orbit_a50b5b9308298c2a17db06a92b82abe85}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a50b5b9308298c2a17db06a92b82abe85}{k\+Num\+Elements} = 3
+\begin{DoxyCompactList}\small\item\em Number of strings in a two-\/line element set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_orbit_a997543f1020cfa000918286b774c4aa8}\label{classosse_1_1collaborate_1_1_platform_orbit_a997543f1020cfa000918286b774c4aa8}} 
+const \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_aeb5892b2982d26547cead0beebc81fe0}{Two\+Line\+Element\+Set} \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a997543f1020cfa000918286b774c4aa8}{k\+Tle\+\_\+}
+\begin{DoxyCompactList}\small\item\em Array of T\+LE strings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_orbit_a5653e1ae6b7a6274f0ecfdb423b25606}\label{classosse_1_1collaborate_1_1_platform_orbit_a5653e1ae6b7a6274f0ecfdb423b25606}} 
+const sgp4\+::\+S\+G\+P4 \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_a5653e1ae6b7a6274f0ecfdb423b25606}{k\+Model\+\_\+}
+\begin{DoxyCompactList}\small\item\em S\+G\+P4 orbital model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Propogates the position of a satellite. 
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth]{constellations}}
+\end{DoxyImageNoCaption}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_orbit_a7883ef54a0b5d13497fd6d21c3bd2ebf}\label{classosse_1_1collaborate_1_1_platform_orbit_a7883ef54a0b5d13497fd6d21c3bd2ebf}} 
+\index{osse\+::collaborate\+::\+Platform\+Orbit@{osse\+::collaborate\+::\+Platform\+Orbit}!Platform\+Orbit@{Platform\+Orbit}}
+\index{Platform\+Orbit@{Platform\+Orbit}!osse\+::collaborate\+::\+Platform\+Orbit@{osse\+::collaborate\+::\+Platform\+Orbit}}
+\paragraph{\texorpdfstring{Platform\+Orbit()}{PlatformOrbit()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Platform\+Orbit\+::\+Platform\+Orbit (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_aeb5892b2982d26547cead0beebc81fe0}{Two\+Line\+Element\+Set} \&}]{\+\_\+tle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor from T\+LE. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tle} & Two-\/line element set \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_orbit_a7c11526ed7a47023520c8fbf3605b4c4}\label{classosse_1_1collaborate_1_1_platform_orbit_a7c11526ed7a47023520c8fbf3605b4c4}} 
+\index{osse\+::collaborate\+::\+Platform\+Orbit@{osse\+::collaborate\+::\+Platform\+Orbit}!Duplicate@{Duplicate}}
+\index{Duplicate@{Duplicate}!osse\+::collaborate\+::\+Platform\+Orbit@{osse\+::collaborate\+::\+Platform\+Orbit}}
+\paragraph{\texorpdfstring{Duplicate()}{Duplicate()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_platform_orbit}{Platform\+Orbit} $>$ osse\+::collaborate\+::\+Platform\+Orbit\+::\+Duplicate (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+orbit\+\_\+planes,  }\item[{const uint16\+\_\+t \&}]{\+\_\+groups\+\_\+per\+\_\+plane,  }\item[{const uint16\+\_\+t \&}]{\+\_\+sats\+\_\+in\+\_\+train,  }\item[{const uint16\+\_\+t \&}]{\+\_\+sats\+\_\+in\+\_\+tandem,  }\item[{const uint16\+\_\+t \&}]{\+\_\+train\+\_\+angle,  }\item[{const uint16\+\_\+t \&}]{\+\_\+tandem\+\_\+angle }\end{DoxyParamCaption}) const}
+
+
+
+Makes a pattern of orbits based on this. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+orbit\+\_\+planes} & Number of orbit planes \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+groups\+\_\+per\+\_\+plane} & Number of groups per plane \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+sats\+\_\+in\+\_\+train} & Number of satellites in a train \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+sats\+\_\+in\+\_\+tandem} & Number of satellites in tandem \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+train\+\_\+angle} & Angle between train satellites \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+tandem\+\_\+angle} & Angle between tandem satellites \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pattern\+\_\+ A list of orbits 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_orbit_ae0b1dac3159bb4f278091b73221cad93}\label{classosse_1_1collaborate_1_1_platform_orbit_ae0b1dac3159bb4f278091b73221cad93}} 
+\index{osse\+::collaborate\+::\+Platform\+Orbit@{osse\+::collaborate\+::\+Platform\+Orbit}!k\+Tle@{k\+Tle}}
+\index{k\+Tle@{k\+Tle}!osse\+::collaborate\+::\+Platform\+Orbit@{osse\+::collaborate\+::\+Platform\+Orbit}}
+\paragraph{\texorpdfstring{k\+Tle()}{kTle()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_platform_orbit_aeb5892b2982d26547cead0beebc81fe0}{Two\+Line\+Element\+Set}\& osse\+::collaborate\+::\+Platform\+Orbit\+::k\+Tle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Array of T\+LE strings. 
+
+\begin{DoxyReturn}{Returns}
+k\+Tle\+\_\+ Array of T\+LE strings 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_orbit_a6741aa8faec9968fd8353214d2022648}\label{classosse_1_1collaborate_1_1_platform_orbit_a6741aa8faec9968fd8353214d2022648}} 
+\index{osse\+::collaborate\+::\+Platform\+Orbit@{osse\+::collaborate\+::\+Platform\+Orbit}!Predict\+Orbital\+State@{Predict\+Orbital\+State}}
+\index{Predict\+Orbital\+State@{Predict\+Orbital\+State}!osse\+::collaborate\+::\+Platform\+Orbit@{osse\+::collaborate\+::\+Platform\+Orbit}}
+\paragraph{\texorpdfstring{Predict\+Orbital\+State()}{PredictOrbitalState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} osse\+::collaborate\+::\+Platform\+Orbit\+::\+Predict\+Orbital\+State (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+simulation\+\_\+clock,  }\item[{const uint64\+\_\+t \&}]{\+\_\+time\+\_\+s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the orbital\+\_\+state of an object the current clock time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+simulation\+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+time\+\_\+s} & Time offset from the current time (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} of an object the current clock time 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_platform_ad7070fcb9d91b22f25dbe0211ba0cc73}{osse\+::collaborate\+::\+Platform}.
+
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_orbit_a2b97a4133cb7d82d3ea62a3470f87d72}\label{classosse_1_1collaborate_1_1_platform_orbit_a2b97a4133cb7d82d3ea62a3470f87d72}} 
+\index{osse\+::collaborate\+::\+Platform\+Orbit@{osse\+::collaborate\+::\+Platform\+Orbit}!Predict\+Orbital\+State@{Predict\+Orbital\+State}}
+\index{Predict\+Orbital\+State@{Predict\+Orbital\+State}!osse\+::collaborate\+::\+Platform\+Orbit@{osse\+::collaborate\+::\+Platform\+Orbit}}
+\paragraph{\texorpdfstring{Predict\+Orbital\+State()}{PredictOrbitalState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Platform\+Orbit\+::\+Predict\+Orbital\+State (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+simulation\+\_\+clock,  }\item[{const uint64\+\_\+t \&}]{\+\_\+time\+\_\+s,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} $\ast$}]{\+\_\+orbital\+\_\+state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Update the orbital\+\_\+state of an object the current clock time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+simulation\+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+time\+\_\+s} & Time offset from the current time (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+orbital\+\_\+state} & \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_platform_a15881a343059315acdaf018e0c2470d8}{osse\+::collaborate\+::\+Platform}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/platform\+\_\+orbit.\+h\item 
+libs/collaborate/src/platform\+\_\+orbit.\+cpp\end{DoxyCompactItemize}

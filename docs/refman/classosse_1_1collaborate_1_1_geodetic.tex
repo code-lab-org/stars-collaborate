@@ -1,0 +1,345 @@
+\hypertarget{classosse_1_1collaborate_1_1_geodetic}{}\subsection{osse\+:\+:collaborate\+:\+:Geodetic Class Reference}
+\label{classosse_1_1collaborate_1_1_geodetic}\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+
+
+Latitude longitude, and altitude.  
+
+
+
+
+{\ttfamily \#include $<$geodetic.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a8c111a79dfe50da43aa21f6256ffa13c}\label{classosse_1_1collaborate_1_1_geodetic_a8c111a79dfe50da43aa21f6256ffa13c}} 
+\hyperlink{classosse_1_1collaborate_1_1_geodetic_a8c111a79dfe50da43aa21f6256ffa13c}{Geodetic} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_geodetic_ac9d280c2db61a43f05581513d33ed592}{Geodetic} (const double \&\+\_\+latitude\+\_\+rad, const double \&\+\_\+longitude\+\_\+rad, const double \&\+\_\+altitude\+\_\+m)
+\begin{DoxyCompactList}\small\item\em Constructor from L\+LH. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_geodetic_a70cc660ec75b0240b495343744a43c8b}{Geodetic} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+position\+\_\+m\+\_\+rad, const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const uint64\+\_\+t \&\+\_\+offset\+\_\+s)
+\begin{DoxyCompactList}\small\item\em Constructor from position and current time. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_geodetic_a053690869f985a7561abdfaa7eb9e8a7}{Geodetic} (const std\+::array$<$ double, 3 $>$ \&\+\_\+triple)
+\begin{DoxyCompactList}\small\item\em Constructor from L\+LH. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_geodetic_afcdcf0c690a911d8bb93b2c822988ccf}{Geodetic} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+position\+\_\+m\+\_\+rad, const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+direction, const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const uint64\+\_\+t \&\+\_\+offset\+\_\+s)
+\begin{DoxyCompactList}\small\item\em Constructor from ray intersection with the Earth. \end{DoxyCompactList}\item 
+std\+::array$<$ double, 3 $>$ \hyperlink{classosse_1_1collaborate_1_1_geodetic_a6ef067b2b517a75ddb0c5fa76449d27b}{Intersection} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+position\+\_\+m\+\_\+rad, const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+direction, const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const uint64\+\_\+t \&\+\_\+offset\+\_\+s)
+\begin{DoxyCompactList}\small\item\em Calculates ray intersection with Earth\textquotesingle{}s surface. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_geodetic_a7f70ddcb884dbf99264e3e7e92ac7948}{Haversine} (const \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} \&\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Calculates a great-\/circle distance to another location. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_geodetic_a4a46857018f20a00720e05fe705828ec}{To\+Vector} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock) const
+\begin{DoxyCompactList}\small\item\em Converts to a vector. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classosse_1_1collaborate_1_1_geodetic_ac2fee1f9452db5b6543962cc5ff54cc0}{To\+String} () const
+\begin{DoxyCompactList}\small\item\em Outputs the geodetic to a string. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classosse_1_1collaborate_1_1_geodetic_a4fac054aeeb63048ae1621888c952af6}{Obtain\+Log} () const
+\begin{DoxyCompactList}\small\item\em Generates a log of coordinates. \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_geodetic_a3947d5953fc888fd1b822e8e0a9688e9}{latitude\+\_\+rad} () const
+\begin{DoxyCompactList}\small\item\em Get latitude (radians) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_geodetic_a300f08b52f55d9d7f339d94548ac4745}{longitude\+\_\+rad} () const
+\begin{DoxyCompactList}\small\item\em Get longitude (radians) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_geodetic_a4c166387a76e142c6bb500b0e34dc782}{altitude\+\_\+m} () const
+\begin{DoxyCompactList}\small\item\em Get altitude (meters) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classosse_1_1collaborate_1_1_geodetic_a828ad6fbdcebe1ee5d7f8925d7423907}{Calculate\+Latitude\+Rad} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+position\+\_\+m\+\_\+rad, const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const uint64\+\_\+t \&\+\_\+offset\+\_\+s) const
+\begin{DoxyCompactList}\small\item\em Calculate latitude from position and current time. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_geodetic_a66984db0ad32d1d761b57a2835b9ba7e}{Calculate\+Longitude\+Rad} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+position\+\_\+m\+\_\+rad, const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const uint64\+\_\+t \&\+\_\+offset\+\_\+s) const
+\begin{DoxyCompactList}\small\item\em Calculate longitude from position and current time. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_geodetic_a9720fc55eb736812b81de9bfabb1d541}{Calculate\+AltitudeM} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+position\+\_\+m\+\_\+rad, const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const uint64\+\_\+t \&\+\_\+offset\+\_\+s) const
+\begin{DoxyCompactList}\small\item\em Calculate alttitude from position and current time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_ab37875cea23c8e39892ee87c8c42c83a}\label{classosse_1_1collaborate_1_1_geodetic_ab37875cea23c8e39892ee87c8c42c83a}} 
+double \hyperlink{classosse_1_1collaborate_1_1_geodetic_ab37875cea23c8e39892ee87c8c42c83a}{latitude\+\_\+rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Latitude (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a86223073ca9f7d9c7e0bc3594f412b1f}\label{classosse_1_1collaborate_1_1_geodetic_a86223073ca9f7d9c7e0bc3594f412b1f}} 
+double \hyperlink{classosse_1_1collaborate_1_1_geodetic_a86223073ca9f7d9c7e0bc3594f412b1f}{longitude\+\_\+rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Longitude (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a72989a52edbfd0ae45d5c29637852733}\label{classosse_1_1collaborate_1_1_geodetic_a72989a52edbfd0ae45d5c29637852733}} 
+double \hyperlink{classosse_1_1collaborate_1_1_geodetic_a72989a52edbfd0ae45d5c29637852733}{altitude\+\_\+m\+\_\+}
+\begin{DoxyCompactList}\small\item\em Altitude (meters) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Latitude longitude, and altitude. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_ac9d280c2db61a43f05581513d33ed592}\label{classosse_1_1collaborate_1_1_geodetic_ac9d280c2db61a43f05581513d33ed592}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!Geodetic@{Geodetic}}
+\index{Geodetic@{Geodetic}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{Geodetic()}{Geodetic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Geodetic\+::\+Geodetic (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+latitude\+\_\+rad,  }\item[{const double \&}]{\+\_\+longitude\+\_\+rad,  }\item[{const double \&}]{\+\_\+altitude\+\_\+m }\end{DoxyParamCaption})}
+
+
+
+Constructor from L\+LH. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+latitude\+\_\+rad} & Latitude (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+longitude\+\_\+rad} & Longitude (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+altitude\+\_\+m} & Altitude (meters) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a70cc660ec75b0240b495343744a43c8b}\label{classosse_1_1collaborate_1_1_geodetic_a70cc660ec75b0240b495343744a43c8b}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!Geodetic@{Geodetic}}
+\index{Geodetic@{Geodetic}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{Geodetic()}{Geodetic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Geodetic\+::\+Geodetic (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const uint64\+\_\+t \&}]{\+\_\+offset\+\_\+s }\end{DoxyParamCaption})}
+
+
+
+Constructor from position and current time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+position\+\_\+m\+\_\+rad} & Position of node (meters and radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+offset\+\_\+s} & Offset from current time (seconds) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a053690869f985a7561abdfaa7eb9e8a7}\label{classosse_1_1collaborate_1_1_geodetic_a053690869f985a7561abdfaa7eb9e8a7}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!Geodetic@{Geodetic}}
+\index{Geodetic@{Geodetic}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{Geodetic()}{Geodetic()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Geodetic\+::\+Geodetic (\begin{DoxyParamCaption}\item[{const std\+::array$<$ double, 3 $>$ \&}]{\+\_\+triple }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor from L\+LH. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+triple} & Array containing latitude, longitude, and altitude \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_afcdcf0c690a911d8bb93b2c822988ccf}\label{classosse_1_1collaborate_1_1_geodetic_afcdcf0c690a911d8bb93b2c822988ccf}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!Geodetic@{Geodetic}}
+\index{Geodetic@{Geodetic}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{Geodetic()}{Geodetic()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Geodetic\+::\+Geodetic (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+direction,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const uint64\+\_\+t \&}]{\+\_\+offset\+\_\+s }\end{DoxyParamCaption})}
+
+
+
+Constructor from ray intersection with the Earth. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+position\+\_\+m\+\_\+rad} & Position of node \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+direction} & Direction of the line of sight \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+offset\+\_\+s} & Offset from current time (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position of closest intersection (or empty if none)
+\end{DoxyReturn}
+\[ \vec{p} = Position \] \[ \hat{r} = Unit~Focus~Direction \] \[ a = b = EARTH~semimajor~axis,~ c = EARTH~semiminor~axis \] \[ \vec{q}_1=\begin{bmatrix} 1 \div a&1 \div b&1 \div c\end{bmatrix} \] \[ \vec{q}_2=\begin{bmatrix} a& b& c\end{bmatrix} \] \[ \vec{p}_{q} = \vec{p}\vec{q}_1 \] \[ Quadratic~Formula \] \[ A = \left\lvert \vec{r} \right\rvert^2 \] \[ B = 2(\vec{p}_{q} \cdot \vec{r}) \] \[ C = \left\lvert\vec{p}_{q}\right\rvert^2 - 1 \] \[ t_1 = \frac{-B+\sqrt{B^2 - 4AC}}{2A} \] \[ t_2 = \frac{-B-\sqrt{B^2 - 4AC}}{2A} \] \[ Intersection = \min{\left(\left(\vec{p}_{q}-((\vec{p}_{q}+\hat{r}*t_1)*\vec{q}_2)\right), \left(\vec{p}_{q} - ((\vec{p}_{q}+\hat{r}*t_2)*\vec{q}_2)\right)\right)} \] 
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a4c166387a76e142c6bb500b0e34dc782}\label{classosse_1_1collaborate_1_1_geodetic_a4c166387a76e142c6bb500b0e34dc782}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!altitude\+\_\+m@{altitude\+\_\+m}}
+\index{altitude\+\_\+m@{altitude\+\_\+m}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{altitude\+\_\+m()}{altitude\_m()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Geodetic\+::altitude\+\_\+m (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get altitude (meters) 
+
+\begin{DoxyReturn}{Returns}
+altitude\+\_\+m\+\_\+ Altitude (meters) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a9720fc55eb736812b81de9bfabb1d541}\label{classosse_1_1collaborate_1_1_geodetic_a9720fc55eb736812b81de9bfabb1d541}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!Calculate\+AltitudeM@{Calculate\+AltitudeM}}
+\index{Calculate\+AltitudeM@{Calculate\+AltitudeM}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{Calculate\+Altitude\+M()}{CalculateAltitudeM()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Geodetic\+::\+Calculate\+AltitudeM (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const uint64\+\_\+t \&}]{\+\_\+offset\+\_\+s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculate alttitude from position and current time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+position\+\_\+m\+\_\+rad} & Position of node (meters and radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+offset\+\_\+s} & Offset from current time (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The altitude (meters) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a828ad6fbdcebe1ee5d7f8925d7423907}\label{classosse_1_1collaborate_1_1_geodetic_a828ad6fbdcebe1ee5d7f8925d7423907}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!Calculate\+Latitude\+Rad@{Calculate\+Latitude\+Rad}}
+\index{Calculate\+Latitude\+Rad@{Calculate\+Latitude\+Rad}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{Calculate\+Latitude\+Rad()}{CalculateLatitudeRad()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Geodetic\+::\+Calculate\+Latitude\+Rad (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const uint64\+\_\+t \&}]{\+\_\+offset\+\_\+s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculate latitude from position and current time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+position\+\_\+m\+\_\+rad} & Position of node (meters and radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+offset\+\_\+s} & Offset from current time (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The latitude (radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a66984db0ad32d1d761b57a2835b9ba7e}\label{classosse_1_1collaborate_1_1_geodetic_a66984db0ad32d1d761b57a2835b9ba7e}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!Calculate\+Longitude\+Rad@{Calculate\+Longitude\+Rad}}
+\index{Calculate\+Longitude\+Rad@{Calculate\+Longitude\+Rad}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{Calculate\+Longitude\+Rad()}{CalculateLongitudeRad()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Geodetic\+::\+Calculate\+Longitude\+Rad (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const uint64\+\_\+t \&}]{\+\_\+offset\+\_\+s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculate longitude from position and current time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+position\+\_\+m\+\_\+rad} & Position of node (meters and radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+offset\+\_\+s} & Offset from current time (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The longitude (radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a7f70ddcb884dbf99264e3e7e92ac7948}\label{classosse_1_1collaborate_1_1_geodetic_a7f70ddcb884dbf99264e3e7e92ac7948}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!Haversine@{Haversine}}
+\index{Haversine@{Haversine}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{Haversine()}{Haversine()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Geodetic\+::\+Haversine (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} \&}]{\+\_\+other }\end{DoxyParamCaption}) const}
+
+
+
+Calculates a great-\/circle distance to another location. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+other} & Other geodetic location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distance Great circle distance
+\end{DoxyReturn}
+\[ a = EARTH~Semimajor~Axis \] \[ d = 2a \arcsin{\sqrt{\left(\sin{\left(\frac{lat_1 - lat_2}{2}\right)}\right)^2 + \left(\left(\sin{\left(\frac{lon_1 - lon_2}{2}\right)}\right)^2 \cos(lat_1*lat_2)\right)}} \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a6ef067b2b517a75ddb0c5fa76449d27b}\label{classosse_1_1collaborate_1_1_geodetic_a6ef067b2b517a75ddb0c5fa76449d27b}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!Intersection@{Intersection}}
+\index{Intersection@{Intersection}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{Intersection()}{Intersection()}}
+{\footnotesize\ttfamily std\+::array$<$ double, 3 $>$ osse\+::collaborate\+::\+Geodetic\+::\+Intersection (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+direction,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const uint64\+\_\+t \&}]{\+\_\+offset\+\_\+s }\end{DoxyParamCaption})}
+
+
+
+Calculates ray intersection with Earth\textquotesingle{}s surface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+position\+\_\+m\+\_\+rad} & Position of node \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+direction} & Direction of the line of sight \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+offset\+\_\+s} & Offset from current time (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position of closest intersection (or empty if none)
+\end{DoxyReturn}
+\[ \vec{p} = Position \] \[ \hat{r} = Unit~Focus~Direction \] \[ a = b = EARTH~semimajor~axis,~ c = EARTH~semiminor~axis \] \[ \vec{q}_1=\begin{bmatrix} 1 \div a&1 \div b&1 \div c\end{bmatrix} \] \[ \vec{q}_2=\begin{bmatrix} a& b& c\end{bmatrix} \] \[ \vec{p}_{q} = \vec{p}\vec{q}_1 \] \[ Quadratic~Formula \] \[ A = \left\lvert \vec{r} \right\rvert^2 \] \[ B = 2(\vec{p}_{q} \cdot \vec{r}) \] \[ C = \left\lvert\vec{p}_{q}\right\rvert^2 - 1 \] \[ t_1 = \frac{-B+\sqrt{B^2 - 4AC}}{2A} \] \[ t_2 = \frac{-B-\sqrt{B^2 - 4AC}}{2A} \] \[ Intersection = \min{\left(\left(\vec{p}_{q}-((\vec{p}_{q}+\hat{r}*t_1)*\vec{q}_2)\right), \left(\vec{p}_{q} - ((\vec{p}_{q}+\hat{r}*t_2)*\vec{q}_2)\right)\right)} \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a3947d5953fc888fd1b822e8e0a9688e9}\label{classosse_1_1collaborate_1_1_geodetic_a3947d5953fc888fd1b822e8e0a9688e9}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!latitude\+\_\+rad@{latitude\+\_\+rad}}
+\index{latitude\+\_\+rad@{latitude\+\_\+rad}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{latitude\+\_\+rad()}{latitude\_rad()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Geodetic\+::latitude\+\_\+rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get latitude (radians) 
+
+\begin{DoxyReturn}{Returns}
+latitude\+\_\+rad\+\_\+ Latitude (radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a300f08b52f55d9d7f339d94548ac4745}\label{classosse_1_1collaborate_1_1_geodetic_a300f08b52f55d9d7f339d94548ac4745}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!longitude\+\_\+rad@{longitude\+\_\+rad}}
+\index{longitude\+\_\+rad@{longitude\+\_\+rad}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{longitude\+\_\+rad()}{longitude\_rad()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Geodetic\+::longitude\+\_\+rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get longitude (radians) 
+
+\begin{DoxyReturn}{Returns}
+longitude\+\_\+rad\+\_\+ Longitude (radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a4fac054aeeb63048ae1621888c952af6}\label{classosse_1_1collaborate_1_1_geodetic_a4fac054aeeb63048ae1621888c952af6}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!Obtain\+Log@{Obtain\+Log}}
+\index{Obtain\+Log@{Obtain\+Log}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{Obtain\+Log()}{ObtainLog()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ osse\+::collaborate\+::\+Geodetic\+::\+Obtain\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Generates a log of coordinates. 
+
+\begin{DoxyReturn}{Returns}
+A log of coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_ac2fee1f9452db5b6543962cc5ff54cc0}\label{classosse_1_1collaborate_1_1_geodetic_ac2fee1f9452db5b6543962cc5ff54cc0}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily std\+::string osse\+::collaborate\+::\+Geodetic\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Outputs the geodetic to a string. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_geodetic_a4a46857018f20a00720e05fe705828ec}\label{classosse_1_1collaborate_1_1_geodetic_a4a46857018f20a00720e05fe705828ec}} 
+\index{osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}!To\+Vector@{To\+Vector}}
+\index{To\+Vector@{To\+Vector}!osse\+::collaborate\+::\+Geodetic@{osse\+::collaborate\+::\+Geodetic}}
+\paragraph{\texorpdfstring{To\+Vector()}{ToVector()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Geodetic\+::\+To\+Vector (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock }\end{DoxyParamCaption}) const}
+
+
+
+Converts to a vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The vector 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/geodetic.\+h\item 
+libs/collaborate/src/geodetic.\+cpp\end{DoxyCompactItemize}

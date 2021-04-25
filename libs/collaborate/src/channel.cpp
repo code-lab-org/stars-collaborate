@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Ryan Linnabary
+// Copyright (C) 2019 The Ohio State University
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -70,10 +70,10 @@ void Channel::Start() {
   active_ = true;
 }
 
-void Channel::Update(const SimulationClock& _clock) {
+void Channel::Update(const SimulationClock& _clock, const bool& _flag) {
   Vector tx_position_m_rad = tx_node_->orbital_state().position_m_rad();
   Vector rx_position_m_rad = rx_node_->orbital_state().position_m_rad();
-  if (earth::Visible(tx_position_m_rad, rx_position_m_rad)) {
+  if (_flag || earth::Visible(tx_position_m_rad, rx_position_m_rad)) {
     UpdateLosUnit();
     UpdateGainDb();
     UpdateOpen();

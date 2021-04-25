@@ -1,0 +1,92 @@
+\hypertarget{subsystem__comm_8h_source}{}\subsection{subsystem\+\_\+comm.\+h}
+\label{subsystem__comm_8h_source}\index{libs/collaborate/include/collaborate/subsystem\+\_\+comm.\+h@{libs/collaborate/include/collaborate/subsystem\+\_\+comm.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SUBSYSTEM\_COMM\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SUBSYSTEM\_COMM\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <cstdint>}
+00020 \textcolor{preprocessor}{#include <vector>}
+00021 
+00022 \textcolor{preprocessor}{#include "collaborate/antenna.h"}
+00023 \textcolor{preprocessor}{#include "collaborate/modem.h"}
+00024 \textcolor{preprocessor}{#include "collaborate/packet\_forward.h"}
+00025 \textcolor{preprocessor}{#include "collaborate/packet\_return.h"}
+00026 \textcolor{preprocessor}{#include "collaborate/reference\_frame.h"}
+00027 \textcolor{preprocessor}{#include "collaborate/simulation\_clock.h"}
+00028 
+00029 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00030 \textcolor{keyword}{namespace }collaborate \{
+00031 
+\Hypertarget{subsystem__comm_8h_source_l00034}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm}{00034} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm}{SubsystemComm} \{
+00035  \textcolor{keyword}{public}:
+\Hypertarget{subsystem__comm_8h_source_l00037}\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event}{00037}   \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event}{CommunicationEvent} \{
+\Hypertarget{subsystem__comm_8h_source_l00039}\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event_aead594fdeec1324272f4329c95c6238b}{00039}     uint16\_t \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event_aead594fdeec1324272f4329c95c6238b}{index\_};
+\Hypertarget{subsystem__comm_8h_source_l00041}\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event_aacc073aa04b27d099f7d2ad5ab5f8f93}{00041}     uint64\_t \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event_aacc073aa04b27d099f7d2ad5ab5f8f93}{elapsed\_s\_};
+\Hypertarget{subsystem__comm_8h_source_l00043}\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event_a5a93bd31cd61a81f8aba9b1cf298e183}{00043}     \hyperlink{classosse_1_1collaborate_1_1_packet_forward}{PacketForward} \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event_a5a93bd31cd61a81f8aba9b1cf298e183}{packet\_};
+00044   \} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_abda28dad95a597a9a43053ef2bb62e5c}{CommunicationEvent};
+\Hypertarget{subsystem__comm_8h_source_l00046}\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event}{00046}   \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event}{FeedbackEvent} \{
+\Hypertarget{subsystem__comm_8h_source_l00048}\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event_af116edadaf008d7c05ab0effcd13bb65}{00048}     uint16\_t \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event_af116edadaf008d7c05ab0effcd13bb65}{index\_};
+\Hypertarget{subsystem__comm_8h_source_l00050}\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event_a6bdb809d39809ec7b7db279b1e0a9328}{00050}     uint64\_t \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event_a6bdb809d39809ec7b7db279b1e0a9328}{elapsed\_s\_};
+\Hypertarget{subsystem__comm_8h_source_l00052}\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event_ab124adecbe5f57978cca26aeafbd23d8}{00052}     \hyperlink{classosse_1_1collaborate_1_1_packet_return}{PacketReturn} \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event_ab124adecbe5f57978cca26aeafbd23d8}{packet\_};
+00053   \} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a679a4916e89a9dfce191486c1b93505d}{FeedbackEvent};
+\Hypertarget{subsystem__comm_8h_source_l00055}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{00055}   \textcolor{keyword}{enum class} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{kMode} \{Free, Transmitting, Receiving\};
+00059   \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a4723a445928f1dccc2734fae58cfaa3e}{SubsystemComm}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna}* \_antenna, \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_modem}{Modem}* \_modem);
+00063   uint16\_t \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ab3675c014fa2575e699a43f870c1d4f0}{Update}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_clock);
+00066   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ae3626e8fd31433972e7b69aa25fb9375}{RequiredTransferDurationS}() \textcolor{keyword}{const};
+00070   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ae3626e8fd31433972e7b69aa25fb9375}{RequiredTransferDurationS}(\textcolor{keyword}{const} uint64\_t& \_buffer\_size\_bytes) \textcolor{keyword}{const};
+00073   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a19ba433f23b428c1864f33e3b8588639}{CalculatePowerDrainW}();
+00076   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ae50e83fd95a6bf1b918a0971833f9615}{AddToStorage}(\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event}{CommunicationEvent} \_event);
+00079   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ae50e83fd95a6bf1b918a0971833f9615}{AddToStorage}(\hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_feedback_event}{FeedbackEvent} \_feedback\_event);
+00083   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a8f806bb513c9b15ce8f8a345856ca33b}{OrientAntenna}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame}& \_orbit\_frame,
+00084                      \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame}& \_body\_frame);
+00087   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5177011bf7857dcb5d202ab460d2fc54}{LoadData}(\textcolor{keyword}{const} std::vector<uint8\_t>& \_payload);
+00089   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a9ab6002b3bf8b3a8ac28735d017577bc}{EraseDataBuffer}();
+00092   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a2679fccc19316e5fd32ff6e0786a0262}{set\_data\_buffer}(\textcolor{keyword}{const} std::vector<uint8\_t>& \_data\_buffer);
+\Hypertarget{subsystem__comm_8h_source_l00095}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a1279c0e9906325a8aff5a04de1af15d8}{00095}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna}* \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a1279c0e9906325a8aff5a04de1af15d8}{kAntenna}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a1dedea563a1dd4d0683b4f90b69363a1}{kAntenna\_};\}
+\Hypertarget{subsystem__comm_8h_source_l00098}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a8e4f0338a3fb3d26a620316938c02cbd}{00098}   \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a8e4f0338a3fb3d26a620316938c02cbd}{antenna\_frame}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5d10fed86dac2ed01a39d797387ebb53}{antenna\_frame\_};\}
+\Hypertarget{subsystem__comm_8h_source_l00101}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ab42ca920118cc2a528ef7dd8360f6e64}{00101}   \textcolor{keyword}{const} std::vector<uint8\_t>& \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ab42ca920118cc2a528ef7dd8360f6e64}{data\_buffer}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a595907bebe0c1409623d06332e1a3ae8}{data\_buffer\_};\}
+\Hypertarget{subsystem__comm_8h_source_l00104}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a217614042fd340158f7c7538e7bec530}{00104}   \textcolor{keyword}{const} \textcolor{keywordtype}{bool}& \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a217614042fd340158f7c7538e7bec530}{active}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a18a8993ec6cb817a7e10784d62212f26}{active\_};\}
+\Hypertarget{subsystem__comm_8h_source_l00107}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a688d10c873c2a5992b88ed5b9ba6b369}{00107}   \textcolor{keyword}{const} uint64\_t& \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a688d10c873c2a5992b88ed5b9ba6b369}{elapsed\_s}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{structosse_1_1collaborate_1_1_subsystem_comm_1_1_communication_event_aacc073aa04b27d099f7d2ad5ab5f8f93}{elapsed\_s\_};\}
+00110   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a25bea17a1d9e372e0e8da1dfe999fd75}{set\_mode}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{kMode}& \_mode);
+\Hypertarget{subsystem__comm_8h_source_l00113}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_adaba2e0c3b3704a4ece62137d609adff}{00113}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{kMode}& \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_adaba2e0c3b3704a4ece62137d609adff}{mode}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5a75c07913f0a8346125c25062c6ccec}{mode\_};\}
+\Hypertarget{subsystem__comm_8h_source_l00116}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a8c5aa0a02bc95da7ad3cbd6063d0ed61}{00116}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_modem}{Modem}* \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a8c5aa0a02bc95da7ad3cbd6063d0ed61}{kModem}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_acc7ee59253e419de39e922b76492d8a6}{kModem\_};\}
+\Hypertarget{subsystem__comm_8h_source_l00119}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a9c9e0f1c881dd90275186b5146236849}{00119}   \textcolor{keyword}{const} std::vector<CommunicationEvent>& \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a9c9e0f1c881dd90275186b5146236849}{storage}() \{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_aa77240c5f4126b123fd87ab8754bf68a}{storage\_};\}
+\Hypertarget{subsystem__comm_8h_source_l00122}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a99c728f5a45dc285197f5cd68708cb14}{00122}   \textcolor{keyword}{const} std::vector<FeedbackEvent>& \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a99c728f5a45dc285197f5cd68708cb14}{feedback\_storage}() \{
+00123     \textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_adc9776db966b5a37b3a1ad61fc935ca7}{feedback\_storage\_};
+00124   \}
+00125 
+00126  \textcolor{keyword}{private}:
+\Hypertarget{subsystem__comm_8h_source_l00128}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_acc7ee59253e419de39e922b76492d8a6}{00128}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_modem}{Modem}* \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_acc7ee59253e419de39e922b76492d8a6}{kModem\_};
+\Hypertarget{subsystem__comm_8h_source_l00130}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_aa77240c5f4126b123fd87ab8754bf68a}{00130}   std::vector<CommunicationEvent> \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_aa77240c5f4126b123fd87ab8754bf68a}{storage\_};
+\Hypertarget{subsystem__comm_8h_source_l00132}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5a75c07913f0a8346125c25062c6ccec}{00132}   \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{kMode} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5a75c07913f0a8346125c25062c6ccec}{mode\_};
+\Hypertarget{subsystem__comm_8h_source_l00134}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_adc9776db966b5a37b3a1ad61fc935ca7}{00134}   std::vector<FeedbackEvent> \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_adc9776db966b5a37b3a1ad61fc935ca7}{feedback\_storage\_};
+\Hypertarget{subsystem__comm_8h_source_l00136}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a1dedea563a1dd4d0683b4f90b69363a1}{00136}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna}* \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a1dedea563a1dd4d0683b4f90b69363a1}{kAntenna\_};
+\Hypertarget{subsystem__comm_8h_source_l00138}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5d10fed86dac2ed01a39d797387ebb53}{00138}   \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5d10fed86dac2ed01a39d797387ebb53}{antenna\_frame\_};
+\Hypertarget{subsystem__comm_8h_source_l00140}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a595907bebe0c1409623d06332e1a3ae8}{00140}   std::vector<uint8\_t> \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a595907bebe0c1409623d06332e1a3ae8}{data\_buffer\_};
+\Hypertarget{subsystem__comm_8h_source_l00142}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a18a8993ec6cb817a7e10784d62212f26}{00142}   \textcolor{keywordtype}{bool} \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a18a8993ec6cb817a7e10784d62212f26}{active\_};
+\Hypertarget{subsystem__comm_8h_source_l00144}\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ac9e22a265eb605a22ee793bc8254890c}{00144}   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_ac9e22a265eb605a22ee793bc8254890c}{elapsed\_s\_};
+00145 \};
+00146 
+00147 \}  \textcolor{comment}{// namespace collaborate}
+00148 \}  \textcolor{comment}{// namespace osse}
+00149 
+00150 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SUBSYSTEM\_COMM\_H\_}
+\end{DoxyCode}

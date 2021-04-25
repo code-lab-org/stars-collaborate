@@ -1,0 +1,59 @@
+\hypertarget{packet_8h_source}{}\subsection{packet.\+h}
+\label{packet_8h_source}\index{libs/collaborate/include/collaborate/packet.\+h@{libs/collaborate/include/collaborate/packet.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PACKET\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PACKET\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <cstdint>}
+00020 \textcolor{preprocessor}{#include <vector>}
+00021 
+00022 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00023 \textcolor{keyword}{namespace }collaborate \{
+00024 
+\Hypertarget{packet_8h_source_l00027}\hyperlink{classosse_1_1collaborate_1_1_packet}{00027} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_packet}{Packet} \{
+00028  \textcolor{keyword}{public}:
+00030   \hyperlink{classosse_1_1collaborate_1_1_packet_aecb3018048e1845ea9e45dcd008cc0df}{Packet}();
+\Hypertarget{packet_8h_source_l00033}\hyperlink{classosse_1_1collaborate_1_1_packet_a6034dd26382166bf4feeed7cecda3e54}{00033}   \textcolor{keyword}{const} std::vector<uint8\_t>& \hyperlink{classosse_1_1collaborate_1_1_packet_a6034dd26382166bf4feeed7cecda3e54}{payload}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_packet_a1917bbaba5a0fb4757947d2626287410}{payload\_};\}
+00034 
+00035  \textcolor{keyword}{protected}:
+00038   \textcolor{keyword}{explicit} \hyperlink{classosse_1_1collaborate_1_1_packet_aecb3018048e1845ea9e45dcd008cc0df}{Packet}(\textcolor{keyword}{const} std::vector<uint8\_t>& \_payload);
+00042   \textcolor{keyword}{template} <\textcolor{keyword}{class} T>
+\Hypertarget{packet_8h_source_l00043}\hyperlink{classosse_1_1collaborate_1_1_packet_a7ebfc5903ba6bf302e2f4a33340e7155}{00043}   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_packet_a7ebfc5903ba6bf302e2f4a33340e7155}{Pack}(\textcolor{keyword}{const} T& \_value, std::vector<uint8\_t>* \_payload)\textcolor{keyword}{ const }\{
+00044     T local = \_value;
+00045     uint8\_t* start = \textcolor{keyword}{reinterpret\_cast<}uint8\_t*\textcolor{keyword}{>}(&local);
+00046     \_payload->insert(std::end(*\_payload), start, start + \textcolor{keyword}{sizeof}(T));
+00047   \}
+00052   \textcolor{keywordtype}{bool} \hyperlink{classosse_1_1collaborate_1_1_packet_acf78e5e563ba07643fb1969dc332b1fb}{UnpackBool}(\textcolor{keyword}{const} std::vector<uint8\_t>& \_payload,
+00053                   \textcolor{keyword}{const} uint16\_t& \_index) \textcolor{keyword}{const};
+00058   uint16\_t \hyperlink{classosse_1_1collaborate_1_1_packet_a454166985d9b63b553cb6174417c4dde}{UnpackUInt16T}(\textcolor{keyword}{const} std::vector<uint8\_t>& \_payload,
+00059                          \textcolor{keyword}{const} uint16\_t& \_index) \textcolor{keyword}{const};
+00064   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_packet_ab84b122670543d85df644041129568df}{UnpackUInt64T}(\textcolor{keyword}{const} std::vector<uint8\_t>& \_payload,
+00065                          \textcolor{keyword}{const} uint16\_t& \_index) \textcolor{keyword}{const};
+00070   \textcolor{keywordtype}{int} \hyperlink{classosse_1_1collaborate_1_1_packet_a7c786b41b594b51377b0a70ce3a61259}{UnpackInteger}(\textcolor{keyword}{const} std::vector<uint8\_t>& \_payload,
+00071                     \textcolor{keyword}{const} uint16\_t& \_index) \textcolor{keyword}{const};
+00076   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_packet_aa7678be22b45d54b28f1b85594638d60}{UnpackDouble}(\textcolor{keyword}{const} std::vector<uint8\_t>& \_payload,
+00077                       \textcolor{keyword}{const} uint16\_t& \_index) \textcolor{keyword}{const};
+\Hypertarget{packet_8h_source_l00079}\hyperlink{classosse_1_1collaborate_1_1_packet_a1917bbaba5a0fb4757947d2626287410}{00079}   std::vector<uint8\_t> \hyperlink{classosse_1_1collaborate_1_1_packet_a1917bbaba5a0fb4757947d2626287410}{payload\_};
+00080 \};
+00081 
+00082 \}  \textcolor{comment}{// namespace collaborate}
+00083 \}  \textcolor{comment}{// namespace osse}
+00084 
+00085 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PACKET\_H\_}
+\end{DoxyCode}

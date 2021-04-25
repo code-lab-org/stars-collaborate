@@ -1,0 +1,38 @@
+\hypertarget{antenna__isotropic_8h_source}{}\subsection{antenna\+\_\+isotropic.\+h}
+\label{antenna__isotropic_8h_source}\index{libs/collaborate/include/collaborate/antenna\+\_\+isotropic.\+h@{libs/collaborate/include/collaborate/antenna\+\_\+isotropic.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_ANTENNA\_ISOTROPIC\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_ANTENNA\_ISOTROPIC\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include "collaborate/antenna.h"}
+00020 
+00021 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00022 \textcolor{keyword}{namespace }collaborate \{
+00023 
+\Hypertarget{antenna__isotropic_8h_source_l00030}\hyperlink{classosse_1_1collaborate_1_1_antenna_isotropic}{00030} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_antenna_isotropic}{AntennaIsotropic} : \textcolor{keyword}{public} \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} \{
+00031  \textcolor{keyword}{public}:
+00034   \textcolor{keyword}{explicit} \hyperlink{classosse_1_1collaborate_1_1_antenna_isotropic_ae431744ad97d6b0a1d25039e94b4ffcb}{AntennaIsotropic}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_max\_gain\_db);
+00041   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_antenna_isotropic_ab695187eb238b78ac03f27bd1cbffc11}{GainDb}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_theta\_rad, \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_phi\_rad) \textcolor{keyword}{const};
+00042 \};
+00043 
+00044 \}  \textcolor{comment}{// namespace collaborate}
+00045 \}  \textcolor{comment}{// namespace osse}
+00046 
+00047 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_ANTENNA\_ISOTROPIC\_H\_}
+\end{DoxyCode}

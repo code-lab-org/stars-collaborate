@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Ryan Linnabary
+// Copyright (C) 2019 The Ohio State University
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -24,6 +24,12 @@
 namespace osse {
 namespace collaborate {
 namespace earth {
+
+// bool Visible(const Vector& _receiver, const Vector& _transmitter) {
+//   (void) _receiver;
+//   (void) _transmitter;
+//   return true;
+// }
 
 bool Visible(const Vector& _receiver, const Vector& _transmitter) {
   // Receiver and Transmitter

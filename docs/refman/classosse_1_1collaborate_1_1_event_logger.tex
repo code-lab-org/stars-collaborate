@@ -1,0 +1,94 @@
+\hypertarget{classosse_1_1collaborate_1_1_event_logger}{}\subsection{osse\+:\+:collaborate\+:\+:Event\+Logger Class Reference}
+\label{classosse_1_1collaborate_1_1_event_logger}\index{osse\+::collaborate\+::\+Event\+Logger@{osse\+::collaborate\+::\+Event\+Logger}}
+
+
+An interface to the spdlog logger.  
+
+
+
+
+{\ttfamily \#include $<$event\+\_\+logger.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_event_logger_a9c87908de9f2673fe6464b59df4082d1}{Event\+Logger} (const std\+::string \&\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_event_logger_ad76479bfe7482caf22f6fd9e70445640}{Initialize} (const std\+::string \&\+\_\+level, const std\+::string \&\+\_\+console\+\_\+level, const bool \&\+\_\+utc)
+\begin{DoxyCompactList}\small\item\em Initialize the event logger\textquotesingle{}s behavor. \end{DoxyCompactList}\item 
+spdlog\+::logger $\ast$ \hyperlink{classosse_1_1collaborate_1_1_event_logger_a76adbd3cee03eb159797eb14dd496bc6}{log} ()
+\begin{DoxyCompactList}\small\item\em Get the spdlog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_event_logger_a251a1f450efb2a8b48689dff5056e8cd}\label{classosse_1_1collaborate_1_1_event_logger_a251a1f450efb2a8b48689dff5056e8cd}} 
+std\+::shared\+\_\+ptr$<$ spdlog\+::sinks\+::stdout\+\_\+color\+\_\+sink\+\_\+mt $>$ \hyperlink{classosse_1_1collaborate_1_1_event_logger_a251a1f450efb2a8b48689dff5056e8cd}{console\+\_\+}
+\begin{DoxyCompactList}\small\item\em Console sink. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_event_logger_a42a6aa81525ec44dcee5b76d8a238e5b}\label{classosse_1_1collaborate_1_1_event_logger_a42a6aa81525ec44dcee5b76d8a238e5b}} 
+std\+::shared\+\_\+ptr$<$ spdlog\+::sinks\+::basic\+\_\+file\+\_\+sink\+\_\+mt $>$ \hyperlink{classosse_1_1collaborate_1_1_event_logger_a42a6aa81525ec44dcee5b76d8a238e5b}{file\+\_\+}
+\begin{DoxyCompactList}\small\item\em File sink. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_event_logger_af5ebd14804c7ffd7a584e9a389d47f53}\label{classosse_1_1collaborate_1_1_event_logger_af5ebd14804c7ffd7a584e9a389d47f53}} 
+std\+::unique\+\_\+ptr$<$ spdlog\+::logger $>$ \hyperlink{classosse_1_1collaborate_1_1_event_logger_af5ebd14804c7ffd7a584e9a389d47f53}{log\+\_\+}
+\begin{DoxyCompactList}\small\item\em Multi-\/sink. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An interface to the spdlog logger. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_event_logger_a9c87908de9f2673fe6464b59df4082d1}\label{classosse_1_1collaborate_1_1_event_logger_a9c87908de9f2673fe6464b59df4082d1}} 
+\index{osse\+::collaborate\+::\+Event\+Logger@{osse\+::collaborate\+::\+Event\+Logger}!Event\+Logger@{Event\+Logger}}
+\index{Event\+Logger@{Event\+Logger}!osse\+::collaborate\+::\+Event\+Logger@{osse\+::collaborate\+::\+Event\+Logger}}
+\paragraph{\texorpdfstring{Event\+Logger()}{EventLogger()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Event\+Logger\+::\+Event\+Logger (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+path} & File sink path \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_event_logger_ad76479bfe7482caf22f6fd9e70445640}\label{classosse_1_1collaborate_1_1_event_logger_ad76479bfe7482caf22f6fd9e70445640}} 
+\index{osse\+::collaborate\+::\+Event\+Logger@{osse\+::collaborate\+::\+Event\+Logger}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!osse\+::collaborate\+::\+Event\+Logger@{osse\+::collaborate\+::\+Event\+Logger}}
+\paragraph{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Event\+Logger\+::\+Initialize (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+level,  }\item[{const std\+::string \&}]{\+\_\+console\+\_\+level,  }\item[{const bool \&}]{\+\_\+utc }\end{DoxyParamCaption})}
+
+
+
+Initialize the event logger\textquotesingle{}s behavor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+level} & Base level for logging \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+console\+\_\+level} & Level for console logging \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+utc} & Whether to use U\+TC or local time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_event_logger_a76adbd3cee03eb159797eb14dd496bc6}\label{classosse_1_1collaborate_1_1_event_logger_a76adbd3cee03eb159797eb14dd496bc6}} 
+\index{osse\+::collaborate\+::\+Event\+Logger@{osse\+::collaborate\+::\+Event\+Logger}!log@{log}}
+\index{log@{log}!osse\+::collaborate\+::\+Event\+Logger@{osse\+::collaborate\+::\+Event\+Logger}}
+\paragraph{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily spdlog\+::logger$\ast$ osse\+::collaborate\+::\+Event\+Logger\+::log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the spdlog. 
+
+\begin{DoxyReturn}{Returns}
+log\+\_\+ Pointer to spdlog 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/event\+\_\+logger.\+h\item 
+libs/collaborate/src/event\+\_\+logger.\+cpp\end{DoxyCompactItemize}

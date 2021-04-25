@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #
-# Copyright (C) 2018 Ryan Linnabary
+# Copyright (C) 2018 The Ohio State University
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -65,27 +65,27 @@ def main():
     data_index = -1
     path = paths[args.index]
     log, index, _ = read_measurement(path)
-    this_data_index = int(np.floor(log['tick'][0] / 1800))
-    if this_data_index != data_index:
-        data_index = this_data_index
-        image = read_data(data_files[data_index], 'TAUTOT')
+    # this_data_index = int(np.floor(log['tick'][0] / 1800))
+    # if this_data_index != data_index:
+    #     data_index = this_data_index
+    #     image = read_data(data_files[data_index], 'TAUTOT')
 
-    # Map
-    plt.figure(figsize=(6, 6))
-    idx = int(len(log['latitude'])/2)
-    middle = [list(log['longitude'])[idx], list(log['latitude'])[idx]]
-    axes = plt.axes(projection=ccrs.NearsidePerspective(*middle))
-    axes.set_global()
-    axes.gridlines()
-    month = str(index[0][5:7])
-    map_blue_marble(axes, month, 'low')
-    axes.imshow(image, transform=ccrs.PlateCarree())
-    scatter_small_red(axes, log['latitude'], log['longitude'])
-    remove_margins()
-    out = f'{args.out_dir}{only_name(path)}_map'
-    plt.savefig(f'{out}.pdf')
-    plt.savefig(f'{out}.png', dpi=300)
-    plt.close()
+    # # Map
+    # plt.figure(figsize=(6, 6))
+    # idx = int(len(log['latitude'])/2)
+    # middle = [list(log['longitude'])[idx], list(log['latitude'])[idx]]
+    # axes = plt.axes(projection=ccrs.NearsidePerspective(*middle))
+    # axes.set_global()
+    # axes.gridlines()
+    # month = str(index[0][5:7])
+    # map_blue_marble(axes, month, 'low')
+    # axes.imshow(image, transform=ccrs.PlateCarree())
+    # scatter_small_red(axes, log['latitude'], log['longitude'])
+    # remove_margins()
+    # out = f'{args.out_dir}{only_name(path)}_map'
+    # plt.savefig(f'{out}.pdf')
+    # plt.savefig(f'{out}.png', dpi=300)
+    # plt.close()
 
     # Graph
     plt.figure(figsize=(9, 3))

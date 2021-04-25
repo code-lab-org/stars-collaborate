@@ -1,0 +1,62 @@
+\hypertarget{subsystem__power_8h_source}{}\subsection{subsystem\+\_\+power.\+h}
+\label{subsystem__power_8h_source}\index{libs/collaborate/include/collaborate/subsystem\+\_\+power.\+h@{libs/collaborate/include/collaborate/subsystem\+\_\+power.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SUBSYSTEM\_POWER\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SUBSYSTEM\_POWER\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <vector>}
+00020 
+00021 \textcolor{preprocessor}{#include "collaborate/battery.h"}
+00022 \textcolor{preprocessor}{#include "collaborate/reference\_frame.h"}
+00023 \textcolor{preprocessor}{#include "collaborate/simulation\_clock.h"}
+00024 \textcolor{preprocessor}{#include "collaborate/solar\_panel.h"}
+00025 \textcolor{preprocessor}{#include "collaborate/vector.h"}
+00026 
+00027 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00028 \textcolor{keyword}{namespace }collaborate \{
+00029 
+\Hypertarget{subsystem__power_8h_source_l00034}\hyperlink{classosse_1_1collaborate_1_1_subsystem_power}{00034} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_subsystem_power}{SubsystemPower} \{
+00035  \textcolor{keyword}{public}:
+\Hypertarget{subsystem__power_8h_source_l00037}\hyperlink{classosse_1_1collaborate_1_1_subsystem_power_ae707a132f821afa47c5448a4d4ff98b5}{00037}   \textcolor{keyword}{static} constexpr \textcolor{keywordtype}{int} \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_ae707a132f821afa47c5448a4d4ff98b5}{kSecsPerHr} = 3600;
+00042   \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a7dafdf11fd2f0d904353e2f385c905bc}{SubsystemPower}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_battery}{Battery}& \_battery,
+00043                  \textcolor{keyword}{const} std::vector<SolarPanel> \_solar\_panels,
+00044                  \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_idle\_power\_w);
+00052   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_aba48698154d6b98d97c067fcb8c5f924}{Update}(\textcolor{keyword}{const} \textcolor{keywordtype}{bool}& \_charge,
+00053               \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_simulation\_clock,
+00054               \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame}& \_body\_frame,
+00055               \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame}& \_orbit\_frame,
+00056               \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_power\_drain\_w,
+00057               \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_position\_m\_rad);
+\Hypertarget{subsystem__power_8h_source_l00060}\hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a609e653cc6c7e4a91ebd250219fabe95}{00060}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_battery}{Battery}& \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a609e653cc6c7e4a91ebd250219fabe95}{battery}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_acee674aab89035d6e9620b89755aac4d}{battery\_};\}
+\Hypertarget{subsystem__power_8h_source_l00063}\hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a2167155fe0eea9b74d5603899b4b4183}{00063}   \textcolor{keyword}{const} std::vector<SolarPanel>& \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a2167155fe0eea9b74d5603899b4b4183}{solar\_panels}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a82c6cd20990c6be2b18de988772eea7c}{solar\_panels\_};\}
+\Hypertarget{subsystem__power_8h_source_l00066}\hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a21f180c076d8f5f5fd6004bc917b2571}{00066}   \textcolor{keyword}{const} \textcolor{keywordtype}{bool}& \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a21f180c076d8f5f5fd6004bc917b2571}{charging}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a456586081b9c7ebc53f40eefc60ae60b}{charging\_};\}
+00067 
+00068  \textcolor{keyword}{private}:
+\Hypertarget{subsystem__power_8h_source_l00070}\hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a456586081b9c7ebc53f40eefc60ae60b}{00070}   \textcolor{keywordtype}{bool} \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a456586081b9c7ebc53f40eefc60ae60b}{charging\_};
+\Hypertarget{subsystem__power_8h_source_l00072}\hyperlink{classosse_1_1collaborate_1_1_subsystem_power_acee674aab89035d6e9620b89755aac4d}{00072}   \hyperlink{classosse_1_1collaborate_1_1_battery}{Battery} \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_acee674aab89035d6e9620b89755aac4d}{battery\_};
+\Hypertarget{subsystem__power_8h_source_l00074}\hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a82c6cd20990c6be2b18de988772eea7c}{00074}   std::vector<SolarPanel> \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a82c6cd20990c6be2b18de988772eea7c}{solar\_panels\_};
+\Hypertarget{subsystem__power_8h_source_l00076}\hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a9a4dc2c6177007e21e0e2c1613e58c9f}{00076}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_subsystem_power_a9a4dc2c6177007e21e0e2c1613e58c9f}{idle\_power\_w\_};
+00077 \};
+00078 
+00079 \}  \textcolor{comment}{// namespace collaborate}
+00080 \}  \textcolor{comment}{// namespace osse}
+00081 
+00082 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SUBSYSTEM\_POWER\_H\_}
+\end{DoxyCode}

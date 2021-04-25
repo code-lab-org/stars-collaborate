@@ -1,0 +1,134 @@
+\hypertarget{classosse_1_1collaborate_1_1_platform_earth}{}\subsection{osse\+:\+:collaborate\+:\+:Platform\+Earth Class Reference}
+\label{classosse_1_1collaborate_1_1_platform_earth}\index{osse\+::collaborate\+::\+Platform\+Earth@{osse\+::collaborate\+::\+Platform\+Earth}}
+
+
+Propogates the position of a stationary object on Earth\textquotesingle{}s surface.  
+
+
+
+
+{\ttfamily \#include $<$platform\+\_\+earth.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Platform\+Earth\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classosse_1_1collaborate_1_1_platform_earth__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_platform_earth_afc5a80925b8a51fbdb93e0cc8eea3607}{Platform\+Earth} (const std\+::string \&\+\_\+name, const double \&\+\_\+latitude\+\_\+rad, const double \&\+\_\+longitude\+\_\+rad, const double \&\+\_\+altitude\+\_\+m)
+\begin{DoxyCompactList}\small\item\em Constructor From L\+LH. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} \hyperlink{classosse_1_1collaborate_1_1_platform_earth_aff04ed83ab0ae2f7b3bcb1019588efcd}{Predict\+Orbital\+State} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const uint64\+\_\+t \&\+\_\+time\+\_\+s) const
+\begin{DoxyCompactList}\small\item\em Get the orbital\+\_\+state of an object using the current clock value. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_platform_earth_ab49f25fe5d37334918483cfdcef3471a}{Predict\+Orbital\+State} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const uint64\+\_\+t \&\+\_\+time\+\_\+s, \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} $\ast$\+\_\+orbital\+\_\+state) const
+\begin{DoxyCompactList}\small\item\em Update the orbital\+\_\+state of an object the current clock time. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} \& \hyperlink{classosse_1_1collaborate_1_1_platform_earth_ac422459d6fb6cf713b52730f7e51f5b0}{k\+Geodetic\+RadM} () const
+\begin{DoxyCompactList}\small\item\em Get geodetic position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_earth_ab79ec0de68f62f6355614bc3963cf44f}\label{classosse_1_1collaborate_1_1_platform_earth_ab79ec0de68f62f6355614bc3963cf44f}} 
+const \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} \hyperlink{classosse_1_1collaborate_1_1_platform_earth_ab79ec0de68f62f6355614bc3963cf44f}{k\+Geodetic\+Rad\+M\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Propogates the position of a stationary object on Earth\textquotesingle{}s surface. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_earth_afc5a80925b8a51fbdb93e0cc8eea3607}\label{classosse_1_1collaborate_1_1_platform_earth_afc5a80925b8a51fbdb93e0cc8eea3607}} 
+\index{osse\+::collaborate\+::\+Platform\+Earth@{osse\+::collaborate\+::\+Platform\+Earth}!Platform\+Earth@{Platform\+Earth}}
+\index{Platform\+Earth@{Platform\+Earth}!osse\+::collaborate\+::\+Platform\+Earth@{osse\+::collaborate\+::\+Platform\+Earth}}
+\paragraph{\texorpdfstring{Platform\+Earth()}{PlatformEarth()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Platform\+Earth\+::\+Platform\+Earth (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const double \&}]{\+\_\+latitude\+\_\+rad,  }\item[{const double \&}]{\+\_\+longitude\+\_\+rad,  }\item[{const double \&}]{\+\_\+altitude\+\_\+m }\end{DoxyParamCaption})}
+
+
+
+Constructor From L\+LH. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+name} & Name of the platform \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+latitude\+\_\+rad} & Latitude (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+longitude\+\_\+rad} & Longitude (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+altitude\+\_\+m} & Altitude (meters) \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_earth_ac422459d6fb6cf713b52730f7e51f5b0}\label{classosse_1_1collaborate_1_1_platform_earth_ac422459d6fb6cf713b52730f7e51f5b0}} 
+\index{osse\+::collaborate\+::\+Platform\+Earth@{osse\+::collaborate\+::\+Platform\+Earth}!k\+Geodetic\+RadM@{k\+Geodetic\+RadM}}
+\index{k\+Geodetic\+RadM@{k\+Geodetic\+RadM}!osse\+::collaborate\+::\+Platform\+Earth@{osse\+::collaborate\+::\+Platform\+Earth}}
+\paragraph{\texorpdfstring{k\+Geodetic\+Rad\+M()}{kGeodeticRadM()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic}\& osse\+::collaborate\+::\+Platform\+Earth\+::k\+Geodetic\+RadM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get geodetic position. 
+
+\begin{DoxyReturn}{Returns}
+geodetic\+\_\+ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_earth_aff04ed83ab0ae2f7b3bcb1019588efcd}\label{classosse_1_1collaborate_1_1_platform_earth_aff04ed83ab0ae2f7b3bcb1019588efcd}} 
+\index{osse\+::collaborate\+::\+Platform\+Earth@{osse\+::collaborate\+::\+Platform\+Earth}!Predict\+Orbital\+State@{Predict\+Orbital\+State}}
+\index{Predict\+Orbital\+State@{Predict\+Orbital\+State}!osse\+::collaborate\+::\+Platform\+Earth@{osse\+::collaborate\+::\+Platform\+Earth}}
+\paragraph{\texorpdfstring{Predict\+Orbital\+State()}{PredictOrbitalState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} osse\+::collaborate\+::\+Platform\+Earth\+::\+Predict\+Orbital\+State (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const uint64\+\_\+t \&}]{\+\_\+time\+\_\+s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the orbital\+\_\+state of an object using the current clock value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+time\+\_\+s} & Time offset from the current time (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+orbital\+\_\+state \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} of an obect at the specified time 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_platform_ad7070fcb9d91b22f25dbe0211ba0cc73}{osse\+::collaborate\+::\+Platform}.
+
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_platform_earth_ab49f25fe5d37334918483cfdcef3471a}\label{classosse_1_1collaborate_1_1_platform_earth_ab49f25fe5d37334918483cfdcef3471a}} 
+\index{osse\+::collaborate\+::\+Platform\+Earth@{osse\+::collaborate\+::\+Platform\+Earth}!Predict\+Orbital\+State@{Predict\+Orbital\+State}}
+\index{Predict\+Orbital\+State@{Predict\+Orbital\+State}!osse\+::collaborate\+::\+Platform\+Earth@{osse\+::collaborate\+::\+Platform\+Earth}}
+\paragraph{\texorpdfstring{Predict\+Orbital\+State()}{PredictOrbitalState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Platform\+Earth\+::\+Predict\+Orbital\+State (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const uint64\+\_\+t \&}]{\+\_\+time\+\_\+s,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} $\ast$}]{\+\_\+orbital\+\_\+state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Update the orbital\+\_\+state of an object the current clock time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+time\+\_\+s} & Time offset from the current time (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+orbital\+\_\+state} & \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_platform_a15881a343059315acdaf018e0c2470d8}{osse\+::collaborate\+::\+Platform}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/platform\+\_\+earth.\+h\item 
+libs/collaborate/src/platform\+\_\+earth.\+cpp\end{DoxyCompactItemize}

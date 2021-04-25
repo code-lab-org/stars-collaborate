@@ -1,0 +1,60 @@
+\hypertarget{platform__earth_8h_source}{}\subsection{platform\+\_\+earth.\+h}
+\label{platform__earth_8h_source}\index{libs/collaborate/include/collaborate/platform\+\_\+earth.\+h@{libs/collaborate/include/collaborate/platform\+\_\+earth.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PLATFORM\_EARTH\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PLATFORM\_EARTH\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <cstdint>}
+00020 \textcolor{preprocessor}{#include <string>}
+00021 \textcolor{preprocessor}{#include <vector>}
+00022 
+00023 \textcolor{preprocessor}{#include "collaborate/geodetic.h"}
+00024 \textcolor{preprocessor}{#include "collaborate/orbital\_state.h"}
+00025 \textcolor{preprocessor}{#include "collaborate/platform.h"}
+00026 \textcolor{preprocessor}{#include "collaborate/simulation\_clock.h"}
+00027 
+00028 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00029 \textcolor{keyword}{namespace }collaborate \{
+00030 
+\Hypertarget{platform__earth_8h_source_l00033}\hyperlink{classosse_1_1collaborate_1_1_platform_earth}{00033} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_platform_earth}{PlatformEarth} : \textcolor{keyword}{public} \hyperlink{classosse_1_1collaborate_1_1_platform}{Platform} \{
+00034  \textcolor{keyword}{public}:
+00040   \hyperlink{classosse_1_1collaborate_1_1_platform_earth_afc5a80925b8a51fbdb93e0cc8eea3607}{PlatformEarth}(\textcolor{keyword}{const} std::string& \_name,
+00041                 \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_latitude\_rad,
+00042                 \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_longitude\_rad,
+00043                 \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_altitude\_m);
+00048   \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{OrbitalState} \hyperlink{classosse_1_1collaborate_1_1_platform_earth_aff04ed83ab0ae2f7b3bcb1019588efcd}{PredictOrbitalState}(\textcolor{keyword}{const} 
+      \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_clock,
+00049                                    \textcolor{keyword}{const} uint64\_t& \_time\_s) \textcolor{keyword}{const};
+00054   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_platform_earth_aff04ed83ab0ae2f7b3bcb1019588efcd}{PredictOrbitalState}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_clock,
+00055                            \textcolor{keyword}{const} uint64\_t& \_time\_s,
+00056                            \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{OrbitalState}* \_orbital\_state) \textcolor{keyword}{const};
+\Hypertarget{platform__earth_8h_source_l00059}\hyperlink{classosse_1_1collaborate_1_1_platform_earth_ac422459d6fb6cf713b52730f7e51f5b0}{00059}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic}& \hyperlink{classosse_1_1collaborate_1_1_platform_earth_ac422459d6fb6cf713b52730f7e51f5b0}{kGeodeticRadM}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_platform_earth_ab79ec0de68f62f6355614bc3963cf44f}{kGeodeticRadM\_};\}
+00060 
+00061  \textcolor{keyword}{private}:
+\Hypertarget{platform__earth_8h_source_l00063}\hyperlink{classosse_1_1collaborate_1_1_platform_earth_ab79ec0de68f62f6355614bc3963cf44f}{00063}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} \hyperlink{classosse_1_1collaborate_1_1_platform_earth_ab79ec0de68f62f6355614bc3963cf44f}{kGeodeticRadM\_};
+00064 \};
+00065 
+00070 std::vector<PlatformEarth> PlatformEarthList(\textcolor{keyword}{const} std::string& \_path);
+00071 
+00072 \}  \textcolor{comment}{// namespace collaborate}
+00073 \}  \textcolor{comment}{// namespace osse}
+00074 
+00075 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PLATFORM\_EARTH\_H\_}
+\end{DoxyCode}

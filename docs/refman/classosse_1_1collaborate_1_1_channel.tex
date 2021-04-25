@@ -1,0 +1,474 @@
+\hypertarget{classosse_1_1collaborate_1_1_channel}{}\subsection{osse\+:\+:collaborate\+:\+:Channel Class Reference}
+\label{classosse_1_1collaborate_1_1_channel}\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+
+
+Describes properties of a communication channel between nodes.  
+
+
+
+
+{\ttfamily \#include $<$channel.\+h$>$}
+
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer}{Log\+Buffer}
+\begin{DoxyCompactList}\small\item\em A buffer for logged node data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a39f733e7246a07d8a2741106f5311dd6}\label{classosse_1_1collaborate_1_1_channel_a39f733e7246a07d8a2741106f5311dd6}} 
+typedef struct \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer}{osse\+::collaborate\+::\+Channel\+::\+Log\+Buffer} \hyperlink{classosse_1_1collaborate_1_1_channel_a39f733e7246a07d8a2741106f5311dd6}{Log\+Buffer}
+\begin{DoxyCompactList}\small\item\em A buffer for logged node data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_channel_a2f160167f6144d6c2c6d91639b003e47}{Channel} (\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+tx\+\_\+node, \hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+rx\+\_\+node)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_ab8e91e0798d0a4270669b3bffd7bf0a4}\label{classosse_1_1collaborate_1_1_channel_ab8e91e0798d0a4270669b3bffd7bf0a4}} 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_ab8e91e0798d0a4270669b3bffd7bf0a4}{Start} ()
+\begin{DoxyCompactList}\small\item\em Starts fake transmission of data. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_adf7ff16e5dcde4bd51ef2e602568d4eb}{Update} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const bool \&\+\_\+flag)
+\begin{DoxyCompactList}\small\item\em Updates member variables and performs fake transfers. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_channel_a44c51b493f2c32e35fbc2104168dd98d}{Predict\+Transfer\+DurationS} () const
+\begin{DoxyCompactList}\small\item\em Calculates expected transfer duration (seconds) \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_channel_a325a93527ae5a31ae54142c0e4d684ca}{Predict\+Transfer\+Size\+Bytes} () const
+\begin{DoxyCompactList}\small\item\em Calculates Expected transfer size (bytes) \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_channel_ac156e6d32458cf614675b8fa87866f25}{tx\+\_\+node} () const
+\begin{DoxyCompactList}\small\item\em Get transmitter. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_channel_abc1c2e786daa390bcd1cd0982566e5f2}{rx\+\_\+node} () const
+\begin{DoxyCompactList}\small\item\em Get receiver. \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_channel_a4027ef876124bbe4cf0bd4b00acaf884}{rx\+\_\+gain\+\_\+db} () const
+\begin{DoxyCompactList}\small\item\em Get received gain (decibels) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_channel_ab810753b421db910e6a1ee938a2080af}{tx\+\_\+gain\+\_\+db} () const
+\begin{DoxyCompactList}\small\item\em Get transmitted gain (decibels) \end{DoxyCompactList}\item 
+const bool \& \hyperlink{classosse_1_1collaborate_1_1_channel_aad77cd18b2279048700dd944aacfa8fc}{active} () const
+\begin{DoxyCompactList}\small\item\em Get activity. \end{DoxyCompactList}\item 
+const bool \& \hyperlink{classosse_1_1collaborate_1_1_channel_ad6f31877da7e33e97a454bad6d00b93a}{error\+\_\+flag} () const
+\begin{DoxyCompactList}\small\item\em Get error status. \end{DoxyCompactList}\item 
+const bool \& \hyperlink{classosse_1_1collaborate_1_1_channel_a320df78e3d3cab27387910b653a36c42}{success\+\_\+flag} () const
+\begin{DoxyCompactList}\small\item\em Get success status. \end{DoxyCompactList}\item 
+const bool \& \hyperlink{classosse_1_1collaborate_1_1_channel_a9cfb391686ccfce59c85e7a72274423e}{open} () const
+\begin{DoxyCompactList}\small\item\em Get potential contact status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a8f8d63e606e491d47331834221b34159}\label{classosse_1_1collaborate_1_1_channel_a8f8d63e606e491d47331834221b34159}} 
+static constexpr double \hyperlink{classosse_1_1collaborate_1_1_channel_a8f8d63e606e491d47331834221b34159}{k\+Speed\+Of\+Light\+M\+PerS} = 299792458.\+0
+\begin{DoxyCompactList}\small\item\em Speed of light in a vacuum (meters per second) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_afa3d5712ec01f8ebe7c332c6f70b6f34}{Fake\+Transfer} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock)
+\begin{DoxyCompactList}\small\item\em Uses fake data buffers to simulate the movement of data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a7883ecefbb4beb76b4b4344c5b77fd4b}\label{classosse_1_1collaborate_1_1_channel_a7883ecefbb4beb76b4b4344c5b77fd4b}} 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_a7883ecefbb4beb76b4b4344c5b77fd4b}{Real\+Transfer} ()
+\begin{DoxyCompactList}\small\item\em Moves data from real transmit buffer to real receive buffer. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_ad63128fabbcbd8ad76512937333324f8}{Buffer} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock)
+\begin{DoxyCompactList}\small\item\em Appends data to log buffer. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_a557ea9a5efc851158e8faac44e7727dd}{Flush} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock)
+\begin{DoxyCompactList}\small\item\em Writes the log buffer to file. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_channel_a82f92a2447146dccb81de8557994afb9}{Calculate\+Data\+Rate\+Bits\+PerS} () const
+\begin{DoxyCompactList}\small\item\em Calculates data rate (bits per second) \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_a7e37174d94c0da66432d7b0ace4b2ba4}{Update\+Omega\+Rad\+PerS} ()
+\begin{DoxyCompactList}\small\item\em Calculates frequency (radians per second) \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_a89877e3e5c3cdfdd53b59001fea27b93}{Update\+DistanceM} ()
+\begin{DoxyCompactList}\small\item\em Updates distance (meters) \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_a6fb6a52d46f410cb369e42be9a7213bf}{Update\+Los\+Unit} ()
+\begin{DoxyCompactList}\small\item\em Updates line-\/of-\/sight unit vectors. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_a757a6ce4a001b986bf3ab746b37ec3b7}{Update\+Los\+Speed\+M\+PerS} ()
+\begin{DoxyCompactList}\small\item\em Updates line-\/of-\/sight speed (meters per second) \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_a95ee1344e01272f80d638f3cde164e9c}{Update\+Gain\+Db} ()
+\begin{DoxyCompactList}\small\item\em Updates directional gain values (decibels) \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_a8f419e4573c12ba04b82c023c8f7326f}{Update\+Open} ()
+\begin{DoxyCompactList}\small\item\em Updates potential contact status. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_a1b086fb253ad06cdbaff229b9916ee7b}{Update\+PowerW} ()
+\begin{DoxyCompactList}\small\item\em Updates power (Watts) \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_channel_abd29033e2e6c9edbb5fd54923a444b26}{Update\+DelayS} ()
+\begin{DoxyCompactList}\small\item\em Updates delay (seconds) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a2e4a3cec53dd0d2abc5fe1641459c0e7}\label{classosse_1_1collaborate_1_1_channel_a2e4a3cec53dd0d2abc5fe1641459c0e7}} 
+\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_channel_a2e4a3cec53dd0d2abc5fe1641459c0e7}{tx\+\_\+node\+\_\+}
+\begin{DoxyCompactList}\small\item\em Transmitter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a0d4d4a4b172d2444980cbae914d74361}\label{classosse_1_1collaborate_1_1_channel_a0d4d4a4b172d2444980cbae914d74361}} 
+\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_channel_a0d4d4a4b172d2444980cbae914d74361}{rx\+\_\+node\+\_\+}
+\begin{DoxyCompactList}\small\item\em Receiver. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a3fad3094032c9667487f197177e6fc72}\label{classosse_1_1collaborate_1_1_channel_a3fad3094032c9667487f197177e6fc72}} 
+double \hyperlink{classosse_1_1collaborate_1_1_channel_a3fad3094032c9667487f197177e6fc72}{data\+\_\+rate\+\_\+bits\+\_\+per\+\_\+s\+\_\+}
+\begin{DoxyCompactList}\small\item\em Data rate (bits per second) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a85b1f3fd35f688d8ba9827066e5ef49d}\label{classosse_1_1collaborate_1_1_channel_a85b1f3fd35f688d8ba9827066e5ef49d}} 
+double \hyperlink{classosse_1_1collaborate_1_1_channel_a85b1f3fd35f688d8ba9827066e5ef49d}{omega\+\_\+rad\+\_\+per\+\_\+s\+\_\+}
+\begin{DoxyCompactList}\small\item\em Frequency (radians per second) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_ada3d728365912011d4df5c56ccd59365}\label{classosse_1_1collaborate_1_1_channel_ada3d728365912011d4df5c56ccd59365}} 
+double \hyperlink{classosse_1_1collaborate_1_1_channel_ada3d728365912011d4df5c56ccd59365}{rx\+\_\+power\+\_\+w\+\_\+}
+\begin{DoxyCompactList}\small\item\em Received power (Watts) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a6eee9b25ba7942592cb29679db3770e8}\label{classosse_1_1collaborate_1_1_channel_a6eee9b25ba7942592cb29679db3770e8}} 
+double \hyperlink{classosse_1_1collaborate_1_1_channel_a6eee9b25ba7942592cb29679db3770e8}{rx\+\_\+gain\+\_\+db\+\_\+}
+\begin{DoxyCompactList}\small\item\em Received gain (decibels) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_aebb77505cfd79838ab10170b87be5e7f}\label{classosse_1_1collaborate_1_1_channel_aebb77505cfd79838ab10170b87be5e7f}} 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_channel_aebb77505cfd79838ab10170b87be5e7f}{rx\+\_\+los\+\_\+unit\+\_\+}
+\begin{DoxyCompactList}\small\item\em Received line-\/of-\/sight vector (unit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a2085f92bb595a75a1f936970dfe57bb6}\label{classosse_1_1collaborate_1_1_channel_a2085f92bb595a75a1f936970dfe57bb6}} 
+double \hyperlink{classosse_1_1collaborate_1_1_channel_a2085f92bb595a75a1f936970dfe57bb6}{tx\+\_\+power\+\_\+w\+\_\+}
+\begin{DoxyCompactList}\small\item\em Transmitted power (watts) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a42c1469e873ae36e596a3f937bdf66ed}\label{classosse_1_1collaborate_1_1_channel_a42c1469e873ae36e596a3f937bdf66ed}} 
+double \hyperlink{classosse_1_1collaborate_1_1_channel_a42c1469e873ae36e596a3f937bdf66ed}{tx\+\_\+gain\+\_\+db\+\_\+}
+\begin{DoxyCompactList}\small\item\em Transmitted gain (decibels) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a1f324f3e44d5c8c6279a3caf1fc4602b}\label{classosse_1_1collaborate_1_1_channel_a1f324f3e44d5c8c6279a3caf1fc4602b}} 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_channel_a1f324f3e44d5c8c6279a3caf1fc4602b}{tx\+\_\+los\+\_\+unit\+\_\+}
+\begin{DoxyCompactList}\small\item\em Transmitted line-\/of-\/sight vector (unit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a52ae5da3fdf5cfae94dec68588da935e}\label{classosse_1_1collaborate_1_1_channel_a52ae5da3fdf5cfae94dec68588da935e}} 
+double \hyperlink{classosse_1_1collaborate_1_1_channel_a52ae5da3fdf5cfae94dec68588da935e}{los\+\_\+speed\+\_\+m\+\_\+per\+\_\+s\+\_\+}
+\begin{DoxyCompactList}\small\item\em Line-\/of-\/sight speed (meters per second) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a60a7429514284cc331face20bacf0c08}\label{classosse_1_1collaborate_1_1_channel_a60a7429514284cc331face20bacf0c08}} 
+double \hyperlink{classosse_1_1collaborate_1_1_channel_a60a7429514284cc331face20bacf0c08}{distance\+\_\+m\+\_\+}
+\begin{DoxyCompactList}\small\item\em Distance (meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a567bfcfd31f64c6921e062384963de5a}\label{classosse_1_1collaborate_1_1_channel_a567bfcfd31f64c6921e062384963de5a}} 
+double \hyperlink{classosse_1_1collaborate_1_1_channel_a567bfcfd31f64c6921e062384963de5a}{delay\+\_\+s\+\_\+}
+\begin{DoxyCompactList}\small\item\em Delay (seconds) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a2d6624f0bbbb368eaa2d291a77587d0d}\label{classosse_1_1collaborate_1_1_channel_a2d6624f0bbbb368eaa2d291a77587d0d}} 
+bool \hyperlink{classosse_1_1collaborate_1_1_channel_a2d6624f0bbbb368eaa2d291a77587d0d}{active\+\_\+}
+\begin{DoxyCompactList}\small\item\em Activity status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_ab19359c577701cabb1a7ada40c5feca8}\label{classosse_1_1collaborate_1_1_channel_ab19359c577701cabb1a7ada40c5feca8}} 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_channel_ab19359c577701cabb1a7ada40c5feca8}{fake\+\_\+rx\+\_\+buffer\+\_\+bytes\+\_\+}
+\begin{DoxyCompactList}\small\item\em Fake receive buffer size (bytes) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a4d270da79a74f7f5261d3dbb861d931e}\label{classosse_1_1collaborate_1_1_channel_a4d270da79a74f7f5261d3dbb861d931e}} 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_channel_a4d270da79a74f7f5261d3dbb861d931e}{fake\+\_\+tx\+\_\+buffer\+\_\+bytes\+\_\+}
+\begin{DoxyCompactList}\small\item\em Fake transmit buffer size (bytes) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a1c314c850379b6f0c33b92aad8722800}\label{classosse_1_1collaborate_1_1_channel_a1c314c850379b6f0c33b92aad8722800}} 
+std\+::vector$<$ double $>$ \hyperlink{classosse_1_1collaborate_1_1_channel_a1c314c850379b6f0c33b92aad8722800}{log\+\_\+buffer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Buffer for log data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_af75105b9b55712ecca44c7d91f085338}\label{classosse_1_1collaborate_1_1_channel_af75105b9b55712ecca44c7d91f085338}} 
+bool \hyperlink{classosse_1_1collaborate_1_1_channel_af75105b9b55712ecca44c7d91f085338}{error\+\_\+flag\+\_\+}
+\begin{DoxyCompactList}\small\item\em Error status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a59d55edf9ee92cf28e4f304d17587223}\label{classosse_1_1collaborate_1_1_channel_a59d55edf9ee92cf28e4f304d17587223}} 
+bool \hyperlink{classosse_1_1collaborate_1_1_channel_a59d55edf9ee92cf28e4f304d17587223}{success\+\_\+flag\+\_\+}
+\begin{DoxyCompactList}\small\item\em Success status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a269d85437ed1de4d35d67c06257b72c0}\label{classosse_1_1collaborate_1_1_channel_a269d85437ed1de4d35d67c06257b72c0}} 
+bool \hyperlink{classosse_1_1collaborate_1_1_channel_a269d85437ed1de4d35d67c06257b72c0}{open\+\_\+}
+\begin{DoxyCompactList}\small\item\em Potential contact status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_af7057de27216b3871fb9ef97e5c14e31}\label{classosse_1_1collaborate_1_1_channel_af7057de27216b3871fb9ef97e5c14e31}} 
+\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer}{Log\+Buffer} \hyperlink{classosse_1_1collaborate_1_1_channel_af7057de27216b3871fb9ef97e5c14e31}{log\+\_\+}
+\begin{DoxyCompactList}\small\item\em Buffer for logged communication parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Describes properties of a communication channel between nodes. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a2f160167f6144d6c2c6d91639b003e47}\label{classosse_1_1collaborate_1_1_channel_a2f160167f6144d6c2c6d91639b003e47}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Channel@{Channel}}
+\index{Channel@{Channel}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Channel()}{Channel()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Channel\+::\+Channel (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+tx\+\_\+node,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+rx\+\_\+node }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tx\+\_\+node} & Transmitter \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+rx\+\_\+node} & Receiver \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_aad77cd18b2279048700dd944aacfa8fc}\label{classosse_1_1collaborate_1_1_channel_aad77cd18b2279048700dd944aacfa8fc}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!active@{active}}
+\index{active@{active}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{active()}{active()}}
+{\footnotesize\ttfamily const bool\& osse\+::collaborate\+::\+Channel\+::active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get activity. 
+
+\begin{DoxyReturn}{Returns}
+active\+\_\+ activity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_ad63128fabbcbd8ad76512937333324f8}\label{classosse_1_1collaborate_1_1_channel_ad63128fabbcbd8ad76512937333324f8}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Buffer()}{Buffer()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Channel\+::\+Buffer (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Appends data to log buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a82f92a2447146dccb81de8557994afb9}\label{classosse_1_1collaborate_1_1_channel_a82f92a2447146dccb81de8557994afb9}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Calculate\+Data\+Rate\+Bits\+PerS@{Calculate\+Data\+Rate\+Bits\+PerS}}
+\index{Calculate\+Data\+Rate\+Bits\+PerS@{Calculate\+Data\+Rate\+Bits\+PerS}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Calculate\+Data\+Rate\+Bits\+Per\+S()}{CalculateDataRateBitsPerS()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Channel\+::\+Calculate\+Data\+Rate\+Bits\+PerS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculates data rate (bits per second) 
+
+\begin{DoxyReturn}{Returns}
+Data rate (bits per second)
+\end{DoxyReturn}
+\[ \delta = \min{(\delta_{tx}, \delta_{rx})} ~~~ (bits~per~second) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_ad6f31877da7e33e97a454bad6d00b93a}\label{classosse_1_1collaborate_1_1_channel_ad6f31877da7e33e97a454bad6d00b93a}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!error\+\_\+flag@{error\+\_\+flag}}
+\index{error\+\_\+flag@{error\+\_\+flag}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{error\+\_\+flag()}{error\_flag()}}
+{\footnotesize\ttfamily const bool\& osse\+::collaborate\+::\+Channel\+::error\+\_\+flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get error status. 
+
+\begin{DoxyReturn}{Returns}
+error\+\_\+flag\+\_\+ Error status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_afa3d5712ec01f8ebe7c332c6f70b6f34}\label{classosse_1_1collaborate_1_1_channel_afa3d5712ec01f8ebe7c332c6f70b6f34}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Fake\+Transfer@{Fake\+Transfer}}
+\index{Fake\+Transfer@{Fake\+Transfer}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Fake\+Transfer()}{FakeTransfer()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Channel\+::\+Fake\+Transfer (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Uses fake data buffers to simulate the movement of data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a557ea9a5efc851158e8faac44e7727dd}\label{classosse_1_1collaborate_1_1_channel_a557ea9a5efc851158e8faac44e7727dd}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Flush@{Flush}}
+\index{Flush@{Flush}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Flush()}{Flush()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Channel\+::\+Flush (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Writes the log buffer to file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a9cfb391686ccfce59c85e7a72274423e}\label{classosse_1_1collaborate_1_1_channel_a9cfb391686ccfce59c85e7a72274423e}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!open@{open}}
+\index{open@{open}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily const bool\& osse\+::collaborate\+::\+Channel\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get potential contact status. 
+
+\begin{DoxyReturn}{Returns}
+open\+\_\+ Potential contact status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a44c51b493f2c32e35fbc2104168dd98d}\label{classosse_1_1collaborate_1_1_channel_a44c51b493f2c32e35fbc2104168dd98d}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Predict\+Transfer\+DurationS@{Predict\+Transfer\+DurationS}}
+\index{Predict\+Transfer\+DurationS@{Predict\+Transfer\+DurationS}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Predict\+Transfer\+Duration\+S()}{PredictTransferDurationS()}}
+{\footnotesize\ttfamily uint64\+\_\+t osse\+::collaborate\+::\+Channel\+::\+Predict\+Transfer\+DurationS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Calculates expected transfer duration (seconds) 
+
+\begin{DoxyReturn}{Returns}
+Expected transfer duration (seconds) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a325a93527ae5a31ae54142c0e4d684ca}\label{classosse_1_1collaborate_1_1_channel_a325a93527ae5a31ae54142c0e4d684ca}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Predict\+Transfer\+Size\+Bytes@{Predict\+Transfer\+Size\+Bytes}}
+\index{Predict\+Transfer\+Size\+Bytes@{Predict\+Transfer\+Size\+Bytes}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Predict\+Transfer\+Size\+Bytes()}{PredictTransferSizeBytes()}}
+{\footnotesize\ttfamily uint64\+\_\+t osse\+::collaborate\+::\+Channel\+::\+Predict\+Transfer\+Size\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Calculates Expected transfer size (bytes) 
+
+\begin{DoxyReturn}{Returns}
+Expected transfer size (bytes) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a4027ef876124bbe4cf0bd4b00acaf884}\label{classosse_1_1collaborate_1_1_channel_a4027ef876124bbe4cf0bd4b00acaf884}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!rx\+\_\+gain\+\_\+db@{rx\+\_\+gain\+\_\+db}}
+\index{rx\+\_\+gain\+\_\+db@{rx\+\_\+gain\+\_\+db}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{rx\+\_\+gain\+\_\+db()}{rx\_gain\_db()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Channel\+::rx\+\_\+gain\+\_\+db (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get received gain (decibels) 
+
+\begin{DoxyReturn}{Returns}
+rx\+\_\+gain\+\_\+db\+\_\+ Received gain (decibels) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_abc1c2e786daa390bcd1cd0982566e5f2}\label{classosse_1_1collaborate_1_1_channel_abc1c2e786daa390bcd1cd0982566e5f2}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!rx\+\_\+node@{rx\+\_\+node}}
+\index{rx\+\_\+node@{rx\+\_\+node}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{rx\+\_\+node()}{rx\_node()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_node}{Node}$\ast$ osse\+::collaborate\+::\+Channel\+::rx\+\_\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get receiver. 
+
+\begin{DoxyReturn}{Returns}
+rx\+\_\+node\+\_\+ Receiver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a320df78e3d3cab27387910b653a36c42}\label{classosse_1_1collaborate_1_1_channel_a320df78e3d3cab27387910b653a36c42}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!success\+\_\+flag@{success\+\_\+flag}}
+\index{success\+\_\+flag@{success\+\_\+flag}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{success\+\_\+flag()}{success\_flag()}}
+{\footnotesize\ttfamily const bool\& osse\+::collaborate\+::\+Channel\+::success\+\_\+flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get success status. 
+
+\begin{DoxyReturn}{Returns}
+success\+\_\+flag\+\_\+ Success status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_ab810753b421db910e6a1ee938a2080af}\label{classosse_1_1collaborate_1_1_channel_ab810753b421db910e6a1ee938a2080af}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!tx\+\_\+gain\+\_\+db@{tx\+\_\+gain\+\_\+db}}
+\index{tx\+\_\+gain\+\_\+db@{tx\+\_\+gain\+\_\+db}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{tx\+\_\+gain\+\_\+db()}{tx\_gain\_db()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Channel\+::tx\+\_\+gain\+\_\+db (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get transmitted gain (decibels) 
+
+\begin{DoxyReturn}{Returns}
+tx\+\_\+gain\+\_\+db\+\_\+ Transmitted gain (decibels) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_ac156e6d32458cf614675b8fa87866f25}\label{classosse_1_1collaborate_1_1_channel_ac156e6d32458cf614675b8fa87866f25}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!tx\+\_\+node@{tx\+\_\+node}}
+\index{tx\+\_\+node@{tx\+\_\+node}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{tx\+\_\+node()}{tx\_node()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_node}{Node}$\ast$ osse\+::collaborate\+::\+Channel\+::tx\+\_\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get transmitter. 
+
+\begin{DoxyReturn}{Returns}
+tx\+\_\+node\+\_\+ Transmitter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_adf7ff16e5dcde4bd51ef2e602568d4eb}\label{classosse_1_1collaborate_1_1_channel_adf7ff16e5dcde4bd51ef2e602568d4eb}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Update@{Update}}
+\index{Update@{Update}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Channel\+::\+Update (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const bool \&}]{\+\_\+flag }\end{DoxyParamCaption})}
+
+
+
+Updates member variables and performs fake transfers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+flag} & Flag \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_abd29033e2e6c9edbb5fd54923a444b26}\label{classosse_1_1collaborate_1_1_channel_abd29033e2e6c9edbb5fd54923a444b26}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Update\+DelayS@{Update\+DelayS}}
+\index{Update\+DelayS@{Update\+DelayS}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Update\+Delay\+S()}{UpdateDelayS()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Channel\+::\+Update\+DelayS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates delay (seconds) 
+
+\[ \delta = d / c \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a89877e3e5c3cdfdd53b59001fea27b93}\label{classosse_1_1collaborate_1_1_channel_a89877e3e5c3cdfdd53b59001fea27b93}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Update\+DistanceM@{Update\+DistanceM}}
+\index{Update\+DistanceM@{Update\+DistanceM}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Update\+Distance\+M()}{UpdateDistanceM()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Channel\+::\+Update\+DistanceM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates distance (meters) 
+
+\[ d = \left\lvert\vec{p}_{tx} - \vec{p}_{rx}\right\rvert ~~~ (meters) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a95ee1344e01272f80d638f3cde164e9c}\label{classosse_1_1collaborate_1_1_channel_a95ee1344e01272f80d638f3cde164e9c}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Update\+Gain\+Db@{Update\+Gain\+Db}}
+\index{Update\+Gain\+Db@{Update\+Gain\+Db}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Update\+Gain\+Db()}{UpdateGainDb()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Channel\+::\+Update\+Gain\+Db (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates directional gain values (decibels) 
+
+\[ (~for~both~TX~and~RX~nodes~) \] \[ {\bf{O}}, {\bf{B}}, {\bf{A}} = Orbit,Body,Antenna~Frame~Attitude~Matrices \] \[ \hat{u} = LOS~Unit~Vector \] \[ \hat{a} = Antenna~LOS~Unit~Vector \] \[ \hat{a} = \left(\left(\left(\hat{u}{\bf{O}^{-1}}\right) {\bf{B}^{-1}}\right){\bf{A}^{-1}}\right) \] \[ g = G_{a}(\theta_{a}, \phi_{a}, \omega_{a}) ~~~ (decibels) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a757a6ce4a001b986bf3ab746b37ec3b7}\label{classosse_1_1collaborate_1_1_channel_a757a6ce4a001b986bf3ab746b37ec3b7}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Update\+Los\+Speed\+M\+PerS@{Update\+Los\+Speed\+M\+PerS}}
+\index{Update\+Los\+Speed\+M\+PerS@{Update\+Los\+Speed\+M\+PerS}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Update\+Los\+Speed\+M\+Per\+S()}{UpdateLosSpeedMPerS()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Channel\+::\+Update\+Los\+Speed\+M\+PerS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates line-\/of-\/sight speed (meters per second) 
+
+\[ s = (\vec{v}_{t} - \vec{v}_{r}) \cdot \hat{p}_{tx,rx} ~~~ (meters~per~second) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a6fb6a52d46f410cb369e42be9a7213bf}\label{classosse_1_1collaborate_1_1_channel_a6fb6a52d46f410cb369e42be9a7213bf}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Update\+Los\+Unit@{Update\+Los\+Unit}}
+\index{Update\+Los\+Unit@{Update\+Los\+Unit}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Update\+Los\+Unit()}{UpdateLosUnit()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Channel\+::\+Update\+Los\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates line-\/of-\/sight unit vectors. 
+
+\[ \vec{r}_{tx,rx} = \left\lvert \vec{p}_{rx} - \vec{p}_{tx} \right\rvert,~ \vec{r}_{rx,tx} = \left\lvert \vec{p}_{tx} - \vec{p}_{rx} \right\rvert \] \[ \hat{r}_{tx,rx} = \frac{\vec{r}_{tx,rx}}{\left\lvert\vec{r}_{tx,rx}\right\rvert},~ \hat{r}_{rx,tx} = \frac{\vec{r}_{rx,tx}}{\left\lvert\vec{r}_{rx,tx}\right\rvert} \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a7e37174d94c0da66432d7b0ace4b2ba4}\label{classosse_1_1collaborate_1_1_channel_a7e37174d94c0da66432d7b0ace4b2ba4}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Update\+Omega\+Rad\+PerS@{Update\+Omega\+Rad\+PerS}}
+\index{Update\+Omega\+Rad\+PerS@{Update\+Omega\+Rad\+PerS}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Update\+Omega\+Rad\+Per\+S()}{UpdateOmegaRadPerS()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Channel\+::\+Update\+Omega\+Rad\+PerS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculates frequency (radians per second) 
+
+\begin{DoxyReturn}{Returns}
+Frequency (radians per second)
+\end{DoxyReturn}
+\[ \omega = \max{(\omega_{tx}, \omega_{rx})} ~~~ (radians~per~second) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a8f419e4573c12ba04b82c023c8f7326f}\label{classosse_1_1collaborate_1_1_channel_a8f419e4573c12ba04b82c023c8f7326f}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Update\+Open@{Update\+Open}}
+\index{Update\+Open@{Update\+Open}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Update\+Open()}{UpdateOpen()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Channel\+::\+Update\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates potential contact status. 
+
+\[ \delta = Gain~Threshold \] \[ Open = (g_{tx} > \delta) \land (g_{rx} > \delta) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_channel_a1b086fb253ad06cdbaff229b9916ee7b}\label{classosse_1_1collaborate_1_1_channel_a1b086fb253ad06cdbaff229b9916ee7b}} 
+\index{osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}!Update\+PowerW@{Update\+PowerW}}
+\index{Update\+PowerW@{Update\+PowerW}!osse\+::collaborate\+::\+Channel@{osse\+::collaborate\+::\+Channel}}
+\paragraph{\texorpdfstring{Update\+Power\+W()}{UpdatePowerW()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Channel\+::\+Update\+PowerW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates power (Watts) 
+
+\[ P_{rx} = P_{tx} * g_{tx} * g_{rx} * \frac{\frac{c}{\frac{\omega}{2\pi}}}{4\pi d}^2 \] 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/channel.\+h\item 
+libs/collaborate/src/channel.\+cpp\end{DoxyCompactItemize}

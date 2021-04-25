@@ -1,0 +1,186 @@
+\hypertarget{classosse_1_1collaborate_1_1_antenna}{}\subsection{osse\+:\+:collaborate\+:\+:Antenna Class Reference}
+\label{classosse_1_1collaborate_1_1_antenna}\index{osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}}
+
+
+Abstract antenna.  
+
+
+
+
+{\ttfamily \#include $<$antenna.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Antenna\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classosse_1_1collaborate_1_1_antenna__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_antenna_a0f871800c6102bc92a2bda159f43b240}{Antenna} (const double \&\+\_\+max\+\_\+gain\+\_\+db, const double \&\+\_\+roll\+\_\+rad, const double \&\+\_\+pitch\+\_\+rad, const double \&\+\_\+yaw\+\_\+rad)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classosse_1_1collaborate_1_1_antenna_a67214b4b28f3d48931c8fb435cc1f85d}{Gain\+Db} (const double \&\+\_\+theta\+\_\+rad, const double \&\+\_\+phi\+\_\+rad) const =0
+\begin{DoxyCompactList}\small\item\em Obtain directional gain (decibels) \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_antenna_ae24d52fa84fd3acff597c56259f4aba6}{Log} (const std\+::string \&\+\_\+path) const
+\begin{DoxyCompactList}\small\item\em Logs the antenna pattern to a file. \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_antenna_a0666d28c6d44c193d4abd844a04044b4}{k\+Max\+Gain\+Db} () const
+\begin{DoxyCompactList}\small\item\em Get maximum gain (decibels) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_antenna_ac6602825c2e7282bc89f01b45f3289b7}{k\+Roll\+Rad} () const
+\begin{DoxyCompactList}\small\item\em Get roll angle to host body reference frame (radians) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_antenna_a3216890f8adcd7f52bbf9af7fef2f45f}{k\+Pitch\+Rad} () const
+\begin{DoxyCompactList}\small\item\em Get pitch angle to host body reference frame (radians) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_antenna_a79acbd84d9ad9a739ec0a8c60b49bc93}{k\+Yaw\+Rad} () const
+\begin{DoxyCompactList}\small\item\em Get yaw angle to host body reference frame (radians) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_a3bb8d000dfd0dbd4713cc1c4fbc8772e}\label{classosse_1_1collaborate_1_1_antenna_a3bb8d000dfd0dbd4713cc1c4fbc8772e}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_antenna_a3bb8d000dfd0dbd4713cc1c4fbc8772e}{k\+Max\+Gain\+Db\+\_\+}
+\begin{DoxyCompactList}\small\item\em Maximum gain (decibels) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_aff899094f1534787d2ce4899a6d1babb}\label{classosse_1_1collaborate_1_1_antenna_aff899094f1534787d2ce4899a6d1babb}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_antenna_aff899094f1534787d2ce4899a6d1babb}{k\+Roll\+Rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Roll angle to host body reference frame (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_a05c6fd112ee735a371ed48f0a9b3701f}\label{classosse_1_1collaborate_1_1_antenna_a05c6fd112ee735a371ed48f0a9b3701f}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_antenna_a05c6fd112ee735a371ed48f0a9b3701f}{k\+Pitch\+Rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pitch angle to host body reference frame (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_abb5b0f5a06d029eba6029f143588c99b}\label{classosse_1_1collaborate_1_1_antenna_abb5b0f5a06d029eba6029f143588c99b}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_antenna_abb5b0f5a06d029eba6029f143588c99b}{k\+Yaw\+Rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Yaw angle to host body reference frame (radians) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Abstract antenna. 
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth]{antennas}}
+\end{DoxyImageNoCaption}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_a0f871800c6102bc92a2bda159f43b240}\label{classosse_1_1collaborate_1_1_antenna_a0f871800c6102bc92a2bda159f43b240}} 
+\index{osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}!Antenna@{Antenna}}
+\index{Antenna@{Antenna}!osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}}
+\paragraph{\texorpdfstring{Antenna()}{Antenna()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Antenna\+::\+Antenna (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+max\+\_\+gain\+\_\+db,  }\item[{const double \&}]{\+\_\+roll\+\_\+rad,  }\item[{const double \&}]{\+\_\+pitch\+\_\+rad,  }\item[{const double \&}]{\+\_\+yaw\+\_\+rad }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+max\+\_\+gain\+\_\+db} & Maximum gain (decibels) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+roll\+\_\+rad} & Roll angle to host body reference frame (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+pitch\+\_\+rad} & Pitch angle to host body reference frame (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+yaw\+\_\+rad} & Yaw angle to host body reference frame (radians) \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_a67214b4b28f3d48931c8fb435cc1f85d}\label{classosse_1_1collaborate_1_1_antenna_a67214b4b28f3d48931c8fb435cc1f85d}} 
+\index{osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}!Gain\+Db@{Gain\+Db}}
+\index{Gain\+Db@{Gain\+Db}!osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}}
+\paragraph{\texorpdfstring{Gain\+Db()}{GainDb()}}
+{\footnotesize\ttfamily virtual double osse\+::collaborate\+::\+Antenna\+::\+Gain\+Db (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+theta\+\_\+rad,  }\item[{const double \&}]{\+\_\+phi\+\_\+rad }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Obtain directional gain (decibels) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+theta\+\_\+rad} & Altitude angle from positive z-\/axis (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+phi\+\_\+rad} & Azimuth angle (radians) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Directional gain (decibels) 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classosse_1_1collaborate_1_1_antenna_dipole_a46aab376eb3bb44ae47beceef79db8df}{osse\+::collaborate\+::\+Antenna\+Dipole}, \hyperlink{classosse_1_1collaborate_1_1_antenna_helical_ac405a2e34ec76610b88d8f1fb407658d}{osse\+::collaborate\+::\+Antenna\+Helical}, \hyperlink{classosse_1_1collaborate_1_1_antenna_patch_a34cd1ff37a5851f9dab72d737f72d0de}{osse\+::collaborate\+::\+Antenna\+Patch}, and \hyperlink{classosse_1_1collaborate_1_1_antenna_isotropic_ab695187eb238b78ac03f27bd1cbffc11}{osse\+::collaborate\+::\+Antenna\+Isotropic}.
+
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_a0666d28c6d44c193d4abd844a04044b4}\label{classosse_1_1collaborate_1_1_antenna_a0666d28c6d44c193d4abd844a04044b4}} 
+\index{osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}!k\+Max\+Gain\+Db@{k\+Max\+Gain\+Db}}
+\index{k\+Max\+Gain\+Db@{k\+Max\+Gain\+Db}!osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}}
+\paragraph{\texorpdfstring{k\+Max\+Gain\+Db()}{kMaxGainDb()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Antenna\+::k\+Max\+Gain\+Db (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get maximum gain (decibels) 
+
+\begin{DoxyReturn}{Returns}
+max\+\_\+gain\+\_\+db\+\_\+ Maximum gain (decibels) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_a3216890f8adcd7f52bbf9af7fef2f45f}\label{classosse_1_1collaborate_1_1_antenna_a3216890f8adcd7f52bbf9af7fef2f45f}} 
+\index{osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}!k\+Pitch\+Rad@{k\+Pitch\+Rad}}
+\index{k\+Pitch\+Rad@{k\+Pitch\+Rad}!osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}}
+\paragraph{\texorpdfstring{k\+Pitch\+Rad()}{kPitchRad()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Antenna\+::k\+Pitch\+Rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get pitch angle to host body reference frame (radians) 
+
+\begin{DoxyReturn}{Returns}
+pitch\+\_\+rad\+\_\+ Pitch angle to host body reference frame (radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_ac6602825c2e7282bc89f01b45f3289b7}\label{classosse_1_1collaborate_1_1_antenna_ac6602825c2e7282bc89f01b45f3289b7}} 
+\index{osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}!k\+Roll\+Rad@{k\+Roll\+Rad}}
+\index{k\+Roll\+Rad@{k\+Roll\+Rad}!osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}}
+\paragraph{\texorpdfstring{k\+Roll\+Rad()}{kRollRad()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Antenna\+::k\+Roll\+Rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get roll angle to host body reference frame (radians) 
+
+\begin{DoxyReturn}{Returns}
+roll\+\_\+rad\+\_\+ Roll angle to host body reference frame (radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_a79acbd84d9ad9a739ec0a8c60b49bc93}\label{classosse_1_1collaborate_1_1_antenna_a79acbd84d9ad9a739ec0a8c60b49bc93}} 
+\index{osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}!k\+Yaw\+Rad@{k\+Yaw\+Rad}}
+\index{k\+Yaw\+Rad@{k\+Yaw\+Rad}!osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}}
+\paragraph{\texorpdfstring{k\+Yaw\+Rad()}{kYawRad()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Antenna\+::k\+Yaw\+Rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get yaw angle to host body reference frame (radians) 
+
+\begin{DoxyReturn}{Returns}
+yaw\+\_\+rad\+\_\+ Yaw angle to host body reference frame (radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_antenna_ae24d52fa84fd3acff597c56259f4aba6}\label{classosse_1_1collaborate_1_1_antenna_ae24d52fa84fd3acff597c56259f4aba6}} 
+\index{osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}!Log@{Log}}
+\index{Log@{Log}!osse\+::collaborate\+::\+Antenna@{osse\+::collaborate\+::\+Antenna}}
+\paragraph{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Antenna\+::\+Log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+path }\end{DoxyParamCaption}) const}
+
+
+
+Logs the antenna pattern to a file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+path} & File path \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/antenna.\+h\item 
+libs/collaborate/src/antenna.\+cpp\end{DoxyCompactItemize}

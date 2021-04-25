@@ -1,0 +1,653 @@
+\hypertarget{classosse_1_1collaborate_1_1_node}{}\subsection{osse\+:\+:collaborate\+:\+:Node Class Reference}
+\label{classosse_1_1collaborate_1_1_node}\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+
+
+A member of the network (ground, air, or space)  
+
+
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structosse_1_1collaborate_1_1_node_1_1_log_buffer}{Log\+Buffer}
+\begin{DoxyCompactList}\small\item\em A buffer for logged node data. \end{DoxyCompactList}\item 
+struct \hyperlink{structosse_1_1collaborate_1_1_node_1_1_partial_log}{Partial\+Log}
+\begin{DoxyCompactList}\small\item\em A geodetic log for a node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a6f8b0270e42a0c2059d7b554acfbd3db}\label{classosse_1_1collaborate_1_1_node_a6f8b0270e42a0c2059d7b554acfbd3db}} 
+enum \hyperlink{classosse_1_1collaborate_1_1_node_a6f8b0270e42a0c2059d7b554acfbd3db}{k\+Mode} \{ {\bfseries Free}, 
+{\bfseries Carrying}, 
+{\bfseries Sensing}
+ \}\begin{DoxyCompactList}\small\item\em Possible modes of operation. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_acfeda3c545f3705daed42fb0f3aefd0a}\label{classosse_1_1collaborate_1_1_node_acfeda3c545f3705daed42fb0f3aefd0a}} 
+typedef struct \hyperlink{structosse_1_1collaborate_1_1_node_1_1_partial_log}{osse\+::collaborate\+::\+Node\+::\+Partial\+Log} \hyperlink{classosse_1_1collaborate_1_1_node_acfeda3c545f3705daed42fb0f3aefd0a}{Partial\+Log}
+\begin{DoxyCompactList}\small\item\em A geodetic log for a node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_ad0600514a3ee62f8b415cd0f1a1ca846}\label{classosse_1_1collaborate_1_1_node_ad0600514a3ee62f8b415cd0f1a1ca846}} 
+typedef struct \hyperlink{structosse_1_1collaborate_1_1_node_1_1_log_buffer}{osse\+::collaborate\+::\+Node\+::\+Log\+Buffer} \hyperlink{classosse_1_1collaborate_1_1_node_ad0600514a3ee62f8b415cd0f1a1ca846}{Log\+Buffer}
+\begin{DoxyCompactList}\small\item\em A buffer for logged node data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_node_ae2a5efe31854b5d48a5887eedfbdf741}{Node} (const std\+::string \&\+\_\+name, const uint16\+\_\+t \&\+\_\+index, const uint16\+\_\+t \&\+\_\+constellation, const \hyperlink{classosse_1_1collaborate_1_1_platform}{Platform} $\ast$\+\_\+platform, const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm}{Subsystem\+Comm} \&\+\_\+comm\+\_\+if, const \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing}{Subsystem\+Sensing} \&\+\_\+sensing\+\_\+if, const \hyperlink{classosse_1_1collaborate_1_1_subsystem_power}{Subsystem\+Power} \&\+\_\+subsystem\+\_\+power, const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} $\ast$\+\_\+clock, \hyperlink{classosse_1_1collaborate_1_1_data_processor}{Data\+Processor} $\ast$\+\_\+data\+\_\+processor, \hyperlink{classosse_1_1collaborate_1_1_event_logger}{Event\+Logger} $\ast$\+\_\+event\+\_\+log, \hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$\+\_\+data\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Construct a node. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_acd3b3577f11a2e3a360c98f47cbfdc59}{Update} (const uint64\+\_\+t \&\+\_\+offset\+\_\+s, const bool \&\+\_\+comm\+\_\+orient, const bool \&\+\_\+sensing\+\_\+orient, const bool \&\+\_\+measure, const bool \&\+\_\+charge, const bool \&\+\_\+power\+\_\+update, const bool \&\+\_\+communicate)
+\begin{DoxyCompactList}\small\item\em Update the orbital\+\_\+state and antenna reference\+\_\+frames. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a39b4ab16083780371f5e4fa4acb406dc}{Plan\+Measurement} (const uint64\+\_\+t \&\+\_\+start\+\_\+s, const uint16\+\_\+t \&\+\_\+return\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Adds a measurement to the list of planned measurements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_ae36a2e5d2d098d9708a9884a6210a7f3}\label{classosse_1_1collaborate_1_1_node_ae36a2e5d2d098d9708a9884a6210a7f3}} 
+void \hyperlink{classosse_1_1collaborate_1_1_node_ae36a2e5d2d098d9708a9884a6210a7f3}{Address\+Comm\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Processes Communication buffer to take action. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a45e01ee665774552f165918a13009264}{Switch\+Communication} (const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{Subsystem\+Comm\+::k\+Mode} \&\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Switches the mode of the communication interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a09b3bb653fbbc822e032ddcb21391578}\label{classosse_1_1collaborate_1_1_node_a09b3bb653fbbc822e032ddcb21391578}} 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a09b3bb653fbbc822e032ddcb21391578}{Move\+Sensor\+Data\+To\+Comm\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Moves all data from sensing interface to communication interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_ae2d23d2421c57428f2526688dd45617e}\label{classosse_1_1collaborate_1_1_node_ae2d23d2421c57428f2526688dd45617e}} 
+void \hyperlink{classosse_1_1collaborate_1_1_node_ae2d23d2421c57428f2526688dd45617e}{Buffer\+Data\+Log} ()
+\begin{DoxyCompactList}\small\item\em Buffers entire data frame into the data log. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a1b150ab656ccb5432591ae6b487ee4c7}\label{classosse_1_1collaborate_1_1_node_a1b150ab656ccb5432591ae6b487ee4c7}} 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a1b150ab656ccb5432591ae6b487ee4c7}{Flush} ()
+\begin{DoxyCompactList}\small\item\em Buffers remainder data fram into the data log. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a222b22c38f2d5c317de945d798a76955}{Set\+Comm\+Buffer} (std\+::vector$<$ uint8\+\_\+t $>$ \+\_\+comm\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Sets the data buffer of the communication interface. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a3bba23d7547d2de96f064d1473628d38}{Set\+Sensing\+Buffer} (std\+::vector$<$ uint8\+\_\+t $>$ \+\_\+sensing\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Sets the data buffer of the sensing interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a6db099054b0517bbda3a9765a0b94346}\label{classosse_1_1collaborate_1_1_node_a6db099054b0517bbda3a9765a0b94346}} 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a6db099054b0517bbda3a9765a0b94346}{Erase\+Comm\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Erases the data buffer of the communication interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a08df1f764d1a7f312262b71a7a0250ce}\label{classosse_1_1collaborate_1_1_node_a08df1f764d1a7f312262b71a7a0250ce}} 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a08df1f764d1a7f312262b71a7a0250ce}{Erase\+Sensing\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Erases the data buffer of the sensing interface. \end{DoxyCompactList}\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \hyperlink{classosse_1_1collaborate_1_1_node_a509a6e91f68702372c01c4d12885e2fa}{Get\+Comm\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Gets the data buffer of the communication interface. \end{DoxyCompactList}\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \hyperlink{classosse_1_1collaborate_1_1_node_a8ea0c9188f90cdb2b186ea6c43c3c9ed}{Get\+Sensing\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Gets the data buffer of the sensing interface. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a3d477f1fa6f8866f4b35618efb5802d2}{set\+\_\+mode} (const \hyperlink{classosse_1_1collaborate_1_1_node_a6f8b0270e42a0c2059d7b554acfbd3db}{k\+Mode} \&\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Set mode of operation. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classosse_1_1collaborate_1_1_node_a4967cafbc71c566ec34a9ae05849cfbe}{name} () const
+\begin{DoxyCompactList}\small\item\em Get name. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_node_a07b4c8d3cdb8859e50a604a584c04a55}{index} () const
+\begin{DoxyCompactList}\small\item\em Get index. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_node_a43bddbe894e3c5bdd20cf0be0d0bd173}{constellation} () const
+\begin{DoxyCompactList}\small\item\em Get constellation. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} \& \hyperlink{classosse_1_1collaborate_1_1_node_a42ec8f451ee77becdb4d3cf5992c11c9}{orbital\+\_\+state} () const
+\begin{DoxyCompactList}\small\item\em Get orbital\+\_\+state. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_platform}{Platform} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_node_a9601f81216155623ab7fe14d26f78f88}{k\+Platform} () const
+\begin{DoxyCompactList}\small\item\em Get k\+Platform. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm}{Subsystem\+Comm} \& \hyperlink{classosse_1_1collaborate_1_1_node_a23bfe1a7c15e88e46111485264912a9c}{comm\+\_\+if} () const
+\begin{DoxyCompactList}\small\item\em Get communication interface. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing}{Subsystem\+Sensing} \& \hyperlink{classosse_1_1collaborate_1_1_node_a38b667613384c4481da24ab6631f0ee2}{sensing\+\_\+if} () const
+\begin{DoxyCompactList}\small\item\em Get sensing interface. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_node_a6f8b0270e42a0c2059d7b554acfbd3db}{k\+Mode} \& \hyperlink{classosse_1_1collaborate_1_1_node_a524a1e53ef230698b7d29435c7ff7dae}{mode} () const
+\begin{DoxyCompactList}\small\item\em Get mode of operation. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_subsystem_power}{Subsystem\+Power} \& \hyperlink{classosse_1_1collaborate_1_1_node_a62c89064d7fb5c92822518cdc996f8f6}{subsystem\+\_\+power} () const
+\begin{DoxyCompactList}\small\item\em Get power subsystem. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ \& \hyperlink{classosse_1_1collaborate_1_1_node_a5bfc3c5ea5ca059b0154f270dfd8971c}{min\+\_\+suggestions} () const
+\begin{DoxyCompactList}\small\item\em Get suggested minimal places to visit. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ \& \hyperlink{classosse_1_1collaborate_1_1_node_a883dae4381225516446aa574b9c9a12b}{max\+\_\+suggestions} () const
+\begin{DoxyCompactList}\small\item\em Get suggested maximal places to visit. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::pair$<$ bool, uint16\+\_\+t $>$ $>$ \& \hyperlink{classosse_1_1collaborate_1_1_node_ad04ee8d4b8b52e49b561b50cdb67e2d3}{feedback} () const
+\begin{DoxyCompactList}\small\item\em Get feedback. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a1a00e90c98e919ec2ffe04543a6e3280}{set\+\_\+min\+\_\+suggestions} (const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ \&\+\_\+min\+\_\+suggestions)
+\begin{DoxyCompactList}\small\item\em Set minimum suggestions. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a25761538070b7e3ff6e70204e034d4c0}{set\+\_\+max\+\_\+suggestions} (const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ \&\+\_\+max\+\_\+suggestions)
+\begin{DoxyCompactList}\small\item\em Set maximum suggestions. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a1d7b06e05b4d88d6566e2399490d0bea}{set\+\_\+feedback} (const std\+::vector$<$ std\+::pair$<$ bool, uint16\+\_\+t $>$$>$ \&\+\_\+feedback)
+\begin{DoxyCompactList}\small\item\em Set feedback. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a615007d2ca37dfb904d0889618ed792b}{set\+\_\+target\+\_\+index} (const int \&\+\_\+target\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Set target index. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a40068aa3df9446eb12db7db47c2ae1e3}{set\+\_\+num\+\_\+neighbors} (const uint16\+\_\+t \&\+\_\+num\+\_\+neighbors)
+\begin{DoxyCompactList}\small\item\em Set number of neighbors. \end{DoxyCompactList}\item 
+const int \& \hyperlink{classosse_1_1collaborate_1_1_node_ab130d2f7d75dc219b81ce7155e2923e9}{target\+\_\+index} () const
+\begin{DoxyCompactList}\small\item\em Get target index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_ab547be97379bd04ed560971c0fd4f375}\label{classosse_1_1collaborate_1_1_node_ab547be97379bd04ed560971c0fd4f375}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_node_ab547be97379bd04ed560971c0fd4f375}{k\+Log\+Buffer\+Size} = 1000
+\begin{DoxyCompactList}\small\item\em Number of simulation increments in a single data log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a1f7955a77d53ada38f29b4570b16b3e9}{Update\+Orbital\+State} (const uint64\+\_\+t \&\+\_\+offset\+\_\+s)
+\begin{DoxyCompactList}\small\item\em Update orbital\+\_\+state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a2dda0ef1876f0ed936293be997af022a}\label{classosse_1_1collaborate_1_1_node_a2dda0ef1876f0ed936293be997af022a}} 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a2dda0ef1876f0ed936293be997af022a}{Update\+Comm\+Antenna} ()
+\begin{DoxyCompactList}\small\item\em Update communication antenna orientation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_acd5b1c422bbbb309f3c695fac686786f}\label{classosse_1_1collaborate_1_1_node_acd5b1c422bbbb309f3c695fac686786f}} 
+void \hyperlink{classosse_1_1collaborate_1_1_node_acd5b1c422bbbb309f3c695fac686786f}{Update\+Sensing\+Antenna} ()
+\begin{DoxyCompactList}\small\item\em Update sensing antenna orientation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a5c1772b734c6ad8a2892a7304a04a05e}\label{classosse_1_1collaborate_1_1_node_a5c1772b734c6ad8a2892a7304a04a05e}} 
+void \hyperlink{classosse_1_1collaborate_1_1_node_a5c1772b734c6ad8a2892a7304a04a05e}{Update\+Measurement} ()
+\begin{DoxyCompactList}\small\item\em Update measurements. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_node_ac5741490b2b8c184a8825a683ac8c48c}{Update\+Power} (const bool \&\+\_\+charge)
+\begin{DoxyCompactList}\small\item\em Update power management. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_ab8d25ac0c9caeefd987e42104f9e53e4}\label{classosse_1_1collaborate_1_1_node_ab8d25ac0c9caeefd987e42104f9e53e4}} 
+void \hyperlink{classosse_1_1collaborate_1_1_node_ab8d25ac0c9caeefd987e42104f9e53e4}{Update\+Communication} ()
+\begin{DoxyCompactList}\small\item\em Update commmunication interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a51af2c7f6906a141b85de778fdd7f004}\label{classosse_1_1collaborate_1_1_node_a51af2c7f6906a141b85de778fdd7f004}} 
+const std\+::string \hyperlink{classosse_1_1collaborate_1_1_node_a51af2c7f6906a141b85de778fdd7f004}{name\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_aa5e25e2ee47b2844c4c21bac3d1d7934}\label{classosse_1_1collaborate_1_1_node_aa5e25e2ee47b2844c4c21bac3d1d7934}} 
+const uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_node_aa5e25e2ee47b2844c4c21bac3d1d7934}{index\+\_\+}
+\begin{DoxyCompactList}\small\item\em Index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_aea79cb309df08b29245eb01111be90b9}\label{classosse_1_1collaborate_1_1_node_aea79cb309df08b29245eb01111be90b9}} 
+const uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_node_aea79cb309df08b29245eb01111be90b9}{constellation\+\_\+}
+\begin{DoxyCompactList}\small\item\em Constellation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a4023c11b1e6825c8e0cfded85e1396d5}\label{classosse_1_1collaborate_1_1_node_a4023c11b1e6825c8e0cfded85e1396d5}} 
+const \hyperlink{classosse_1_1collaborate_1_1_platform}{Platform} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_node_a4023c11b1e6825c8e0cfded85e1396d5}{k\+Platform\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_platform}{Platform}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a8d52d3efaf2619a9b26c730cb2adbf9d}\label{classosse_1_1collaborate_1_1_node_a8d52d3efaf2619a9b26c730cb2adbf9d}} 
+\hyperlink{classosse_1_1collaborate_1_1_data_processor}{Data\+Processor} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_node_a8d52d3efaf2619a9b26c730cb2adbf9d}{k\+Data\+Processor\+\_\+}
+\begin{DoxyCompactList}\small\item\em Data processor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a1fc8d51ddc3466027b8efde29797a2c7}\label{classosse_1_1collaborate_1_1_node_a1fc8d51ddc3466027b8efde29797a2c7}} 
+\hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} \hyperlink{classosse_1_1collaborate_1_1_node_a1fc8d51ddc3466027b8efde29797a2c7}{orbital\+\_\+state\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a3e64c1ecade1f9c94d4cae01792894bd}\label{classosse_1_1collaborate_1_1_node_a3e64c1ecade1f9c94d4cae01792894bd}} 
+\hyperlink{classosse_1_1collaborate_1_1_subsystem_comm}{Subsystem\+Comm} \hyperlink{classosse_1_1collaborate_1_1_node_a3e64c1ecade1f9c94d4cae01792894bd}{comm\+\_\+if\+\_\+}
+\begin{DoxyCompactList}\small\item\em Communication interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a5210629517e191fde896f951231be594}\label{classosse_1_1collaborate_1_1_node_a5210629517e191fde896f951231be594}} 
+\hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing}{Subsystem\+Sensing} \hyperlink{classosse_1_1collaborate_1_1_node_a5210629517e191fde896f951231be594}{sensing\+\_\+if\+\_\+}
+\begin{DoxyCompactList}\small\item\em Sensing interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a5790afc55b6c64cd666fd922740f6048}\label{classosse_1_1collaborate_1_1_node_a5790afc55b6c64cd666fd922740f6048}} 
+\hyperlink{classosse_1_1collaborate_1_1_node_a6f8b0270e42a0c2059d7b554acfbd3db}{k\+Mode} \hyperlink{classosse_1_1collaborate_1_1_node_a5790afc55b6c64cd666fd922740f6048}{mode\+\_\+}
+\begin{DoxyCompactList}\small\item\em Mode of operation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_afe26b3dbb589dcc9dc930280ce10707d}\label{classosse_1_1collaborate_1_1_node_afe26b3dbb589dcc9dc930280ce10707d}} 
+\hyperlink{classosse_1_1collaborate_1_1_subsystem_power}{Subsystem\+Power} \hyperlink{classosse_1_1collaborate_1_1_node_afe26b3dbb589dcc9dc930280ce10707d}{subsystem\+\_\+power\+\_\+}
+\begin{DoxyCompactList}\small\item\em Power sybsystem. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_af6e9839afd8e912ef1ac415185a2c72c}\label{classosse_1_1collaborate_1_1_node_af6e9839afd8e912ef1ac415185a2c72c}} 
+std\+::vector$<$ std\+::pair$<$ uint64\+\_\+t, uint16\+\_\+t $>$ $>$ \hyperlink{classosse_1_1collaborate_1_1_node_af6e9839afd8e912ef1ac415185a2c72c}{measurements\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of planned measurements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_af662492d5f497222dc9f6515ca8fb154}\label{classosse_1_1collaborate_1_1_node_af662492d5f497222dc9f6515ca8fb154}} 
+std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ \hyperlink{classosse_1_1collaborate_1_1_node_af662492d5f497222dc9f6515ca8fb154}{min\+\_\+suggestions\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of suggested target minimal locations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a8ed02bda0f0ed137c303066ddb6bd508}\label{classosse_1_1collaborate_1_1_node_a8ed02bda0f0ed137c303066ddb6bd508}} 
+std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ \hyperlink{classosse_1_1collaborate_1_1_node_a8ed02bda0f0ed137c303066ddb6bd508}{max\+\_\+suggestions\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of suggested target maximal locations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a9d0a5d5634871c12f22c8da680b32ca0}\label{classosse_1_1collaborate_1_1_node_a9d0a5d5634871c12f22c8da680b32ca0}} 
+int \hyperlink{classosse_1_1collaborate_1_1_node_a9d0a5d5634871c12f22c8da680b32ca0}{target\+\_\+index\+\_\+}
+\begin{DoxyCompactList}\small\item\em Target node index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a5389720711d92e5bd1facd9dba96b344}\label{classosse_1_1collaborate_1_1_node_a5389720711d92e5bd1facd9dba96b344}} 
+std\+::vector$<$ std\+::pair$<$ bool, uint16\+\_\+t $>$ $>$ \hyperlink{classosse_1_1collaborate_1_1_node_a5389720711d92e5bd1facd9dba96b344}{feedback\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of informer indices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a1208a6045a92dacbd33c80dad1f40cef}\label{classosse_1_1collaborate_1_1_node_a1208a6045a92dacbd33c80dad1f40cef}} 
+uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_node_a1208a6045a92dacbd33c80dad1f40cef}{num\+\_\+neighbors\+\_\+}
+\begin{DoxyCompactList}\small\item\em The number of other visible nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_ae65ffe22cbd766fbf92c416f71a0665f}\label{classosse_1_1collaborate_1_1_node_ae65ffe22cbd766fbf92c416f71a0665f}} 
+const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_node_ae65ffe22cbd766fbf92c416f71a0665f}{clock\+\_\+}
+\begin{DoxyCompactList}\small\item\em Simulation clock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_ae27780ec35b7ad012a6b462ed4d506f2}\label{classosse_1_1collaborate_1_1_node_ae27780ec35b7ad012a6b462ed4d506f2}} 
+\hyperlink{classosse_1_1collaborate_1_1_event_logger}{Event\+Logger} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_node_ae27780ec35b7ad012a6b462ed4d506f2}{event\+\_\+log\+\_\+}
+\begin{DoxyCompactList}\small\item\em Event log. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a4ec904a63c911c1cbaf7dc880ad323f2}\label{classosse_1_1collaborate_1_1_node_a4ec904a63c911c1cbaf7dc880ad323f2}} 
+\hyperlink{structosse_1_1collaborate_1_1_node_1_1_log_buffer}{Log\+Buffer} \hyperlink{classosse_1_1collaborate_1_1_node_a4ec904a63c911c1cbaf7dc880ad323f2}{log\+\_\+buffer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Buffer for data log. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_af0c3f012fb1c5986a893f64c107f411a}\label{classosse_1_1collaborate_1_1_node_af0c3f012fb1c5986a893f64c107f411a}} 
+\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_node_af0c3f012fb1c5986a893f64c107f411a}{data\+\_\+log\+\_\+}
+\begin{DoxyCompactList}\small\item\em Data log. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a82f9514ee12e8fd9a63c3143d450e18f}\label{classosse_1_1collaborate_1_1_node_a82f9514ee12e8fd9a63c3143d450e18f}} 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_node_a82f9514ee12e8fd9a63c3143d450e18f}{num\+\_\+logs\+\_\+}
+\begin{DoxyCompactList}\small\item\em Number of completed data buffer logs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+A member of the network (ground, air, or space) 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_ae2a5efe31854b5d48a5887eedfbdf741}\label{classosse_1_1collaborate_1_1_node_ae2a5efe31854b5d48a5887eedfbdf741}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Node\+::\+Node (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const uint16\+\_\+t \&}]{\+\_\+index,  }\item[{const uint16\+\_\+t \&}]{\+\_\+constellation,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_platform}{Platform} $\ast$}]{\+\_\+platform,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm}{Subsystem\+Comm} \&}]{\+\_\+comm\+\_\+if,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing}{Subsystem\+Sensing} \&}]{\+\_\+sensing\+\_\+if,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_subsystem_power}{Subsystem\+Power} \&}]{\+\_\+subsystem\+\_\+power,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} $\ast$}]{\+\_\+clock,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_data_processor}{Data\+Processor} $\ast$}]{\+\_\+data\+\_\+processor,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_event_logger}{Event\+Logger} $\ast$}]{\+\_\+event\+\_\+log,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$}]{\+\_\+data\+\_\+log }\end{DoxyParamCaption})}
+
+
+
+Construct a node. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+name} & Name \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+index} & Index \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+constellation} & Which constellation it belongs to \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+platform} & \hyperlink{classosse_1_1collaborate_1_1_platform}{Platform} \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+comm\+\_\+if} & Communication interface \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+sensing\+\_\+if} & Sensing interface \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+subsystem\+\_\+power} & Power subsystem \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+processor} & Data processor \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+event\+\_\+log} & Event log \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+log} & Data log \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a23bfe1a7c15e88e46111485264912a9c}\label{classosse_1_1collaborate_1_1_node_a23bfe1a7c15e88e46111485264912a9c}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!comm\+\_\+if@{comm\+\_\+if}}
+\index{comm\+\_\+if@{comm\+\_\+if}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{comm\+\_\+if()}{comm\_if()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm}{Subsystem\+Comm}\& osse\+::collaborate\+::\+Node\+::comm\+\_\+if (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get communication interface. 
+
+\begin{DoxyReturn}{Returns}
+comm\+\_\+if\+\_\+ Communication interface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a43bddbe894e3c5bdd20cf0be0d0bd173}\label{classosse_1_1collaborate_1_1_node_a43bddbe894e3c5bdd20cf0be0d0bd173}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!constellation@{constellation}}
+\index{constellation@{constellation}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{constellation()}{constellation()}}
+{\footnotesize\ttfamily uint64\+\_\+t osse\+::collaborate\+::\+Node\+::constellation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get constellation. 
+
+\begin{DoxyReturn}{Returns}
+constellation\+\_\+ Constellation it belongs to 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_ad04ee8d4b8b52e49b561b50cdb67e2d3}\label{classosse_1_1collaborate_1_1_node_ad04ee8d4b8b52e49b561b50cdb67e2d3}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!feedback@{feedback}}
+\index{feedback@{feedback}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{feedback()}{feedback()}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::pair$<$bool, uint16\+\_\+t$>$ $>$\& osse\+::collaborate\+::\+Node\+::feedback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get feedback. 
+
+\begin{DoxyReturn}{Returns}
+feedback\+\_\+ feedback 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a509a6e91f68702372c01c4d12885e2fa}\label{classosse_1_1collaborate_1_1_node_a509a6e91f68702372c01c4d12885e2fa}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!Get\+Comm\+Buffer@{Get\+Comm\+Buffer}}
+\index{Get\+Comm\+Buffer@{Get\+Comm\+Buffer}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{Get\+Comm\+Buffer()}{GetCommBuffer()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint8\+\_\+t $>$ osse\+::collaborate\+::\+Node\+::\+Get\+Comm\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the data buffer of the communication interface. 
+
+\begin{DoxyReturn}{Returns}
+Data buffer for the communication interface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a8ea0c9188f90cdb2b186ea6c43c3c9ed}\label{classosse_1_1collaborate_1_1_node_a8ea0c9188f90cdb2b186ea6c43c3c9ed}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!Get\+Sensing\+Buffer@{Get\+Sensing\+Buffer}}
+\index{Get\+Sensing\+Buffer@{Get\+Sensing\+Buffer}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{Get\+Sensing\+Buffer()}{GetSensingBuffer()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint8\+\_\+t $>$ osse\+::collaborate\+::\+Node\+::\+Get\+Sensing\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the data buffer of the sensing interface. 
+
+\begin{DoxyReturn}{Returns}
+Data buffer for the sensing interface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a07b4c8d3cdb8859e50a604a584c04a55}\label{classosse_1_1collaborate_1_1_node_a07b4c8d3cdb8859e50a604a584c04a55}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!index@{index}}
+\index{index@{index}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily uint16\+\_\+t osse\+::collaborate\+::\+Node\+::index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get index. 
+
+\begin{DoxyReturn}{Returns}
+index\+\_\+ Index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a9601f81216155623ab7fe14d26f78f88}\label{classosse_1_1collaborate_1_1_node_a9601f81216155623ab7fe14d26f78f88}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!k\+Platform@{k\+Platform}}
+\index{k\+Platform@{k\+Platform}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{k\+Platform()}{kPlatform()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_platform}{Platform}$\ast$ osse\+::collaborate\+::\+Node\+::k\+Platform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get k\+Platform. 
+
+\begin{DoxyReturn}{Returns}
+k\+Platform\+\_\+ \hyperlink{classosse_1_1collaborate_1_1_platform}{Platform} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a883dae4381225516446aa574b9c9a12b}\label{classosse_1_1collaborate_1_1_node_a883dae4381225516446aa574b9c9a12b}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!max\+\_\+suggestions@{max\+\_\+suggestions}}
+\index{max\+\_\+suggestions@{max\+\_\+suggestions}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{max\+\_\+suggestions()}{max\_suggestions()}}
+{\footnotesize\ttfamily const std\+::vector$<$\hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic}$>$\& osse\+::collaborate\+::\+Node\+::max\+\_\+suggestions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get suggested maximal places to visit. 
+
+\begin{DoxyReturn}{Returns}
+max\+\_\+suggestions\+\_\+ Suggested maximal places to visit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a5bfc3c5ea5ca059b0154f270dfd8971c}\label{classosse_1_1collaborate_1_1_node_a5bfc3c5ea5ca059b0154f270dfd8971c}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!min\+\_\+suggestions@{min\+\_\+suggestions}}
+\index{min\+\_\+suggestions@{min\+\_\+suggestions}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{min\+\_\+suggestions()}{min\_suggestions()}}
+{\footnotesize\ttfamily const std\+::vector$<$\hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic}$>$\& osse\+::collaborate\+::\+Node\+::min\+\_\+suggestions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get suggested minimal places to visit. 
+
+\begin{DoxyReturn}{Returns}
+min\+\_\+suggestions\+\_\+ Suggested minimal places to visit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a524a1e53ef230698b7d29435c7ff7dae}\label{classosse_1_1collaborate_1_1_node_a524a1e53ef230698b7d29435c7ff7dae}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!mode@{mode}}
+\index{mode@{mode}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{mode()}{mode()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_node_a6f8b0270e42a0c2059d7b554acfbd3db}{k\+Mode}\& osse\+::collaborate\+::\+Node\+::mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get mode of operation. 
+
+\begin{DoxyReturn}{Returns}
+mode\+\_\+ Mode of operation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a4967cafbc71c566ec34a9ae05849cfbe}\label{classosse_1_1collaborate_1_1_node_a4967cafbc71c566ec34a9ae05849cfbe}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!name@{name}}
+\index{name@{name}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string osse\+::collaborate\+::\+Node\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get name. 
+
+\begin{DoxyReturn}{Returns}
+name\+\_\+ Name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a42ec8f451ee77becdb4d3cf5992c11c9}\label{classosse_1_1collaborate_1_1_node_a42ec8f451ee77becdb4d3cf5992c11c9}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!orbital\+\_\+state@{orbital\+\_\+state}}
+\index{orbital\+\_\+state@{orbital\+\_\+state}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{orbital\+\_\+state()}{orbital\_state()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State}\& osse\+::collaborate\+::\+Node\+::orbital\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get orbital\+\_\+state. 
+
+\begin{DoxyReturn}{Returns}
+orbital\+\_\+state\+\_\+ \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a39b4ab16083780371f5e4fa4acb406dc}\label{classosse_1_1collaborate_1_1_node_a39b4ab16083780371f5e4fa4acb406dc}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!Plan\+Measurement@{Plan\+Measurement}}
+\index{Plan\+Measurement@{Plan\+Measurement}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{Plan\+Measurement()}{PlanMeasurement()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::\+Plan\+Measurement (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+start\+\_\+s,  }\item[{const uint16\+\_\+t \&}]{\+\_\+return\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Adds a measurement to the list of planned measurements. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+start\+\_\+s} & Start time (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+return\+\_\+index} & The index of the informer node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a38b667613384c4481da24ab6631f0ee2}\label{classosse_1_1collaborate_1_1_node_a38b667613384c4481da24ab6631f0ee2}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!sensing\+\_\+if@{sensing\+\_\+if}}
+\index{sensing\+\_\+if@{sensing\+\_\+if}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{sensing\+\_\+if()}{sensing\_if()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing}{Subsystem\+Sensing}\& osse\+::collaborate\+::\+Node\+::sensing\+\_\+if (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get sensing interface. 
+
+\begin{DoxyReturn}{Returns}
+sensing\+\_\+if\+\_\+ Sensing interface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a1d7b06e05b4d88d6566e2399490d0bea}\label{classosse_1_1collaborate_1_1_node_a1d7b06e05b4d88d6566e2399490d0bea}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!set\+\_\+feedback@{set\+\_\+feedback}}
+\index{set\+\_\+feedback@{set\+\_\+feedback}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{set\+\_\+feedback()}{set\_feedback()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::set\+\_\+feedback (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ bool, uint16\+\_\+t $>$$>$ \&}]{\+\_\+feedback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set feedback. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+feedback} & feedback \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a25761538070b7e3ff6e70204e034d4c0}\label{classosse_1_1collaborate_1_1_node_a25761538070b7e3ff6e70204e034d4c0}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!set\+\_\+max\+\_\+suggestions@{set\+\_\+max\+\_\+suggestions}}
+\index{set\+\_\+max\+\_\+suggestions@{set\+\_\+max\+\_\+suggestions}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{set\+\_\+max\+\_\+suggestions()}{set\_max\_suggestions()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::set\+\_\+max\+\_\+suggestions (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ \&}]{\+\_\+max\+\_\+suggestions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set maximum suggestions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+max\+\_\+suggestions} & Maximum suggestions \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a1a00e90c98e919ec2ffe04543a6e3280}\label{classosse_1_1collaborate_1_1_node_a1a00e90c98e919ec2ffe04543a6e3280}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!set\+\_\+min\+\_\+suggestions@{set\+\_\+min\+\_\+suggestions}}
+\index{set\+\_\+min\+\_\+suggestions@{set\+\_\+min\+\_\+suggestions}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{set\+\_\+min\+\_\+suggestions()}{set\_min\_suggestions()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::set\+\_\+min\+\_\+suggestions (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ \&}]{\+\_\+min\+\_\+suggestions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set minimum suggestions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+min\+\_\+suggestions} & Minimum suggestions \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a3d477f1fa6f8866f4b35618efb5802d2}\label{classosse_1_1collaborate_1_1_node_a3d477f1fa6f8866f4b35618efb5802d2}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!set\+\_\+mode@{set\+\_\+mode}}
+\index{set\+\_\+mode@{set\+\_\+mode}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{set\+\_\+mode()}{set\_mode()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::set\+\_\+mode (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_node_a6f8b0270e42a0c2059d7b554acfbd3db}{k\+Mode} \&}]{\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Set mode of operation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+mode} & Mode of operation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a40068aa3df9446eb12db7db47c2ae1e3}\label{classosse_1_1collaborate_1_1_node_a40068aa3df9446eb12db7db47c2ae1e3}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!set\+\_\+num\+\_\+neighbors@{set\+\_\+num\+\_\+neighbors}}
+\index{set\+\_\+num\+\_\+neighbors@{set\+\_\+num\+\_\+neighbors}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{set\+\_\+num\+\_\+neighbors()}{set\_num\_neighbors()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::set\+\_\+num\+\_\+neighbors (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+num\+\_\+neighbors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set number of neighbors. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+neighbors} & number of neighbors \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a615007d2ca37dfb904d0889618ed792b}\label{classosse_1_1collaborate_1_1_node_a615007d2ca37dfb904d0889618ed792b}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!set\+\_\+target\+\_\+index@{set\+\_\+target\+\_\+index}}
+\index{set\+\_\+target\+\_\+index@{set\+\_\+target\+\_\+index}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{set\+\_\+target\+\_\+index()}{set\_target\_index()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::set\+\_\+target\+\_\+index (\begin{DoxyParamCaption}\item[{const int \&}]{\+\_\+target\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set target index. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+target\+\_\+index} & Target index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a222b22c38f2d5c317de945d798a76955}\label{classosse_1_1collaborate_1_1_node_a222b22c38f2d5c317de945d798a76955}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!Set\+Comm\+Buffer@{Set\+Comm\+Buffer}}
+\index{Set\+Comm\+Buffer@{Set\+Comm\+Buffer}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{Set\+Comm\+Buffer()}{SetCommBuffer()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::\+Set\+Comm\+Buffer (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$}]{\+\_\+comm\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Sets the data buffer of the communication interface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+comm\+\_\+buffer} & The data buffer for the communication interface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a3bba23d7547d2de96f064d1473628d38}\label{classosse_1_1collaborate_1_1_node_a3bba23d7547d2de96f064d1473628d38}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!Set\+Sensing\+Buffer@{Set\+Sensing\+Buffer}}
+\index{Set\+Sensing\+Buffer@{Set\+Sensing\+Buffer}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{Set\+Sensing\+Buffer()}{SetSensingBuffer()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::\+Set\+Sensing\+Buffer (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$}]{\+\_\+sensing\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Sets the data buffer of the sensing interface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+sensing\+\_\+buffer} & The data buffer for the sensing interface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a62c89064d7fb5c92822518cdc996f8f6}\label{classosse_1_1collaborate_1_1_node_a62c89064d7fb5c92822518cdc996f8f6}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!subsystem\+\_\+power@{subsystem\+\_\+power}}
+\index{subsystem\+\_\+power@{subsystem\+\_\+power}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{subsystem\+\_\+power()}{subsystem\_power()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_subsystem_power}{Subsystem\+Power}\& osse\+::collaborate\+::\+Node\+::subsystem\+\_\+power (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get power subsystem. 
+
+\begin{DoxyReturn}{Returns}
+subsystem\+\_\+power\+\_\+ Power subsystem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a45e01ee665774552f165918a13009264}\label{classosse_1_1collaborate_1_1_node_a45e01ee665774552f165918a13009264}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!Switch\+Communication@{Switch\+Communication}}
+\index{Switch\+Communication@{Switch\+Communication}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{Switch\+Communication()}{SwitchCommunication()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::\+Switch\+Communication (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_subsystem_comm_a5e1ce4f232ca2aae0b99d1225e682190}{Subsystem\+Comm\+::k\+Mode} \&}]{\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Switches the mode of the communication interface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+mode} & Interface node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_ab130d2f7d75dc219b81ce7155e2923e9}\label{classosse_1_1collaborate_1_1_node_ab130d2f7d75dc219b81ce7155e2923e9}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!target\+\_\+index@{target\+\_\+index}}
+\index{target\+\_\+index@{target\+\_\+index}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{target\+\_\+index()}{target\_index()}}
+{\footnotesize\ttfamily const int\& osse\+::collaborate\+::\+Node\+::target\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get target index. 
+
+\begin{DoxyReturn}{Returns}
+target\+\_\+index\+\_\+ Target index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_acd3b3577f11a2e3a360c98f47cbfdc59}\label{classosse_1_1collaborate_1_1_node_acd3b3577f11a2e3a360c98f47cbfdc59}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!Update@{Update}}
+\index{Update@{Update}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::\+Update (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+offset\+\_\+s,  }\item[{const bool \&}]{\+\_\+comm\+\_\+orient,  }\item[{const bool \&}]{\+\_\+sensing\+\_\+orient,  }\item[{const bool \&}]{\+\_\+measure,  }\item[{const bool \&}]{\+\_\+charge,  }\item[{const bool \&}]{\+\_\+power\+\_\+update,  }\item[{const bool \&}]{\+\_\+communicate }\end{DoxyParamCaption})}
+
+
+
+Update the orbital\+\_\+state and antenna reference\+\_\+frames. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+offset\+\_\+s} & Offset from the current time (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+comm\+\_\+orient} & Whether to orient the comm interface \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+sensing\+\_\+orient} & Whether to orient the sensing interface \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+measure} & Whether to update the sensing interface \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+charge} & Whether to charge the battery \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+power\+\_\+update} & Whether to update the power subsystem \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+communicate} & Whether to consider communcation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_a1f7955a77d53ada38f29b4570b16b3e9}\label{classosse_1_1collaborate_1_1_node_a1f7955a77d53ada38f29b4570b16b3e9}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!Update\+Orbital\+State@{Update\+Orbital\+State}}
+\index{Update\+Orbital\+State@{Update\+Orbital\+State}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{Update\+Orbital\+State()}{UpdateOrbitalState()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::\+Update\+Orbital\+State (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+offset\+\_\+s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update orbital\+\_\+state. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+offset\+\_\+s} & Time offset (seconds) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_node_ac5741490b2b8c184a8825a683ac8c48c}\label{classosse_1_1collaborate_1_1_node_ac5741490b2b8c184a8825a683ac8c48c}} 
+\index{osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}!Update\+Power@{Update\+Power}}
+\index{Update\+Power@{Update\+Power}!osse\+::collaborate\+::\+Node@{osse\+::collaborate\+::\+Node}}
+\paragraph{\texorpdfstring{Update\+Power()}{UpdatePower()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Node\+::\+Update\+Power (\begin{DoxyParamCaption}\item[{const bool \&}]{\+\_\+charge }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update power management. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+charge} & Whether to charge the battery \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/node.\+h\item 
+libs/collaborate/src/node.\+cpp\end{DoxyCompactItemize}

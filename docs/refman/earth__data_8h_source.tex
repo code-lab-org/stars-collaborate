@@ -1,0 +1,55 @@
+\hypertarget{earth__data_8h_source}{}\subsection{earth\+\_\+data.\+h}
+\label{earth__data_8h_source}\index{libs/collaborate/include/collaborate/earth\+\_\+data.\+h@{libs/collaborate/include/collaborate/earth\+\_\+data.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_EARTH\_DATA\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_EARTH\_DATA\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <array>}
+00020 \textcolor{preprocessor}{#include <memory>}
+00021 \textcolor{preprocessor}{#include <string>}
+00022 \textcolor{preprocessor}{#include <vector>}
+00023 
+00024 \textcolor{preprocessor}{#include "\hyperlink{earth_8h}{collaborate/earth.h}"}
+00025 \textcolor{preprocessor}{#include "collaborate/simulation\_clock.h"}
+00026 
+00027 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00028 \textcolor{keyword}{namespace }collaborate \{
+00029 
+\Hypertarget{earth__data_8h_source_l00034}\hyperlink{classosse_1_1collaborate_1_1_earth_data}{00034} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_earth_data}{EarthData} \{
+00035  \textcolor{keyword}{public}:
+00038   \textcolor{keyword}{explicit} \hyperlink{classosse_1_1collaborate_1_1_earth_data_a77ce398a29306b84cdddbd937cb62bbd}{EarthData}(\textcolor{keyword}{const} std::string& \_root);
+00042   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_earth_data_a22d7fe03f04f1b3b10020271b16dec5c}{Update}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_clock, \textcolor{keyword}{const} std::string& \_variable);
+00047   \textcolor{keywordtype}{float} \hyperlink{classosse_1_1collaborate_1_1_earth_data_a39c94ce236efd3ddb85e6108205a7067}{Measure}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_latitude\_rad,
+00048                 \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_longitude\_rad) \textcolor{keyword}{const};
+00049 
+00050  \textcolor{keyword}{private}:
+00053   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_earth_data_a7a00924ea65a5ea68c25fbba2c1d3c9d}{Buffer}(\textcolor{keyword}{const} std::string& \_variable);
+00057   uint16\_t \hyperlink{classosse_1_1collaborate_1_1_earth_data_a5c22945fb816aac16410d2641bba666c}{IndexLatitude}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_latitude\_rad) \textcolor{keyword}{const};
+00061   uint16\_t \hyperlink{classosse_1_1collaborate_1_1_earth_data_affbe14ade774253ba546982953996574}{IndexLongitude}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_longitude\_rad) \textcolor{keyword}{const};
+00065   std::vector<std::string> \hyperlink{classosse_1_1collaborate_1_1_earth_data_ab97521a1742be97c74a0aa538f8ad180}{FindDataPaths}(\textcolor{keyword}{const} std::string& \_root) \textcolor{keyword}{const};
+\Hypertarget{earth__data_8h_source_l00067}\hyperlink{classosse_1_1collaborate_1_1_earth_data_aec97d6b176f78cc12e94038ca93234ba}{00067}   \textcolor{keyword}{const} std::vector<std::string> \hyperlink{classosse_1_1collaborate_1_1_earth_data_aec97d6b176f78cc12e94038ca93234ba}{data\_paths\_};
+\Hypertarget{earth__data_8h_source_l00069}\hyperlink{classosse_1_1collaborate_1_1_earth_data_ad6b69b9ff9d275e6546fd940c0a9d21c}{00069}   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_earth_data_ad6b69b9ff9d275e6546fd940c0a9d21c}{current\_index\_};
+\Hypertarget{earth__data_8h_source_l00071}\hyperlink{classosse_1_1collaborate_1_1_earth_data_a8a2c4b1c349e08640731dc8062a83fe7}{00071}   std::array<float, earth::kNumPositions> \hyperlink{classosse_1_1collaborate_1_1_earth_data_a8a2c4b1c349e08640731dc8062a83fe7}{kData\_};
+00072 \};
+00073 
+00074 \}  \textcolor{comment}{// namespace collaborate}
+00075 \}  \textcolor{comment}{// namespace osse}
+00076 
+00077 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_EARTH\_DATA\_H\_}
+\end{DoxyCode}

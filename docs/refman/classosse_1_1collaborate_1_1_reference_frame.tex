@@ -1,0 +1,448 @@
+\hypertarget{classosse_1_1collaborate_1_1_reference_frame}{}\subsection{osse\+:\+:collaborate\+:\+:Reference\+Frame Class Reference}
+\label{classosse_1_1collaborate_1_1_reference_frame}\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+
+
+An attitude reference frame.  
+
+
+
+
+{\ttfamily \#include $<$reference\+\_\+frame.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame_aa7a87b7392e85b87cf0994457f0b5b6a}{Reference\+Frame} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+x\+\_\+axis, const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+y\+\_\+axis, const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+z\+\_\+axis)
+\begin{DoxyCompactList}\small\item\em Constructor from axes. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame_ab6e3506c308d48e033730fa71c3721af}{Reference\+Frame} (const double \&\+\_\+roll\+\_\+rad, const double \&\+\_\+pitch\+\_\+rad, const double \&\+\_\+yaw\+\_\+rad)
+\begin{DoxyCompactList}\small\item\em Constructor from angles. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame_a09500c8f97064fa3d907913e26f2df90}{Reference\+Frame} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame, const double \&\+\_\+roll\+\_\+rad, const double \&\+\_\+pitch\+\_\+rad, const double \&\+\_\+yaw\+\_\+rad)
+\begin{DoxyCompactList}\small\item\em Constructor from reference frame and rotation angles. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame_a603c3443d0d09086de9e95cd69b62ea5}{Reference\+Frame} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame\+\_\+1, const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame\+\_\+2, const double \&\+\_\+roll\+\_\+rad, const double \&\+\_\+pitch\+\_\+rad, const double \&\+\_\+yaw\+\_\+rad)
+\begin{DoxyCompactList}\small\item\em Constructor from two reference frames and rotation angles. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a0d731be5e188825229a59440eea5341e}{Update} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Updates axes relative to a single reference frame. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_reference_frame_aa32123d1bb0af3ba1f3bb68d72c8e6e3}{Update} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame\+\_\+1, const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Updates axes relative to a single reference frame. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classosse_1_1collaborate_1_1_reference_frame_ac448c98f8206e372f7c367b511f008e6}{Obtain\+Log} () const
+\begin{DoxyCompactList}\small\item\em Logs the \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame}. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_reference_frame_adf108795332e39e7975d7bfe69774b78}{set\+\_\+z\+\_\+axis} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+z\+\_\+axis)
+\begin{DoxyCompactList}\small\item\em Set z-\/axis. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a239519dbae2c753b8763d5b39d97e93d}{set\+\_\+y\+\_\+axis} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+y\+\_\+axis)
+\begin{DoxyCompactList}\small\item\em Set y-\/axis. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a58806d59231dd107bf2b25a0a7396266}{set\+\_\+x\+\_\+axis} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+x\+\_\+axis)
+\begin{DoxyCompactList}\small\item\em Set x-\/axis. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix}{Attitude\+Matrix} \& \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a518335e6d01a2b8c50f00402818d22b9}{attitude} () const
+\begin{DoxyCompactList}\small\item\em Get attitude attitude\+\_\+matrix. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \& \hyperlink{classosse_1_1collaborate_1_1_reference_frame_ad3fcddd11a85e828e7de51b333bdf12b}{z\+\_\+axis} () const
+\begin{DoxyCompactList}\small\item\em Get z-\/axis. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \& \hyperlink{classosse_1_1collaborate_1_1_reference_frame_ae37a2e46a6ed1868a12829e461e6e423}{y\+\_\+axis} () const
+\begin{DoxyCompactList}\small\item\em Get y-\/axis. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \& \hyperlink{classosse_1_1collaborate_1_1_reference_frame_ac2b2705500ac17535e5ec8127684b449}{x\+\_\+axis} () const
+\begin{DoxyCompactList}\small\item\em Get x-\/axis. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classosse_1_1collaborate_1_1_reference_frame_ae5b5e9f9dcb5841fbeb910402afc3b77}{To\+String} () const
+\begin{DoxyCompactList}\small\item\em Outputs \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} to a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a560f99ed2e6d7298cffbfbab84fe4a94}{Transform\+X\+Axis} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame) const
+\begin{DoxyCompactList}\small\item\em Transforms Earth\textquotesingle{}s x-\/axis through single reference. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a417ac4bad191e12f1aaff76e413f339e}{Transform\+Y\+Axis} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame) const
+\begin{DoxyCompactList}\small\item\em Transforms Earth\textquotesingle{}s y-\/axis through single reference. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a7fc4ac945236cd63ed4c3bddd5149594}{Transform\+Z\+Axis} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame) const
+\begin{DoxyCompactList}\small\item\em Transforms Earth\textquotesingle{}s z-\/axis through single reference. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a2172488c952b75bca793b4eca308b50b}{Transform\+X\+Axis} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame\+\_\+1, const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame\+\_\+2) const
+\begin{DoxyCompactList}\small\item\em Transforms Earth\textquotesingle{}s x-\/axis through two reference frames. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a7f321d33340f957142db898ce6d91b7a}{Transform\+Y\+Axis} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame\+\_\+1, const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame\+\_\+2) const
+\begin{DoxyCompactList}\small\item\em Transforms Earth\textquotesingle{}s y-\/axis through two reference frames. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a2b99f8d49fc9c61b8dc98118469aeb38}{Transform\+Z\+Axis} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame\+\_\+1, const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+frame\+\_\+2) const
+\begin{DoxyCompactList}\small\item\em Transforms Earth\textquotesingle{}s z-\/axis through two reference frames. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a090dbed30d878898de54dde3396c9834}\label{classosse_1_1collaborate_1_1_reference_frame_a090dbed30d878898de54dde3396c9834}} 
+\hyperlink{classosse_1_1collaborate_1_1_attitude_matrix}{Attitude\+Matrix} \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a090dbed30d878898de54dde3396c9834}{attitude\+\_\+}
+\begin{DoxyCompactList}\small\item\em Attitude attitude\+\_\+matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a75537f26c0568f35ee4c42def52efa55}\label{classosse_1_1collaborate_1_1_reference_frame_a75537f26c0568f35ee4c42def52efa55}} 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a75537f26c0568f35ee4c42def52efa55}{x\+\_\+axis\+\_\+}
+\begin{DoxyCompactList}\small\item\em X-\/axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a332173d954b5201f1ab5a07be1154c87}\label{classosse_1_1collaborate_1_1_reference_frame_a332173d954b5201f1ab5a07be1154c87}} 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_reference_frame_a332173d954b5201f1ab5a07be1154c87}{y\+\_\+axis\+\_\+}
+\begin{DoxyCompactList}\small\item\em Y-\/axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_acd8265229993f949f611129283ec7645}\label{classosse_1_1collaborate_1_1_reference_frame_acd8265229993f949f611129283ec7645}} 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_reference_frame_acd8265229993f949f611129283ec7645}{z\+\_\+axis\+\_\+}
+\begin{DoxyCompactList}\small\item\em Z-\/axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An attitude reference frame. 
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=0.5\textwidth]{frames}}
+\end{DoxyImageNoCaption}
+
+
+\[ \vec{x}_{axis}, \vec{y}_{axis}, \vec{z}_{axis} = \begin{bmatrix} x_x\\x_y\\x_z \end{bmatrix},~ \begin{bmatrix} y_x\\y_y\\y_z \end{bmatrix},~ \begin{bmatrix} z_x\\z_y\\z_z \end{bmatrix} ~~~(unit~vectors) \] \[ {\bf{A}} = Attitude~AttitudeMatrix = \begin{bmatrix} a_{0,0} & a_{0,1} & a_{0,2} \\ a_{1,0} & a_{1,1} & a_{1,2} \\ a_{2,0} & a_{2,1} & a_{2,2} \end{bmatrix} \] 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_aa7a87b7392e85b87cf0994457f0b5b6a}\label{classosse_1_1collaborate_1_1_reference_frame_aa7a87b7392e85b87cf0994457f0b5b6a}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Reference\+Frame@{Reference\+Frame}}
+\index{Reference\+Frame@{Reference\+Frame}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Reference\+Frame()}{ReferenceFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Reference\+Frame\+::\+Reference\+Frame (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+x\+\_\+axis,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+y\+\_\+axis,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+z\+\_\+axis }\end{DoxyParamCaption})}
+
+
+
+Constructor from axes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+x\+\_\+axis} & X-\/axis (unit) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+y\+\_\+axis} & Y-\/axis (unit) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+z\+\_\+axis} & Z-\/axis (unit) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_ab6e3506c308d48e033730fa71c3721af}\label{classosse_1_1collaborate_1_1_reference_frame_ab6e3506c308d48e033730fa71c3721af}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Reference\+Frame@{Reference\+Frame}}
+\index{Reference\+Frame@{Reference\+Frame}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Reference\+Frame()}{ReferenceFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Reference\+Frame\+::\+Reference\+Frame (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+roll\+\_\+rad,  }\item[{const double \&}]{\+\_\+pitch\+\_\+rad,  }\item[{const double \&}]{\+\_\+yaw\+\_\+rad }\end{DoxyParamCaption})}
+
+
+
+Constructor from angles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+roll\+\_\+rad} & Rotation about the x-\/axis \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+pitch\+\_\+rad} & Rotation about the y-\/axis \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+yaw\+\_\+rad} & Rotation about the z-\/axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a09500c8f97064fa3d907913e26f2df90}\label{classosse_1_1collaborate_1_1_reference_frame_a09500c8f97064fa3d907913e26f2df90}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Reference\+Frame@{Reference\+Frame}}
+\index{Reference\+Frame@{Reference\+Frame}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Reference\+Frame()}{ReferenceFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Reference\+Frame\+::\+Reference\+Frame (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame,  }\item[{const double \&}]{\+\_\+roll\+\_\+rad,  }\item[{const double \&}]{\+\_\+pitch\+\_\+rad,  }\item[{const double \&}]{\+\_\+yaw\+\_\+rad }\end{DoxyParamCaption})}
+
+
+
+Constructor from reference frame and rotation angles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame} & Reference frame \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+roll\+\_\+rad} & Rotation about the x-\/axis \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+pitch\+\_\+rad} & Rotation about the y-\/axis \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+yaw\+\_\+rad} & Rotation about the z-\/axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a603c3443d0d09086de9e95cd69b62ea5}\label{classosse_1_1collaborate_1_1_reference_frame_a603c3443d0d09086de9e95cd69b62ea5}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Reference\+Frame@{Reference\+Frame}}
+\index{Reference\+Frame@{Reference\+Frame}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Reference\+Frame()}{ReferenceFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Reference\+Frame\+::\+Reference\+Frame (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame\+\_\+1,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame\+\_\+2,  }\item[{const double \&}]{\+\_\+roll\+\_\+rad,  }\item[{const double \&}]{\+\_\+pitch\+\_\+rad,  }\item[{const double \&}]{\+\_\+yaw\+\_\+rad }\end{DoxyParamCaption})}
+
+
+
+Constructor from two reference frames and rotation angles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame\+\_\+1} & First reference frame \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame\+\_\+2} & Second reference frame \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+roll\+\_\+rad} & Rotation about the x-\/axis \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+pitch\+\_\+rad} & Rotation about the y-\/axis \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+yaw\+\_\+rad} & Rotation about the z-\/axis \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a518335e6d01a2b8c50f00402818d22b9}\label{classosse_1_1collaborate_1_1_reference_frame_a518335e6d01a2b8c50f00402818d22b9}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!attitude@{attitude}}
+\index{attitude@{attitude}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{attitude()}{attitude()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_attitude_matrix}{Attitude\+Matrix}\& osse\+::collaborate\+::\+Reference\+Frame\+::attitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get attitude attitude\+\_\+matrix. 
+
+\begin{DoxyReturn}{Returns}
+attitude\+\_\+ Attitude attitude\+\_\+matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_ac448c98f8206e372f7c367b511f008e6}\label{classosse_1_1collaborate_1_1_reference_frame_ac448c98f8206e372f7c367b511f008e6}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Obtain\+Log@{Obtain\+Log}}
+\index{Obtain\+Log@{Obtain\+Log}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Obtain\+Log()}{ObtainLog()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ osse\+::collaborate\+::\+Reference\+Frame\+::\+Obtain\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Logs the \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame}. 
+
+\begin{DoxyReturn}{Returns}
+A vector of doubles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a58806d59231dd107bf2b25a0a7396266}\label{classosse_1_1collaborate_1_1_reference_frame_a58806d59231dd107bf2b25a0a7396266}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!set\+\_\+x\+\_\+axis@{set\+\_\+x\+\_\+axis}}
+\index{set\+\_\+x\+\_\+axis@{set\+\_\+x\+\_\+axis}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{set\+\_\+x\+\_\+axis()}{set\_x\_axis()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Reference\+Frame\+::set\+\_\+x\+\_\+axis (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+x\+\_\+axis }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set x-\/axis. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+x\+\_\+axis} & X-\/axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a239519dbae2c753b8763d5b39d97e93d}\label{classosse_1_1collaborate_1_1_reference_frame_a239519dbae2c753b8763d5b39d97e93d}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!set\+\_\+y\+\_\+axis@{set\+\_\+y\+\_\+axis}}
+\index{set\+\_\+y\+\_\+axis@{set\+\_\+y\+\_\+axis}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{set\+\_\+y\+\_\+axis()}{set\_y\_axis()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Reference\+Frame\+::set\+\_\+y\+\_\+axis (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+y\+\_\+axis }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set y-\/axis. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+y\+\_\+axis} & Y-\/axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_adf108795332e39e7975d7bfe69774b78}\label{classosse_1_1collaborate_1_1_reference_frame_adf108795332e39e7975d7bfe69774b78}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!set\+\_\+z\+\_\+axis@{set\+\_\+z\+\_\+axis}}
+\index{set\+\_\+z\+\_\+axis@{set\+\_\+z\+\_\+axis}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{set\+\_\+z\+\_\+axis()}{set\_z\_axis()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Reference\+Frame\+::set\+\_\+z\+\_\+axis (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+z\+\_\+axis }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set z-\/axis. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+z\+\_\+axis} & Z-\/axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_ae5b5e9f9dcb5841fbeb910402afc3b77}\label{classosse_1_1collaborate_1_1_reference_frame_ae5b5e9f9dcb5841fbeb910402afc3b77}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily std\+::string osse\+::collaborate\+::\+Reference\+Frame\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Outputs \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} to a string. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a560f99ed2e6d7298cffbfbab84fe4a94}\label{classosse_1_1collaborate_1_1_reference_frame_a560f99ed2e6d7298cffbfbab84fe4a94}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Transform\+X\+Axis@{Transform\+X\+Axis}}
+\index{Transform\+X\+Axis@{Transform\+X\+Axis}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Transform\+X\+Axis()}{TransformXAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Reference\+Frame\+::\+Transform\+X\+Axis (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Transforms Earth\textquotesingle{}s x-\/axis through single reference. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame} & Reference frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Earth\textquotesingle{}s transformed x-\/axis
+\end{DoxyReturn}
+\[ {\bf{M}}_{this} = This~Attitude~AttitudeMatrix \] \[ {\bf{M}}_{F} = Reference~ReferenceFrame~Attitude~AttitudeMatrix \] \[ \vec{x}_{earth} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} \] \[ \vec{x} = \left(\left(\vec{x}_{earth}{\bf{M}}_{this}\right){\bf{M}}_{F}\right) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a2172488c952b75bca793b4eca308b50b}\label{classosse_1_1collaborate_1_1_reference_frame_a2172488c952b75bca793b4eca308b50b}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Transform\+X\+Axis@{Transform\+X\+Axis}}
+\index{Transform\+X\+Axis@{Transform\+X\+Axis}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Transform\+X\+Axis()}{TransformXAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Reference\+Frame\+::\+Transform\+X\+Axis (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame\+\_\+1,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame\+\_\+2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Transforms Earth\textquotesingle{}s x-\/axis through two reference frames. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame\+\_\+1} & First reference frame \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame\+\_\+2} & Second reference frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Earth\textquotesingle{}s transformed x-\/axis
+\end{DoxyReturn}
+\[ {\bf{M}}_{this} = This~Attitude~AttitudeMatrix \] \[ {\bf{M}}_{F1} = Reference~ReferenceFrame~1~Attitude~AttitudeMatrix \] \[ {\bf{M}}_{F2} = Reference~ReferenceFrame~2~Attitude~AttitudeMatrix \] \[ \vec{x}_{earth} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} \] \[ \vec{x} = \left( \left(\left(\vec{x}_{earth}{\bf{M}}_{this}\right){\bf{M}}_{F2}\right) {\bf{M}}_{F1}\right) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a417ac4bad191e12f1aaff76e413f339e}\label{classosse_1_1collaborate_1_1_reference_frame_a417ac4bad191e12f1aaff76e413f339e}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Transform\+Y\+Axis@{Transform\+Y\+Axis}}
+\index{Transform\+Y\+Axis@{Transform\+Y\+Axis}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Transform\+Y\+Axis()}{TransformYAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Reference\+Frame\+::\+Transform\+Y\+Axis (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Transforms Earth\textquotesingle{}s y-\/axis through single reference. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame} & Reference frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Earth\textquotesingle{}s transformed y-\/axis
+\end{DoxyReturn}
+\[ {\bf{M}}_{this} = This~Attitude~AttitudeMatrix \] \[ {\bf{M}}_{F} = Reference~ReferenceFrame~Attitude~AttitudeMatrix \] \[ \vec{y}_{earth} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \] \[ \vec{y} = \left(\left(\vec{y}_{earth}{\bf{M}}_{this}\right){\bf{M}}_{F}\right) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a7f321d33340f957142db898ce6d91b7a}\label{classosse_1_1collaborate_1_1_reference_frame_a7f321d33340f957142db898ce6d91b7a}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Transform\+Y\+Axis@{Transform\+Y\+Axis}}
+\index{Transform\+Y\+Axis@{Transform\+Y\+Axis}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Transform\+Y\+Axis()}{TransformYAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Reference\+Frame\+::\+Transform\+Y\+Axis (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame\+\_\+1,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame\+\_\+2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Transforms Earth\textquotesingle{}s y-\/axis through two reference frames. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame\+\_\+1} & First reference frame \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame\+\_\+2} & Second reference frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Earth\textquotesingle{}s transformed y-\/axis
+\end{DoxyReturn}
+\[ {\bf{M}}_{this} = This~Attitude~AttitudeMatrix \] \[ {\bf{M}}_{F1} = Reference~ReferenceFrame~1~Attitude~AttitudeMatrix \] \[ {\bf{M}}_{F2} = Reference~ReferenceFrame~2~Attitude~AttitudeMatrix \] \[ \vec{y}_{earth} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \] \[ \vec{y} = \left( \left(\left(\vec{y}_{earth}{\bf{M}}_{this}\right){\bf{M}}_{F2}\right) {\bf{M}}_{F1}\right) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a7fc4ac945236cd63ed4c3bddd5149594}\label{classosse_1_1collaborate_1_1_reference_frame_a7fc4ac945236cd63ed4c3bddd5149594}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Transform\+Z\+Axis@{Transform\+Z\+Axis}}
+\index{Transform\+Z\+Axis@{Transform\+Z\+Axis}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Transform\+Z\+Axis()}{TransformZAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Reference\+Frame\+::\+Transform\+Z\+Axis (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Transforms Earth\textquotesingle{}s z-\/axis through single reference. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame} & Reference frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Earth\textquotesingle{}s transformed z-\/axis
+\end{DoxyReturn}
+\[ {\bf{M}}_{this} = This~Attitude~AttitudeMatrix \] \[ {\bf{M}}_{F} = Reference~ReferenceFrame~Attitude~AttitudeMatrix \] \[ \vec{z}_{earth} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \] \[ \vec{z} = \left(\left(\vec{z}_{earth}{\bf{M}}_{this}\right){\bf{M}}_{F}\right) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a2b99f8d49fc9c61b8dc98118469aeb38}\label{classosse_1_1collaborate_1_1_reference_frame_a2b99f8d49fc9c61b8dc98118469aeb38}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Transform\+Z\+Axis@{Transform\+Z\+Axis}}
+\index{Transform\+Z\+Axis@{Transform\+Z\+Axis}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Transform\+Z\+Axis()}{TransformZAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Reference\+Frame\+::\+Transform\+Z\+Axis (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame\+\_\+1,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame\+\_\+2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Transforms Earth\textquotesingle{}s z-\/axis through two reference frames. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame\+\_\+1} & First reference frame \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame\+\_\+2} & Second reference frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Earth\textquotesingle{}s transformed z-\/axis
+\end{DoxyReturn}
+\[ {\bf{M}}_{this} = This~Attitude~AttitudeMatrix \] \[ {\bf{M}}_{F1} = Reference~ReferenceFrame~1~Attitude~AttitudeMatrix \] \[ {\bf{M}}_{F2} = Reference~ReferenceFrame~2~Attitude~AttitudeMatrix \] \[ \vec{z}_{earth} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \] \[ \vec{z} = \left( \left(\left(\vec{z}_{earth}{\bf{M}}_{this}\right){\bf{M}}_{F2}\right) {\bf{M}}_{F1}\right) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_a0d731be5e188825229a59440eea5341e}\label{classosse_1_1collaborate_1_1_reference_frame_a0d731be5e188825229a59440eea5341e}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Update@{Update}}
+\index{Update@{Update}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Reference\+Frame\+::\+Update (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Updates axes relative to a single reference frame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame} & Reference frame\\
+\hline
+\end{DoxyParams}
+\[ {\bf{M}}_{this} = This~Attitude~AttitudeMatrix \] \[ {\bf{M}}_{F} = Reference~ReferenceFrame~Attitude~AttitudeMatrix \] \[ \vec{x}_{earth} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix},~~~ \vec{y}_{earth} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix},~~~ \vec{z}_{earth} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \] \[ \vec{x} = \left(\left(\vec{x}_{earth}{\bf{M}}_{this}\right){\bf{M}}_{F}\right) \] \[ \vec{y} = \left(\left(\vec{y}_{earth}{\bf{M}}_{this}\right){\bf{M}}_{F}\right) \] \[ \vec{y} = \left(\left(\vec{y}_{earth}{\bf{M}}_{this}\right){\bf{M}}_{F}\right) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_aa32123d1bb0af3ba1f3bb68d72c8e6e3}\label{classosse_1_1collaborate_1_1_reference_frame_aa32123d1bb0af3ba1f3bb68d72c8e6e3}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!Update@{Update}}
+\index{Update@{Update}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Reference\+Frame\+::\+Update (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame\+\_\+1,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+frame\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Updates axes relative to a single reference frame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame\+\_\+1} & First reference frame \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame\+\_\+2} & Second reference frame\\
+\hline
+\end{DoxyParams}
+\[ {\bf{M}}_{this} = This~Attitude~AttitudeMatrix \] \[ {\bf{M}}_{F1} = Reference~ReferenceFrame~1~Attitude~AttitudeMatrix \] \[ {\bf{M}}_{F2} = Reference~ReferenceFrame~2~Attitude~AttitudeMatrix \] \[ \vec{x}_{earth} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix},~~~ \vec{y}_{earth} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix},~~~ \vec{z}_{earth} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \] \[ \vec{x} = \left( \left(\left(\vec{x}_{earth}{\bf{M}}_{this}\right){\bf{M}}_{F2}\right) {\bf{M}}_{F1}\right) \] \[ \vec{y} = \left( \left(\left(\vec{y}_{earth}{\bf{M}}_{this}\right){\bf{M}}_{F2}\right) {\bf{M}}_{F1}\right) \] \[ \vec{z} = \left( \left(\left(\vec{z}_{earth}{\bf{M}}_{this}\right){\bf{M}}_{F2}\right) {\bf{M}}_{F1}\right) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_ac2b2705500ac17535e5ec8127684b449}\label{classosse_1_1collaborate_1_1_reference_frame_ac2b2705500ac17535e5ec8127684b449}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!x\+\_\+axis@{x\+\_\+axis}}
+\index{x\+\_\+axis@{x\+\_\+axis}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{x\+\_\+axis()}{x\_axis()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}\& osse\+::collaborate\+::\+Reference\+Frame\+::x\+\_\+axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get x-\/axis. 
+
+\begin{DoxyReturn}{Returns}
+x\+\_\+axis\+\_\+ X-\/axis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_ae37a2e46a6ed1868a12829e461e6e423}\label{classosse_1_1collaborate_1_1_reference_frame_ae37a2e46a6ed1868a12829e461e6e423}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!y\+\_\+axis@{y\+\_\+axis}}
+\index{y\+\_\+axis@{y\+\_\+axis}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{y\+\_\+axis()}{y\_axis()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}\& osse\+::collaborate\+::\+Reference\+Frame\+::y\+\_\+axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get y-\/axis. 
+
+\begin{DoxyReturn}{Returns}
+y\+\_\+axis\+\_\+ Y-\/axis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_reference_frame_ad3fcddd11a85e828e7de51b333bdf12b}\label{classosse_1_1collaborate_1_1_reference_frame_ad3fcddd11a85e828e7de51b333bdf12b}} 
+\index{osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}!z\+\_\+axis@{z\+\_\+axis}}
+\index{z\+\_\+axis@{z\+\_\+axis}!osse\+::collaborate\+::\+Reference\+Frame@{osse\+::collaborate\+::\+Reference\+Frame}}
+\paragraph{\texorpdfstring{z\+\_\+axis()}{z\_axis()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}\& osse\+::collaborate\+::\+Reference\+Frame\+::z\+\_\+axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get z-\/axis. 
+
+\begin{DoxyReturn}{Returns}
+z\+\_\+axis\+\_\+ Z-\/axis 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/reference\+\_\+frame.\+h\item 
+libs/collaborate/src/reference\+\_\+frame.\+cpp\end{DoxyCompactItemize}

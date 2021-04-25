@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #
-# Copyright (C) 2018 Ryan Linnabary
+# Copyright (C) 2018 The Ohio State University
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

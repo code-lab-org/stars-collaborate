@@ -1,0 +1,80 @@
+\hypertarget{scheduler__alpha_8h_source}{}\subsection{scheduler\+\_\+alpha.\+h}
+\label{scheduler__alpha_8h_source}\index{libs/collaborate/include/collaborate/scheduler\+\_\+alpha.\+h@{libs/collaborate/include/collaborate/scheduler\+\_\+alpha.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SCHEDULER\_ALPHA\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SCHEDULER\_ALPHA\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <cstdint>}
+00020 \textcolor{preprocessor}{#include <string>}
+00021 \textcolor{preprocessor}{#include <utility>}
+00022 \textcolor{preprocessor}{#include <vector>}
+00023 
+00024 \textcolor{preprocessor}{#include "collaborate/event\_logger.h"}
+00025 \textcolor{preprocessor}{#include "collaborate/geodetic.h"}
+00026 \textcolor{preprocessor}{#include "collaborate/node.h"}
+00027 \textcolor{preprocessor}{#include "collaborate/scheduler.h"}
+00028 \textcolor{preprocessor}{#include "collaborate/simulation\_clock.h"}
+00029 \textcolor{preprocessor}{#include "collaborate/tree.h"}
+00030 
+00031 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00032 \textcolor{keyword}{namespace }collaborate \{
+00033 
+\Hypertarget{scheduler__alpha_8h_source_l00038}\hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha}{00038} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha}{SchedulerAlpha} : \textcolor{keyword}{public} \hyperlink{classosse_1_1collaborate_1_1_scheduler}{Scheduler} \{
+00039  \textcolor{keyword}{public}:
+00042   \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_abf962f131875a1091699fe16a4d0eeb8}{SchedulerAlpha}(\hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}* \_clock);
+00046   \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_abf962f131875a1091699fe16a4d0eeb8}{SchedulerAlpha}(\hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}* \_clock, \textcolor{keyword}{const} \textcolor{keywordtype}{bool}& \_flag);
+00050   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a375c441e048ff73c2d97816d9c9cb29e}{Update}(\textcolor{keyword}{const} std::vector<Node*>& \_nodes, \hyperlink{classosse_1_1collaborate_1_1_event_logger}{EventLogger}* \_event\_log);
+00055   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a78709b9ddc8f6dd9b380432f6deedbb1}{PredictChargeChange}(\hyperlink{classosse_1_1collaborate_1_1_sun}{Sun}* \_sun, \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_node, \textcolor{keyword}{const} uint64\_t& \_limit\_s);
+00062   \textcolor{keywordtype}{bool} \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_ab757ae48c70b3409beb483d977bd62f5}{NextVisitor}(\textcolor{keyword}{const} std::vector<Geodetic>& \_destinations\_rad\_m,
+00063                    \textcolor{keyword}{const} uint16\_t& \_sink\_constellation,
+00064                    \hyperlink{classosse_1_1collaborate_1_1_node}{Node}** next\_visitor\_,
+00065                    uint64\_t* prediction\_s\_);
+00072   std::vector<std::pair<uint16\_t, uint64\_t>> \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_abf3bad26233bb4a9094a0236bc380f8e}{FindRoute}(
+00073       \textcolor{keyword}{const} uint16\_t& \_start,
+00074       \textcolor{keyword}{const} uint16\_t& \_end,
+00075       \textcolor{keyword}{const} uint64\_t& \_contact\_s,
+00076       \textcolor{keyword}{const} uint64\_t& \_limit\_s);
+00077 
+00078  \textcolor{keyword}{private}:
+00084   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a3347ebdec27431be3bbd389e1dad88a6}{NodeSensorDistance}(\hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_node,
+00085                             \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic}& \_destination\_rad\_m,
+00086                             \textcolor{keyword}{const} uint64\_t& \_offset\_s);
+00092   std::vector<std::pair<uint16\_t, uint64\_t>> \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_af858a8d223a945fd93235d0b68a44cee}{MakeRoute}(
+00093       \hyperlink{classosse_1_1collaborate_1_1_tree}{Tree}* \_tree,
+00094       \textcolor{keyword}{const} uint16\_t& \_end,
+00095       \textcolor{keyword}{const} uint64\_t& \_contact\_s);
+00101   std::vector<uint16\_t> \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a6cf7cf015650e1837c6ae65bda26ff95}{FindGainsFrom}(\textcolor{keyword}{const} uint16\_t& \_tx\_index,
+00102                                       \textcolor{keyword}{const} uint64\_t& \_offset\_s,
+00103                                       \textcolor{keyword}{const} std::vector<uint16\_t>& \_rxs);
+00111   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_adc69d9527006a9eccc142f9369c93cb5}{Confirm}(\hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_tx\_node,
+00112                    \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_rx\_node,
+00113                    \textcolor{keyword}{const} uint64\_t& \_duration\_s,
+00114                    \textcolor{keyword}{const} uint64\_t& \_original\_s,
+00115                    \textcolor{keyword}{const} uint64\_t& \_lower\_limit\_s);
+00120   std::string \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a66f56e307485a3ab62b625324006d945}{GetRouteLog}(
+00121       \textcolor{keyword}{const} uint16\_t& \_start\_index,
+00122       \textcolor{keyword}{const} std::vector<std::pair<uint16\_t, uint64\_t>>& \_route);
+\Hypertarget{scheduler__alpha_8h_source_l00124}\hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a98ad63ff3f5454a21f08296db3d6fc6d}{00124}   \textcolor{keywordtype}{bool} \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a98ad63ff3f5454a21f08296db3d6fc6d}{flag\_};
+00125 \};
+00126 
+00127 \}  \textcolor{comment}{// namespace collaborate}
+00128 \}  \textcolor{comment}{// namespace osse}
+00129 
+00130 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_SCHEDULER\_ALPHA\_H\_}
+\end{DoxyCode}

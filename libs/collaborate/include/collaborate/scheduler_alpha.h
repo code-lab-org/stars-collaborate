@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Ryan Linnabary
+// Copyright (C) 2019 The Ohio State University
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -39,7 +39,11 @@ class SchedulerAlpha : public Scheduler {
  public:
   /// @brief Constructor
   /// @param[in] _clock Simulation clock
-  explicit SchedulerAlpha(SimulationClock* _clock);
+  SchedulerAlpha(SimulationClock* _clock);
+  /// @brief Constructor
+  /// @param[in] _clock Simulation clock
+  /// @param[in] _flag Flag
+  SchedulerAlpha(SimulationClock* _clock, const bool& _flag);
   /// @brief Updates the list of nodes
   /// @param[in] _nodes Nodes
   /// @param[in] _event_log Event logger
@@ -116,6 +120,8 @@ class SchedulerAlpha : public Scheduler {
   std::string GetRouteLog(
       const uint16_t& _start_index,
       const std::vector<std::pair<uint16_t, uint64_t>>& _route);
+  /// @brief Flag
+  bool flag_;
 };
 
 }  // namespace collaborate

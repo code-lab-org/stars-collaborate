@@ -1,0 +1,248 @@
+\hypertarget{classosse_1_1collaborate_1_1_graph_unweighted}{}\subsection{osse\+:\+:collaborate\+:\+:Graph\+Unweighted Class Reference}
+\label{classosse_1_1collaborate_1_1_graph_unweighted}\index{osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}}
+
+
+Concrete graph with unweighted edges.  
+
+
+
+
+{\ttfamily \#include $<$graph\+\_\+unweighted.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Graph\+Unweighted\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classosse_1_1collaborate_1_1_graph_unweighted__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_a5b5c79a90fa8a8957f98e0dc4f5bafb6}{Graph\+Unweighted} (\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$\+\_\+data\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_a06fa72fc5e51142a242fdf535af96078}{Log} (const uint16\+\_\+t \&\+\_\+num\+\_\+nodes, const uint64\+\_\+t \&\+\_\+tick) const
+\begin{DoxyCompactList}\small\item\em Writes unweighted graph to a binary file. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_ae118a5f9c0bc24858192d13cac995f76}{Set\+Edge} (const uint16\+\_\+t \&\+\_\+row, const uint16\+\_\+t \&\+\_\+col, const bool \&\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the edge at a row and a column to. \end{DoxyCompactList}\item 
+bool \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_a60c3d775df67e19dbc49134b629c750d}{Get\+Edge} (const uint16\+\_\+t \&\+\_\+row, const uint16\+\_\+t \&\+\_\+col) const
+\begin{DoxyCompactList}\small\item\em Gets the edge at a row and a column to. \end{DoxyCompactList}\item 
+std\+::set$<$ uint16\+\_\+t $>$ \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_a7f648d33e2f67f09cd45395c4f8f736f}{Get\+Row} (const uint16\+\_\+t \&\+\_\+row, const uint16\+\_\+t \&\+\_\+num\+\_\+nodes) const
+\begin{DoxyCompactList}\small\item\em Gets an entire row from the graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_unweighted_a9fe20052aa221d26ecd27db25c0c9391}\label{classosse_1_1collaborate_1_1_graph_unweighted_a9fe20052aa221d26ecd27db25c0c9391}} 
+void \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_a9fe20052aa221d26ecd27db25c0c9391}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Sets all edges to false. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_ab38de4495671d90fe49aae2b5be2500b}{Transfer\+Route} (const std\+::vector$<$ uint16\+\_\+t $>$ \&\+\_\+route)
+\begin{DoxyCompactList}\small\item\em The route is copied into the graph. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_ada77cbd0724afefdb49d381d63fdda24}{Transfer\+Weights} (const \hyperlink{classosse_1_1collaborate_1_1_graph_weighted}{Graph\+Weighted} \&\+\_\+weighted\+\_\+graph, const uint16\+\_\+t \&\+\_\+num\+\_\+nodes)
+\begin{DoxyCompactList}\small\item\em Edges with weights are true and edges without are false. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_aaaffd6846abfa88f54eaa10fd24dd571}{Mask\+Weighted} (const uint16\+\_\+t \&\+\_\+num\+\_\+nodes, \hyperlink{classosse_1_1collaborate_1_1_graph_weighted}{Graph\+Weighted} $\ast$\+\_\+weighted\+\_\+graph)
+\begin{DoxyCompactList}\small\item\em Mask the edges of a weighted graph. \end{DoxyCompactList}\item 
+bool \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_aa64af5c58b4f322987f9d01f13c6e2d5}{Prim} (const \hyperlink{classosse_1_1collaborate_1_1_graph_weighted}{Graph\+Weighted} \&\+\_\+weighted, const uint16\+\_\+t \&\+\_\+num\+\_\+nodes)
+\begin{DoxyCompactList}\small\item\em Uses Prim\textquotesingle{}s algorithm to find the minimum spanning tree in a graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_unweighted_a218e4872b092090509bc2483186de31a}\label{classosse_1_1collaborate_1_1_graph_unweighted_a218e4872b092090509bc2483186de31a}} 
+typedef std\+::array$<$ bool, \hyperlink{classosse_1_1collaborate_1_1_graph_a9c9828305d419d29fc1eed87a4520cd5}{Graph\+::k\+Size} $>$ \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_a218e4872b092090509bc2483186de31a}{Edges}
+\begin{DoxyCompactList}\small\item\em Underlying adjacency attitude\+\_\+matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_unweighted_ae1e5841b64a17371fbbf2dfffe396b45}\label{classosse_1_1collaborate_1_1_graph_unweighted_ae1e5841b64a17371fbbf2dfffe396b45}} 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_a218e4872b092090509bc2483186de31a}{Edges} $>$ \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted_ae1e5841b64a17371fbbf2dfffe396b45}{edges\+\_\+}
+\begin{DoxyCompactList}\small\item\em Unweighted edges. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Concrete graph with unweighted edges. 
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth]{prim}}
+\end{DoxyImageNoCaption}
+
+
+\[ n_x n_x \in \{True,False\} \] \[ {\bf{E}} = Unweighted~Edges = \begin{bmatrix} 0 & n_0 n_1 & \dots & n_0 n_{N-1} & n_0 n_N \\ n_1 n_0 & 0 & \dots & n_1 n_{N-1} & n_1 n_N \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ n_{N-1} n_0 & n_{N-1} n_1 & \dots & 0 & n_{N-1} n_N \\ n_N n_0 & n_N n_1 & \dots & n_N n_{N-1} & 0 \end{bmatrix} \] 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_unweighted_a5b5c79a90fa8a8957f98e0dc4f5bafb6}\label{classosse_1_1collaborate_1_1_graph_unweighted_a5b5c79a90fa8a8957f98e0dc4f5bafb6}} 
+\index{osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}!Graph\+Unweighted@{Graph\+Unweighted}}
+\index{Graph\+Unweighted@{Graph\+Unweighted}!osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}}
+\paragraph{\texorpdfstring{Graph\+Unweighted()}{GraphUnweighted()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Graph\+Unweighted\+::\+Graph\+Unweighted (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$}]{\+\_\+data\+\_\+log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+log} & Data logger \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_unweighted_a60c3d775df67e19dbc49134b629c750d}\label{classosse_1_1collaborate_1_1_graph_unweighted_a60c3d775df67e19dbc49134b629c750d}} 
+\index{osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}!Get\+Edge@{Get\+Edge}}
+\index{Get\+Edge@{Get\+Edge}!osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}}
+\paragraph{\texorpdfstring{Get\+Edge()}{GetEdge()}}
+{\footnotesize\ttfamily bool osse\+::collaborate\+::\+Graph\+Unweighted\+::\+Get\+Edge (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+row,  }\item[{const uint16\+\_\+t \&}]{\+\_\+col }\end{DoxyParamCaption}) const}
+
+
+
+Gets the edge at a row and a column to. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+row} & Row \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+col} & Column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_unweighted_a7f648d33e2f67f09cd45395c4f8f736f}\label{classosse_1_1collaborate_1_1_graph_unweighted_a7f648d33e2f67f09cd45395c4f8f736f}} 
+\index{osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}!Get\+Row@{Get\+Row}}
+\index{Get\+Row@{Get\+Row}!osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}}
+\paragraph{\texorpdfstring{Get\+Row()}{GetRow()}}
+{\footnotesize\ttfamily std\+::set$<$ uint16\+\_\+t $>$ osse\+::collaborate\+::\+Graph\+Unweighted\+::\+Get\+Row (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+row,  }\item[{const uint16\+\_\+t \&}]{\+\_\+num\+\_\+nodes }\end{DoxyParamCaption}) const}
+
+
+
+Gets an entire row from the graph. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+row} & Row number \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+nodes} & Number of nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of transmitters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_unweighted_a06fa72fc5e51142a242fdf535af96078}\label{classosse_1_1collaborate_1_1_graph_unweighted_a06fa72fc5e51142a242fdf535af96078}} 
+\index{osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}!Log@{Log}}
+\index{Log@{Log}!osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}}
+\paragraph{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Graph\+Unweighted\+::\+Log (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+num\+\_\+nodes,  }\item[{const uint64\+\_\+t \&}]{\+\_\+tick }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Writes unweighted graph to a binary file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+nodes} & Number of nodes (rows and columns) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+tick} & The simulation clock tick \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_graph_abaef7c4642242e096d2bbfc74b8d1d07}{osse\+::collaborate\+::\+Graph}.
+
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_unweighted_aaaffd6846abfa88f54eaa10fd24dd571}\label{classosse_1_1collaborate_1_1_graph_unweighted_aaaffd6846abfa88f54eaa10fd24dd571}} 
+\index{osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}!Mask\+Weighted@{Mask\+Weighted}}
+\index{Mask\+Weighted@{Mask\+Weighted}!osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}}
+\paragraph{\texorpdfstring{Mask\+Weighted()}{MaskWeighted()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Graph\+Unweighted\+::\+Mask\+Weighted (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+num\+\_\+nodes,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_graph_weighted}{Graph\+Weighted} $\ast$}]{\+\_\+weighted\+\_\+graph }\end{DoxyParamCaption})}
+
+
+
+Mask the edges of a weighted graph. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+weighted\+\_\+graph} & Weighted graph \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+nodes} & Number of nodes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_unweighted_aa64af5c58b4f322987f9d01f13c6e2d5}\label{classosse_1_1collaborate_1_1_graph_unweighted_aa64af5c58b4f322987f9d01f13c6e2d5}} 
+\index{osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}!Prim@{Prim}}
+\index{Prim@{Prim}!osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}}
+\paragraph{\texorpdfstring{Prim()}{Prim()}}
+{\footnotesize\ttfamily bool osse\+::collaborate\+::\+Graph\+Unweighted\+::\+Prim (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_graph_weighted}{Graph\+Weighted} \&}]{\+\_\+weighted,  }\item[{const uint16\+\_\+t \&}]{\+\_\+num\+\_\+nodes }\end{DoxyParamCaption})}
+
+
+
+Uses Prim\textquotesingle{}s algorithm to find the minimum spanning tree in a graph. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+weighted} & Weighted graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+connected\+\_\+ Whether or not the graph is connected 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+nodes} & Number of nodes (rows and columns) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_unweighted_ae118a5f9c0bc24858192d13cac995f76}\label{classosse_1_1collaborate_1_1_graph_unweighted_ae118a5f9c0bc24858192d13cac995f76}} 
+\index{osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}!Set\+Edge@{Set\+Edge}}
+\index{Set\+Edge@{Set\+Edge}!osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}}
+\paragraph{\texorpdfstring{Set\+Edge()}{SetEdge()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Graph\+Unweighted\+::\+Set\+Edge (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+row,  }\item[{const uint16\+\_\+t \&}]{\+\_\+col,  }\item[{const bool \&}]{\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the edge at a row and a column to. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+row} & Row \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+col} & Column \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_unweighted_ab38de4495671d90fe49aae2b5be2500b}\label{classosse_1_1collaborate_1_1_graph_unweighted_ab38de4495671d90fe49aae2b5be2500b}} 
+\index{osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}!Transfer\+Route@{Transfer\+Route}}
+\index{Transfer\+Route@{Transfer\+Route}!osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}}
+\paragraph{\texorpdfstring{Transfer\+Route()}{TransferRoute()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Graph\+Unweighted\+::\+Transfer\+Route (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint16\+\_\+t $>$ \&}]{\+\_\+route }\end{DoxyParamCaption})}
+
+
+
+The route is copied into the graph. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+route} & Route \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_unweighted_ada77cbd0724afefdb49d381d63fdda24}\label{classosse_1_1collaborate_1_1_graph_unweighted_ada77cbd0724afefdb49d381d63fdda24}} 
+\index{osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}!Transfer\+Weights@{Transfer\+Weights}}
+\index{Transfer\+Weights@{Transfer\+Weights}!osse\+::collaborate\+::\+Graph\+Unweighted@{osse\+::collaborate\+::\+Graph\+Unweighted}}
+\paragraph{\texorpdfstring{Transfer\+Weights()}{TransferWeights()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Graph\+Unweighted\+::\+Transfer\+Weights (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_graph_weighted}{Graph\+Weighted} \&}]{\+\_\+weighted\+\_\+graph,  }\item[{const uint16\+\_\+t \&}]{\+\_\+num\+\_\+nodes }\end{DoxyParamCaption})}
+
+
+
+Edges with weights are true and edges without are false. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+weighted\+\_\+graph} & Weighted graph \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+nodes} & Number of nodes \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/graph\+\_\+unweighted.\+h\item 
+libs/collaborate/src/graph\+\_\+unweighted.\+cpp\end{DoxyCompactItemize}

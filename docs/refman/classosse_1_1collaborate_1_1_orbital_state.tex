@@ -1,0 +1,239 @@
+\hypertarget{classosse_1_1collaborate_1_1_orbital_state}{}\subsection{osse\+:\+:collaborate\+:\+:Orbital\+State Class Reference}
+\label{classosse_1_1collaborate_1_1_orbital_state}\index{osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}}
+
+
+The position and orientation of a node.  
+
+
+
+
+{\ttfamily \#include $<$orbital\+\_\+state.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_orbital_state_a9990f1fc348981b44c1a9c7781cb9b4f}{Orbital\+State} (double \+\_\+x\+\_\+m, double \+\_\+y\+\_\+m, double \+\_\+z\+\_\+m, double \+\_\+latitude\+\_\+rad, double \+\_\+longitude\+\_\+rad, double \+\_\+altitude\+\_\+m, double \+\_\+dx\+\_\+m\+\_\+per\+\_\+s, double \+\_\+dy\+\_\+m\+\_\+per\+\_\+s, double \+\_\+dz\+\_\+m\+\_\+per\+\_\+s, double \+\_\+roll\+\_\+rad, double \+\_\+pitch\+\_\+rad, double \+\_\+yaw\+\_\+rad)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a0ed1213527f9cbe7a6131feb4308046e}{Calculate\+Platform\+Orbit\+Reference\+Frame} () const
+\begin{DoxyCompactList}\small\item\em Calculates the orbit reference\+\_\+frame. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a29fea23801f7de2f5ad72888b15ca220}{Update} (double \+\_\+x\+\_\+m, double \+\_\+y\+\_\+m, double \+\_\+z\+\_\+m, double \+\_\+latitude\+\_\+rad, double \+\_\+longitude\+\_\+rad, double \+\_\+altitude\+\_\+m, double \+\_\+dx\+\_\+m\+\_\+per\+\_\+s, double \+\_\+dy\+\_\+m\+\_\+per\+\_\+s, double \+\_\+dz\+\_\+m\+\_\+per\+\_\+s)
+\begin{DoxyCompactList}\small\item\em Update the orbital\+\_\+state. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a010c89b843916c12e8d6ec4042787af6}{Obtain\+Log} () const
+\begin{DoxyCompactList}\small\item\em Logs the \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State}. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a5ef68d5b425411e26612f213ab406136}{Obtain\+Geodetic\+Log} () const
+\begin{DoxyCompactList}\small\item\em Logs the \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} Coordinates. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \& \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a09eef3c4ce4d5a6aff3b6cee6e1dea0e}{position\+\_\+m\+\_\+rad} () const
+\begin{DoxyCompactList}\small\item\em Get The position (meters and radians) \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \& \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a2d52b42f0259367d91e2c247aea9522f}{velocity\+\_\+m\+\_\+per\+\_\+s} () const
+\begin{DoxyCompactList}\small\item\em Get the velocity. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} \& \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a7a6f749d24d80b5e5c08eb4a03857a31}{geodetic\+\_\+rad\+\_\+m} () const
+\begin{DoxyCompactList}\small\item\em Get The geodetic position (radians and meters) \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \& \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a9704e21bdf2ed6245b4b27e5a2911310}{orbit\+\_\+frame} () const
+\begin{DoxyCompactList}\small\item\em Get the orbit\+\_\+frame. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \& \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a28b3414c74ad4ebe11d0e835dc9591ee}{body\+\_\+frame} () const
+\begin{DoxyCompactList}\small\item\em Get the body\+\_\+frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a5508edbd6215162be9483b371e95750c}\label{classosse_1_1collaborate_1_1_orbital_state_a5508edbd6215162be9483b371e95750c}} 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a5508edbd6215162be9483b371e95750c}{position\+\_\+m\+\_\+rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Position (meters and radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a07d091b449bf6093c0f8c8568d6625bb}\label{classosse_1_1collaborate_1_1_orbital_state_a07d091b449bf6093c0f8c8568d6625bb}} 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a07d091b449bf6093c0f8c8568d6625bb}{velocity\+\_\+m\+\_\+per\+\_\+s\+\_\+}
+\begin{DoxyCompactList}\small\item\em Velocity (meters per second) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a5129e6f49ed14ff382a4f62cabe4d80c}\label{classosse_1_1collaborate_1_1_orbital_state_a5129e6f49ed14ff382a4f62cabe4d80c}} 
+\hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a5129e6f49ed14ff382a4f62cabe4d80c}{geodetic\+\_\+rad\+\_\+m\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} position (radians and meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_aa8a60024082bf2c299abfea13aa24f5e}\label{classosse_1_1collaborate_1_1_orbital_state_aa8a60024082bf2c299abfea13aa24f5e}} 
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_aa8a60024082bf2c299abfea13aa24f5e}{orbit\+\_\+frame\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_platform_orbit}{Platform\+Orbit} \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} (unit) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a3542ba071a7a50da3974a5766b089d58}\label{classosse_1_1collaborate_1_1_orbital_state_a3542ba071a7a50da3974a5766b089d58}} 
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a3542ba071a7a50da3974a5766b089d58}{body\+\_\+frame\+\_\+}
+\begin{DoxyCompactList}\small\item\em Body \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} (unit) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+The position and orientation of a node. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a9990f1fc348981b44c1a9c7781cb9b4f}\label{classosse_1_1collaborate_1_1_orbital_state_a9990f1fc348981b44c1a9c7781cb9b4f}} 
+\index{osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}!Orbital\+State@{Orbital\+State}}
+\index{Orbital\+State@{Orbital\+State}!osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}}
+\paragraph{\texorpdfstring{Orbital\+State()}{OrbitalState()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Orbital\+State\+::\+Orbital\+State (\begin{DoxyParamCaption}\item[{double}]{\+\_\+x\+\_\+m,  }\item[{double}]{\+\_\+y\+\_\+m,  }\item[{double}]{\+\_\+z\+\_\+m,  }\item[{double}]{\+\_\+latitude\+\_\+rad,  }\item[{double}]{\+\_\+longitude\+\_\+rad,  }\item[{double}]{\+\_\+altitude\+\_\+m,  }\item[{double}]{\+\_\+dx\+\_\+m\+\_\+per\+\_\+s,  }\item[{double}]{\+\_\+dy\+\_\+m\+\_\+per\+\_\+s,  }\item[{double}]{\+\_\+dz\+\_\+m\+\_\+per\+\_\+s,  }\item[{double}]{\+\_\+roll\+\_\+rad,  }\item[{double}]{\+\_\+pitch\+\_\+rad,  }\item[{double}]{\+\_\+yaw\+\_\+rad }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+x\+\_\+m} & X-\/component of position (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+y\+\_\+m} & Y-\/component of position (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+z\+\_\+m} & Z-\/component of position (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+latitude\+\_\+rad} & Latitude (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+longitude\+\_\+rad} & Longitude (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+altitude\+\_\+m} & Altitude (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+dx\+\_\+m\+\_\+per\+\_\+s} & X-\/component of velocity (meters per second) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+dy\+\_\+m\+\_\+per\+\_\+s} & Y-\/component of velocity (meters per second) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+dz\+\_\+m\+\_\+per\+\_\+s} & Z-\/component of velocity (meters per second) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+roll\+\_\+rad} & Satellite\textquotesingle{}s roll angle (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+pitch\+\_\+rad} & Satellite\textquotesingle{}s pitch angle (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+yaw\+\_\+rad} & Satellite\textquotesingle{}s yaw angle (radians) \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a28b3414c74ad4ebe11d0e835dc9591ee}\label{classosse_1_1collaborate_1_1_orbital_state_a28b3414c74ad4ebe11d0e835dc9591ee}} 
+\index{osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}!body\+\_\+frame@{body\+\_\+frame}}
+\index{body\+\_\+frame@{body\+\_\+frame}!osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}}
+\paragraph{\texorpdfstring{body\+\_\+frame()}{body\_frame()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame}\& osse\+::collaborate\+::\+Orbital\+State\+::body\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the body\+\_\+frame. 
+
+\begin{DoxyReturn}{Returns}
+body\+\_\+frame\+\_\+ Body\+\_\+reference\+\_\+frame (unit) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a0ed1213527f9cbe7a6131feb4308046e}\label{classosse_1_1collaborate_1_1_orbital_state_a0ed1213527f9cbe7a6131feb4308046e}} 
+\index{osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}!Calculate\+Platform\+Orbit\+Reference\+Frame@{Calculate\+Platform\+Orbit\+Reference\+Frame}}
+\index{Calculate\+Platform\+Orbit\+Reference\+Frame@{Calculate\+Platform\+Orbit\+Reference\+Frame}!osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}}
+\paragraph{\texorpdfstring{Calculate\+Platform\+Orbit\+Reference\+Frame()}{CalculatePlatformOrbitReferenceFrame()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} osse\+::collaborate\+::\+Orbital\+State\+::\+Calculate\+Platform\+Orbit\+Reference\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the orbit reference\+\_\+frame. 
+
+\begin{DoxyReturn}{Returns}
+Orbit reference\+\_\+frame
+\end{DoxyReturn}
+\[ \hat{y} = \frac{-\vec{p}\times\vec{v}} {\left\lvert-\vec{p}\times\vec{v}\right\rvert} \] \[ \hat{z} = \frac{-\vec{p}}{\left\lvert-\vec{p}\right\rvert} \] \[ \hat{x} = \hat{y}\times\hat{z} \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a7a6f749d24d80b5e5c08eb4a03857a31}\label{classosse_1_1collaborate_1_1_orbital_state_a7a6f749d24d80b5e5c08eb4a03857a31}} 
+\index{osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}!geodetic\+\_\+rad\+\_\+m@{geodetic\+\_\+rad\+\_\+m}}
+\index{geodetic\+\_\+rad\+\_\+m@{geodetic\+\_\+rad\+\_\+m}!osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}}
+\paragraph{\texorpdfstring{geodetic\+\_\+rad\+\_\+m()}{geodetic\_rad\_m()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic}\& osse\+::collaborate\+::\+Orbital\+State\+::geodetic\+\_\+rad\+\_\+m (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get The geodetic position (radians and meters) 
+
+\begin{DoxyReturn}{Returns}
+geodetic\+\_\+rad\+\_\+m\+\_\+ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} position (radians and meters) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a5ef68d5b425411e26612f213ab406136}\label{classosse_1_1collaborate_1_1_orbital_state_a5ef68d5b425411e26612f213ab406136}} 
+\index{osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}!Obtain\+Geodetic\+Log@{Obtain\+Geodetic\+Log}}
+\index{Obtain\+Geodetic\+Log@{Obtain\+Geodetic\+Log}!osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}}
+\paragraph{\texorpdfstring{Obtain\+Geodetic\+Log()}{ObtainGeodeticLog()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ osse\+::collaborate\+::\+Orbital\+State\+::\+Obtain\+Geodetic\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Logs the \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State} \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} Coordinates. 
+
+\begin{DoxyReturn}{Returns}
+A vector of doubles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a010c89b843916c12e8d6ec4042787af6}\label{classosse_1_1collaborate_1_1_orbital_state_a010c89b843916c12e8d6ec4042787af6}} 
+\index{osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}!Obtain\+Log@{Obtain\+Log}}
+\index{Obtain\+Log@{Obtain\+Log}!osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}}
+\paragraph{\texorpdfstring{Obtain\+Log()}{ObtainLog()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ osse\+::collaborate\+::\+Orbital\+State\+::\+Obtain\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Logs the \hyperlink{classosse_1_1collaborate_1_1_orbital_state}{Orbital\+State}. 
+
+\begin{DoxyReturn}{Returns}
+A vector of doubles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a9704e21bdf2ed6245b4b27e5a2911310}\label{classosse_1_1collaborate_1_1_orbital_state_a9704e21bdf2ed6245b4b27e5a2911310}} 
+\index{osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}!orbit\+\_\+frame@{orbit\+\_\+frame}}
+\index{orbit\+\_\+frame@{orbit\+\_\+frame}!osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}}
+\paragraph{\texorpdfstring{orbit\+\_\+frame()}{orbit\_frame()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame}\& osse\+::collaborate\+::\+Orbital\+State\+::orbit\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the orbit\+\_\+frame. 
+
+\begin{DoxyReturn}{Returns}
+orbit\+\_\+frame\+\_\+ Orbit\+\_\+reference\+\_\+frame (unit) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a09eef3c4ce4d5a6aff3b6cee6e1dea0e}\label{classosse_1_1collaborate_1_1_orbital_state_a09eef3c4ce4d5a6aff3b6cee6e1dea0e}} 
+\index{osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}!position\+\_\+m\+\_\+rad@{position\+\_\+m\+\_\+rad}}
+\index{position\+\_\+m\+\_\+rad@{position\+\_\+m\+\_\+rad}!osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}}
+\paragraph{\texorpdfstring{position\+\_\+m\+\_\+rad()}{position\_m\_rad()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}\& osse\+::collaborate\+::\+Orbital\+State\+::position\+\_\+m\+\_\+rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get The position (meters and radians) 
+
+\begin{DoxyReturn}{Returns}
+position\+\_\+m\+\_\+rad\+\_\+ Position (meters and radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a29fea23801f7de2f5ad72888b15ca220}\label{classosse_1_1collaborate_1_1_orbital_state_a29fea23801f7de2f5ad72888b15ca220}} 
+\index{osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}!Update@{Update}}
+\index{Update@{Update}!osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}}
+\paragraph{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Orbital\+State\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{\+\_\+x\+\_\+m,  }\item[{double}]{\+\_\+y\+\_\+m,  }\item[{double}]{\+\_\+z\+\_\+m,  }\item[{double}]{\+\_\+latitude\+\_\+rad,  }\item[{double}]{\+\_\+longitude\+\_\+rad,  }\item[{double}]{\+\_\+altitude\+\_\+m,  }\item[{double}]{\+\_\+dx\+\_\+m\+\_\+per\+\_\+s,  }\item[{double}]{\+\_\+dy\+\_\+m\+\_\+per\+\_\+s,  }\item[{double}]{\+\_\+dz\+\_\+m\+\_\+per\+\_\+s }\end{DoxyParamCaption})}
+
+
+
+Update the orbital\+\_\+state. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+x\+\_\+m} & X-\/component of position (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+y\+\_\+m} & Y-\/component of position (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+z\+\_\+m} & Z-\/component of position (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+latitude\+\_\+rad} & Latitude (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+longitude\+\_\+rad} & Longitude (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+altitude\+\_\+m} & Altitude (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+dx\+\_\+m\+\_\+per\+\_\+s} & X-\/component of velocity (meters per second) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+dy\+\_\+m\+\_\+per\+\_\+s} & Y-\/component of velocity (meters per second) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+dz\+\_\+m\+\_\+per\+\_\+s} & Z-\/component of velocity (meters per second) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_orbital_state_a2d52b42f0259367d91e2c247aea9522f}\label{classosse_1_1collaborate_1_1_orbital_state_a2d52b42f0259367d91e2c247aea9522f}} 
+\index{osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}!velocity\+\_\+m\+\_\+per\+\_\+s@{velocity\+\_\+m\+\_\+per\+\_\+s}}
+\index{velocity\+\_\+m\+\_\+per\+\_\+s@{velocity\+\_\+m\+\_\+per\+\_\+s}!osse\+::collaborate\+::\+Orbital\+State@{osse\+::collaborate\+::\+Orbital\+State}}
+\paragraph{\texorpdfstring{velocity\+\_\+m\+\_\+per\+\_\+s()}{velocity\_m\_per\_s()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}\& osse\+::collaborate\+::\+Orbital\+State\+::velocity\+\_\+m\+\_\+per\+\_\+s (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the velocity. 
+
+\begin{DoxyReturn}{Returns}
+velocity\+\_\+ Velocity (meters per second) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/orbital\+\_\+state.\+h\item 
+libs/collaborate/src/orbital\+\_\+state.\+cpp\end{DoxyCompactItemize}

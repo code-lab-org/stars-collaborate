@@ -1,9 +1,6 @@
 #+TITLE: Collaborate
-#+AUTHOR: Ryan Linnabary
-#+OPTIONS: html-postamble:nil
+#+OPTIONS: html-postamble:nil author:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="doxygen/style.css" />
-# https://github.com/linnabary/collaborate
-# https://linnabary.github.io/collaborate
 #+ATTR_HTML: :width 100%
 #+ATTR_MD: :width 300
 [[./images/raster/top.png]]
@@ -41,13 +38,13 @@
    - *Solution*: Autonomous resource management /(power, comm., sensing)/
    - *First Step*: _Software Tools_ for _Modeling/Simulating Future Systems_
 ** Author
-   Ryan Linnabary - linnabary.24@osu.edu
+   The Ohio State University
 ** Sponsor
    NASA Advanced Information Systems Technology Program NNH16ZDA001N-AIST
 ** Source Code & Documentation
-   The complete source code is available on [[https://github.com/linnabary/collaborate][Github]].  Complete Doxygen API
-   documentation is available for the [[https://linnabary.github.io/collaborate/cpp_html/index.html][C++ Library]] and [[https://linnabary.github.io/collaborate/py_html/index.html][Python Tools]]. There is
-   also a [[https://linnabary.github.io/collaborate/refman.pdf][User Manual]].
+   The complete source code is available on Github.  Complete Doxygen API
+   documentation is available for the C++ LIbrary and Python Tools. There is
+   also a User Manual.
 ** Applications
    Collaborate is a software library and toolset for simulating collaborative
    autonomous small-satellite sensor networks.
@@ -61,28 +58,28 @@
      - Delay-tolerant networks
 ** Publications
    #+BEGIN_QUOTE
-   Ryan Linnabary, et. al., /"Software Library for Simulation of Collaborative
+   R. L., et. al., /"Software Library for Simulation of Collaborative
    Sensor Networks for Navigation and Sensing"/, Consortium of Ohio Universities
    on Navigation and Timekeeping (COUNT), April 3 2019, Columbus,
-   OH.  [[[https://linnabary.github.io/collaborate/publications/count_abstract.pdf][Abstract]]|[[https://linnabary.github.io/collaborate/publications/count_poster.pdf][Poster]]]
+   OH.
    #+END_QUOTE
    #+BEGIN_QUOTE
-   Ryan Linnabary, et. al., /"Using Cognitive Communications to Increase the
+   R. L., et. al., /"Using Cognitive Communications to Increase the
    Operational Value of Collaborative Networks of Satellites"/, IEEE Cognitive
    Communications for Aerospace Applications Workshop (IEEE-CCAAW), June 26
-   2019, Cleveland, OH.  [[[https://linnabary.github.io/collaborate/publications/ccaaw_paper.pdf][Paper]]|[[https://linnabary.github.io/collaborate/publications/ccaaw_slides.pdf][Slides]]]
+   2019, Cleveland, OH.
    #+END_QUOTE
    #+BEGIN_QUOTE
-   Ryan Linnabary, et. al., /"Open Source Software for Simulating Collaborative
+   R. L., et. al., /"Open Source Software for Simulating Collaborative
    Networks of Autonomous Adaptive Sensors"/, in Proceedings of the IEEE
    International Geoscience and Remote Sensing Symposium (IGARSS) 2019,
-   Yokahama, Japan.  [[[https://linnabary.github.io/collaborate/publications/igarss_paper.pdf][Paper]]|[[https://linnabary.github.io/collaborate/publications/igarss_slides.pdf][Slides]]]
+   Yokahama, Japan.
    #+END_QUOTE
    #+BEGIN_QUOTE
-   Ryan Linnabary, et. al., /"Open Source Software for Simulating Collaborative
+   R. L., et. al., /"Open Source Software for Simulating Collaborative
    Networks of Autonomous Adaptive Sensors"/, ElectroScience Laboratory
    Consortium on Electromagnetics and Radio Frequencies (ESL-CERF), August 5
-   2019, Columbus, OH.  [[[https://linnabary.github.io/collaborate/publications/cerf_slide.pdf][Slide]]|[[https://linnabary.github.io/collaborate/publications/cerf_poster.pdf][Poster]]]
+   2019, Columbus, OH.
    #+END_QUOTE
    -----
 * Work Flow
@@ -103,17 +100,17 @@
    Install git.  Clone this repository in the home directory.
    #+BEGIN_SRC
    ~ $ sudo apt install git
-   ~ $ git clone https://github.com/linnabary/collaborate.git
+   ~ $ git clone <repository>
    #+END_SRC
    Install Docker.
    #+BEGIN_SRC
    ~ $ sudo apt install docker.io
    #+END_SRC
-   Build the Docker image using the [[https://raw.githubusercontent.com/linnabary/collaborate/master/env/docker/build.sh][image build script]].
+   Build the Docker image using the image build script.
    #+BEGIN_SRC
    ~ $ sudo ./collaborate/env/docker/build.sh
    #+END_SRC
-   Run the Docker container using the [[https://raw.githubusercontent.com/linnabary/collaborate/master/env/docker/run.sh][container run script]].
+   Run the Docker container using the container run script.
    #+BEGIN_SRC
    ~ $ sudo ./collaborate/env/docker/run.sh
    root@collaborate-test:~/collaborate#
@@ -168,13 +165,13 @@
     ~ $ sudo apt install update
     ~ $ sudo apt install upgrade
     ~ $ sudo apt install git
-    ~ $ git clone https://github.com/linnabary/collaborate.git
+    ~ $ git clone <repository>
     #+END_SRC
-    Download C++ dependencies listed in [[https://raw.githubusercontent.com/linnabary/collaborate/master/env/local/apt.txt][apt.txt]].
+    Download C++ dependencies listed in apt.txt.
     #+BEGIN_SRC
     ~ $ cat collaborate/env/local/apt.txt | xargs sudo apt install -y
     #+END_SRC
-    Download Python3 dependencies listed in [[https://raw.githubusercontent.com/linnabary/collaborate/master/env/local/py.txt][py.txt]].
+    Download Python3 dependencies listed in py.txt.
     #+BEGIN_SRC
     ~ $ cat collaborate/env/local/py.txt | xargs sudo -H pip3 install
     ~ $ sudo -H install cartopy
@@ -188,7 +185,7 @@
 * Build the Project
   /Time/: 5 min.
   #
-  The following [[https://raw.githubusercontent.com/linnabary/collaborate/master/sys/build.sh][project build script]] will build the project with CMake.  If you
+  The following project build script will build the project with CMake.  If you
   set either of the variables CPPLINT, PYLINT, DOXYGEN to true, it will also
   check code style conformance and generate documentation.
   #+BEGIN_SRC
@@ -202,14 +199,14 @@
   #
   In-between simulations, it may be useful to empty the directories ~output~
   and ~analysis~ so that new simulation results do not clobber the old ones.
-  The [[https://raw.githubusercontent.com/linnabary/collaborate/master/sys/clean.sh][clean script]] accomplishes this, but /does not prompt for confirmation/.
+  The clean script accomplishes this, but /does not prompt for confirmation/.
   #+BEGIN_SRC
   ~/collaborate $ ./sys/clean.sh
   #+END_SRC
   -----
 * Condition the Input Data
   Since the repository can not track large files, the input NetCDF data has been
-  broken-up into smaller files.  Run the [[https://raw.githubusercontent.com/linnabary/collaborate/master/util/combine.py][combine script]] to merge these files
+  broken-up into smaller files.  Run the combine script to merge these files
   together before running any example programs.  This needs to be done only
   once.
   #+BEGIN_SRC
@@ -232,7 +229,7 @@
 * Simple Example
   /Time/: 2 min.
   #
-  The simple simulation /(source: [[https://raw.githubusercontent.com/linnabary/collaborate/master/apps/simple/simple.cpp][simple.cpp]])/ will produce simulation data in
+  The simple simulation /(source: simple.cpp)/ will produce simulation data in
   the ~output~ folder.
   #+BEGIN_SRC
   ~/collaborate $ ./simple.out
@@ -257,7 +254,7 @@
   /Note/: The first time a Python script reads a ~.nc4~ file, it is archived to
   a ~.pkl~ file.  Additional "runs" will access the ~.pkl~ file to save time.
   #
-  Run the [[https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_antenna.py][antenna plot script]] to view the dipole's gain pattern (passing ~-f~
+  Run the antenna plot script to view the dipole's gain pattern (passing ~-f~
   for an interactive 3D plot).
   #+BEGIN_SRC
   ~/collaborate $ util/plot_antenna.py -f
@@ -265,7 +262,7 @@
   #+ATTR_HTML: :style width: 100%; max-width: 250px;
   [[./images/raster/dipole.png]]
   #
-  Run the [[https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_series.py][series plot script]] to graph satellite parameters in time.
+  Run the series plot script to graph satellite parameters in time.
   #+BEGIN_SRC
   ~/collaborate $ util/plot_series.py -f
   #+END_SRC
@@ -279,7 +276,7 @@
   #+BEGIN_SRC
   ~/collaborate $ ./sys/clean.sh
   #+END_SRC
-  The intermediate simulation /(source: [[https://raw.githubusercontent.com/linnabary/collaborate/master/apps/intermediate/intermediate.cpp][intermediate.cpp]])/ will produce
+  The intermediate simulation /(source: intermediate.cpp)/ will produce
   simulation data in the ~output~ folder, including measurement logs.
   #+BEGIN_SRC
   ~/collaborate $ ./intermediate.out
@@ -291,7 +288,7 @@
   network.nc4
   #+END_SRC
   #
-  Run the [[https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_map.py][map plot script]] to view the initial positions of the satellites
+  Run the map plot script to view the initial positions of the satellites
   (passing ~-u~ to include the line-of-sight /contact graph/).
   #+BEGIN_SRC
   ~/collaborate $ util/plot_map.py -u output/network.nc4 -f
@@ -303,14 +300,14 @@
   [[./images/raster/all_los.png]]
   #
   This contact graph can also be viewed as an image with the
-  [[https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_network.py][network plot script]].
+  network plot script.
   #+BEGIN_SRC
   ~/collaborate $ util/plot_network.py -f
   #+END_SRC
   #+ATTR_HTML: :style width: 100%; max-width: 250px;
   [[./images/raster/unweighted.png]]
   #
-  Use the [[https://raw.githubusercontent.com/linnabary/collaborate/master/util/animate_network.py][network animation script]] to visualize instantaneous line-of-sight
+  Use the network animation script to visualize instantaneous line-of-sight
   distances.
   #+BEGIN_SRC
   ~/collaborate $ util/animate_network.py -i output/distance.nc4 -w -f
@@ -319,7 +316,7 @@
   #+HTML: <source src="./anim/network.mp4" type="video/mp4">
   #+HTML: </video>
   #
-  Run the [[https://raw.githubusercontent.com/linnabary/collaborate/master/util/animate_map.py][map animation script]] to visualize satellite motion.  This works best
+  Run the map animation script to visualize satellite motion.  This works best
   without opening a figure (writing to an MP4 file instead).
   #+BEGIN_SRC
   ~/collaborate $ util/animate_map.py
@@ -332,7 +329,7 @@
   #+HTML: <source src="./anim/map.mp4" type="video/mp4">
   #+HTML: Watch Video</video>
   #
-  Run the [[https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_data.py][data plot script]] with an additional argument to view the first frame
+  Run the data plot script with an additional argument to view the first frame
   of ~"TAUTOT"~ + ~"PRECTOT"~ together.
   #+BEGIN_SRC
   ~/collaborate $ util/plot_data.py -j input/nc4/ -f
@@ -347,7 +344,7 @@
   #+BEGIN_SRC
   ~/collaborate $ ./sys/clean.sh
   #+END_SRC
-  The advanced simulation /(source: [[https://raw.githubusercontent.com/linnabary/collaborate/master/apps/advanced/advanced.cpp][advanced.cpp]])/ will produce simulation data
+  The advanced simulation /(source: advanced.cpp)/ will produce simulation data
   to the ~output~ folder, including measurement and communication logs..
   #+BEGIN_SRC
   ~/collaborate $ ./advanced.out
@@ -362,7 +359,7 @@
   tree_0_47_7459.tex
   tree_3_165_5359.tex
   #+END_SRC
-  Run the [[https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_measurement.py][measurement plot script]] to plot a map and graph of a measurement.
+  Run the measurement plot script to plot a map and graph of a measurement.
   These files are created in ~analysis~ unless otherwise specified.
   #+BEGIN_SRC
   ~/collaborate $ util/plot_measurement.py
@@ -371,7 +368,7 @@
   [[./images/raster/measurement.png]]
   #
   Low-level communication channel parameters can be plotted using the
-  [[https://raw.githubusercontent.com/linnabary/collaborate/master/util/plot_channel.py][channel plot script]].
+  channel plot script.
   #+BEGIN_SRC
   ~/collaborate $ util/plot_channel.py -f
   #+END_SRC
@@ -390,24 +387,24 @@
   -----
 * Library Details
 ** License
-   This project is licensed under [[https://raw.githubusercontent.com/linnabary/collaborate/master/LICENSE.txt][LGPL v3.0]] and contains code protected by other
+   This project is licensed under LGPL v3.0 and contains code protected by other
    compatible free-software licenses.
    #+ATTR_HTML: :border 2 :rules all :frame border :width 100%
-   |------------------+------------+------------+-------------+----------------+----------------------|
-   | *Directory*      | *Language* | *License*  | *Copyright* | *Author*       | *Repository*         |
-   |------------------+------------+------------+-------------+----------------+----------------------|
-   | libs/collaborate | C++        | [[https://raw.githubusercontent.com/linnabary/collaborate/master/LICENSE.txt][LGPL v3.0]]  | [[https://raw.githubusercontent.com/linnabary/collaborate/master/COPYRIGHT.txt][Link]]        | Ryan Linnabary | [[https://github.com/linnabary/collaborate][linnabary/collaborate]] |
-   |------------------+------------+------------+-------------+----------------+----------------------|
-   | libs/sgp4        | C++        | [[https://raw.githubusercontent.com/linnabary/collaborate/master/libs/sgp4/LICENSE.txt][Apache 2.0]] | [[https://raw.githubusercontent.com/linnabary/collaborate/master/libs/sgp4/COPYRIGHT.txt][Link]]        | Daniel Warner  | [[https://github.com/dnwrnr/sgp4][dnwrnr/sgp4]]          |
-   |------------------+------------+------------+-------------+----------------+----------------------|
-   | libs/spdlog      | C++        | [[https://raw.githubusercontent.com/linnabary/collaborate/master/libs/spdlog/LICENSE.txt][MIT]]        | [[https://raw.githubusercontent.com/linnabary/collaborate/master/libs/spdlog/COPYRIGHT.txt][Link]]        | Gabi Melman    | [[https://github.com/gabime/spdlog][gabime/spdlog]]        |
-   |------------------+------------+------------+-------------+----------------+----------------------|
-   | libs/nlohmann    | C++        | [[https://raw.githubusercontent.com/linnabary/collaborate/master/libs/nlohmann/LICENSE.txt][MIT]]        | [[https://raw.githubusercontent.com/linnabary/collaborate/master/libs/nlohmann/COPYRIGHT.txt][Link]]        | Niels Lohmann  | [[https://github.com/nlohmann/json][nlohmann/json]]        |
-   |------------------+------------+------------+-------------+----------------+----------------------|
-   | libs/netcdf      | C++        | [[https://raw.githubusercontent.com/linnabary/collaborate/master/libs/netcdf/LICENSE.txt][UniData]]    | [[https://raw.githubusercontent.com/linnabary/collaborate/master/libs/netcdf/COPYRIGHT.txt][Link]]        | Unidata        | [[https://github.com/Unidata/netCDF-cxx4][unidata/netcdf-cxx4]]  |
-   |------------------+------------+------------+-------------+----------------+----------------------|
-   | util             | Python     | [[https://raw.githubusercontent.com/linnabary/collaborate/master/LICENSE.txt][LGPL v3.0]]  | [[https://raw.githubusercontent.com/linnabary/collaborate/master/COPYRIGHT.txt][Link]]        | Ryan Linnabary | [[https://github.com/linnabary/collaborate][linnabary/collaborate]] |
-   |------------------+------------+------------+-------------+----------------+----------------------|
+   |------------------+------------+------------+---------------------------+---------------------|
+   | *Directory*      | *Language* | *License*  | *Author*                  | *Repository*        |
+   |------------------+------------+------------+---------------------------+---------------------|
+   | libs/collaborate | C++        | LGPL v3.0  | The Ohio State University |                     |
+   |------------------+------------+------------+---------------------------+---------------------|
+   | libs/sgp4        | C++        | Apache 2.0 | Daniel Warner             | [[https://github.com/dnwrnr/sgp4][dnwrnr/sgp4]]         |
+   |------------------+------------+------------+---------------------------+---------------------|
+   | libs/spdlog      | C++        | MIT        | Gabi Melman               | [[https://github.com/gabime/spdlog][gabime/spdlog]]       |
+   |------------------+------------+------------+---------------------------+---------------------|
+   | libs/nlohmann    | C++        | MIT        | Niels Lohmann             | [[https://github.com/nlohmann/json][nlohmann/json]]       |
+   |------------------+------------+------------+---------------------------+---------------------|
+   | libs/netcdf      | C++        | Unidata    | Unidata                   | [[https://github.com/Unidata/netCDF-cxx4][unidata/netcdf-cxx4]] |
+   |------------------+------------+------------+---------------------------+---------------------|
+   | util             | Python     | LGPL v3.0  | The Ohio State University |                     |
+   |------------------+------------+------------+---------------------------+---------------------|
 ** Structure
    The C++ library's class hierarchy provides an object-oriented system for
    observing system simulation experiments.  The following illustration shows how
@@ -415,9 +412,9 @@
    #+ATTR_HTML: :style width: 100%; max-width: 600px;
    [[./images/raster/library.png]]
 ** Profiling
-   The call-graph below was created with Valgrind /(source: [[https://raw.githubusercontent.com/linnabary/collaborate/master/sys/profile.sh][profile.sh]])/.  It
+   The call-graph below was created with Valgrind /(source: profile.sh)/.  It
    shows the most common function calls (>5% CPU) for the program
-   [[https://raw.githubusercontent.com/linnabary/collaborate/master/apps/simple/simple.cpp][simple.cpp]].
+   simple.cpp.
    #+BEGIN_SRC
    ~/collaborate $ ./sys/profile.sh ./simple.out
    ~/collaborate $ ls -lSa callgrind*
@@ -429,7 +426,7 @@
 ** Testing
    The Valgrind tool ~memcheck~ is used to evaluate memory behavior.
 *** Simple Example
-    Testing memory behavior for [[https://raw.githubusercontent.com/linnabary/collaborate/master/apps/simple/simple.cpp][simple.cpp]]:
+    Testing memory behavior for simple.cpp:
     #+BEGIN_SRC
     ./sys/memcheck.sh ./simple.out
     ==2119== Memcheck, a memory error detector
@@ -454,7 +451,7 @@
     ==2119== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
     #+END_SRC
 *** Intermediate Example
-    Testing memory behavior for [[https://raw.githubusercontent.com/linnabary/collaborate/master/apps/intermediate/intermediate.cpp][intermediate.cpp]]:
+    Testing memory behavior for intermediate.cpp:
     #+BEGIN_SRC
     ./sys/memcheck.sh ./intermediate.out
     ==1936== Memcheck, a memory error detector
@@ -479,7 +476,7 @@
     ==1936== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
     #+END_SRC
 *** Advanced Example
-    Testing memory behavior for [[https://raw.githubusercontent.com/linnabary/collaborate/master/apps/advanced/advanced.cpp][advanced.cpp]]:
+    Testing memory behavior for advanced.cpp:
     #+BEGIN_SRC
     ./sys/memcheck.sh ./advanced.out
     ==2501== Memcheck, a memory error detector

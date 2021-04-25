@@ -1,0 +1,91 @@
+\hypertarget{util_8h_source}{}\subsection{util.\+h}
+\label{util_8h_source}\index{libs/collaborate/include/collaborate/util.\+h@{libs/collaborate/include/collaborate/util.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_UTIL\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_UTIL\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <algorithm>}
+00020 \textcolor{preprocessor}{#include <climits>}
+00021 \textcolor{preprocessor}{#include <cmath>}
+00022 \textcolor{preprocessor}{#include <complex>}
+00023 \textcolor{preprocessor}{#include <cstdint>}
+00024 \textcolor{preprocessor}{#include <iomanip>}
+00025 \textcolor{preprocessor}{#include <random>}
+00026 \textcolor{preprocessor}{#include <sstream>}
+00027 \textcolor{preprocessor}{#include <string>}
+00028 \textcolor{preprocessor}{#include <vector>}
+00029 
+00030 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00031 \textcolor{keyword}{namespace }collaborate \{
+00032 \textcolor{keyword}{namespace }util \{
+00033 
+\Hypertarget{util_8h_source_l00035}\hyperlink{util_8h_a8d1f6a2e0aa4520710c2d90b8a12b945}{00035} \textcolor{keyword}{typedef} std::complex<double> \hyperlink{util_8h_a8d1f6a2e0aa4520710c2d90b8a12b945}{Complex};
+00036 
+\Hypertarget{util_8h_source_l00038}\hyperlink{util_8h_a975407298bb80f7f2272702fa7bfe14d}{00038} \textcolor{keyword}{typedef} std::vector<Complex> \hyperlink{util_8h_a975407298bb80f7f2272702fa7bfe14d}{Polynomial};
+00039 
+\Hypertarget{util_8h_source_l00041}\hyperlink{util_8h_aafd53d7ece71a9ace600ad244ddb72ac}{00041} constexpr \textcolor{keywordtype}{double} \hyperlink{util_8h_aafd53d7ece71a9ace600ad244ddb72ac}{kPiRad} = M\_PI;
+00042 
+\Hypertarget{util_8h_source_l00044}\hyperlink{util_8h_ab41b2319cbabaf576c9ba15dcba9c0aa}{00044} constexpr \textcolor{keywordtype}{double} \hyperlink{util_8h_ab41b2319cbabaf576c9ba15dcba9c0aa}{kPiByTwoRad} = M\_PI\_2;
+00045 
+\Hypertarget{util_8h_source_l00047}\hyperlink{util_8h_a3a79aec93e2780fa996a064802dc9c5d}{00047} constexpr \textcolor{keywordtype}{double} \hyperlink{util_8h_a3a79aec93e2780fa996a064802dc9c5d}{kTwoPiRad} = 2 * M\_PI;
+00048 
+\Hypertarget{util_8h_source_l00050}\hyperlink{util_8h_ad1122acb7e2ee33cb490199c5992f3ff}{00050} constexpr \textcolor{keywordtype}{double} \hyperlink{util_8h_ad1122acb7e2ee33cb490199c5992f3ff}{kBitsPerByte} = CHAR\_BIT;
+00051 
+00054 
+\Hypertarget{util_8h_source_l00063}\hyperlink{util_8h_a87b98378be06910f70a7d2467f45df07}{00063} \textcolor{keyword}{inline} std::string \hyperlink{util_8h_a87b98378be06910f70a7d2467f45df07}{StringFromDouble}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_input,
+00064                                     \textcolor{keyword}{const} uint8\_t& \_characteristic,
+00065                                     \textcolor{keyword}{const} uint8\_t& \_mantissa) \{
+00066   std::stringstream stream;
+00067   stream << std::setprecision(\_mantissa)
+00068          << std::fixed
+00069          << std::setw(\_characteristic + \_mantissa + 1)
+00070          << std::setfill(\textcolor{charliteral}{'0'})
+00071          << std::internal
+00072          << \_input;
+00073   \textcolor{keywordflow}{return} stream.str();
+00074 \}
+00075 
+\Hypertarget{util_8h_source_l00082}\hyperlink{util_8h_ad1a5ca6ae403ff11e3e628b74727d36a}{00082} \textcolor{keyword}{inline} uint64\_t \hyperlink{util_8h_ad1a5ca6ae403ff11e3e628b74727d36a}{RandomNumberBetween}(\textcolor{keyword}{const} uint64\_t& \_minimum,
+00083                                     \textcolor{keyword}{const} uint64\_t& \_maximum) \{
+00084   std::random\_device seeder;
+00085   std::mt19937 engine(seeder());
+00086   std::uniform\_int\_distribution<int> distribution(\_minimum, \_maximum);
+00087   \textcolor{keywordflow}{return} distribution(engine);
+00088 \}
+00089 
+\Hypertarget{util_8h_source_l00099}\hyperlink{util_8h_a06000e3e4538d7949b83b78663da9554}{00099} \textcolor{keyword}{inline} uint64\_t \hyperlink{util_8h_a06000e3e4538d7949b83b78663da9554}{Index}(\textcolor{keyword}{const} uint64\_t& \_row,
+00100                       \textcolor{keyword}{const} uint64\_t& \_column,
+00101                       \textcolor{keyword}{const} uint64\_t& \_num\_columns) \{
+00102   \textcolor{keywordflow}{return} (\_row * \_num\_columns + \_column);
+00103 \}
+00104 
+00108 \textcolor{keywordtype}{double} \hyperlink{util_8h_a8f96efc8962a36fc0f5f4c4513bb1ed6}{MinimumRoot}(\textcolor{keyword}{const} Polynomial& \_coefficients);
+00109 
+00113 Polynomial \hyperlink{util_8h_ac5254bd53737bca048d12dbda092ddc7}{ComplexRoots}(\textcolor{keyword}{const} Polynomial& \_coefficients);
+00114 
+00119 \textcolor{keywordtype}{void} \hyperlink{util_8h_ac3a132af1e7f25403fc93320ed288ef9}{Laguerre}(\textcolor{keyword}{const} Polynomial& \_coefficients,
+00120               \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \_degree,
+00121               Complex* \_value);
+00122 
+00123 \}  \textcolor{comment}{// namespace util}
+00124 \}  \textcolor{comment}{// namespace collaborate}
+00125 \}  \textcolor{comment}{// namespace osse}
+00126 
+00127 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_UTIL\_H\_}
+\end{DoxyCode}

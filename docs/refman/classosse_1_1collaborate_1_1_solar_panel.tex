@@ -1,0 +1,146 @@
+\hypertarget{classosse_1_1collaborate_1_1_solar_panel}{}\subsection{osse\+:\+:collaborate\+:\+:Solar\+Panel Class Reference}
+\label{classosse_1_1collaborate_1_1_solar_panel}\index{osse\+::collaborate\+::\+Solar\+Panel@{osse\+::collaborate\+::\+Solar\+Panel}}
+
+
+A solar panel.  
+
+
+
+
+{\ttfamily \#include $<$solar\+\_\+panel.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_solar_panel_a060136ae41f3ce295647564b92450e1c}{Solar\+Panel} (const double \&\+\_\+efficiency\+\_\+percent, const double \&\+\_\+surface\+\_\+area\+\_\+m2, const double \&\+\_\+roll\+\_\+rad, const double \&\+\_\+pitch\+\_\+rad, const double \&\+\_\+yaw\+\_\+rad, \hyperlink{classosse_1_1collaborate_1_1_sun}{Sun} $\ast$\+\_\+sun)
+\begin{DoxyCompactList}\small\item\em Constructor from attitude angles. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_solar_panel_ac32a08edad4d388bc8bc859a1bc0a513}{Rx\+PowerW} () const
+\begin{DoxyCompactList}\small\item\em Obtain the received power in a direction (Watts) \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a800aa0d521177fcf9b5175c3f6f6529d}{Update} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+body\+\_\+frame, const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+orbit\+\_\+frame, const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+position\+\_\+m\+\_\+rad)
+\begin{DoxyCompactList}\small\item\em Updates the attitude frame orientation and effective area. \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_solar_panel_ab7c233e3e84dea59e532d0353a0f6038}{effective\+\_\+area\+\_\+m2} () const
+\begin{DoxyCompactList}\small\item\em Get Effective area (meters squared) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_a955f766fe850b04209aa6878473dbd5e}\label{classosse_1_1collaborate_1_1_solar_panel_a955f766fe850b04209aa6878473dbd5e}} 
+static constexpr double \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a955f766fe850b04209aa6878473dbd5e}{k\+Solar\+Irradiance\+W\+Per\+M2} = 1332
+\begin{DoxyCompactList}\small\item\em The sun\textquotesingle{}s irradiance (Watts per meter squared) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_abbab629e0b4d2a6a48e0745b9e250873}\label{classosse_1_1collaborate_1_1_solar_panel_abbab629e0b4d2a6a48e0745b9e250873}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_solar_panel_abbab629e0b4d2a6a48e0745b9e250873}{k\+Efficiency\+Percent\+\_\+}
+\begin{DoxyCompactList}\small\item\em Efficiency (percent) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_ac97b97d9099a7d224605717af1974de1}\label{classosse_1_1collaborate_1_1_solar_panel_ac97b97d9099a7d224605717af1974de1}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_solar_panel_ac97b97d9099a7d224605717af1974de1}{k\+Surface\+Area\+M2\+\_\+}
+\begin{DoxyCompactList}\small\item\em Surface area (meters squared) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_a31a0bcb804b07d0bc4dc5683ce072409}\label{classosse_1_1collaborate_1_1_solar_panel_a31a0bcb804b07d0bc4dc5683ce072409}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a31a0bcb804b07d0bc4dc5683ce072409}{k\+Roll\+Rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Roll angle to host body frame (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_a974ef9d81d8aadcec9b2f5734830c228}\label{classosse_1_1collaborate_1_1_solar_panel_a974ef9d81d8aadcec9b2f5734830c228}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a974ef9d81d8aadcec9b2f5734830c228}{k\+Pitch\+Rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pitch angle to host body frame (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_a37c98f5e1c13ab13b81e195abcca91a5}\label{classosse_1_1collaborate_1_1_solar_panel_a37c98f5e1c13ab13b81e195abcca91a5}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a37c98f5e1c13ab13b81e195abcca91a5}{k\+Yaw\+Rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Yaw angle to host body frame (radians) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_ad99923d6f3d925443fb29b97cb05f781}\label{classosse_1_1collaborate_1_1_solar_panel_ad99923d6f3d925443fb29b97cb05f781}} 
+const \hyperlink{classosse_1_1collaborate_1_1_sun}{Sun} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_solar_panel_ad99923d6f3d925443fb29b97cb05f781}{k\+Sun\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_sun}{Sun}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_ab229ffc8235cb471fd15e78d8d0cb68e}\label{classosse_1_1collaborate_1_1_solar_panel_ab229ffc8235cb471fd15e78d8d0cb68e}} 
+double \hyperlink{classosse_1_1collaborate_1_1_solar_panel_ab229ffc8235cb471fd15e78d8d0cb68e}{effective\+\_\+area\+\_\+m2\+\_\+}
+\begin{DoxyCompactList}\small\item\em Effective area (meters squared) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_a4d0770f4bfd51e69538539700d32ecb3}\label{classosse_1_1collaborate_1_1_solar_panel_a4d0770f4bfd51e69538539700d32ecb3}} 
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \hyperlink{classosse_1_1collaborate_1_1_solar_panel_a4d0770f4bfd51e69538539700d32ecb3}{attitude\+\_\+}
+\begin{DoxyCompactList}\small\item\em Attitude frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+A solar panel. 
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth]{power}}
+\end{DoxyImageNoCaption}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_a060136ae41f3ce295647564b92450e1c}\label{classosse_1_1collaborate_1_1_solar_panel_a060136ae41f3ce295647564b92450e1c}} 
+\index{osse\+::collaborate\+::\+Solar\+Panel@{osse\+::collaborate\+::\+Solar\+Panel}!Solar\+Panel@{Solar\+Panel}}
+\index{Solar\+Panel@{Solar\+Panel}!osse\+::collaborate\+::\+Solar\+Panel@{osse\+::collaborate\+::\+Solar\+Panel}}
+\paragraph{\texorpdfstring{Solar\+Panel()}{SolarPanel()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Solar\+Panel\+::\+Solar\+Panel (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+efficiency\+\_\+percent,  }\item[{const double \&}]{\+\_\+surface\+\_\+area\+\_\+m2,  }\item[{const double \&}]{\+\_\+roll\+\_\+rad,  }\item[{const double \&}]{\+\_\+pitch\+\_\+rad,  }\item[{const double \&}]{\+\_\+yaw\+\_\+rad,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_sun}{Sun} $\ast$}]{\+\_\+sun }\end{DoxyParamCaption})}
+
+
+
+Constructor from attitude angles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+efficiency\+\_\+percent} & Efficiency (percent) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+surface\+\_\+area\+\_\+m2} & Surface area (meters squared) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+roll\+\_\+rad} & Roll angle to host body frame (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+pitch\+\_\+rad} & Pitch angle to host body frame (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+yaw\+\_\+rad} & Yaw angle to host body frame (radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+sun} & \hyperlink{classosse_1_1collaborate_1_1_sun}{Sun} \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_ab7c233e3e84dea59e532d0353a0f6038}\label{classosse_1_1collaborate_1_1_solar_panel_ab7c233e3e84dea59e532d0353a0f6038}} 
+\index{osse\+::collaborate\+::\+Solar\+Panel@{osse\+::collaborate\+::\+Solar\+Panel}!effective\+\_\+area\+\_\+m2@{effective\+\_\+area\+\_\+m2}}
+\index{effective\+\_\+area\+\_\+m2@{effective\+\_\+area\+\_\+m2}!osse\+::collaborate\+::\+Solar\+Panel@{osse\+::collaborate\+::\+Solar\+Panel}}
+\paragraph{\texorpdfstring{effective\+\_\+area\+\_\+m2()}{effective\_area\_m2()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Solar\+Panel\+::effective\+\_\+area\+\_\+m2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Effective area (meters squared) 
+
+\begin{DoxyReturn}{Returns}
+effective\+\_\+area\+\_\+m2\+\_\+ Effective area (meters squared) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_ac32a08edad4d388bc8bc859a1bc0a513}\label{classosse_1_1collaborate_1_1_solar_panel_ac32a08edad4d388bc8bc859a1bc0a513}} 
+\index{osse\+::collaborate\+::\+Solar\+Panel@{osse\+::collaborate\+::\+Solar\+Panel}!Rx\+PowerW@{Rx\+PowerW}}
+\index{Rx\+PowerW@{Rx\+PowerW}!osse\+::collaborate\+::\+Solar\+Panel@{osse\+::collaborate\+::\+Solar\+Panel}}
+\paragraph{\texorpdfstring{Rx\+Power\+W()}{RxPowerW()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Solar\+Panel\+::\+Rx\+PowerW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtain the received power in a direction (Watts) 
+
+\begin{DoxyReturn}{Returns}
+Power received in a specified direction (Watts)
+\end{DoxyReturn}
+\[ I = Solar~Irradiance ~~~ (Watt~per~square~meter) \] \[ \sigma = Effective~Area ~~~ (meters~squared) \] \[ \eta = Efficiency ~~~ (percent) \] \[ P = I\eta\sigma ~~~ (Watts)\] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_solar_panel_a800aa0d521177fcf9b5175c3f6f6529d}\label{classosse_1_1collaborate_1_1_solar_panel_a800aa0d521177fcf9b5175c3f6f6529d}} 
+\index{osse\+::collaborate\+::\+Solar\+Panel@{osse\+::collaborate\+::\+Solar\+Panel}!Update@{Update}}
+\index{Update@{Update}!osse\+::collaborate\+::\+Solar\+Panel@{osse\+::collaborate\+::\+Solar\+Panel}}
+\paragraph{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Solar\+Panel\+::\+Update (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+body\+\_\+frame,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+orbit\+\_\+frame,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+position\+\_\+m\+\_\+rad }\end{DoxyParamCaption})}
+
+
+
+Updates the attitude frame orientation and effective area. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+body\+\_\+frame} & Host\textquotesingle{}s body frame \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+orbit\+\_\+frame} & Host\textquotesingle{}s orbit frame \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+position\+\_\+m\+\_\+rad} & Host\textquotesingle{}s position (meters and radians)\\
+\hline
+\end{DoxyParams}
+\[ \vec{p}_{sun} = Solar~Position ~~~ (meters) \] \[ \vec{p} = Current~Position ~~~ (meters) \] \[ A = Total~Surface~Area ~~~ (meters~squared) \] \[ \hat{n} = Unit~Normal~Vector,~Attitude~Z-Axis \] \[ \sigma = A\cos{(\angle{(\hat{n},\vec{r}_{p,sun})})} ~~~ (meters) \] 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/solar\+\_\+panel.\+h\item 
+libs/collaborate/src/solar\+\_\+panel.\+cpp\end{DoxyCompactItemize}

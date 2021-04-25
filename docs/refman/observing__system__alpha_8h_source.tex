@@ -1,0 +1,68 @@
+\hypertarget{observing__system__alpha_8h_source}{}\subsection{observing\+\_\+system\+\_\+alpha.\+h}
+\label{observing__system__alpha_8h_source}\index{libs/collaborate/include/collaborate/observing\+\_\+system\+\_\+alpha.\+h@{libs/collaborate/include/collaborate/observing\+\_\+system\+\_\+alpha.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_OBSERVING\_SYSTEM\_ALPHA\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_OBSERVING\_SYSTEM\_ALPHA\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <cstdint>}
+00020 \textcolor{preprocessor}{#include <string>}
+00021 \textcolor{preprocessor}{#include <vector>}
+00022 
+00023 \textcolor{preprocessor}{#include "collaborate/channel.h"}
+00024 \textcolor{preprocessor}{#include "collaborate/event\_logger.h"}
+00025 \textcolor{preprocessor}{#include "collaborate/graph\_unweighted.h"}
+00026 \textcolor{preprocessor}{#include "collaborate/observing\_system.h"}
+00027 \textcolor{preprocessor}{#include "collaborate/scheduler.h"}
+00028 \textcolor{preprocessor}{#include "collaborate/simulation\_clock.h"}
+00029 
+00030 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00031 \textcolor{keyword}{namespace }collaborate \{
+00032 
+\Hypertarget{observing__system__alpha_8h_source_l00037}\hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha}{00037} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha}{ObservingSystemAlpha} : \textcolor{keyword}{public} \hyperlink{classosse_1_1collaborate_1_1_observing_system}{ObservingSystem} \{
+00038  \textcolor{keyword}{public}:
+00045   \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_ab282044b92aabebc6d9d31e0c9ab84b6}{ObservingSystemAlpha}(\hyperlink{classosse_1_1collaborate_1_1_sun}{Sun}* \_sun,
+00046                        \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}* \_clock,
+00047                        \hyperlink{classosse_1_1collaborate_1_1_scheduler}{Scheduler}* \_collaborate,
+00048                        \hyperlink{classosse_1_1collaborate_1_1_event_logger}{EventLogger}* \_event\_log,
+00049                        \hyperlink{classosse_1_1collaborate_1_1_data_logger}{DataLogger}* \_network\_log);
+00057   \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_ab282044b92aabebc6d9d31e0c9ab84b6}{ObservingSystemAlpha}(\hyperlink{classosse_1_1collaborate_1_1_sun}{Sun}* \_sun,
+00058                        \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}* \_clock,
+00059                        \hyperlink{classosse_1_1collaborate_1_1_scheduler}{Scheduler}* \_collaborate,
+00060                        \hyperlink{classosse_1_1collaborate_1_1_event_logger}{EventLogger}* \_event\_log,
+00061                        \hyperlink{classosse_1_1collaborate_1_1_data_logger}{DataLogger}* \_network\_log,
+00062                        \textcolor{keyword}{const} \textcolor{keywordtype}{bool}& \_flag);
+00065   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_a99b9d34ab9304624d36253d4431d34e7}{Seed}(\textcolor{keyword}{const} uint64\_t& \_span\_s);
+00069   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_a6f6e7a1f24d7890c9da666e9e90ecb2b}{SeedMany}(\textcolor{keyword}{const} uint64\_t& \_span\_s, \textcolor{keyword}{const} uint16\_t& \_constellation);
+00073   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_ad720f4060e443b244540333b6e5d27a8}{SeedManyMore}(\textcolor{keyword}{const} uint64\_t& \_span\_s, \textcolor{keyword}{const} uint16\_t& \_constellation);
+00075   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_aa08dadc203f46736cc75d4a1a5ef60f8}{Update}();
+00077   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_a8a7798f3de1f2b96524d1457d9f3143f}{LinesOfSight}();
+00078 
+00079  \textcolor{keyword}{private}:
+00081   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_a19bf647d15aeb16d71082e1aef2ba140}{ArbitrateCommunication}();
+00083   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_a28f5ffebc95dc94c95de69732ce8ee29}{Specular}();
+\Hypertarget{observing__system__alpha_8h_source_l00085}\hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_afb9f4173b5226b349365b7d529fa93e2}{00085}   \hyperlink{classosse_1_1collaborate_1_1_graph_unweighted}{GraphUnweighted} \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_afb9f4173b5226b349365b7d529fa93e2}{unweighted\_};
+\Hypertarget{observing__system__alpha_8h_source_l00087}\hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_a69f8f791a0d6289f2d043a4a2ec6912c}{00087}   std::vector<Channel> \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_a69f8f791a0d6289f2d043a4a2ec6912c}{channels\_};
+\Hypertarget{observing__system__alpha_8h_source_l00089}\hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_a5aaa729d1e8c2778865626843035e510}{00089}   \textcolor{keywordtype}{bool} \hyperlink{classosse_1_1collaborate_1_1_observing_system_alpha_a5aaa729d1e8c2778865626843035e510}{flag\_};
+00090 \};
+00091 
+00092 \}  \textcolor{comment}{// namespace collaborate}
+00093 \}  \textcolor{comment}{// namespace osse}
+00094 
+00095 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_OBSERVING\_SYSTEM\_ALPHA\_H\_}
+\end{DoxyCode}

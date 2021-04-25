@@ -1,0 +1,108 @@
+\hypertarget{classosse_1_1collaborate_1_1_data_processor_source}{}\subsection{osse\+:\+:collaborate\+:\+:Data\+Processor\+Source Class Reference}
+\label{classosse_1_1collaborate_1_1_data_processor_source}\index{osse\+::collaborate\+::\+Data\+Processor\+Source@{osse\+::collaborate\+::\+Data\+Processor\+Source}}
+
+
+A source/informer satellite\textquotesingle{}s internal data processor.  
+
+
+
+
+{\ttfamily \#include $<$data\+\_\+processor\+\_\+source.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Data\+Processor\+Source\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classosse_1_1collaborate_1_1_data_processor_source__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_processor_source_abda2d1b8e2939b332b1690ea1bbd2e21}\label{classosse_1_1collaborate_1_1_data_processor_source_abda2d1b8e2939b332b1690ea1bbd2e21}} 
+\hyperlink{classosse_1_1collaborate_1_1_data_processor_source_abda2d1b8e2939b332b1690ea1bbd2e21}{Data\+Processor\+Source} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_processor_source_af72b963c9cbf47f265e5f8deb4ec098f}\label{classosse_1_1collaborate_1_1_data_processor_source_af72b963c9cbf47f265e5f8deb4ec098f}} 
+\hyperlink{classosse_1_1collaborate_1_1_data_processor_source_af72b963c9cbf47f265e5f8deb4ec098f}{Data\+Processor\+Source} (const bool \&\+\_\+flag)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_data_processor_source_a625d453c95bf1491290afdd0b85d4681}{Compute} (const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_packet_raw}{Packet\+Raw} $>$ \&\+\_\+raw\+\_\+packets, const uint16\+\_\+t \&\+\_\+source\+\_\+index, const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ $\ast$\+\_\+min\+\_\+list, std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ $\ast$\+\_\+max\+\_\+list, std\+::vector$<$ std\+::pair$<$ bool, uint16\+\_\+t $>$$>$ $\ast$\+\_\+feedback) const
+\begin{DoxyCompactList}\small\item\em Processes a sensor measurement. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_data_processor_source_ae9b24ff12942f0c667064a349d12fa9b}{Regression} (const bool \&\+\_\+success, const uint16\+\_\+t \&\+\_\+constellation)
+\begin{DoxyCompactList}\small\item\em Adapts thresholds in response to feedback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_processor_source_a676104998e0edb31c85f3ace7408ea30}\label{classosse_1_1collaborate_1_1_data_processor_source_a676104998e0edb31c85f3ace7408ea30}} 
+double \hyperlink{classosse_1_1collaborate_1_1_data_processor_source_a676104998e0edb31c85f3ace7408ea30}{regression\+\_\+step\+\_\+}
+\begin{DoxyCompactList}\small\item\em Size of correction in regression action. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_processor_source_a987bff6789aae12fa88d317347304beb}\label{classosse_1_1collaborate_1_1_data_processor_source_a987bff6789aae12fa88d317347304beb}} 
+double \hyperlink{classosse_1_1collaborate_1_1_data_processor_source_a987bff6789aae12fa88d317347304beb}{threshold\+\_\+rain\+\_\+}
+\begin{DoxyCompactList}\small\item\em Cloud depth minimum for existence of rain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_processor_source_a9644f1ea065308146c05106d13dc2ccc}\label{classosse_1_1collaborate_1_1_data_processor_source_a9644f1ea065308146c05106d13dc2ccc}} 
+bool \hyperlink{classosse_1_1collaborate_1_1_data_processor_source_a9644f1ea065308146c05106d13dc2ccc}{flag\+\_\+}
+\begin{DoxyCompactList}\small\item\em Flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+A source/informer satellite\textquotesingle{}s internal data processor. 
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_processor_source_a625d453c95bf1491290afdd0b85d4681}\label{classosse_1_1collaborate_1_1_data_processor_source_a625d453c95bf1491290afdd0b85d4681}} 
+\index{osse\+::collaborate\+::\+Data\+Processor\+Source@{osse\+::collaborate\+::\+Data\+Processor\+Source}!Compute@{Compute}}
+\index{Compute@{Compute}!osse\+::collaborate\+::\+Data\+Processor\+Source@{osse\+::collaborate\+::\+Data\+Processor\+Source}}
+\paragraph{\texorpdfstring{Compute()}{Compute()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Data\+Processor\+Source\+::\+Compute (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_packet_raw}{Packet\+Raw} $>$ \&}]{\+\_\+raw\+\_\+packets,  }\item[{const uint16\+\_\+t \&}]{\+\_\+source\+\_\+index,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ $\ast$}]{\+\_\+min\+\_\+list,  }\item[{std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ $\ast$}]{\+\_\+max\+\_\+list,  }\item[{std\+::vector$<$ std\+::pair$<$ bool, uint16\+\_\+t $>$$>$ $\ast$}]{\+\_\+feedback }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Processes a sensor measurement. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+raw\+\_\+packets} & List of raw measurement packets \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+source\+\_\+index} & Index of source node \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+min\+\_\+list} & List of minimal suggestions \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+max\+\_\+list} & List of maximum suggestions \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+feedback} & List of feedback target node indices \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_data_processor_af984306eb4619e7d5823a7293fe568cb}{osse\+::collaborate\+::\+Data\+Processor}.
+
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_data_processor_source_ae9b24ff12942f0c667064a349d12fa9b}\label{classosse_1_1collaborate_1_1_data_processor_source_ae9b24ff12942f0c667064a349d12fa9b}} 
+\index{osse\+::collaborate\+::\+Data\+Processor\+Source@{osse\+::collaborate\+::\+Data\+Processor\+Source}!Regression@{Regression}}
+\index{Regression@{Regression}!osse\+::collaborate\+::\+Data\+Processor\+Source@{osse\+::collaborate\+::\+Data\+Processor\+Source}}
+\paragraph{\texorpdfstring{Regression()}{Regression()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Data\+Processor\+Source\+::\+Regression (\begin{DoxyParamCaption}\item[{const bool \&}]{\+\_\+success,  }\item[{const uint16\+\_\+t \&}]{\+\_\+constellation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adapts thresholds in response to feedback. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+success} & Whether the measurement exceeded the threshold \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+constellation} & Constellation of the target satellite \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_data_processor_a4efa75369a65d2a6011093facfcac44a}{osse\+::collaborate\+::\+Data\+Processor}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/data\+\_\+processor\+\_\+source.\+h\item 
+libs/collaborate/src/data\+\_\+processor\+\_\+source.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,80 @@
+\hypertarget{packet__forward_8h_source}{}\subsection{packet\+\_\+forward.\+h}
+\label{packet__forward_8h_source}\index{libs/collaborate/include/collaborate/packet\+\_\+forward.\+h@{libs/collaborate/include/collaborate/packet\+\_\+forward.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PACKET\_FORWARD\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PACKET\_FORWARD\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <array>}
+00020 \textcolor{preprocessor}{#include <cstdint>}
+00021 \textcolor{preprocessor}{#include <ostream>}
+00022 \textcolor{preprocessor}{#include <string>}
+00023 \textcolor{preprocessor}{#include <utility>}
+00024 \textcolor{preprocessor}{#include <vector>}
+00025 
+00026 \textcolor{preprocessor}{#include "collaborate/packet.h"}
+00027 
+00028 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00029 \textcolor{keyword}{namespace }collaborate \{
+00030 
+\Hypertarget{packet__forward_8h_source_l00033}\hyperlink{classosse_1_1collaborate_1_1_packet_forward}{00033} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_packet_forward}{PacketForward} : \textcolor{keyword}{public} \hyperlink{classosse_1_1collaborate_1_1_packet}{Packet} \{
+00034  \textcolor{keyword}{public}:
+\Hypertarget{packet__forward_8h_source_l00036}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a47107f0bbd0e8648650abeebb46fefc9}{00036}   \textcolor{keyword}{static} constexpr \textcolor{keywordtype}{int} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a47107f0bbd0e8648650abeebb46fefc9}{kPacketForwardSizeBytes} = 312;
+\Hypertarget{packet__forward_8h_source_l00038}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_ae6a49cb87c138068b0e4f9c68a4a202f}{00038}   \textcolor{keyword}{static} constexpr \textcolor{keywordtype}{int} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_ae6a49cb87c138068b0e4f9c68a4a202f}{kMaxTransfers} = 30;
+\Hypertarget{packet__forward_8h_source_l00040}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a31d3aee3aa9c241a30910ccc365b8316}{00040}   \textcolor{keyword}{static} constexpr \textcolor{keywordtype}{int} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a31d3aee3aa9c241a30910ccc365b8316}{kBytesPerTransfer} = 10;
+\Hypertarget{packet__forward_8h_source_l00042}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5ae3c5868c471ffc222a30a647092f3c}{00042}   \textcolor{keyword}{static} constexpr \textcolor{keywordtype}{int} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5ae3c5868c471ffc222a30a647092f3c}{kEventIndex} = 300;
+\Hypertarget{packet__forward_8h_source_l00044}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a539708e3f37b9de4dcb8245d348a9087}{00044}   \textcolor{keyword}{static} constexpr \textcolor{keywordtype}{int} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a539708e3f37b9de4dcb8245d348a9087}{kFeedbackIndex} = 310;
+\Hypertarget{packet__forward_8h_source_l00046}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{00046}   \textcolor{keyword}{typedef} std::pair<uint16\_t, uint64\_t> \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Event};
+\Hypertarget{packet__forward_8h_source_l00048}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}{00048}   \textcolor{keyword}{typedef} std::vector<Event> \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}{PartialRoute};
+\Hypertarget{packet__forward_8h_source_l00050}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5b42a7c3605c5a6c7e0880599b213240}{00050}   \textcolor{keyword}{typedef} std::array<Event, kMaxTransfers> \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5b42a7c3605c5a6c7e0880599b213240}{Route};
+00053   \textcolor{keyword}{explicit} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_aa9d4d7abe36998c9178db59950c18c51}{PacketForward}(\textcolor{keyword}{const} std::vector<uint8\_t>& \_payload);
+00058   \hyperlink{classosse_1_1collaborate_1_1_packet_forward_aa9d4d7abe36998c9178db59950c18c51}{PacketForward}(\textcolor{keyword}{const} PartialRoute& \_partial\_route,
+00059                 \textcolor{keyword}{const} Event& \_event,
+00060                 \textcolor{keyword}{const} uint16\_t& \_feedback);
+00063   std::string \hyperlink{classosse_1_1collaborate_1_1_packet_forward_ab1bc40a24079aac6e1ee579e76b6e4a3}{ToString}() \textcolor{keyword}{const};
+\Hypertarget{packet__forward_8h_source_l00066}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a186c0e8f307fb9495533e4abc977b86b}{00066}   \textcolor{keyword}{const} Route& \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a186c0e8f307fb9495533e4abc977b86b}{route}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a6e1aebd75f31a98f1effe8011480607d}{route\_};\}
+\Hypertarget{packet__forward_8h_source_l00069}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a6807359ebbff9386a42e8310493cccc3}{00069}   \textcolor{keyword}{const} Event& \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a6807359ebbff9386a42e8310493cccc3}{event}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_ada88ba82c98c358b3c5200300d322f9e}{event\_};\}
+\Hypertarget{packet__forward_8h_source_l00072}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_ada8a2b432af1e7e4dc09bcf056e45273}{00072}   \textcolor{keyword}{const} uint16\_t& \hyperlink{classosse_1_1collaborate_1_1_packet_forward_ada8a2b432af1e7e4dc09bcf056e45273}{feedback}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a93607aa047ad213bc9938374dcbe1e64}{feedback\_};\}
+00075   PartialRoute \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a1c3ee630b59d3db2a4e9e7484c1c7752}{DecodePartialRoute}();
+00076 
+00077  \textcolor{keyword}{private}:
+00083   std::vector<uint8\_t> \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5f6bf9e22a6c956b08593eb35b149543}{PackAll}(\textcolor{keyword}{const} PartialRoute& \_partial\_route,
+00084                                \textcolor{keyword}{const} Event& \_event,
+00085                                \textcolor{keyword}{const} uint16\_t& \_feedback) \textcolor{keyword}{const};
+00089   Route \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a3c77c0ab27c74b52945244faf8ce3d5e}{EncodeRoute}(\textcolor{keyword}{const} PartialRoute& \_partial\_route) \textcolor{keyword}{const};
+00093   Route \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a34d3be1f164ab0b1ee52396c8e5ec2cc}{UnpackRoute}(\textcolor{keyword}{const} std::vector<uint8\_t>& \_payload) \textcolor{keyword}{const};
+00097   Event \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a954b32499a8ca1e5d68da03b567dc2e3}{UnpackEvent}(\textcolor{keyword}{const} std::vector<uint8\_t>& \_payload) \textcolor{keyword}{const};
+00101   uint16\_t \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4498a5e0e0c38145f88238df36ad815d}{UnpackFeedback}(\textcolor{keyword}{const} std::vector<uint8\_t>& \_payload) \textcolor{keyword}{const};
+\Hypertarget{packet__forward_8h_source_l00103}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a6e1aebd75f31a98f1effe8011480607d}{00103}   Route \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a6e1aebd75f31a98f1effe8011480607d}{route\_};
+\Hypertarget{packet__forward_8h_source_l00105}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_ada88ba82c98c358b3c5200300d322f9e}{00105}   Event \hyperlink{classosse_1_1collaborate_1_1_packet_forward_ada88ba82c98c358b3c5200300d322f9e}{event\_};
+\Hypertarget{packet__forward_8h_source_l00107}\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a93607aa047ad213bc9938374dcbe1e64}{00107}   uint16\_t \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a93607aa047ad213bc9938374dcbe1e64}{feedback\_};
+00108 \};
+00109 
+00113 \textcolor{keyword}{inline} std::ostream& operator<<(std::ostream& strm,
+00114                                 \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_packet_forward}{PacketForward}& \_control\_packet) \{
+00115   \textcolor{keywordflow}{return} strm << \_control\_packet.\hyperlink{classosse_1_1collaborate_1_1_packet_forward_ab1bc40a24079aac6e1ee579e76b6e4a3}{ToString}();
+00116 \}
+00117 
+00123 std::vector<PacketForward> ReadControlBuffer(
+00124     \textcolor{keyword}{const} std::vector<uint8\_t>& \_buffer);
+00125 
+00126 \}  \textcolor{comment}{// namespace collaborate}
+00127 \}  \textcolor{comment}{// namespace osse}
+00128 
+00129 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_PACKET\_FORWARD\_H\_}
+\end{DoxyCode}

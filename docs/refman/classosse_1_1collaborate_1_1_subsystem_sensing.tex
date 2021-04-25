@@ -1,0 +1,348 @@
+\hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing}{}\subsection{osse\+:\+:collaborate\+:\+:Subsystem\+Sensing Class Reference}
+\label{classosse_1_1collaborate_1_1_subsystem_sensing}\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+
+
+An interface for RF sensing.  
+
+
+
+
+{\ttfamily \#include $<$subsystem\+\_\+sensing.\+h$>$}
+
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structosse_1_1collaborate_1_1_subsystem_sensing_1_1_log_buffer}{Log\+Buffer}
+\begin{DoxyCompactList}\small\item\em A buffer for logged node data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a40c7c3573a1e53e3d1b5455c51a79b70}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a40c7c3573a1e53e3d1b5455c51a79b70}} 
+typedef struct \hyperlink{structosse_1_1collaborate_1_1_subsystem_sensing_1_1_log_buffer}{osse\+::collaborate\+::\+Subsystem\+Sensing\+::\+Log\+Buffer} \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a40c7c3573a1e53e3d1b5455c51a79b70}{Log\+Buffer}
+\begin{DoxyCompactList}\small\item\em A buffer for logged node data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a86a15f70b159a115f6682a795cba3b13}{Subsystem\+Sensing} (const \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} $\ast$\+\_\+antenna, \hyperlink{classosse_1_1collaborate_1_1_sensor}{Sensor} $\ast$\+\_\+sensor)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a7ab0187c0ebdf98d98190c5cbeff49b2}{Measure} (const uint16\+\_\+t \&\+\_\+informer\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Measures for a specified time. \end{DoxyCompactList}\item 
+bool \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_aa2e63167e5a5fc6c646febeb263a4b22}{Update} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+position\+\_\+m\+\_\+rad, const int \+\_\+node\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Obtain a measurement from the earth\+\_\+data. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_abd60540872a1fad85bf8ec99e82f1e4d}{Orient\+Antenna} (const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+orbit\+\_\+frame, const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&\+\_\+body\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Calculates a new attitude frame for the antenna. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_aca7bea84c4184675d161c698ec0318a9}{Load\+Data} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload)
+\begin{DoxyCompactList}\small\item\em Adds data to the data buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a637cf0e89bc362c63d4b66f493fab083}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a637cf0e89bc362c63d4b66f493fab083}} 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a637cf0e89bc362c63d4b66f493fab083}{Erase\+Data\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Empties data buffer. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a8d770dd2a5632d02759baeaa6fb3e590}{set\+\_\+data\+\_\+buffer} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+data\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Set data buffer. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a7f87c28bdaa990f8f94116b096db9e59}{k\+Antenna} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna}. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a3fbab25a150abeec9081d0441234613c}{antenna\+\_\+frame} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} reference frame. \end{DoxyCompactList}\item 
+const std\+::vector$<$ uint8\+\_\+t $>$ \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a094f36e93f5eaa7fa64ddfd7c5194192}{data\+\_\+buffer} () const
+\begin{DoxyCompactList}\small\item\em Get Data buffer. \end{DoxyCompactList}\item 
+const bool \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a21b24d19773e1a831335c6b279bf21b9}{active} () const
+\begin{DoxyCompactList}\small\item\em Activity status. \end{DoxyCompactList}\item 
+const uint64\+\_\+t \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a8ed2eb5dfbb7d722c04950fd77d8b5e0}{elapsed\+\_\+s} () const
+\begin{DoxyCompactList}\small\item\em Get time counter (seconds) \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_ad29be395e00832a8a3a5958a449d491a}{set\+\_\+complete} (const bool \&\+\_\+complete)
+\begin{DoxyCompactList}\small\item\em Sets the complete flag. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_sensor}{Sensor} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_acab2a1de4777a5ef9552dc8823949a1b}{sensor} () const
+\begin{DoxyCompactList}\small\item\em Get The sensor. \end{DoxyCompactList}\item 
+const uint64\+\_\+t \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_ab94e0390b0014014b66b49815f6b25cb}{expiration\+\_\+s} () const
+\begin{DoxyCompactList}\small\item\em Get The time limit for activity. \end{DoxyCompactList}\item 
+const bool \& \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_addbe1b3cecafc40119deaa33359069b5}{complete} () const
+\begin{DoxyCompactList}\small\item\em Get whether or not the measurement is complete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a56cb5fced3dd63c0f2d14fed8a4f1cf7}{Flush} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock, const int \+\_\+node\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Output the logged data to a netcdf file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a503fdc0d0f764dd7d61638d2ba23926e}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a503fdc0d0f764dd7d61638d2ba23926e}} 
+\hyperlink{classosse_1_1collaborate_1_1_sensor}{Sensor} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a503fdc0d0f764dd7d61638d2ba23926e}{sensor\+\_\+}
+\begin{DoxyCompactList}\small\item\em The sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_ae8bebb9418505e5cccf99c4b6f9bee49}\label{classosse_1_1collaborate_1_1_subsystem_sensing_ae8bebb9418505e5cccf99c4b6f9bee49}} 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_ae8bebb9418505e5cccf99c4b6f9bee49}{expiration\+\_\+s\+\_\+}
+\begin{DoxyCompactList}\small\item\em The time limit for activity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_adc94dcf762ca1d4b969a0a503c5e3ed6}\label{classosse_1_1collaborate_1_1_subsystem_sensing_adc94dcf762ca1d4b969a0a503c5e3ed6}} 
+bool \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_adc94dcf762ca1d4b969a0a503c5e3ed6}{complete\+\_\+}
+\begin{DoxyCompactList}\small\item\em Whether or not the measurement is complete. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a7916855d290de78a685cfd668631e863}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a7916855d290de78a685cfd668631e863}} 
+uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a7916855d290de78a685cfd668631e863}{informer\+\_\+index\+\_\+}
+\begin{DoxyCompactList}\small\item\em Index of the informer node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_afdc810bfd795fcac61884ed8a1bf7956}\label{classosse_1_1collaborate_1_1_subsystem_sensing_afdc810bfd795fcac61884ed8a1bf7956}} 
+\hyperlink{structosse_1_1collaborate_1_1_subsystem_sensing_1_1_log_buffer}{Log\+Buffer} \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_afdc810bfd795fcac61884ed8a1bf7956}{buffer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Buffer for logged data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a9015f4c7dfbe2d3f7cedaae0b0c62be3}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a9015f4c7dfbe2d3f7cedaae0b0c62be3}} 
+const \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a9015f4c7dfbe2d3f7cedaae0b0c62be3}{k\+Antenna\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_ad6ca9951f1043cf96209c8bc7440427c}\label{classosse_1_1collaborate_1_1_subsystem_sensing_ad6ca9951f1043cf96209c8bc7440427c}} 
+\hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_ad6ca9951f1043cf96209c8bc7440427c}{antenna\+\_\+frame\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} reference frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a0efe18b40e18db7aff3315006d0d29f5}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a0efe18b40e18db7aff3315006d0d29f5}} 
+std\+::vector$<$ uint8\+\_\+t $>$ \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a0efe18b40e18db7aff3315006d0d29f5}{data\+\_\+buffer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Data buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a5ccb7693a3282609ef174c866032b7ba}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a5ccb7693a3282609ef174c866032b7ba}} 
+bool \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a5ccb7693a3282609ef174c866032b7ba}{active\+\_\+}
+\begin{DoxyCompactList}\small\item\em Activity status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a81f649b8d63d894a9d44a1657f7bf4c7}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a81f649b8d63d894a9d44a1657f7bf4c7}} 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_subsystem_sensing_a81f649b8d63d894a9d44a1657f7bf4c7}{elapsed\+\_\+s\+\_\+}
+\begin{DoxyCompactList}\small\item\em Get time counter (seconds) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An interface for RF sensing. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a86a15f70b159a115f6682a795cba3b13}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a86a15f70b159a115f6682a795cba3b13}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!Subsystem\+Sensing@{Subsystem\+Sensing}}
+\index{Subsystem\+Sensing@{Subsystem\+Sensing}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{Subsystem\+Sensing()}{SubsystemSensing()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Subsystem\+Sensing\+::\+Subsystem\+Sensing (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} $\ast$}]{\+\_\+antenna,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_sensor}{Sensor} $\ast$}]{\+\_\+sensor }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+antenna} & The antenna \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+sensor} & The sensor \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a21b24d19773e1a831335c6b279bf21b9}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a21b24d19773e1a831335c6b279bf21b9}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!active@{active}}
+\index{active@{active}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{active()}{active()}}
+{\footnotesize\ttfamily const bool\& osse\+::collaborate\+::\+Subsystem\+Sensing\+::active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Activity status. 
+
+\begin{DoxyReturn}{Returns}
+active\+\_\+ Activity status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a3fbab25a150abeec9081d0441234613c}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a3fbab25a150abeec9081d0441234613c}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!antenna\+\_\+frame@{antenna\+\_\+frame}}
+\index{antenna\+\_\+frame@{antenna\+\_\+frame}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{antenna\+\_\+frame()}{antenna\_frame()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} osse\+::collaborate\+::\+Subsystem\+Sensing\+::antenna\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} reference frame. 
+
+\begin{DoxyReturn}{Returns}
+antenna\+\_\+frame\+\_\+ \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} reference frame 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_addbe1b3cecafc40119deaa33359069b5}\label{classosse_1_1collaborate_1_1_subsystem_sensing_addbe1b3cecafc40119deaa33359069b5}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!complete@{complete}}
+\index{complete@{complete}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{complete()}{complete()}}
+{\footnotesize\ttfamily const bool\& osse\+::collaborate\+::\+Subsystem\+Sensing\+::complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get whether or not the measurement is complete. 
+
+\begin{DoxyReturn}{Returns}
+complete\+\_\+ Whether or not the measurement is complete 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a094f36e93f5eaa7fa64ddfd7c5194192}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a094f36e93f5eaa7fa64ddfd7c5194192}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!data\+\_\+buffer@{data\+\_\+buffer}}
+\index{data\+\_\+buffer@{data\+\_\+buffer}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{data\+\_\+buffer()}{data\_buffer()}}
+{\footnotesize\ttfamily const std\+::vector$<$uint8\+\_\+t$>$\& osse\+::collaborate\+::\+Subsystem\+Sensing\+::data\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Data buffer. 
+
+\begin{DoxyReturn}{Returns}
+data\+\_\+buffer\+\_\+ Data buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a8ed2eb5dfbb7d722c04950fd77d8b5e0}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a8ed2eb5dfbb7d722c04950fd77d8b5e0}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!elapsed\+\_\+s@{elapsed\+\_\+s}}
+\index{elapsed\+\_\+s@{elapsed\+\_\+s}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{elapsed\+\_\+s()}{elapsed\_s()}}
+{\footnotesize\ttfamily const uint64\+\_\+t\& osse\+::collaborate\+::\+Subsystem\+Sensing\+::elapsed\+\_\+s (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get time counter (seconds) 
+
+\begin{DoxyReturn}{Returns}
+elapsed\+\_\+s\+\_\+ Time counter (seconds) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_ab94e0390b0014014b66b49815f6b25cb}\label{classosse_1_1collaborate_1_1_subsystem_sensing_ab94e0390b0014014b66b49815f6b25cb}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!expiration\+\_\+s@{expiration\+\_\+s}}
+\index{expiration\+\_\+s@{expiration\+\_\+s}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{expiration\+\_\+s()}{expiration\_s()}}
+{\footnotesize\ttfamily const uint64\+\_\+t\& osse\+::collaborate\+::\+Subsystem\+Sensing\+::expiration\+\_\+s (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get The time limit for activity. 
+
+\begin{DoxyReturn}{Returns}
+expiration\+\_\+s\+\_\+ The time limit for activity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a56cb5fced3dd63c0f2d14fed8a4f1cf7}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a56cb5fced3dd63c0f2d14fed8a4f1cf7}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!Flush@{Flush}}
+\index{Flush@{Flush}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{Flush()}{Flush()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Sensing\+::\+Flush (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const int}]{\+\_\+node\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Output the logged data to a netcdf file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & The simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+node\+\_\+index} & Unknown \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a7f87c28bdaa990f8f94116b096db9e59}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a7f87c28bdaa990f8f94116b096db9e59}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!k\+Antenna@{k\+Antenna}}
+\index{k\+Antenna@{k\+Antenna}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{k\+Antenna()}{kAntenna()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna}$\ast$ osse\+::collaborate\+::\+Subsystem\+Sensing\+::k\+Antenna (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna}. 
+
+\begin{DoxyReturn}{Returns}
+k\+Antenna\+\_\+ \hyperlink{classosse_1_1collaborate_1_1_antenna}{Antenna} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_aca7bea84c4184675d161c698ec0318a9}\label{classosse_1_1collaborate_1_1_subsystem_sensing_aca7bea84c4184675d161c698ec0318a9}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!Load\+Data@{Load\+Data}}
+\index{Load\+Data@{Load\+Data}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{Load\+Data()}{LoadData()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Sensing\+::\+Load\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload }\end{DoxyParamCaption})}
+
+
+
+Adds data to the data buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a7ab0187c0ebdf98d98190c5cbeff49b2}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a7ab0187c0ebdf98d98190c5cbeff49b2}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!Measure@{Measure}}
+\index{Measure@{Measure}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{Measure()}{Measure()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Sensing\+::\+Measure (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+informer\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Measures for a specified time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+informer\+\_\+index} & Index of the informer node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_abd60540872a1fad85bf8ec99e82f1e4d}\label{classosse_1_1collaborate_1_1_subsystem_sensing_abd60540872a1fad85bf8ec99e82f1e4d}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!Orient\+Antenna@{Orient\+Antenna}}
+\index{Orient\+Antenna@{Orient\+Antenna}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{Orient\+Antenna()}{OrientAntenna()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Sensing\+::\+Orient\+Antenna (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+orbit\+\_\+frame,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{Reference\+Frame} \&}]{\+\_\+body\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Calculates a new attitude frame for the antenna. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+orbit\+\_\+frame} & Satellite orbit frame \\
+\hline
+{\em \+\_\+body\+\_\+frame} & Satellite body frame \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_acab2a1de4777a5ef9552dc8823949a1b}\label{classosse_1_1collaborate_1_1_subsystem_sensing_acab2a1de4777a5ef9552dc8823949a1b}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!sensor@{sensor}}
+\index{sensor@{sensor}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{sensor()}{sensor()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_sensor}{Sensor}$\ast$ osse\+::collaborate\+::\+Subsystem\+Sensing\+::sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get The sensor. 
+
+\begin{DoxyReturn}{Returns}
+sensor\+\_\+ The sensor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_ad29be395e00832a8a3a5958a449d491a}\label{classosse_1_1collaborate_1_1_subsystem_sensing_ad29be395e00832a8a3a5958a449d491a}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!set\+\_\+complete@{set\+\_\+complete}}
+\index{set\+\_\+complete@{set\+\_\+complete}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{set\+\_\+complete()}{set\_complete()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Sensing\+::set\+\_\+complete (\begin{DoxyParamCaption}\item[{const bool \&}]{\+\_\+complete }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the complete flag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+complete} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_a8d770dd2a5632d02759baeaa6fb3e590}\label{classosse_1_1collaborate_1_1_subsystem_sensing_a8d770dd2a5632d02759baeaa6fb3e590}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!set\+\_\+data\+\_\+buffer@{set\+\_\+data\+\_\+buffer}}
+\index{set\+\_\+data\+\_\+buffer@{set\+\_\+data\+\_\+buffer}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{set\+\_\+data\+\_\+buffer()}{set\_data\_buffer()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Subsystem\+Sensing\+::set\+\_\+data\+\_\+buffer (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+data\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Set data buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+buffer} & Data buffer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_subsystem_sensing_aa2e63167e5a5fc6c646febeb263a4b22}\label{classosse_1_1collaborate_1_1_subsystem_sensing_aa2e63167e5a5fc6c646febeb263a4b22}} 
+\index{osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}!Update@{Update}}
+\index{Update@{Update}!osse\+::collaborate\+::\+Subsystem\+Sensing@{osse\+::collaborate\+::\+Subsystem\+Sensing}}
+\paragraph{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily bool osse\+::collaborate\+::\+Subsystem\+Sensing\+::\+Update (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const int}]{\+\_\+node\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Obtain a measurement from the earth\+\_\+data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & The simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+position\+\_\+m\+\_\+rad} & The position of the node \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+node\+\_\+index} & Unknown \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+active\+\_\+ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/subsystem\+\_\+sensing.\+h\item 
+libs/collaborate/src/subsystem\+\_\+sensing.\+cpp\end{DoxyCompactItemize}

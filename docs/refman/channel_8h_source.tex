@@ -1,0 +1,119 @@
+\hypertarget{channel_8h_source}{}\subsection{channel.\+h}
+\label{channel_8h_source}\index{libs/collaborate/include/collaborate/channel.\+h@{libs/collaborate/include/collaborate/channel.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_CHANNEL\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_CHANNEL\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <vector>}
+00020 
+00021 \textcolor{preprocessor}{#include "collaborate/node.h"}
+00022 \textcolor{preprocessor}{#include "collaborate/simulation\_clock.h"}
+00023 \textcolor{preprocessor}{#include "collaborate/vector.h"}
+00024 
+00025 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00026 \textcolor{keyword}{namespace }collaborate \{
+00027 
+\Hypertarget{channel_8h_source_l00030}\hyperlink{classosse_1_1collaborate_1_1_channel}{00030} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_channel}{Channel} \{
+00031  \textcolor{keyword}{public}:
+\Hypertarget{channel_8h_source_l00033}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer}{00033}   \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer}{LogBuffer} \{
+\Hypertarget{channel_8h_source_l00035}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a2afbd3902c0b14c4e7d92e6aaca9ddbe}{00035}     std::vector<uint64\_t> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a2afbd3902c0b14c4e7d92e6aaca9ddbe}{ticks};
+\Hypertarget{channel_8h_source_l00037}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a2b722866b6c38f72d6a6a78588e83e57}{00037}     std::vector<int> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a2b722866b6c38f72d6a6a78588e83e57}{year};
+\Hypertarget{channel_8h_source_l00039}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a5bf009c0a260dbfbbd26cd66f48ee7e5}{00039}     std::vector<int> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a5bf009c0a260dbfbbd26cd66f48ee7e5}{month};
+\Hypertarget{channel_8h_source_l00041}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a6244cfdb1aa952a848cfea6a9a8df2c6}{00041}     std::vector<int> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a6244cfdb1aa952a848cfea6a9a8df2c6}{day};
+\Hypertarget{channel_8h_source_l00043}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a7ba50c40a5463bce1b0144438a0755f9}{00043}     std::vector<int> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a7ba50c40a5463bce1b0144438a0755f9}{hour};
+\Hypertarget{channel_8h_source_l00045}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a344210af8b5d1392167226a43ed02bba}{00045}     std::vector<int> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a344210af8b5d1392167226a43ed02bba}{minute};
+\Hypertarget{channel_8h_source_l00047}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a4afeab41dc091bccba3381a6652b09ec}{00047}     std::vector<int> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a4afeab41dc091bccba3381a6652b09ec}{second};
+\Hypertarget{channel_8h_source_l00049}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a0f19bbc995c38da271e275608c8dba8a}{00049}     std::vector<int> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a0f19bbc995c38da271e275608c8dba8a}{microsecond};
+\Hypertarget{channel_8h_source_l00051}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a0ee6c7be1c08fa4ea5a4433bda7bb916}{00051}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a0ee6c7be1c08fa4ea5a4433bda7bb916}{los\_speed};
+\Hypertarget{channel_8h_source_l00053}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a4bbc5970aed3602f6ca26d929ddd9bd4}{00053}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a4bbc5970aed3602f6ca26d929ddd9bd4}{omega};
+\Hypertarget{channel_8h_source_l00055}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_aaf752b60d0de36d0ccff466e08310f1b}{00055}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_aaf752b60d0de36d0ccff466e08310f1b}{distance};
+\Hypertarget{channel_8h_source_l00057}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a259373bde5e90a1026ab15325ee7aaad}{00057}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a259373bde5e90a1026ab15325ee7aaad}{delay};
+\Hypertarget{channel_8h_source_l00059}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a809c176c69d8ca05e30792da5f642911}{00059}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a809c176c69d8ca05e30792da5f642911}{data\_rate};
+\Hypertarget{channel_8h_source_l00061}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_aa40e252db25b48247fcd4544576db18d}{00061}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_aa40e252db25b48247fcd4544576db18d}{tx\_idx};
+\Hypertarget{channel_8h_source_l00063}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_ad53874a6e9c76bd59f5c627251d31e05}{00063}     std::vector<uint64\_t> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_ad53874a6e9c76bd59f5c627251d31e05}{tx\_buffer};
+\Hypertarget{channel_8h_source_l00065}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a23ef40834d9844581cafa554655c8508}{00065}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a23ef40834d9844581cafa554655c8508}{tx\_lon};
+\Hypertarget{channel_8h_source_l00067}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a84d5db169e0a173a40deb6e3e2947095}{00067}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a84d5db169e0a173a40deb6e3e2947095}{tx\_lat};
+\Hypertarget{channel_8h_source_l00069}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_ab06702edd8dc785a89f992a06f689416}{00069}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_ab06702edd8dc785a89f992a06f689416}{tx\_alt};
+\Hypertarget{channel_8h_source_l00071}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a80490bf31421e5c8118c588b11bde788}{00071}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a80490bf31421e5c8118c588b11bde788}{tx\_gain};
+\Hypertarget{channel_8h_source_l00073}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a51e177e8f0650b125cab6c64a5ff0212}{00073}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a51e177e8f0650b125cab6c64a5ff0212}{tx\_power};
+\Hypertarget{channel_8h_source_l00075}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a8d2fddf86e5ab79f0079c5c0d2eea6e3}{00075}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a8d2fddf86e5ab79f0079c5c0d2eea6e3}{rx\_idx};
+\Hypertarget{channel_8h_source_l00077}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_ae373cb73d60b231587ed311302972654}{00077}     std::vector<uint64\_t> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_ae373cb73d60b231587ed311302972654}{rx\_buffer};
+\Hypertarget{channel_8h_source_l00079}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a01e100a280efca37aaef04cc1f90d71d}{00079}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a01e100a280efca37aaef04cc1f90d71d}{rx\_lon};
+\Hypertarget{channel_8h_source_l00081}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_ad9d1672a8d8e78078d1b06efbe135668}{00081}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_ad9d1672a8d8e78078d1b06efbe135668}{rx\_lat};
+\Hypertarget{channel_8h_source_l00083}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_acda4e7cac97825af0b1c0a273caa542f}{00083}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_acda4e7cac97825af0b1c0a273caa542f}{rx\_alt};
+\Hypertarget{channel_8h_source_l00085}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a4a1fe81a56f14fae41aac661a68e25f9}{00085}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a4a1fe81a56f14fae41aac661a68e25f9}{rx\_gain};
+\Hypertarget{channel_8h_source_l00087}\hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a8d643b5e82bf2993297601be7d99e57f}{00087}     std::vector<double> \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer_a8d643b5e82bf2993297601be7d99e57f}{rx\_power};
+00088   \} \hyperlink{classosse_1_1collaborate_1_1_channel_a39f733e7246a07d8a2741106f5311dd6}{LogBuffer};
+\Hypertarget{channel_8h_source_l00090}\hyperlink{classosse_1_1collaborate_1_1_channel_a8f8d63e606e491d47331834221b34159}{00090}   \textcolor{keyword}{static} constexpr \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_channel_a8f8d63e606e491d47331834221b34159}{kSpeedOfLightMPerS} = 299792458.0;
+00094   \hyperlink{classosse_1_1collaborate_1_1_channel_a2f160167f6144d6c2c6d91639b003e47}{Channel}(\hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_tx\_node, \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \_rx\_node);
+00096   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_ab8e91e0798d0a4270669b3bffd7bf0a4}{Start}();
+00100   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_adf7ff16e5dcde4bd51ef2e602568d4eb}{Update}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_clock, \textcolor{keyword}{const} \textcolor{keywordtype}{bool}& \_flag);
+00103   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_channel_a44c51b493f2c32e35fbc2104168dd98d}{PredictTransferDurationS}() \textcolor{keyword}{const};
+00106   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_channel_a325a93527ae5a31ae54142c0e4d684ca}{PredictTransferSizeBytes}() \textcolor{keyword}{const};
+\Hypertarget{channel_8h_source_l00109}\hyperlink{classosse_1_1collaborate_1_1_channel_ac156e6d32458cf614675b8fa87866f25}{00109}   \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \hyperlink{classosse_1_1collaborate_1_1_channel_ac156e6d32458cf614675b8fa87866f25}{tx\_node}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_channel_a2e4a3cec53dd0d2abc5fe1641459c0e7}{tx\_node\_};\}
+\Hypertarget{channel_8h_source_l00112}\hyperlink{classosse_1_1collaborate_1_1_channel_abc1c2e786daa390bcd1cd0982566e5f2}{00112}   \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \hyperlink{classosse_1_1collaborate_1_1_channel_abc1c2e786daa390bcd1cd0982566e5f2}{rx\_node}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_channel_a0d4d4a4b172d2444980cbae914d74361}{rx\_node\_};\}
+\Hypertarget{channel_8h_source_l00115}\hyperlink{classosse_1_1collaborate_1_1_channel_a4027ef876124bbe4cf0bd4b00acaf884}{00115}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_channel_a4027ef876124bbe4cf0bd4b00acaf884}{rx\_gain\_db}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_channel_a6eee9b25ba7942592cb29679db3770e8}{rx\_gain\_db\_};\}
+\Hypertarget{channel_8h_source_l00118}\hyperlink{classosse_1_1collaborate_1_1_channel_ab810753b421db910e6a1ee938a2080af}{00118}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_channel_ab810753b421db910e6a1ee938a2080af}{tx\_gain\_db}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_channel_a42c1469e873ae36e596a3f937bdf66ed}{tx\_gain\_db\_};\}
+\Hypertarget{channel_8h_source_l00121}\hyperlink{classosse_1_1collaborate_1_1_channel_aad77cd18b2279048700dd944aacfa8fc}{00121}   \textcolor{keyword}{const} \textcolor{keywordtype}{bool}& \hyperlink{classosse_1_1collaborate_1_1_channel_aad77cd18b2279048700dd944aacfa8fc}{active}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_channel_a2d6624f0bbbb368eaa2d291a77587d0d}{active\_};\}
+\Hypertarget{channel_8h_source_l00124}\hyperlink{classosse_1_1collaborate_1_1_channel_ad6f31877da7e33e97a454bad6d00b93a}{00124}   \textcolor{keyword}{const} \textcolor{keywordtype}{bool}& \hyperlink{classosse_1_1collaborate_1_1_channel_ad6f31877da7e33e97a454bad6d00b93a}{error\_flag}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_channel_af75105b9b55712ecca44c7d91f085338}{error\_flag\_};\}
+\Hypertarget{channel_8h_source_l00127}\hyperlink{classosse_1_1collaborate_1_1_channel_a320df78e3d3cab27387910b653a36c42}{00127}   \textcolor{keyword}{const} \textcolor{keywordtype}{bool}& \hyperlink{classosse_1_1collaborate_1_1_channel_a320df78e3d3cab27387910b653a36c42}{success\_flag}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_channel_a59d55edf9ee92cf28e4f304d17587223}{success\_flag\_};\}
+\Hypertarget{channel_8h_source_l00130}\hyperlink{classosse_1_1collaborate_1_1_channel_a9cfb391686ccfce59c85e7a72274423e}{00130}   \textcolor{keyword}{const} \textcolor{keywordtype}{bool}& \hyperlink{classosse_1_1collaborate_1_1_channel_a9cfb391686ccfce59c85e7a72274423e}{open}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_channel_a269d85437ed1de4d35d67c06257b72c0}{open\_};\}
+00131 
+00132  \textcolor{keyword}{private}:
+00135   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_afa3d5712ec01f8ebe7c332c6f70b6f34}{FakeTransfer}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_clock);
+00137   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_a7883ecefbb4beb76b4b4344c5b77fd4b}{RealTransfer}();
+00140   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_ad63128fabbcbd8ad76512937333324f8}{Buffer}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_clock);
+00143   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_a557ea9a5efc851158e8faac44e7727dd}{Flush}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{SimulationClock}& \_clock);
+00150   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_channel_a82f92a2447146dccb81de8557994afb9}{CalculateDataRateBitsPerS}() \textcolor{keyword}{const};
+00157   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_a7e37174d94c0da66432d7b0ace4b2ba4}{UpdateOmegaRadPerS}();
+00163   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_a89877e3e5c3cdfdd53b59001fea27b93}{UpdateDistanceM}();
+00176   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_a6fb6a52d46f410cb369e42be9a7213bf}{UpdateLosUnit}();
+00183   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_a757a6ce4a001b986bf3ab746b37ec3b7}{UpdateLosSpeedMPerS}();
+00197   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_a95ee1344e01272f80d638f3cde164e9c}{UpdateGainDb}();
+00202   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_a8f419e4573c12ba04b82c023c8f7326f}{UpdateOpen}();
+00209   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_a1b086fb253ad06cdbaff229b9916ee7b}{UpdatePowerW}();
+00213   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_channel_abd29033e2e6c9edbb5fd54923a444b26}{UpdateDelayS}();
+\Hypertarget{channel_8h_source_l00215}\hyperlink{classosse_1_1collaborate_1_1_channel_a2e4a3cec53dd0d2abc5fe1641459c0e7}{00215}   \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \hyperlink{classosse_1_1collaborate_1_1_channel_a2e4a3cec53dd0d2abc5fe1641459c0e7}{tx\_node\_};
+\Hypertarget{channel_8h_source_l00217}\hyperlink{classosse_1_1collaborate_1_1_channel_a0d4d4a4b172d2444980cbae914d74361}{00217}   \hyperlink{classosse_1_1collaborate_1_1_node}{Node}* \hyperlink{classosse_1_1collaborate_1_1_channel_a0d4d4a4b172d2444980cbae914d74361}{rx\_node\_};
+\Hypertarget{channel_8h_source_l00219}\hyperlink{classosse_1_1collaborate_1_1_channel_a3fad3094032c9667487f197177e6fc72}{00219}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_channel_a3fad3094032c9667487f197177e6fc72}{data\_rate\_bits\_per\_s\_};
+\Hypertarget{channel_8h_source_l00221}\hyperlink{classosse_1_1collaborate_1_1_channel_a85b1f3fd35f688d8ba9827066e5ef49d}{00221}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_channel_a85b1f3fd35f688d8ba9827066e5ef49d}{omega\_rad\_per\_s\_};
+\Hypertarget{channel_8h_source_l00223}\hyperlink{classosse_1_1collaborate_1_1_channel_ada3d728365912011d4df5c56ccd59365}{00223}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_channel_ada3d728365912011d4df5c56ccd59365}{rx\_power\_w\_};
+\Hypertarget{channel_8h_source_l00225}\hyperlink{classosse_1_1collaborate_1_1_channel_a6eee9b25ba7942592cb29679db3770e8}{00225}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_channel_a6eee9b25ba7942592cb29679db3770e8}{rx\_gain\_db\_};
+\Hypertarget{channel_8h_source_l00227}\hyperlink{classosse_1_1collaborate_1_1_channel_aebb77505cfd79838ab10170b87be5e7f}{00227}   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_channel_aebb77505cfd79838ab10170b87be5e7f}{rx\_los\_unit\_};
+\Hypertarget{channel_8h_source_l00229}\hyperlink{classosse_1_1collaborate_1_1_channel_a2085f92bb595a75a1f936970dfe57bb6}{00229}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_channel_a2085f92bb595a75a1f936970dfe57bb6}{tx\_power\_w\_};
+\Hypertarget{channel_8h_source_l00231}\hyperlink{classosse_1_1collaborate_1_1_channel_a42c1469e873ae36e596a3f937bdf66ed}{00231}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_channel_a42c1469e873ae36e596a3f937bdf66ed}{tx\_gain\_db\_};
+\Hypertarget{channel_8h_source_l00233}\hyperlink{classosse_1_1collaborate_1_1_channel_a1f324f3e44d5c8c6279a3caf1fc4602b}{00233}   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_channel_a1f324f3e44d5c8c6279a3caf1fc4602b}{tx\_los\_unit\_};
+\Hypertarget{channel_8h_source_l00235}\hyperlink{classosse_1_1collaborate_1_1_channel_a52ae5da3fdf5cfae94dec68588da935e}{00235}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_channel_a52ae5da3fdf5cfae94dec68588da935e}{los\_speed\_m\_per\_s\_};
+\Hypertarget{channel_8h_source_l00237}\hyperlink{classosse_1_1collaborate_1_1_channel_a60a7429514284cc331face20bacf0c08}{00237}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_channel_a60a7429514284cc331face20bacf0c08}{distance\_m\_};
+\Hypertarget{channel_8h_source_l00239}\hyperlink{classosse_1_1collaborate_1_1_channel_a567bfcfd31f64c6921e062384963de5a}{00239}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_channel_a567bfcfd31f64c6921e062384963de5a}{delay\_s\_};
+\Hypertarget{channel_8h_source_l00241}\hyperlink{classosse_1_1collaborate_1_1_channel_a2d6624f0bbbb368eaa2d291a77587d0d}{00241}   \textcolor{keywordtype}{bool} \hyperlink{classosse_1_1collaborate_1_1_channel_a2d6624f0bbbb368eaa2d291a77587d0d}{active\_};
+\Hypertarget{channel_8h_source_l00243}\hyperlink{classosse_1_1collaborate_1_1_channel_ab19359c577701cabb1a7ada40c5feca8}{00243}   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_channel_ab19359c577701cabb1a7ada40c5feca8}{fake\_rx\_buffer\_bytes\_};
+\Hypertarget{channel_8h_source_l00245}\hyperlink{classosse_1_1collaborate_1_1_channel_a4d270da79a74f7f5261d3dbb861d931e}{00245}   uint64\_t \hyperlink{classosse_1_1collaborate_1_1_channel_a4d270da79a74f7f5261d3dbb861d931e}{fake\_tx\_buffer\_bytes\_};
+\Hypertarget{channel_8h_source_l00247}\hyperlink{classosse_1_1collaborate_1_1_channel_a1c314c850379b6f0c33b92aad8722800}{00247}   std::vector<double> \hyperlink{classosse_1_1collaborate_1_1_channel_a1c314c850379b6f0c33b92aad8722800}{log\_buffer\_};
+\Hypertarget{channel_8h_source_l00249}\hyperlink{classosse_1_1collaborate_1_1_channel_af75105b9b55712ecca44c7d91f085338}{00249}   \textcolor{keywordtype}{bool} \hyperlink{classosse_1_1collaborate_1_1_channel_af75105b9b55712ecca44c7d91f085338}{error\_flag\_};
+\Hypertarget{channel_8h_source_l00251}\hyperlink{classosse_1_1collaborate_1_1_channel_a59d55edf9ee92cf28e4f304d17587223}{00251}   \textcolor{keywordtype}{bool} \hyperlink{classosse_1_1collaborate_1_1_channel_a59d55edf9ee92cf28e4f304d17587223}{success\_flag\_};
+\Hypertarget{channel_8h_source_l00253}\hyperlink{classosse_1_1collaborate_1_1_channel_a269d85437ed1de4d35d67c06257b72c0}{00253}   \textcolor{keywordtype}{bool} \hyperlink{classosse_1_1collaborate_1_1_channel_a269d85437ed1de4d35d67c06257b72c0}{open\_};
+\Hypertarget{channel_8h_source_l00255}\hyperlink{classosse_1_1collaborate_1_1_channel_af7057de27216b3871fb9ef97e5c14e31}{00255}   \hyperlink{structosse_1_1collaborate_1_1_channel_1_1_log_buffer}{LogBuffer} \hyperlink{classosse_1_1collaborate_1_1_channel_af7057de27216b3871fb9ef97e5c14e31}{log\_};
+00256 \};
+00257 
+00258 \}  \textcolor{comment}{// namespace collaborate}
+00259 \}  \textcolor{comment}{// namespace osse}
+00260 
+00261 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_CHANNEL\_H\_}
+\end{DoxyCode}

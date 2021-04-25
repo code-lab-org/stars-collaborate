@@ -1,0 +1,52 @@
+\hypertarget{event__logger_8h_source}{}\subsection{event\+\_\+logger.\+h}
+\label{event__logger_8h_source}\index{libs/collaborate/include/collaborate/event\+\_\+logger.\+h@{libs/collaborate/include/collaborate/event\+\_\+logger.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_EVENT\_LOGGER\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_EVENT\_LOGGER\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <memory>}
+00020 \textcolor{preprocessor}{#include <string>}
+00021 
+00022 \textcolor{preprocessor}{#include "spdlog/fmt/ostr.h"}
+00023 \textcolor{preprocessor}{#include "spdlog/sinks/basic\_file\_sink.h"}
+00024 \textcolor{preprocessor}{#include "spdlog/sinks/stdout\_color\_sinks.h"}
+00025 \textcolor{preprocessor}{#include "spdlog/spdlog.h"}
+00026 
+00027 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00028 \textcolor{keyword}{namespace }collaborate \{
+00029 
+\Hypertarget{event__logger_8h_source_l00032}\hyperlink{classosse_1_1collaborate_1_1_event_logger}{00032} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_event_logger}{EventLogger} \{
+00033  \textcolor{keyword}{public}:
+00036   \textcolor{keyword}{explicit} \hyperlink{classosse_1_1collaborate_1_1_event_logger_a9c87908de9f2673fe6464b59df4082d1}{EventLogger}(\textcolor{keyword}{const} std::string& \_path);
+00041   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_event_logger_ad76479bfe7482caf22f6fd9e70445640}{Initialize}(\textcolor{keyword}{const} std::string& \_level,
+00042                   \textcolor{keyword}{const} std::string& \_console\_level,
+00043                   \textcolor{keyword}{const} \textcolor{keywordtype}{bool}& \_utc);
+\Hypertarget{event__logger_8h_source_l00046}\hyperlink{classosse_1_1collaborate_1_1_event_logger_a76adbd3cee03eb159797eb14dd496bc6}{00046}   spdlog::logger* \hyperlink{classosse_1_1collaborate_1_1_event_logger_a76adbd3cee03eb159797eb14dd496bc6}{log}() \{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_event_logger_af5ebd14804c7ffd7a584e9a389d47f53}{log\_}.get();\}
+00047 
+00048  \textcolor{keyword}{private}:
+\Hypertarget{event__logger_8h_source_l00050}\hyperlink{classosse_1_1collaborate_1_1_event_logger_a251a1f450efb2a8b48689dff5056e8cd}{00050}   std::shared\_ptr<spdlog::sinks::stdout\_color\_sink\_mt> \hyperlink{classosse_1_1collaborate_1_1_event_logger_a251a1f450efb2a8b48689dff5056e8cd}{console\_};
+\Hypertarget{event__logger_8h_source_l00052}\hyperlink{classosse_1_1collaborate_1_1_event_logger_a42a6aa81525ec44dcee5b76d8a238e5b}{00052}   std::shared\_ptr<spdlog::sinks::basic\_file\_sink\_mt> \hyperlink{classosse_1_1collaborate_1_1_event_logger_a42a6aa81525ec44dcee5b76d8a238e5b}{file\_};
+\Hypertarget{event__logger_8h_source_l00054}\hyperlink{classosse_1_1collaborate_1_1_event_logger_af5ebd14804c7ffd7a584e9a389d47f53}{00054}   std::unique\_ptr<spdlog::logger> \hyperlink{classosse_1_1collaborate_1_1_event_logger_af5ebd14804c7ffd7a584e9a389d47f53}{log\_};
+00055 \};
+00056 
+00057 \}  \textcolor{comment}{// namespace collaborate}
+00058 \}  \textcolor{comment}{// namespace osse}
+00059 
+00060 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_EVENT\_LOGGER\_H\_}
+\end{DoxyCode}

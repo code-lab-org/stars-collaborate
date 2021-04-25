@@ -1,0 +1,492 @@
+\hypertarget{classosse_1_1collaborate_1_1_vector}{}\subsection{osse\+:\+:collaborate\+:\+:Vector Class Reference}
+\label{classosse_1_1collaborate_1_1_vector}\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+
+
+An element of the real coordinate space (cartesian and spherical)  
+
+
+
+
+{\ttfamily \#include $<$vector.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector_af495b2efd099a897642ec06be87abc16}{Vector} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector_a5eefcbb3a555a019d530b8b82ac568af}{Vector} (double \+\_\+x\+\_\+m, double \+\_\+y\+\_\+m, double \+\_\+z\+\_\+m)
+\begin{DoxyCompactList}\small\item\em 3D Cartesian Constructor -\/ Calculates the 4th (magnitude) \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_vector_a427667ec4887828003c2d3652462ad94}{Complete\+Coordinates} ()
+\begin{DoxyCompactList}\small\item\em Updates the vector\textquotesingle{}s spherical and cylindrical coordinates. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_vector_a21c93523c1b0c578e88b4ba831b2021e}{Calculate\+Theta\+Rad} () const
+\begin{DoxyCompactList}\small\item\em Calculates a theta value between 0 and pi (radians) \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_vector_af4e5954804008f6fd041536ab5bb8efe}{Calculate\+Phi\+Rad} () const
+\begin{DoxyCompactList}\small\item\em Calculates a phi value between 0 and 2$\ast$pi (radians) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classosse_1_1collaborate_1_1_vector_acc6656dc258e0eab8cdd3baa0ac7a255}{Obtain\+Log} () const
+\begin{DoxyCompactList}\small\item\em Logs the \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a7d9cb2cd1fdeaae594569c3f8886a17c}{operator-\/} () const
+\begin{DoxyCompactList}\small\item\em Negative operator. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_aab7a37d0c9d6af906635510b15063cac}{operator+} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Addition operator. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a1481fdc0bedbb74a453b75f63599e35a}{operator-\/} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Subtraction operator. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a1067b0871f08bdca0c1021b3763adc80}{Unit} () const
+\begin{DoxyCompactList}\small\item\em Produces a unit vector in the current direction. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_vector_aa33392d41fcf146180125cc0b6a84efb}{Dot} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Calculates the dot product. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a0bfa8cd492b8664c00b2e750ab13334f}{Cross} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Calculates the cross product between two vectors. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a091294293b9af4b040f8784fa9b74cab}{operator$\ast$} (const double \&\+\_\+scalar) const
+\begin{DoxyCompactList}\small\item\em Multiplication operator. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_aeaa64febdb5435cbd3c1e747e9920a11}{operator/} (const double \&\+\_\+scalar) const
+\begin{DoxyCompactList}\small\item\em Division operator. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector_adadeade94ada0735d117526a0f996c40}{operator bool} () const
+\begin{DoxyCompactList}\small\item\em Boolean operator. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_vector_a992473ff0ed786e7891d7608ad99163b}{Angle\+Between} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Calculate the angle between two coordinates. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a52ba4cdc72da4646b3868af7f51b100d}{Ortho\+Normal} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Calculate the unit vector orthonormal to other vector. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a722c3aaf225c4324ff7939bd98827016}{Constraint\+To\+Plane} (const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+other, const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&\+\_\+reference) const
+\begin{DoxyCompactList}\small\item\em Constrain to plane. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classosse_1_1collaborate_1_1_vector_af5fb0bf89a48d682cfbfda512b5fb24d}{To\+String} () const
+\begin{DoxyCompactList}\small\item\em Outputs the vector to a string. \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}{x\+\_\+m} () const
+\begin{DoxyCompactList}\small\item\em Get X value (meters) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}{y\+\_\+m} () const
+\begin{DoxyCompactList}\small\item\em Get Y value (meters) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}{z\+\_\+m} () const
+\begin{DoxyCompactList}\small\item\em Get z\+\_\+value (meters) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_vector_a43ab316f8ed0dce4dc6006c80ea97987}{r\+\_\+m} () const
+\begin{DoxyCompactList}\small\item\em Get maginitude (meters) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_vector_a61bc6a4b1074ca5d69e8eb581128b6a0}{rho\+\_\+m} () const
+\begin{DoxyCompactList}\small\item\em Get the distance from z-\/axis in the x/y-\/plane (meters) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_vector_aa74ca108111d3b520f5e39407d3c4c0a}{theta\+\_\+rad} () const
+\begin{DoxyCompactList}\small\item\em Get angle from the positive z-\/axis (radians) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_vector_a616314b8bb82923b6bc689bd8af88552}{phi\+\_\+rad} () const
+\begin{DoxyCompactList}\small\item\em Get angle from the positive x-\/axis (radians) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a73968df95eae0627d3ed6fe1eb1d0121}\label{classosse_1_1collaborate_1_1_vector_a73968df95eae0627d3ed6fe1eb1d0121}} 
+double \hyperlink{classosse_1_1collaborate_1_1_vector_a73968df95eae0627d3ed6fe1eb1d0121}{x\+\_\+m\+\_\+}
+\begin{DoxyCompactList}\small\item\em X value (meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a9ed86f0af6f6d64bbdc79eec9f5ac7f7}\label{classosse_1_1collaborate_1_1_vector_a9ed86f0af6f6d64bbdc79eec9f5ac7f7}} 
+double \hyperlink{classosse_1_1collaborate_1_1_vector_a9ed86f0af6f6d64bbdc79eec9f5ac7f7}{y\+\_\+m\+\_\+}
+\begin{DoxyCompactList}\small\item\em Y value (meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_adb0356716c196646509b48043fe53c9d}\label{classosse_1_1collaborate_1_1_vector_adb0356716c196646509b48043fe53c9d}} 
+double \hyperlink{classosse_1_1collaborate_1_1_vector_adb0356716c196646509b48043fe53c9d}{z\+\_\+m\+\_\+}
+\begin{DoxyCompactList}\small\item\em Z value (meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a6c20f040fc2015801419933255e5c4db}\label{classosse_1_1collaborate_1_1_vector_a6c20f040fc2015801419933255e5c4db}} 
+double \hyperlink{classosse_1_1collaborate_1_1_vector_a6c20f040fc2015801419933255e5c4db}{r\+\_\+m\+\_\+}
+\begin{DoxyCompactList}\small\item\em Magnitude (meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a94a19254344f6906a759953c96b86001}\label{classosse_1_1collaborate_1_1_vector_a94a19254344f6906a759953c96b86001}} 
+double \hyperlink{classosse_1_1collaborate_1_1_vector_a94a19254344f6906a759953c96b86001}{rho\+\_\+m\+\_\+}
+\begin{DoxyCompactList}\small\item\em Distance from z-\/axis in the x/y-\/plane (meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_aa6d88c9293f3b75c387ccf88cb8cd1de}\label{classosse_1_1collaborate_1_1_vector_aa6d88c9293f3b75c387ccf88cb8cd1de}} 
+double \hyperlink{classosse_1_1collaborate_1_1_vector_aa6d88c9293f3b75c387ccf88cb8cd1de}{theta\+\_\+rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Angle from the positive z-\/axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a7d1e83ec48925e32d614617bfe31223e}\label{classosse_1_1collaborate_1_1_vector_a7d1e83ec48925e32d614617bfe31223e}} 
+double \hyperlink{classosse_1_1collaborate_1_1_vector_a7d1e83ec48925e32d614617bfe31223e}{phi\+\_\+rad\+\_\+}
+\begin{DoxyCompactList}\small\item\em Angle from the positive x-\/axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An element of the real coordinate space (cartesian and spherical) 
+
+\[ \vec{v} = \begin{bmatrix} v_x\\v_y\\v_z \end{bmatrix} ~~~(meters) \] 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_af495b2efd099a897642ec06be87abc16}\label{classosse_1_1collaborate_1_1_vector_af495b2efd099a897642ec06be87abc16}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Vector\+::\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+\[ \vec{s} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} ~~~(meters) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a5eefcbb3a555a019d530b8b82ac568af}\label{classosse_1_1collaborate_1_1_vector_a5eefcbb3a555a019d530b8b82ac568af}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Vector\+::\+Vector (\begin{DoxyParamCaption}\item[{double}]{\+\_\+x\+\_\+m,  }\item[{double}]{\+\_\+y\+\_\+m,  }\item[{double}]{\+\_\+z\+\_\+m }\end{DoxyParamCaption})}
+
+
+
+3D Cartesian Constructor -\/ Calculates the 4th (magnitude) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+x\+\_\+m} & X value (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+y\+\_\+m} & Y value (meters) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+z\+\_\+m} & Z value (meters)\\
+\hline
+\end{DoxyParams}
+\[ \vec{s} = \begin{bmatrix} s_x\\s_y\\s_z \end{bmatrix} ~~~(meters) \] 
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a992473ff0ed786e7891d7608ad99163b}\label{classosse_1_1collaborate_1_1_vector_a992473ff0ed786e7891d7608ad99163b}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!Angle\+Between@{Angle\+Between}}
+\index{Angle\+Between@{Angle\+Between}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{Angle\+Between()}{AngleBetween()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Vector\+::\+Angle\+Between (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+other }\end{DoxyParamCaption}) const}
+
+
+
+Calculate the angle between two coordinates. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+other} & Other coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Angle between the coordinates (radians)
+\end{DoxyReturn}
+\[ \angle(s, t) = \arccos{\left(\frac{s \cdot t}{\lvert s\rvert\lvert t\rvert}\right)} \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_af4e5954804008f6fd041536ab5bb8efe}\label{classosse_1_1collaborate_1_1_vector_af4e5954804008f6fd041536ab5bb8efe}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!Calculate\+Phi\+Rad@{Calculate\+Phi\+Rad}}
+\index{Calculate\+Phi\+Rad@{Calculate\+Phi\+Rad}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{Calculate\+Phi\+Rad()}{CalculatePhiRad()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Vector\+::\+Calculate\+Phi\+Rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Calculates a phi value between 0 and 2$\ast$pi (radians) 
+
+\begin{DoxyReturn}{Returns}
+A phi value between 0 and 2$\ast$pi (radians)
+\end{DoxyReturn}
+\[ \phi = \arctan{\left(\frac{y}{x}\right)} (\mathrm{mod}\ 2\pi) ~~~(radians) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a21c93523c1b0c578e88b4ba831b2021e}\label{classosse_1_1collaborate_1_1_vector_a21c93523c1b0c578e88b4ba831b2021e}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!Calculate\+Theta\+Rad@{Calculate\+Theta\+Rad}}
+\index{Calculate\+Theta\+Rad@{Calculate\+Theta\+Rad}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{Calculate\+Theta\+Rad()}{CalculateThetaRad()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Vector\+::\+Calculate\+Theta\+Rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Calculates a theta value between 0 and pi (radians) 
+
+\begin{DoxyReturn}{Returns}
+A theta value between 0 and pi (radians)
+\end{DoxyReturn}
+\[ \theta = \left\lvert\arctan{\left(\frac{\rho}{z}\right)}\right\rvert ~~~(radians) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a427667ec4887828003c2d3652462ad94}\label{classosse_1_1collaborate_1_1_vector_a427667ec4887828003c2d3652462ad94}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!Complete\+Coordinates@{Complete\+Coordinates}}
+\index{Complete\+Coordinates@{Complete\+Coordinates}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{Complete\+Coordinates()}{CompleteCoordinates()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Vector\+::\+Complete\+Coordinates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the vector\textquotesingle{}s spherical and cylindrical coordinates. 
+
+\[ r = \sqrt{x^2 + y^2 + z^2} ~~~(meters) \] \[ \rho = \sqrt{x^2 + y^2} ~~~(meters) \] \[ \theta = \left\lvert\arctan{\left(\frac{\rho}{z}\right)}\right\rvert ~~~(radians) \] \[ \phi = \arctan{\frac{y}{x}} (\mathrm{mod}\ 2\pi) ~~~(radians) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a722c3aaf225c4324ff7939bd98827016}\label{classosse_1_1collaborate_1_1_vector_a722c3aaf225c4324ff7939bd98827016}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!Constraint\+To\+Plane@{Constraint\+To\+Plane}}
+\index{Constraint\+To\+Plane@{Constraint\+To\+Plane}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{Constraint\+To\+Plane()}{ConstraintToPlane()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Vector\+::\+Constraint\+To\+Plane (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+other,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+reference }\end{DoxyParamCaption}) const}
+
+
+
+Constrain to plane. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+other} & Other vector \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+reference} & Reference vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} in the same plane as other and reference 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a0bfa8cd492b8664c00b2e750ab13334f}\label{classosse_1_1collaborate_1_1_vector_a0bfa8cd492b8664c00b2e750ab13334f}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!Cross@{Cross}}
+\index{Cross@{Cross}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{Cross()}{Cross()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Vector\+::\+Cross (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+other }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the cross product between two vectors. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+other} & Other vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cross product
+\end{DoxyReturn}
+\[ \vec{s} \times \vec{t} = \begin{bmatrix} s_y t_z - s_z t_y \\ s_z t_x - s_x t_z \\ s_x t_y - s_y t_x \end{bmatrix} ~~~(meters) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_aa33392d41fcf146180125cc0b6a84efb}\label{classosse_1_1collaborate_1_1_vector_aa33392d41fcf146180125cc0b6a84efb}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!Dot@{Dot}}
+\index{Dot@{Dot}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{Dot()}{Dot()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Vector\+::\+Dot (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+other }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the dot product. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+other} & Other vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dot product
+\end{DoxyReturn}
+\[ \vec{s} \cdot \vec{t} = s_x t_x + s_y t_y + s_z t_z \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_acc6656dc258e0eab8cdd3baa0ac7a255}\label{classosse_1_1collaborate_1_1_vector_acc6656dc258e0eab8cdd3baa0ac7a255}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!Obtain\+Log@{Obtain\+Log}}
+\index{Obtain\+Log@{Obtain\+Log}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{Obtain\+Log()}{ObtainLog()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ osse\+::collaborate\+::\+Vector\+::\+Obtain\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Logs the \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}. 
+
+\begin{DoxyReturn}{Returns}
+A vector of doubles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_adadeade94ada0735d117526a0f996c40}\label{classosse_1_1collaborate_1_1_vector_adadeade94ada0735d117526a0f996c40}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Vector\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Boolean operator. 
+
+\begin{DoxyReturn}{Returns}
+True if vector is non-\/zero 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a091294293b9af4b040f8784fa9b74cab}\label{classosse_1_1collaborate_1_1_vector_a091294293b9af4b040f8784fa9b74cab}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Vector\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+scalar }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Multiplication operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+scalar} & Scaling value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Scaled vector
+\end{DoxyReturn}
+\[ c\vec{s}=\begin{bmatrix}c s_x\\c s_y\\c s_z\end{bmatrix}~~~(meters) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_aab7a37d0c9d6af906635510b15063cac}\label{classosse_1_1collaborate_1_1_vector_aab7a37d0c9d6af906635510b15063cac}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!operator+@{operator+}}
+\index{operator+@{operator+}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Vector\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Addition operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+other} & Other vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sum of the vectors
+\end{DoxyReturn}
+\[ \vec{s} + \vec{t} = \begin{bmatrix} s_x + t_x \\ s_y + t_y \\ s_z + t_z \end{bmatrix} ~~~(meters) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a7d9cb2cd1fdeaae594569c3f8886a17c}\label{classosse_1_1collaborate_1_1_vector_a7d9cb2cd1fdeaae594569c3f8886a17c}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Vector\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Negative operator. 
+
+\begin{DoxyReturn}{Returns}
+Negative of the vector
+\end{DoxyReturn}
+\[ -\vec{s} = \begin{bmatrix} -x \\ -y \\ -z \end{bmatrix}~~~(meters) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a1481fdc0bedbb74a453b75f63599e35a}\label{classosse_1_1collaborate_1_1_vector_a1481fdc0bedbb74a453b75f63599e35a}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Vector\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Subtraction operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+other} & Other vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Difference between the vectors
+\end{DoxyReturn}
+\[ \vec{s} - \vec{t} = \begin{bmatrix} s_x - t_x \\ s_y - t_y \\ s_z - t_z \end{bmatrix} ~~~(meters) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_aeaa64febdb5435cbd3c1e747e9920a11}\label{classosse_1_1collaborate_1_1_vector_aeaa64febdb5435cbd3c1e747e9920a11}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!operator/@{operator/}}
+\index{operator/@{operator/}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Vector\+::operator/ (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+scalar }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Division operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+scalar} & Scaling value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Scaled vector
+\end{DoxyReturn}
+\[ c\vec{s}=\begin{bmatrix}\frac{s_x}{c}\\\frac{s_y}{c}\\\frac{s_z}{c} \end{bmatrix}~~~(meters) \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a52ba4cdc72da4646b3868af7f51b100d}\label{classosse_1_1collaborate_1_1_vector_a52ba4cdc72da4646b3868af7f51b100d}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!Ortho\+Normal@{Ortho\+Normal}}
+\index{Ortho\+Normal@{Ortho\+Normal}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{Ortho\+Normal()}{OrthoNormal()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Vector\+::\+Ortho\+Normal (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+other }\end{DoxyParamCaption}) const}
+
+
+
+Calculate the unit vector orthonormal to other vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+other} & Other coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unit vector orthonormal to other vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a616314b8bb82923b6bc689bd8af88552}\label{classosse_1_1collaborate_1_1_vector_a616314b8bb82923b6bc689bd8af88552}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!phi\+\_\+rad@{phi\+\_\+rad}}
+\index{phi\+\_\+rad@{phi\+\_\+rad}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{phi\+\_\+rad()}{phi\_rad()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Vector\+::phi\+\_\+rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get angle from the positive x-\/axis (radians) 
+
+\begin{DoxyReturn}{Returns}
+\+\_\+phi\+\_\+rad Angle from the positive x-\/axis (radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a43ab316f8ed0dce4dc6006c80ea97987}\label{classosse_1_1collaborate_1_1_vector_a43ab316f8ed0dce4dc6006c80ea97987}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!r\+\_\+m@{r\+\_\+m}}
+\index{r\+\_\+m@{r\+\_\+m}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{r\+\_\+m()}{r\_m()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Vector\+::r\+\_\+m (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get maginitude (meters) 
+
+\begin{DoxyReturn}{Returns}
+\+\_\+r\+\_\+m Magnutude (meters) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a61bc6a4b1074ca5d69e8eb581128b6a0}\label{classosse_1_1collaborate_1_1_vector_a61bc6a4b1074ca5d69e8eb581128b6a0}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!rho\+\_\+m@{rho\+\_\+m}}
+\index{rho\+\_\+m@{rho\+\_\+m}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{rho\+\_\+m()}{rho\_m()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Vector\+::rho\+\_\+m (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the distance from z-\/axis in the x/y-\/plane (meters) 
+
+\begin{DoxyReturn}{Returns}
+\+\_\+rho\+\_\+rad Distance from z-\/axis in the x/y-\/plane (meters) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_aa74ca108111d3b520f5e39407d3c4c0a}\label{classosse_1_1collaborate_1_1_vector_aa74ca108111d3b520f5e39407d3c4c0a}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!theta\+\_\+rad@{theta\+\_\+rad}}
+\index{theta\+\_\+rad@{theta\+\_\+rad}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{theta\+\_\+rad()}{theta\_rad()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Vector\+::theta\+\_\+rad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get angle from the positive z-\/axis (radians) 
+
+\begin{DoxyReturn}{Returns}
+\+\_\+theta\+\_\+rad Angle from the positive z-\/axis (radians) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_af5fb0bf89a48d682cfbfda512b5fb24d}\label{classosse_1_1collaborate_1_1_vector_af5fb0bf89a48d682cfbfda512b5fb24d}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily std\+::string osse\+::collaborate\+::\+Vector\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Outputs the vector to a string. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a1067b0871f08bdca0c1021b3763adc80}\label{classosse_1_1collaborate_1_1_vector_a1067b0871f08bdca0c1021b3763adc80}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!Unit@{Unit}}
+\index{Unit@{Unit}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{Unit()}{Unit()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} osse\+::collaborate\+::\+Vector\+::\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Produces a unit vector in the current direction. 
+
+\begin{DoxyReturn}{Returns}
+Unit vector in the current direction
+\end{DoxyReturn}
+\[ \hat{s} = \frac{\vec{s}}{\lvert s\rvert} \] \mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}\label{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!x\+\_\+m@{x\+\_\+m}}
+\index{x\+\_\+m@{x\+\_\+m}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{x\+\_\+m()}{x\_m()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Vector\+::x\+\_\+m (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get X value (meters) 
+
+\begin{DoxyReturn}{Returns}
+\+\_\+x\+\_\+m X value (meters) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}\label{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!y\+\_\+m@{y\+\_\+m}}
+\index{y\+\_\+m@{y\+\_\+m}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{y\+\_\+m()}{y\_m()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Vector\+::y\+\_\+m (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Y value (meters) 
+
+\begin{DoxyReturn}{Returns}
+\+\_\+y\+\_\+m Y value (meters) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}\label{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}} 
+\index{osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}!z\+\_\+m@{z\+\_\+m}}
+\index{z\+\_\+m@{z\+\_\+m}!osse\+::collaborate\+::\+Vector@{osse\+::collaborate\+::\+Vector}}
+\paragraph{\texorpdfstring{z\+\_\+m()}{z\_m()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Vector\+::z\+\_\+m (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get z\+\_\+value (meters) 
+
+\begin{DoxyReturn}{Returns}
+\+\_\+z\+\_\+m Z value (meters) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/vector.\+h\item 
+libs/collaborate/src/vector.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,317 @@
+\hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha}{}\subsection{osse\+:\+:collaborate\+:\+:Scheduler\+Alpha Class Reference}
+\label{classosse_1_1collaborate_1_1_scheduler_alpha}\index{osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}}
+
+
+Concrete internal simulation processor.  
+
+
+
+
+{\ttfamily \#include $<$scheduler\+\_\+alpha.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Scheduler\+Alpha\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classosse_1_1collaborate_1_1_scheduler_alpha__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_abf962f131875a1091699fe16a4d0eeb8}{Scheduler\+Alpha} (\hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} $\ast$\+\_\+clock)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_aa3604fc73769a5c09280588532728409}{Scheduler\+Alpha} (\hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} $\ast$\+\_\+clock, const bool \&\+\_\+flag)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a375c441e048ff73c2d97816d9c9cb29e}{Update} (const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$$>$ \&\+\_\+nodes, \hyperlink{classosse_1_1collaborate_1_1_event_logger}{Event\+Logger} $\ast$\+\_\+event\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Updates the list of nodes. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a78709b9ddc8f6dd9b380432f6deedbb1}{Predict\+Charge\+Change} (\hyperlink{classosse_1_1collaborate_1_1_sun}{Sun} $\ast$\+\_\+sun, \hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+node, const uint64\+\_\+t \&\+\_\+limit\+\_\+s)
+\begin{DoxyCompactList}\small\item\em Predicts the times at which charge status will change. \end{DoxyCompactList}\item 
+bool \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_ab757ae48c70b3409beb483d977bd62f5}{Next\+Visitor} (const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ \&\+\_\+destinations\+\_\+rad\+\_\+m, const uint16\+\_\+t \&\+\_\+sink\+\_\+constellation, \hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$$\ast$next\+\_\+visitor\+\_\+, uint64\+\_\+t $\ast$prediction\+\_\+s\+\_\+)
+\begin{DoxyCompactList}\small\item\em Find the next node to visit a location, at future time (seconds) \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ uint16\+\_\+t, uint64\+\_\+t $>$ $>$ \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_abf3bad26233bb4a9094a0236bc380f8e}{Find\+Route} (const uint16\+\_\+t \&\+\_\+start, const uint16\+\_\+t \&\+\_\+end, const uint64\+\_\+t \&\+\_\+contact\+\_\+s, const uint64\+\_\+t \&\+\_\+limit\+\_\+s)
+\begin{DoxyCompactList}\small\item\em Constructs the most efficient time-\/dynamic route available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a3347ebdec27431be3bbd389e1dad88a6}{Node\+Sensor\+Distance} (\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+node, const \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} \&\+\_\+destination\+\_\+rad\+\_\+m, const uint64\+\_\+t \&\+\_\+offset\+\_\+s)
+\begin{DoxyCompactList}\small\item\em Determines the distance from a sensor\textquotesingle{}s current reading position. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ uint16\+\_\+t, uint64\+\_\+t $>$ $>$ \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_af858a8d223a945fd93235d0b68a44cee}{Make\+Route} (\hyperlink{classosse_1_1collaborate_1_1_tree}{Tree} $\ast$\+\_\+tree, const uint16\+\_\+t \&\+\_\+end, const uint64\+\_\+t \&\+\_\+contact\+\_\+s)
+\begin{DoxyCompactList}\small\item\em Makes the route from the tree and adds it to the list. \end{DoxyCompactList}\item 
+std\+::vector$<$ uint16\+\_\+t $>$ \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a6cf7cf015650e1837c6ae65bda26ff95}{Find\+Gains\+From} (const uint16\+\_\+t \&\+\_\+tx\+\_\+index, const uint64\+\_\+t \&\+\_\+offset\+\_\+s, const std\+::vector$<$ uint16\+\_\+t $>$ \&\+\_\+rxs)
+\begin{DoxyCompactList}\small\item\em Finds the current open channels with neighbors. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_adc69d9527006a9eccc142f9369c93cb5}{Confirm} (\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+tx\+\_\+node, \hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$\+\_\+rx\+\_\+node, const uint64\+\_\+t \&\+\_\+duration\+\_\+s, const uint64\+\_\+t \&\+\_\+original\+\_\+s, const uint64\+\_\+t \&\+\_\+lower\+\_\+limit\+\_\+s)
+\begin{DoxyCompactList}\small\item\em Confirms that the contact lasts as long as the specified duration. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a66f56e307485a3ab62b625324006d945}{Get\+Route\+Log} (const uint16\+\_\+t \&\+\_\+start\+\_\+index, const std\+::vector$<$ std\+::pair$<$ uint16\+\_\+t, uint64\+\_\+t $>$$>$ \&\+\_\+route)
+\begin{DoxyCompactList}\small\item\em Obtain the string log for the route. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha_a98ad63ff3f5454a21f08296db3d6fc6d}\label{classosse_1_1collaborate_1_1_scheduler_alpha_a98ad63ff3f5454a21f08296db3d6fc6d}} 
+bool \hyperlink{classosse_1_1collaborate_1_1_scheduler_alpha_a98ad63ff3f5454a21f08296db3d6fc6d}{flag\+\_\+}
+\begin{DoxyCompactList}\small\item\em Flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Concrete internal simulation processor. 
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth]{collaborate}}
+\end{DoxyImageNoCaption}
+ 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha_abf962f131875a1091699fe16a4d0eeb8}\label{classosse_1_1collaborate_1_1_scheduler_alpha_abf962f131875a1091699fe16a4d0eeb8}} 
+\index{osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}!Scheduler\+Alpha@{Scheduler\+Alpha}}
+\index{Scheduler\+Alpha@{Scheduler\+Alpha}!osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}}
+\paragraph{\texorpdfstring{Scheduler\+Alpha()}{SchedulerAlpha()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Scheduler\+Alpha\+::\+Scheduler\+Alpha (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} $\ast$}]{\+\_\+clock }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha_aa3604fc73769a5c09280588532728409}\label{classosse_1_1collaborate_1_1_scheduler_alpha_aa3604fc73769a5c09280588532728409}} 
+\index{osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}!Scheduler\+Alpha@{Scheduler\+Alpha}}
+\index{Scheduler\+Alpha@{Scheduler\+Alpha}!osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}}
+\paragraph{\texorpdfstring{Scheduler\+Alpha()}{SchedulerAlpha()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Scheduler\+Alpha\+::\+Scheduler\+Alpha (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} $\ast$}]{\+\_\+clock,  }\item[{const bool \&}]{\+\_\+flag }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+flag} & Flag \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha_adc69d9527006a9eccc142f9369c93cb5}\label{classosse_1_1collaborate_1_1_scheduler_alpha_adc69d9527006a9eccc142f9369c93cb5}} 
+\index{osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}!Confirm@{Confirm}}
+\index{Confirm@{Confirm}!osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}}
+\paragraph{\texorpdfstring{Confirm()}{Confirm()}}
+{\footnotesize\ttfamily uint64\+\_\+t osse\+::collaborate\+::\+Scheduler\+Alpha\+::\+Confirm (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+tx\+\_\+node,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+rx\+\_\+node,  }\item[{const uint64\+\_\+t \&}]{\+\_\+duration\+\_\+s,  }\item[{const uint64\+\_\+t \&}]{\+\_\+original\+\_\+s,  }\item[{const uint64\+\_\+t \&}]{\+\_\+lower\+\_\+limit\+\_\+s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Confirms that the contact lasts as long as the specified duration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tx\+\_\+node} & The transmitter \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+rx\+\_\+node} & The receiver \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+duration\+\_\+s} & The duration of contact (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+original\+\_\+s} & The starting offset (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+lower\+\_\+limit\+\_\+s} & The lower limit (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The starting time of contact, or infinity if none found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha_a6cf7cf015650e1837c6ae65bda26ff95}\label{classosse_1_1collaborate_1_1_scheduler_alpha_a6cf7cf015650e1837c6ae65bda26ff95}} 
+\index{osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}!Find\+Gains\+From@{Find\+Gains\+From}}
+\index{Find\+Gains\+From@{Find\+Gains\+From}!osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}}
+\paragraph{\texorpdfstring{Find\+Gains\+From()}{FindGainsFrom()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint16\+\_\+t $>$ osse\+::collaborate\+::\+Scheduler\+Alpha\+::\+Find\+Gains\+From (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+tx\+\_\+index,  }\item[{const uint64\+\_\+t \&}]{\+\_\+offset\+\_\+s,  }\item[{const std\+::vector$<$ uint16\+\_\+t $>$ \&}]{\+\_\+rxs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Finds the current open channels with neighbors. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tx\+\_\+index} & The index of the transmitter \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+offset\+\_\+s} & The time offset from current time (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+rxs} & The receivers to consider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The possible receivers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha_abf3bad26233bb4a9094a0236bc380f8e}\label{classosse_1_1collaborate_1_1_scheduler_alpha_abf3bad26233bb4a9094a0236bc380f8e}} 
+\index{osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}!Find\+Route@{Find\+Route}}
+\index{Find\+Route@{Find\+Route}!osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}}
+\paragraph{\texorpdfstring{Find\+Route()}{FindRoute()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ uint16\+\_\+t, uint64\+\_\+t $>$ $>$ osse\+::collaborate\+::\+Scheduler\+Alpha\+::\+Find\+Route (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+start,  }\item[{const uint16\+\_\+t \&}]{\+\_\+end,  }\item[{const uint64\+\_\+t \&}]{\+\_\+contact\+\_\+s,  }\item[{const uint64\+\_\+t \&}]{\+\_\+limit\+\_\+s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Constructs the most efficient time-\/dynamic route available. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+start} & Start node index \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+end} & End node index \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+contact\+\_\+s} & Duration of contact (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+limit\+\_\+s} & Expiration time limit (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Most efficient time-\/dynamic route available 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_scheduler_a060f7f9e1d09ca22cb43ded4b3c5d10c}{osse\+::collaborate\+::\+Scheduler}.
+
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha_a66f56e307485a3ab62b625324006d945}\label{classosse_1_1collaborate_1_1_scheduler_alpha_a66f56e307485a3ab62b625324006d945}} 
+\index{osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}!Get\+Route\+Log@{Get\+Route\+Log}}
+\index{Get\+Route\+Log@{Get\+Route\+Log}!osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}}
+\paragraph{\texorpdfstring{Get\+Route\+Log()}{GetRouteLog()}}
+{\footnotesize\ttfamily std\+::string osse\+::collaborate\+::\+Scheduler\+Alpha\+::\+Get\+Route\+Log (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+start\+\_\+index,  }\item[{const std\+::vector$<$ std\+::pair$<$ uint16\+\_\+t, uint64\+\_\+t $>$$>$ \&}]{\+\_\+route }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obtain the string log for the route. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+start\+\_\+index} & Starting node index \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+route} & List of individual transfers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String log for the route 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha_af858a8d223a945fd93235d0b68a44cee}\label{classosse_1_1collaborate_1_1_scheduler_alpha_af858a8d223a945fd93235d0b68a44cee}} 
+\index{osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}!Make\+Route@{Make\+Route}}
+\index{Make\+Route@{Make\+Route}!osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}}
+\paragraph{\texorpdfstring{Make\+Route()}{MakeRoute()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ uint16\+\_\+t, uint64\+\_\+t $>$ $>$ osse\+::collaborate\+::\+Scheduler\+Alpha\+::\+Make\+Route (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_tree}{Tree} $\ast$}]{\+\_\+tree,  }\item[{const uint16\+\_\+t \&}]{\+\_\+end,  }\item[{const uint64\+\_\+t \&}]{\+\_\+contact\+\_\+s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Makes the route from the tree and adds it to the list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tree} & \hyperlink{classosse_1_1collaborate_1_1_tree}{Tree} \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+end} & End node index \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+contact\+\_\+s} & Duration of contact (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Route 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha_ab757ae48c70b3409beb483d977bd62f5}\label{classosse_1_1collaborate_1_1_scheduler_alpha_ab757ae48c70b3409beb483d977bd62f5}} 
+\index{osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}!Next\+Visitor@{Next\+Visitor}}
+\index{Next\+Visitor@{Next\+Visitor}!osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}}
+\paragraph{\texorpdfstring{Next\+Visitor()}{NextVisitor()}}
+{\footnotesize\ttfamily bool osse\+::collaborate\+::\+Scheduler\+Alpha\+::\+Next\+Visitor (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} $>$ \&}]{\+\_\+destinations\+\_\+rad\+\_\+m,  }\item[{const uint16\+\_\+t \&}]{\+\_\+sink\+\_\+constellation,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$$\ast$}]{next\+\_\+visitor\+\_\+,  }\item[{uint64\+\_\+t $\ast$}]{prediction\+\_\+s\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Find the next node to visit a location, at future time (seconds) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+destinations\+\_\+rad\+\_\+m} & Destinations \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+sink\+\_\+constellation} & Number of the sink constellation \\
+\hline
+\mbox{\tt out}  & {\em next\+\_\+visitor\+\_\+} & Next visitor \\
+\hline
+\mbox{\tt out}  & {\em prediction\+\_\+s\+\_\+} & Time of the next visit (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether a visitor has been found (if outputs are valid) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_scheduler_ababb48a841ec1b4903b69e799e43babf}{osse\+::collaborate\+::\+Scheduler}.
+
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha_a3347ebdec27431be3bbd389e1dad88a6}\label{classosse_1_1collaborate_1_1_scheduler_alpha_a3347ebdec27431be3bbd389e1dad88a6}} 
+\index{osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}!Node\+Sensor\+Distance@{Node\+Sensor\+Distance}}
+\index{Node\+Sensor\+Distance@{Node\+Sensor\+Distance}!osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}}
+\paragraph{\texorpdfstring{Node\+Sensor\+Distance()}{NodeSensorDistance()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Scheduler\+Alpha\+::\+Node\+Sensor\+Distance (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+node,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} \&}]{\+\_\+destination\+\_\+rad\+\_\+m,  }\item[{const uint64\+\_\+t \&}]{\+\_\+offset\+\_\+s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determines the distance from a sensor\textquotesingle{}s current reading position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+node} & \hyperlink{classosse_1_1collaborate_1_1_node}{Node} \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+destination\+\_\+rad\+\_\+m} & \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} destination \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+offset\+\_\+s} & Time offset from present (seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance from a sensor\textquotesingle{}s current reading position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha_a78709b9ddc8f6dd9b380432f6deedbb1}\label{classosse_1_1collaborate_1_1_scheduler_alpha_a78709b9ddc8f6dd9b380432f6deedbb1}} 
+\index{osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}!Predict\+Charge\+Change@{Predict\+Charge\+Change}}
+\index{Predict\+Charge\+Change@{Predict\+Charge\+Change}!osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}}
+\paragraph{\texorpdfstring{Predict\+Charge\+Change()}{PredictChargeChange()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Scheduler\+Alpha\+::\+Predict\+Charge\+Change (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_sun}{Sun} $\ast$}]{\+\_\+sun,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$}]{\+\_\+node,  }\item[{const uint64\+\_\+t \&}]{\+\_\+limit\+\_\+s }\end{DoxyParamCaption})}
+
+
+
+Predicts the times at which charge status will change. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+sun} & \hyperlink{classosse_1_1collaborate_1_1_sun}{Sun} \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+node} & Subject node \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+limit\+\_\+s} & Time limit (seconds) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_scheduler_alpha_a375c441e048ff73c2d97816d9c9cb29e}\label{classosse_1_1collaborate_1_1_scheduler_alpha_a375c441e048ff73c2d97816d9c9cb29e}} 
+\index{osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}!Update@{Update}}
+\index{Update@{Update}!osse\+::collaborate\+::\+Scheduler\+Alpha@{osse\+::collaborate\+::\+Scheduler\+Alpha}}
+\paragraph{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Scheduler\+Alpha\+::\+Update (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_node}{Node} $\ast$$>$ \&}]{\+\_\+nodes,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_event_logger}{Event\+Logger} $\ast$}]{\+\_\+event\+\_\+log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the list of nodes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+nodes} & Nodes \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+event\+\_\+log} & Event logger \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_scheduler_a84241d85d4b53716d3918f44c56875b2}{osse\+::collaborate\+::\+Scheduler}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/scheduler\+\_\+alpha.\+h\item 
+libs/collaborate/src/scheduler\+\_\+alpha.\+cpp\end{DoxyCompactItemize}

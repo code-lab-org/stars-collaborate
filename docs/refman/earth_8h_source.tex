@@ -1,0 +1,82 @@
+\hypertarget{earth_8h_source}{}\subsection{earth.\+h}
+\label{earth_8h_source}\index{libs/collaborate/include/collaborate/earth.\+h@{libs/collaborate/include/collaborate/earth.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_EARTH\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_EARTH\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <cmath>}
+00020 \textcolor{preprocessor}{#include <cstdint>}
+00021 
+00022 \textcolor{preprocessor}{#include "collaborate/vector.h"}
+00023 
+00024 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00025 \textcolor{keyword}{namespace }collaborate \{
+00026 \textcolor{keyword}{namespace }earth \{
+00027 
+00030 
+\Hypertarget{earth_8h_source_l00033}\hyperlink{earth_8h_af8bb9ce2b072050e35c5480bf8296278}{00033} \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \hyperlink{earth_8h_af8bb9ce2b072050e35c5480bf8296278}{kFixedCoordinates} = \textcolor{keyword}{false};
+00034 
+\Hypertarget{earth_8h_source_l00037}\hyperlink{earth_8h_a46b6e30d9a4a90f371244acfbdb653c9}{00037} constexpr \textcolor{keywordtype}{double} \hyperlink{earth_8h_a46b6e30d9a4a90f371244acfbdb653c9}{kAngularFrequencyRadPerS} = 0.000072921158553;
+00038 
+\Hypertarget{earth_8h_source_l00041}\hyperlink{earth_8h_a7bae303ce017edd85f7b94189c8d50c3}{00041} constexpr \textcolor{keywordtype}{double} \hyperlink{earth_8h_a7bae303ce017edd85f7b94189c8d50c3}{kFlattening} = 0.0033528106647474805;
+00042 
+\Hypertarget{earth_8h_source_l00045}\hyperlink{earth_8h_a411a6e31f8ed10e8cba19e46149f9f8c}{00045} constexpr \textcolor{keywordtype}{double} \hyperlink{earth_8h_a411a6e31f8ed10e8cba19e46149f9f8c}{kEccentricity} = std::sqrt((2 * kFlattening)
+00046                                            - std::pow(kFlattening, 2));
+00047 
+\Hypertarget{earth_8h_source_l00050}\hyperlink{earth_8h_af745e3a2ec936d8853084cf8ff6fc9b8}{00050} constexpr \textcolor{keywordtype}{double} \hyperlink{earth_8h_af745e3a2ec936d8853084cf8ff6fc9b8}{kEccentricity2} = std::pow(kEccentricity, 2);
+00051 
+\Hypertarget{earth_8h_source_l00054}\hyperlink{earth_8h_aea4be967a514acb3fe47d751efa45a33}{00054} constexpr \textcolor{keywordtype}{double} \hyperlink{earth_8h_aea4be967a514acb3fe47d751efa45a33}{kSemiMajorAxisM} = 6378137.0;
+00055 
+\Hypertarget{earth_8h_source_l00058}\hyperlink{earth_8h_ae2a7aa24721a922aaa0de288c2ca6922}{00058} constexpr \textcolor{keywordtype}{double} \hyperlink{earth_8h_ae2a7aa24721a922aaa0de288c2ca6922}{kSemiMinorAxisM} = 6356752.314245;  \textcolor{comment}{// b = a * (1-f)}
+00059 
+\Hypertarget{earth_8h_source_l00062}\hyperlink{earth_8h_aa8c950b1e1ae0d3dd89b4a46006708c7}{00062} constexpr uint64\_t \hyperlink{earth_8h_aa8c950b1e1ae0d3dd89b4a46006708c7}{kNumLons} = 5759;
+00063 
+\Hypertarget{earth_8h_source_l00066}\hyperlink{earth_8h_ae0e94d8207af91955610c3f0c8dc9646}{00066} constexpr uint64\_t \hyperlink{earth_8h_ae0e94d8207af91955610c3f0c8dc9646}{kNumLats} = 2880;
+00067 
+\Hypertarget{earth_8h_source_l00070}\hyperlink{earth_8h_afce34c5a12e2010098e2f5e6157613cd}{00070} constexpr uint64\_t \hyperlink{earth_8h_afce34c5a12e2010098e2f5e6157613cd}{kNumPositions} = kNumLons * kNumLats;
+00071 
+\Hypertarget{earth_8h_source_l00074}\hyperlink{earth_8h_ae818c13d8ae8ce338aa40321aaca73dc}{00074} constexpr \textcolor{keywordtype}{double} \hyperlink{earth_8h_ae818c13d8ae8ce338aa40321aaca73dc}{kLonIncrementRad} = ((2 * M\_PI) / kNumLons);
+00075 
+\Hypertarget{earth_8h_source_l00078}\hyperlink{earth_8h_a1229bd9c50f9ef4a377f52ec21520a96}{00078} constexpr \textcolor{keywordtype}{double} \hyperlink{earth_8h_a1229bd9c50f9ef4a377f52ec21520a96}{kLatIncrementRad} = (M\_PI / kNumLats);
+00079 
+00106 \textcolor{keywordtype}{bool} \hyperlink{earth_8h_a000d3776630cd16ba98c34bc5a887ccd}{Visible}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_subject, \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_other);
+00107 
+00115 \textcolor{keywordtype}{void} \hyperlink{earth_8h_a8b4cd1173aa76118acf75f98e5cb04d1}{SpecularPoint}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_tx\_position\_m\_rad,
+00116                    \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_tx\_velocity\_m\_per\_s,
+00117                    \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_rx\_position\_m\_rad,
+00118                    \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_rx\_velocity\_m\_per\_s,
+00119                    \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}* specular\_position\_m\_rad\_,
+00120                    \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}* specular\_velocity\_m\_per\_s\_);
+00121 
+00125 \textcolor{keywordtype}{double} \hyperlink{earth_8h_a6ef212db2b50cdf7ddbc2a187214a25b}{Radius}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_position);
+00126 
+00132 \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{earth_8h_a4474729d4f8d2d7b22c1d5162cd17151}{SpecularSpherical}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_rx\_position\_m\_rad,
+00133                          \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_tx\_position\_m\_rad,
+00134                          \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_radius\_m);
+00135 
+00141 \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{earth_8h_aa43f67f563c35ce39af2af80a9393c4b}{SpecularPosition}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_tx\_position\_m\_rad,
+00142                         \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_rx\_position\_m\_rad,
+00143                         \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_radius\_init\_m);
+00144 
+00145 \}  \textcolor{comment}{// namespace earth}
+00146 \}  \textcolor{comment}{// namespace collaborate}
+00147 \}  \textcolor{comment}{// namespace osse}
+00148 
+00149 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_EARTH\_H\_}
+\end{DoxyCode}

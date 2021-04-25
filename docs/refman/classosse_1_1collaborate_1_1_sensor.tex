@@ -1,0 +1,174 @@
+\hypertarget{classosse_1_1collaborate_1_1_sensor}{}\subsection{osse\+:\+:collaborate\+:\+:Sensor Class Reference}
+\label{classosse_1_1collaborate_1_1_sensor}\index{osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}}
+
+
+Measures scientific data.  
+
+
+
+
+{\ttfamily \#include $<$sensor.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classosse_1_1collaborate_1_1_sensor__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_sensor_a54618610f28a522fa48dd43ea4cdac9a}{Sensor} (\hyperlink{classosse_1_1collaborate_1_1_earth_data}{Earth\+Data} $\ast$\+\_\+earth\+\_\+data, const std\+::string \&\+\_\+variable, const double \&\+\_\+power\+\_\+consumed\+\_\+w, const uint64\+\_\+t \&\+\_\+duration\+\_\+s, const double \&\+\_\+target\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Constructor from earth\+\_\+data. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_earth_data}{Earth\+Data} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_sensor_a60ed2a55579dc999d9d4a40b4e2d2473}{earth\+\_\+data} () const
+\begin{DoxyCompactList}\small\item\em Get The earth\+\_\+data of scientific data. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classosse_1_1collaborate_1_1_sensor_a06cf8b42c998b5125fcaef972f1950fd}{k\+Variable} () const
+\begin{DoxyCompactList}\small\item\em Get variable name. \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_sensor_add78370d01a8feb5d1027a791906b691}{k\+Power\+ConsumedW} () const
+\begin{DoxyCompactList}\small\item\em Get power consumed (Watts) \end{DoxyCompactList}\item 
+const uint64\+\_\+t \& \hyperlink{classosse_1_1collaborate_1_1_sensor_a79da44f371358582b3ab820db6069614}{k\+DurationS} () const
+\begin{DoxyCompactList}\small\item\em Get duration of measurements (seconds) \end{DoxyCompactList}\item 
+const double \& \hyperlink{classosse_1_1collaborate_1_1_sensor_ae19c635fce562849ee3d1e7883bee22c}{k\+Target\+Value} () const
+\begin{DoxyCompactList}\small\item\em Get target value for measurements. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_sensor_a58a36b29c3872dffecfe386610d45095}{Update} (const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&\+\_\+clock) const
+\begin{DoxyCompactList}\small\item\em Updates the earth\+\_\+data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_sensor_a2f9c4593a75c2de643ec70c79d1ff163}\label{classosse_1_1collaborate_1_1_sensor_a2f9c4593a75c2de643ec70c79d1ff163}} 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classosse_1_1collaborate_1_1_earth_data}{Earth\+Data} $>$ \hyperlink{classosse_1_1collaborate_1_1_sensor_a2f9c4593a75c2de643ec70c79d1ff163}{earth\+\_\+data\+\_\+}
+\begin{DoxyCompactList}\small\item\em Data earth\+\_\+data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_sensor_ab6a0bde6a2ee07f5d6670d9d9497ae53}\label{classosse_1_1collaborate_1_1_sensor_ab6a0bde6a2ee07f5d6670d9d9497ae53}} 
+const std\+::string \hyperlink{classosse_1_1collaborate_1_1_sensor_ab6a0bde6a2ee07f5d6670d9d9497ae53}{k\+Variable\+\_\+}
+\begin{DoxyCompactList}\small\item\em Variable name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_sensor_a46e0de0118d7af85016698b61c8a65c9}\label{classosse_1_1collaborate_1_1_sensor_a46e0de0118d7af85016698b61c8a65c9}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_sensor_a46e0de0118d7af85016698b61c8a65c9}{k\+Power\+Consumed\+W\+\_\+}
+\begin{DoxyCompactList}\small\item\em Power consumed during operation (Watts) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_sensor_a6ac32b4c1191cd73af547041255b1a26}\label{classosse_1_1collaborate_1_1_sensor_a6ac32b4c1191cd73af547041255b1a26}} 
+const uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_sensor_a6ac32b4c1191cd73af547041255b1a26}{k\+Duration\+S\+\_\+}
+\begin{DoxyCompactList}\small\item\em Duration of measurements (seconds) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_sensor_a586ce80bf498a6a261361bceef3d79fa}\label{classosse_1_1collaborate_1_1_sensor_a586ce80bf498a6a261361bceef3d79fa}} 
+const double \hyperlink{classosse_1_1collaborate_1_1_sensor_a586ce80bf498a6a261361bceef3d79fa}{k\+Target\+Value\+\_\+}
+\begin{DoxyCompactList}\small\item\em Target value for measurements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Measures scientific data. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_sensor_a54618610f28a522fa48dd43ea4cdac9a}\label{classosse_1_1collaborate_1_1_sensor_a54618610f28a522fa48dd43ea4cdac9a}} 
+\index{osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}}
+\paragraph{\texorpdfstring{Sensor()}{Sensor()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Sensor\+::\+Sensor (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_earth_data}{Earth\+Data} $\ast$}]{\+\_\+earth\+\_\+data,  }\item[{const std\+::string \&}]{\+\_\+variable,  }\item[{const double \&}]{\+\_\+power\+\_\+consumed\+\_\+w,  }\item[{const uint64\+\_\+t \&}]{\+\_\+duration\+\_\+s,  }\item[{const double \&}]{\+\_\+target\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Constructor from earth\+\_\+data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+earth\+\_\+data} & \hyperlink{classosse_1_1collaborate_1_1_earth_data}{Earth\+Data} \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+variable} & Variable name \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+power\+\_\+consumed\+\_\+w} & Power consumed (Watts) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+duration\+\_\+s} & Duration of measurements (seconds) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+target\+\_\+value} & Target value for measurements \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_sensor_a60ed2a55579dc999d9d4a40b4e2d2473}\label{classosse_1_1collaborate_1_1_sensor_a60ed2a55579dc999d9d4a40b4e2d2473}} 
+\index{osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}!earth\+\_\+data@{earth\+\_\+data}}
+\index{earth\+\_\+data@{earth\+\_\+data}!osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}}
+\paragraph{\texorpdfstring{earth\+\_\+data()}{earth\_data()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_earth_data}{Earth\+Data}$\ast$ osse\+::collaborate\+::\+Sensor\+::earth\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get The earth\+\_\+data of scientific data. 
+
+\begin{DoxyReturn}{Returns}
+earth\+\_\+data\+\_\+ The earth\+\_\+data of scientific data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_sensor_a79da44f371358582b3ab820db6069614}\label{classosse_1_1collaborate_1_1_sensor_a79da44f371358582b3ab820db6069614}} 
+\index{osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}!k\+DurationS@{k\+DurationS}}
+\index{k\+DurationS@{k\+DurationS}!osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}}
+\paragraph{\texorpdfstring{k\+Duration\+S()}{kDurationS()}}
+{\footnotesize\ttfamily const uint64\+\_\+t\& osse\+::collaborate\+::\+Sensor\+::k\+DurationS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get duration of measurements (seconds) 
+
+\begin{DoxyReturn}{Returns}
+k\+Duration\+S\+\_\+ Duration of measurements (seconds) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_sensor_add78370d01a8feb5d1027a791906b691}\label{classosse_1_1collaborate_1_1_sensor_add78370d01a8feb5d1027a791906b691}} 
+\index{osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}!k\+Power\+ConsumedW@{k\+Power\+ConsumedW}}
+\index{k\+Power\+ConsumedW@{k\+Power\+ConsumedW}!osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}}
+\paragraph{\texorpdfstring{k\+Power\+Consumed\+W()}{kPowerConsumedW()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Sensor\+::k\+Power\+ConsumedW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get power consumed (Watts) 
+
+\begin{DoxyReturn}{Returns}
+k\+Power\+Consumed\+W\+\_\+ Power consumed (Watts) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_sensor_ae19c635fce562849ee3d1e7883bee22c}\label{classosse_1_1collaborate_1_1_sensor_ae19c635fce562849ee3d1e7883bee22c}} 
+\index{osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}!k\+Target\+Value@{k\+Target\+Value}}
+\index{k\+Target\+Value@{k\+Target\+Value}!osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}}
+\paragraph{\texorpdfstring{k\+Target\+Value()}{kTargetValue()}}
+{\footnotesize\ttfamily const double\& osse\+::collaborate\+::\+Sensor\+::k\+Target\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get target value for measurements. 
+
+\begin{DoxyReturn}{Returns}
+k\+Target\+Value\+\_\+ Target value for measurements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_sensor_a06cf8b42c998b5125fcaef972f1950fd}\label{classosse_1_1collaborate_1_1_sensor_a06cf8b42c998b5125fcaef972f1950fd}} 
+\index{osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}!k\+Variable@{k\+Variable}}
+\index{k\+Variable@{k\+Variable}!osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}}
+\paragraph{\texorpdfstring{k\+Variable()}{kVariable()}}
+{\footnotesize\ttfamily const std\+::string\& osse\+::collaborate\+::\+Sensor\+::k\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get variable name. 
+
+\begin{DoxyReturn}{Returns}
+k\+Variable\+\_\+ Variable name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_sensor_a58a36b29c3872dffecfe386610d45095}\label{classosse_1_1collaborate_1_1_sensor_a58a36b29c3872dffecfe386610d45095}} 
+\index{osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}!Update@{Update}}
+\index{Update@{Update}!osse\+::collaborate\+::\+Sensor@{osse\+::collaborate\+::\+Sensor}}
+\paragraph{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Sensor\+::\+Update (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_simulation_clock}{Simulation\+Clock} \&}]{\+\_\+clock }\end{DoxyParamCaption}) const}
+
+
+
+Updates the earth\+\_\+data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+clock} & Simulation clock \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/sensor.\+h\item 
+libs/collaborate/src/sensor.\+cpp\end{DoxyCompactItemize}

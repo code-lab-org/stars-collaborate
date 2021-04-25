@@ -1,0 +1,76 @@
+\hypertarget{modem_8h_source}{}\subsection{modem.\+h}
+\label{modem_8h_source}\index{libs/collaborate/include/collaborate/modem.\+h@{libs/collaborate/include/collaborate/modem.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_MODEM\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_MODEM\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <cstdint>}
+00020 \textcolor{preprocessor}{#include <string>}
+00021 
+00022 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00023 \textcolor{keyword}{namespace }collaborate \{
+00024 
+\Hypertarget{modem_8h_source_l00027}\hyperlink{classosse_1_1collaborate_1_1_modem}{00027} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_modem}{Modem} \{
+00028  \textcolor{keyword}{public}:
+00041   \hyperlink{classosse_1_1collaborate_1_1_modem_ade030a147d5bc9aaf4a0b615c1cea84a}{Modem}(\textcolor{keyword}{const} std::string& \_kId,
+00042         \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_kRxRfPowerW,
+00043         \textcolor{keyword}{const} uint64\_t& \_kRxRateBitsPerS,
+00044         \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_kRxOmegaRadPerS,
+00045         \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_kRxLambdaM,
+00046         \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_kRxConsumedPowerW,
+00047         \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_kTxRfPowerW,
+00048         \textcolor{keyword}{const} uint64\_t& \_kTxRateBitsPerS,
+00049         \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_kTxOmegaRadPerS,
+00050         \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_kTxLambdaM,
+00051         \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_kTxConsumedPowerW);
+\Hypertarget{modem_8h_source_l00054}\hyperlink{classosse_1_1collaborate_1_1_modem_a8cc084d7cc349b4029f1281c5d3248a3}{00054}   \textcolor{keyword}{const} std::string& \hyperlink{classosse_1_1collaborate_1_1_modem_a8cc084d7cc349b4029f1281c5d3248a3}{kId}() \{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_modem_ad46433c0001e7fd2a93a72eca4fd2e0c}{kId\_};\}
+\Hypertarget{modem_8h_source_l00057}\hyperlink{classosse_1_1collaborate_1_1_modem_ad37beed0399591a98a47b62966a7c2c0}{00057}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_modem_ad37beed0399591a98a47b62966a7c2c0}{kRxRfPowerW}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_modem_a84bba3544a42f26230f6c677ecef7761}{kRxRfPowerW\_};\}
+\Hypertarget{modem_8h_source_l00060}\hyperlink{classosse_1_1collaborate_1_1_modem_a899a9e97b55878e6b521038ddb2a9548}{00060}   \textcolor{keyword}{const} uint64\_t& \hyperlink{classosse_1_1collaborate_1_1_modem_a899a9e97b55878e6b521038ddb2a9548}{kRxRateBitsPerS}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_modem_ad8e5638aba8d3306a9af346cce32f870}{kRxRateBitsPerS\_};\}
+\Hypertarget{modem_8h_source_l00063}\hyperlink{classosse_1_1collaborate_1_1_modem_ac20ca2074113d6e21c8351c22f821bf2}{00063}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_modem_ac20ca2074113d6e21c8351c22f821bf2}{kRxOmegaRadPerS}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_modem_a3475114274ab868781ef1b06c2f4c70f}{kRxOmegaRadPerS\_};\}
+\Hypertarget{modem_8h_source_l00066}\hyperlink{classosse_1_1collaborate_1_1_modem_a3e5ffe93c09f9e615d6706bcf66a5b92}{00066}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_modem_a3e5ffe93c09f9e615d6706bcf66a5b92}{kRxLambdaM}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_modem_a2a0fd8ca40d18a60106077c4fe7063be}{kRxLambdaM\_};\}
+\Hypertarget{modem_8h_source_l00069}\hyperlink{classosse_1_1collaborate_1_1_modem_a1d7fde5092bef180161739258d68acc4}{00069}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_modem_a1d7fde5092bef180161739258d68acc4}{kRxConsumedPowerW}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_modem_a37dc32c7d944e8e234be8497b22c71ae}{kRxConsumedPowerW\_};\}
+\Hypertarget{modem_8h_source_l00072}\hyperlink{classosse_1_1collaborate_1_1_modem_aa4af2bbf6ffd0c09e3a817620bb0354b}{00072}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_modem_aa4af2bbf6ffd0c09e3a817620bb0354b}{kTxRfPowerW}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_modem_a923d73fb837ddeaec8e333816e15abb5}{kTxRfPowerW\_};\}
+\Hypertarget{modem_8h_source_l00075}\hyperlink{classosse_1_1collaborate_1_1_modem_a375ff44cbc39181e15e3bfc839551cb4}{00075}   \textcolor{keyword}{const} uint64\_t& \hyperlink{classosse_1_1collaborate_1_1_modem_a375ff44cbc39181e15e3bfc839551cb4}{kTxRateBitsPerS}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_modem_a34b5118ee33fef6223190d1528b3aecf}{kTxRateBitsPerS\_};\}
+\Hypertarget{modem_8h_source_l00078}\hyperlink{classosse_1_1collaborate_1_1_modem_a42bfe0c78e94eaf71bd3186b6bde1e9d}{00078}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_modem_a42bfe0c78e94eaf71bd3186b6bde1e9d}{kTxOmegaRadPerS}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_modem_a0dfb1dcd54f1ca6da6de6d3084829912}{kTxOmegaRadPerS\_};\}
+\Hypertarget{modem_8h_source_l00081}\hyperlink{classosse_1_1collaborate_1_1_modem_a327712f883fdd72e91b238c018064998}{00081}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_modem_a327712f883fdd72e91b238c018064998}{kTxLambdaM}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_modem_a6f37bdb3320f282c58c32371799c6c43}{kTxLambdaM\_};\}
+\Hypertarget{modem_8h_source_l00084}\hyperlink{classosse_1_1collaborate_1_1_modem_adc5837932829df64bacec3ed4bef6134}{00084}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_modem_adc5837932829df64bacec3ed4bef6134}{kTxConsumedPowerW}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_modem_ac02f253ef6149907fd61b1f5cdbf4590}{kTxConsumedPowerW\_};\}
+00085 
+00086  \textcolor{keyword}{protected}:
+\Hypertarget{modem_8h_source_l00088}\hyperlink{classosse_1_1collaborate_1_1_modem_ad46433c0001e7fd2a93a72eca4fd2e0c}{00088}   \textcolor{keyword}{const} std::string \hyperlink{classosse_1_1collaborate_1_1_modem_ad46433c0001e7fd2a93a72eca4fd2e0c}{kId\_};
+\Hypertarget{modem_8h_source_l00090}\hyperlink{classosse_1_1collaborate_1_1_modem_a84bba3544a42f26230f6c677ecef7761}{00090}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_modem_a84bba3544a42f26230f6c677ecef7761}{kRxRfPowerW\_};
+\Hypertarget{modem_8h_source_l00092}\hyperlink{classosse_1_1collaborate_1_1_modem_ad8e5638aba8d3306a9af346cce32f870}{00092}   \textcolor{keyword}{const} uint64\_t \hyperlink{classosse_1_1collaborate_1_1_modem_ad8e5638aba8d3306a9af346cce32f870}{kRxRateBitsPerS\_};
+\Hypertarget{modem_8h_source_l00094}\hyperlink{classosse_1_1collaborate_1_1_modem_a3475114274ab868781ef1b06c2f4c70f}{00094}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_modem_a3475114274ab868781ef1b06c2f4c70f}{kRxOmegaRadPerS\_};
+\Hypertarget{modem_8h_source_l00096}\hyperlink{classosse_1_1collaborate_1_1_modem_a2a0fd8ca40d18a60106077c4fe7063be}{00096}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_modem_a2a0fd8ca40d18a60106077c4fe7063be}{kRxLambdaM\_};
+\Hypertarget{modem_8h_source_l00098}\hyperlink{classosse_1_1collaborate_1_1_modem_a37dc32c7d944e8e234be8497b22c71ae}{00098}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_modem_a37dc32c7d944e8e234be8497b22c71ae}{kRxConsumedPowerW\_};
+\Hypertarget{modem_8h_source_l00100}\hyperlink{classosse_1_1collaborate_1_1_modem_a923d73fb837ddeaec8e333816e15abb5}{00100}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_modem_a923d73fb837ddeaec8e333816e15abb5}{kTxRfPowerW\_};
+\Hypertarget{modem_8h_source_l00102}\hyperlink{classosse_1_1collaborate_1_1_modem_a34b5118ee33fef6223190d1528b3aecf}{00102}   \textcolor{keyword}{const} uint64\_t \hyperlink{classosse_1_1collaborate_1_1_modem_a34b5118ee33fef6223190d1528b3aecf}{kTxRateBitsPerS\_};
+\Hypertarget{modem_8h_source_l00104}\hyperlink{classosse_1_1collaborate_1_1_modem_a0dfb1dcd54f1ca6da6de6d3084829912}{00104}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_modem_a0dfb1dcd54f1ca6da6de6d3084829912}{kTxOmegaRadPerS\_};
+\Hypertarget{modem_8h_source_l00106}\hyperlink{classosse_1_1collaborate_1_1_modem_a6f37bdb3320f282c58c32371799c6c43}{00106}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_modem_a6f37bdb3320f282c58c32371799c6c43}{kTxLambdaM\_};
+\Hypertarget{modem_8h_source_l00108}\hyperlink{classosse_1_1collaborate_1_1_modem_ac02f253ef6149907fd61b1f5cdbf4590}{00108}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_modem_ac02f253ef6149907fd61b1f5cdbf4590}{kTxConsumedPowerW\_};
+00109 \};
+00110 
+00111 \}  \textcolor{comment}{// namespace collaborate}
+00112 \}  \textcolor{comment}{// namespace osse}
+00113 
+00114 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_MODEM\_H\_}
+\end{DoxyCode}

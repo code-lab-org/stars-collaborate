@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Ryan Linnabary
+// Copyright (C) 2019 The Ohio State University
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -74,6 +74,7 @@ class SubsystemSensing {
   /// @brief Obtain a measurement from the earth_data
   /// @param[in] _clock The simulation clock
   /// @param[in] _position_m_rad The position of the node
+  /// @param[in] _node_index Unknown
   /// @returns active_
   bool Update(const SimulationClock& _clock, const Vector& _position_m_rad, const int _node_index);
   /// @brief Calculates a new attitude frame for the antenna
@@ -120,6 +121,7 @@ class SubsystemSensing {
  private:
   /// @brief Output the logged data to a netcdf file
   /// @param[in] _clock The simulation clock
+  /// @param[in] _node_index Unknown
   void Flush(const SimulationClock& _clock, const int _node_index);
   /// @brief The sensor
   Sensor* sensor_;

@@ -1,0 +1,210 @@
+\hypertarget{earth_8h}{}\subsection{libs/collaborate/include/collaborate/earth.h File Reference}
+\label{earth_8h}\index{libs/collaborate/include/collaborate/earth.\+h@{libs/collaborate/include/collaborate/earth.\+h}}
+
+
+Provides constants related the the E\+A\+R\+TH Earth model.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include \char`\"{}collaborate/vector.\+h\char`\"{}}\newline
+Include dependency graph for earth.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{earth_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{earth_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{earth_8h_a000d3776630cd16ba98c34bc5a887ccd}{osse\+::collaborate\+::earth\+::\+Visible} (const Vector \&\+\_\+subject, const Vector \&\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Determines if a line-\/of-\/sight path exists between two positions. \end{DoxyCompactList}\item 
+void \hyperlink{earth_8h_a8b4cd1173aa76118acf75f98e5cb04d1}{osse\+::collaborate\+::earth\+::\+Specular\+Point} (const Vector \&\+\_\+tx\+\_\+position\+\_\+m\+\_\+rad, const Vector \&\+\_\+tx\+\_\+velocity\+\_\+m\+\_\+per\+\_\+s, const Vector \&\+\_\+rx\+\_\+position\+\_\+m\+\_\+rad, const Vector \&\+\_\+rx\+\_\+velocity\+\_\+m\+\_\+per\+\_\+s, Vector $\ast$specular\+\_\+position\+\_\+m\+\_\+rad\+\_\+, Vector $\ast$specular\+\_\+velocity\+\_\+m\+\_\+per\+\_\+s\+\_\+)
+\begin{DoxyCompactList}\small\item\em Finds a specular point location and velocity. \end{DoxyCompactList}\item 
+double \hyperlink{earth_8h_a6ef212db2b50cdf7ddbc2a187214a25b}{osse\+::collaborate\+::earth\+::\+Radius} (const Vector \&\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Finds the radius of Earth in direction of position. \end{DoxyCompactList}\item 
+Vector \hyperlink{earth_8h_a4474729d4f8d2d7b22c1d5162cd17151}{osse\+::collaborate\+::earth\+::\+Specular\+Spherical} (const Vector \&\+\_\+rx\+\_\+position\+\_\+m\+\_\+rad, const Vector \&\+\_\+tx\+\_\+position\+\_\+m\+\_\+rad, const double \&\+\_\+radius\+\_\+m)
+\begin{DoxyCompactList}\small\item\em Finds a specular point on spherical Earth. \end{DoxyCompactList}\item 
+Vector \hyperlink{earth_8h_aa43f67f563c35ce39af2af80a9393c4b}{osse\+::collaborate\+::earth\+::\+Specular\+Position} (const Vector \&\+\_\+tx\+\_\+position\+\_\+m\+\_\+rad, const Vector \&\+\_\+rx\+\_\+position\+\_\+m\+\_\+rad, const double \&\+\_\+radius\+\_\+init\+\_\+m)
+\begin{DoxyCompactList}\small\item\em Finds a specular point on Earth. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{earth_8h_af8bb9ce2b072050e35c5480bf8296278}\label{earth_8h_af8bb9ce2b072050e35c5480bf8296278}} 
+const bool \hyperlink{earth_8h_af8bb9ce2b072050e35c5480bf8296278}{osse\+::collaborate\+::earth\+::k\+Fixed\+Coordinates} = false
+\begin{DoxyCompactList}\small\item\em Whether to convert native E\+CI coordinates to E\+C\+EF. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{earth_8h_a46b6e30d9a4a90f371244acfbdb653c9}\label{earth_8h_a46b6e30d9a4a90f371244acfbdb653c9}} 
+constexpr double \hyperlink{earth_8h_a46b6e30d9a4a90f371244acfbdb653c9}{osse\+::collaborate\+::earth\+::k\+Angular\+Frequency\+Rad\+PerS} = 0.\+000072921158553
+\begin{DoxyCompactList}\small\item\em Earth\textquotesingle{}s rotational speed (radians per second) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{earth_8h_a7bae303ce017edd85f7b94189c8d50c3}\label{earth_8h_a7bae303ce017edd85f7b94189c8d50c3}} 
+constexpr double \hyperlink{earth_8h_a7bae303ce017edd85f7b94189c8d50c3}{osse\+::collaborate\+::earth\+::k\+Flattening} = 0.\+0033528106647474805
+\begin{DoxyCompactList}\small\item\em Earth\textquotesingle{}s flattening. \end{DoxyCompactList}\item 
+constexpr double \hyperlink{earth_8h_a411a6e31f8ed10e8cba19e46149f9f8c}{osse\+::collaborate\+::earth\+::k\+Eccentricity}
+\begin{DoxyCompactList}\small\item\em Earth\textquotesingle{}s flattening. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{earth_8h_af745e3a2ec936d8853084cf8ff6fc9b8}\label{earth_8h_af745e3a2ec936d8853084cf8ff6fc9b8}} 
+constexpr double \hyperlink{earth_8h_af745e3a2ec936d8853084cf8ff6fc9b8}{osse\+::collaborate\+::earth\+::k\+Eccentricity2} = std\+::pow(k\+Eccentricity, 2)
+\begin{DoxyCompactList}\small\item\em Earth\textquotesingle{}s flattening. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{earth_8h_aea4be967a514acb3fe47d751efa45a33}\label{earth_8h_aea4be967a514acb3fe47d751efa45a33}} 
+constexpr double \hyperlink{earth_8h_aea4be967a514acb3fe47d751efa45a33}{osse\+::collaborate\+::earth\+::k\+Semi\+Major\+AxisM} = 6378137.\+0
+\begin{DoxyCompactList}\small\item\em Earth\textquotesingle{}s semi-\/major axis (meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{earth_8h_ae2a7aa24721a922aaa0de288c2ca6922}\label{earth_8h_ae2a7aa24721a922aaa0de288c2ca6922}} 
+constexpr double \hyperlink{earth_8h_ae2a7aa24721a922aaa0de288c2ca6922}{osse\+::collaborate\+::earth\+::k\+Semi\+Minor\+AxisM} = 6356752.\+314245
+\begin{DoxyCompactList}\small\item\em Earth\textquotesingle{}s semi-\/minor axis (meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{earth_8h_aa8c950b1e1ae0d3dd89b4a46006708c7}\label{earth_8h_aa8c950b1e1ae0d3dd89b4a46006708c7}} 
+constexpr uint64\+\_\+t \hyperlink{earth_8h_aa8c950b1e1ae0d3dd89b4a46006708c7}{osse\+::collaborate\+::earth\+::k\+Num\+Lons} = 5759
+\begin{DoxyCompactList}\small\item\em The number of columns in the earth\+\_\+data\textquotesingle{}s data array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{earth_8h_ae0e94d8207af91955610c3f0c8dc9646}\label{earth_8h_ae0e94d8207af91955610c3f0c8dc9646}} 
+constexpr uint64\+\_\+t \hyperlink{earth_8h_ae0e94d8207af91955610c3f0c8dc9646}{osse\+::collaborate\+::earth\+::k\+Num\+Lats} = 2880
+\begin{DoxyCompactList}\small\item\em The number of rows in the earth\+\_\+data\textquotesingle{}s data array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{earth_8h_afce34c5a12e2010098e2f5e6157613cd}\label{earth_8h_afce34c5a12e2010098e2f5e6157613cd}} 
+constexpr uint64\+\_\+t \hyperlink{earth_8h_afce34c5a12e2010098e2f5e6157613cd}{osse\+::collaborate\+::earth\+::k\+Num\+Positions} = k\+Num\+Lons $\ast$ k\+Num\+Lats
+\begin{DoxyCompactList}\small\item\em The size of the earth\+\_\+data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{earth_8h_ae818c13d8ae8ce338aa40321aaca73dc}\label{earth_8h_ae818c13d8ae8ce338aa40321aaca73dc}} 
+constexpr double \hyperlink{earth_8h_ae818c13d8ae8ce338aa40321aaca73dc}{osse\+::collaborate\+::earth\+::k\+Lon\+Increment\+Rad} = ((2 $\ast$ M\+\_\+\+PI) / k\+Num\+Lons)
+\begin{DoxyCompactList}\small\item\em The size of the increment between longitude divisions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{earth_8h_a1229bd9c50f9ef4a377f52ec21520a96}\label{earth_8h_a1229bd9c50f9ef4a377f52ec21520a96}} 
+constexpr double \hyperlink{earth_8h_a1229bd9c50f9ef4a377f52ec21520a96}{osse\+::collaborate\+::earth\+::k\+Lat\+Increment\+Rad} = (M\+\_\+\+PI / k\+Num\+Lats)
+\begin{DoxyCompactList}\small\item\em The size of the increment between latitude divisions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Provides constants related the the E\+A\+R\+TH Earth model. 
+
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{earth_8h_file_a6ef212db2b50cdf7ddbc2a187214a25b}\label{earth_8h_file_a6ef212db2b50cdf7ddbc2a187214a25b}} 
+\index{earth.\+h@{earth.\+h}!Radius@{Radius}}
+\index{Radius@{Radius}!earth.\+h@{earth.\+h}}
+\paragraph{\texorpdfstring{Radius()}{Radius()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::earth\+::\+Radius (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Finds the radius of Earth in direction of position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+position} & Position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Radius of Earth in direction of position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{earth_8h_file_a8b4cd1173aa76118acf75f98e5cb04d1}\label{earth_8h_file_a8b4cd1173aa76118acf75f98e5cb04d1}} 
+\index{earth.\+h@{earth.\+h}!Specular\+Point@{Specular\+Point}}
+\index{Specular\+Point@{Specular\+Point}!earth.\+h@{earth.\+h}}
+\paragraph{\texorpdfstring{Specular\+Point()}{SpecularPoint()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::earth\+::\+Specular\+Point (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+tx\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+tx\+\_\+velocity\+\_\+m\+\_\+per\+\_\+s,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+rx\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+rx\+\_\+velocity\+\_\+m\+\_\+per\+\_\+s,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} $\ast$}]{specular\+\_\+position\+\_\+m\+\_\+rad\+\_\+,  }\item[{\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} $\ast$}]{specular\+\_\+velocity\+\_\+m\+\_\+per\+\_\+s\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Finds a specular point location and velocity. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tx\+\_\+position\+\_\+m\+\_\+rad} & Transmitter position (meters and radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+tx\+\_\+velocity\+\_\+m\+\_\+per\+\_\+s} & Transmitter velocity (meters per second) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+rx\+\_\+position\+\_\+m\+\_\+rad} & Reciever position (meters and radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+rx\+\_\+velocity\+\_\+m\+\_\+per\+\_\+s} & Reciever velocity (meters per second) \\
+\hline
+\mbox{\tt out}  & {\em specular\+\_\+position\+\_\+m\+\_\+rad\+\_\+} & \\
+\hline
+\mbox{\tt out}  & {\em specular\+\_\+velocity\+\_\+m\+\_\+per\+\_\+s\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{earth_8h_file_aa43f67f563c35ce39af2af80a9393c4b}\label{earth_8h_file_aa43f67f563c35ce39af2af80a9393c4b}} 
+\index{earth.\+h@{earth.\+h}!Specular\+Position@{Specular\+Position}}
+\index{Specular\+Position@{Specular\+Position}!earth.\+h@{earth.\+h}}
+\paragraph{\texorpdfstring{Specular\+Position()}{SpecularPosition()}}
+{\footnotesize\ttfamily Vector osse\+::collaborate\+::earth\+::\+Specular\+Position (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+tx\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+rx\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const double \&}]{\+\_\+radius\+\_\+init\+\_\+m }\end{DoxyParamCaption})}
+
+
+
+Finds a specular point on Earth. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tx\+\_\+position\+\_\+m\+\_\+rad} & Transmitter Position (meters and radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+rx\+\_\+position\+\_\+m\+\_\+rad} & Reciever Position (meters and radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+radius\+\_\+init\+\_\+m} & Initial radius (meters) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Specular position on Earth 
+\end{DoxyReturn}
+\mbox{\Hypertarget{earth_8h_file_a4474729d4f8d2d7b22c1d5162cd17151}\label{earth_8h_file_a4474729d4f8d2d7b22c1d5162cd17151}} 
+\index{earth.\+h@{earth.\+h}!Specular\+Spherical@{Specular\+Spherical}}
+\index{Specular\+Spherical@{Specular\+Spherical}!earth.\+h@{earth.\+h}}
+\paragraph{\texorpdfstring{Specular\+Spherical()}{SpecularSpherical()}}
+{\footnotesize\ttfamily Vector osse\+::collaborate\+::earth\+::\+Specular\+Spherical (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+rx\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+tx\+\_\+position\+\_\+m\+\_\+rad,  }\item[{const double \&}]{\+\_\+radius\+\_\+m }\end{DoxyParamCaption})}
+
+
+
+Finds a specular point on spherical Earth. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+rx\+\_\+position\+\_\+m\+\_\+rad} & Reciever position (meters and radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+tx\+\_\+position\+\_\+m\+\_\+rad} & Transmitter position (meters and radians) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+radius\+\_\+m} & Radius (meters) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Specular position on spherical Earth 
+\end{DoxyReturn}
+\mbox{\Hypertarget{earth_8h_file_a000d3776630cd16ba98c34bc5a887ccd}\label{earth_8h_file_a000d3776630cd16ba98c34bc5a887ccd}} 
+\index{earth.\+h@{earth.\+h}!Visible@{Visible}}
+\index{Visible@{Visible}!earth.\+h@{earth.\+h}}
+\paragraph{\texorpdfstring{Visible()}{Visible()}}
+{\footnotesize\ttfamily bool osse\+::collaborate\+::earth\+::\+Visible (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+subject,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \&}]{\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Determines if a line-\/of-\/sight path exists between two positions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+subject} & Position of subject node \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+other} & Position of other node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether a line-\/of-\/sight path exists
+\end{DoxyReturn}
+\[ \vec{s} = subject~position~vector \] \[ \vec{t} = other~position~vector \] \[ a = b = EARTH~semimajor~axis,~ c = EARTH~semiminor~axis \] \[ \vec{q}=\begin{bmatrix} 1 \div a&1 \div b&1 \div c\end{bmatrix} \] \[ \vec{s}_{q} = \vec{s}\vec{q},~\vec{t}_{q} = \vec{t}\vec{q} \] \[ \vec{r}_{st} = \vec{s}_q - \vec{t}_{q},~ \vec{r}_{ts} = \vec{t}_q - \vec{s}_{q} \] \[ Discriminant~of~Quadratic~Formula: \] \[ d_{st} = (2(\vec{s} \cdot \vec{r}_{st}))^2 - 4(\left\lvert \vec{r}_{st} \right\rvert^2) (\left\lvert\vec{s}\right\rvert^2 - 1) \] \[ d_{ts} = (2(\vec{t} \cdot \vec{r}_{ts}))^2 - 4(\left\lvert \vec{r}_{ts} \right\rvert^2) (\left\lvert\vec{t}\right\rvert^2 - 1) \] \[ Visible = (d_{st} > 0) \lor (d_{ts} > 0) \] 
+
+\subsubsection{Variable Documentation}
+\mbox{\Hypertarget{earth_8h_file_a411a6e31f8ed10e8cba19e46149f9f8c}\label{earth_8h_file_a411a6e31f8ed10e8cba19e46149f9f8c}} 
+\index{earth.\+h@{earth.\+h}!k\+Eccentricity@{k\+Eccentricity}}
+\index{k\+Eccentricity@{k\+Eccentricity}!earth.\+h@{earth.\+h}}
+\paragraph{\texorpdfstring{k\+Eccentricity}{kEccentricity}}
+{\footnotesize\ttfamily osse\+::collaborate\+::earth\+::k\+Eccentricity}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= std::sqrt((2 * kFlattening)
+                                           - std::pow(kFlattening, 2))
+\end{DoxyCode}
+
+
+Earth\textquotesingle{}s flattening. 
+

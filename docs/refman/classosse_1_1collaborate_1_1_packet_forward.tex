@@ -1,0 +1,302 @@
+\hypertarget{classosse_1_1collaborate_1_1_packet_forward}{}\subsection{osse\+:\+:collaborate\+:\+:Packet\+Forward Class Reference}
+\label{classosse_1_1collaborate_1_1_packet_forward}\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+
+
+A packet of control data.  
+
+
+
+
+{\ttfamily \#include $<$packet\+\_\+forward.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Packet\+Forward\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classosse_1_1collaborate_1_1_packet_forward__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}\label{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}} 
+typedef std\+::pair$<$ uint16\+\_\+t, uint64\+\_\+t $>$ \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Event}
+\begin{DoxyCompactList}\small\item\em A route containing node and transfer pairs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}\label{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}} 
+typedef std\+::vector$<$ \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Event} $>$ \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}{Partial\+Route}
+\begin{DoxyCompactList}\small\item\em A partial route containing node and transfer pairs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a5b42a7c3605c5a6c7e0880599b213240}\label{classosse_1_1collaborate_1_1_packet_forward_a5b42a7c3605c5a6c7e0880599b213240}} 
+typedef std\+::array$<$ \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Event}, \hyperlink{classosse_1_1collaborate_1_1_packet_forward_ae6a49cb87c138068b0e4f9c68a4a202f}{k\+Max\+Transfers} $>$ \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5b42a7c3605c5a6c7e0880599b213240}{Route}
+\begin{DoxyCompactList}\small\item\em A route containing node and transfer pairs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_packet_forward_aa9d4d7abe36998c9178db59950c18c51}{Packet\+Forward} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload)
+\begin{DoxyCompactList}\small\item\em Constructor from payload. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a1b033de632232702fdc6c4b58b747b73}{Packet\+Forward} (const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}{Partial\+Route} \&\+\_\+partial\+\_\+route, const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Event} \&\+\_\+event, const uint16\+\_\+t \&\+\_\+feedback)
+\begin{DoxyCompactList}\small\item\em Constructor from data members. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classosse_1_1collaborate_1_1_packet_forward_ab1bc40a24079aac6e1ee579e76b6e4a3}{To\+String} () const
+\begin{DoxyCompactList}\small\item\em Converts the packet to a string. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5b42a7c3605c5a6c7e0880599b213240}{Route} \& \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a186c0e8f307fb9495533e4abc977b86b}{route} () const
+\begin{DoxyCompactList}\small\item\em Gets route. \end{DoxyCompactList}\item 
+const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Event} \& \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a6807359ebbff9386a42e8310493cccc3}{event} () const
+\begin{DoxyCompactList}\small\item\em Gets event. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \& \hyperlink{classosse_1_1collaborate_1_1_packet_forward_ada8a2b432af1e7e4dc09bcf056e45273}{feedback} () const
+\begin{DoxyCompactList}\small\item\em Gets feedback. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}{Partial\+Route} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a1c3ee630b59d3db2a4e9e7484c1c7752}{Decode\+Partial\+Route} ()
+\begin{DoxyCompactList}\small\item\em Decodes the route into a standard vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a47107f0bbd0e8648650abeebb46fefc9}\label{classosse_1_1collaborate_1_1_packet_forward_a47107f0bbd0e8648650abeebb46fefc9}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a47107f0bbd0e8648650abeebb46fefc9}{k\+Packet\+Forward\+Size\+Bytes} = 312
+\begin{DoxyCompactList}\small\item\em The size (bytes) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_ae6a49cb87c138068b0e4f9c68a4a202f}\label{classosse_1_1collaborate_1_1_packet_forward_ae6a49cb87c138068b0e4f9c68a4a202f}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_forward_ae6a49cb87c138068b0e4f9c68a4a202f}{k\+Max\+Transfers} = 30
+\begin{DoxyCompactList}\small\item\em The maximum size of a route. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a31d3aee3aa9c241a30910ccc365b8316}\label{classosse_1_1collaborate_1_1_packet_forward_a31d3aee3aa9c241a30910ccc365b8316}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a31d3aee3aa9c241a30910ccc365b8316}{k\+Bytes\+Per\+Transfer} = 10
+\begin{DoxyCompactList}\small\item\em The number of bytes per transfer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a5ae3c5868c471ffc222a30a647092f3c}\label{classosse_1_1collaborate_1_1_packet_forward_a5ae3c5868c471ffc222a30a647092f3c}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5ae3c5868c471ffc222a30a647092f3c}{k\+Event\+Index} = 300
+\begin{DoxyCompactList}\small\item\em The index of the event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a539708e3f37b9de4dcb8245d348a9087}\label{classosse_1_1collaborate_1_1_packet_forward_a539708e3f37b9de4dcb8245d348a9087}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a539708e3f37b9de4dcb8245d348a9087}{k\+Feedback\+Index} = 310
+\begin{DoxyCompactList}\small\item\em The index of the feedback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5f6bf9e22a6c956b08593eb35b149543}{Pack\+All} (const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}{Partial\+Route} \&\+\_\+partial\+\_\+route, const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Event} \&\+\_\+event, const uint16\+\_\+t \&\+\_\+feedback) const
+\begin{DoxyCompactList}\small\item\em Packs member elements into a payload. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5b42a7c3605c5a6c7e0880599b213240}{Route} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a3c77c0ab27c74b52945244faf8ce3d5e}{Encode\+Route} (const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}{Partial\+Route} \&\+\_\+partial\+\_\+route) const
+\begin{DoxyCompactList}\small\item\em Translates a vector to an array. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5b42a7c3605c5a6c7e0880599b213240}{Route} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a34d3be1f164ab0b1ee52396c8e5ec2cc}{Unpack\+Route} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload) const
+\begin{DoxyCompactList}\small\item\em Unpacks the route from the payload. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Event} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a954b32499a8ca1e5d68da03b567dc2e3}{Unpack\+Event} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload) const
+\begin{DoxyCompactList}\small\item\em Unpacks the event from the payload. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4498a5e0e0c38145f88238df36ad815d}{Unpack\+Feedback} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\+\_\+payload) const
+\begin{DoxyCompactList}\small\item\em Unpacks the feedback from the payload. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a6e1aebd75f31a98f1effe8011480607d}\label{classosse_1_1collaborate_1_1_packet_forward_a6e1aebd75f31a98f1effe8011480607d}} 
+\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5b42a7c3605c5a6c7e0880599b213240}{Route} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a6e1aebd75f31a98f1effe8011480607d}{route\+\_\+}
+\begin{DoxyCompactList}\small\item\em Route containing individual transfer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_ada88ba82c98c358b3c5200300d322f9e}\label{classosse_1_1collaborate_1_1_packet_forward_ada88ba82c98c358b3c5200300d322f9e}} 
+\hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Event} \hyperlink{classosse_1_1collaborate_1_1_packet_forward_ada88ba82c98c358b3c5200300d322f9e}{event\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classosse_1_1collaborate_1_1_node}{Node} index and time of sensor reading. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a93607aa047ad213bc9938374dcbe1e64}\label{classosse_1_1collaborate_1_1_packet_forward_a93607aa047ad213bc9938374dcbe1e64}} 
+uint16\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a93607aa047ad213bc9938374dcbe1e64}{feedback\+\_\+}
+\begin{DoxyCompactList}\small\item\em Feedback node index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+A packet of control data. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_aa9d4d7abe36998c9178db59950c18c51}\label{classosse_1_1collaborate_1_1_packet_forward_aa9d4d7abe36998c9178db59950c18c51}} 
+\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}!Packet\+Forward@{Packet\+Forward}}
+\index{Packet\+Forward@{Packet\+Forward}!osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+\paragraph{\texorpdfstring{Packet\+Forward()}{PacketForward()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Packet\+Forward\+::\+Packet\+Forward (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor from payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a1b033de632232702fdc6c4b58b747b73}\label{classosse_1_1collaborate_1_1_packet_forward_a1b033de632232702fdc6c4b58b747b73}} 
+\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}!Packet\+Forward@{Packet\+Forward}}
+\index{Packet\+Forward@{Packet\+Forward}!osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+\paragraph{\texorpdfstring{Packet\+Forward()}{PacketForward()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Packet\+Forward\+::\+Packet\+Forward (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}{Partial\+Route} \&}]{\+\_\+partial\+\_\+route,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Event} \&}]{\+\_\+event,  }\item[{const uint16\+\_\+t \&}]{\+\_\+feedback }\end{DoxyParamCaption})}
+
+
+
+Constructor from data members. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+partial\+\_\+route} & Route \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+event} & Measurement event \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+feedback} & The index of the feedback node \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a1c3ee630b59d3db2a4e9e7484c1c7752}\label{classosse_1_1collaborate_1_1_packet_forward_a1c3ee630b59d3db2a4e9e7484c1c7752}} 
+\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}!Decode\+Partial\+Route@{Decode\+Partial\+Route}}
+\index{Decode\+Partial\+Route@{Decode\+Partial\+Route}!osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+\paragraph{\texorpdfstring{Decode\+Partial\+Route()}{DecodePartialRoute()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}{Packet\+Forward\+::\+Partial\+Route} osse\+::collaborate\+::\+Packet\+Forward\+::\+Decode\+Partial\+Route (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Decodes the route into a standard vector. 
+
+\begin{DoxyReturn}{Returns}
+Route as a vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a3c77c0ab27c74b52945244faf8ce3d5e}\label{classosse_1_1collaborate_1_1_packet_forward_a3c77c0ab27c74b52945244faf8ce3d5e}} 
+\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}!Encode\+Route@{Encode\+Route}}
+\index{Encode\+Route@{Encode\+Route}!osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+\paragraph{\texorpdfstring{Encode\+Route()}{EncodeRoute()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5b42a7c3605c5a6c7e0880599b213240}{Packet\+Forward\+::\+Route} osse\+::collaborate\+::\+Packet\+Forward\+::\+Encode\+Route (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}{Partial\+Route} \&}]{\+\_\+partial\+\_\+route }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Translates a vector to an array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+partial\+\_\+route} & Route as a vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Route (array) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a6807359ebbff9386a42e8310493cccc3}\label{classosse_1_1collaborate_1_1_packet_forward_a6807359ebbff9386a42e8310493cccc3}} 
+\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}!event@{event}}
+\index{event@{event}!osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+\paragraph{\texorpdfstring{event()}{event()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Event}\& osse\+::collaborate\+::\+Packet\+Forward\+::event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets event. 
+
+\begin{DoxyReturn}{Returns}
+event\+\_\+ Event 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_ada8a2b432af1e7e4dc09bcf056e45273}\label{classosse_1_1collaborate_1_1_packet_forward_ada8a2b432af1e7e4dc09bcf056e45273}} 
+\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}!feedback@{feedback}}
+\index{feedback@{feedback}!osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+\paragraph{\texorpdfstring{feedback()}{feedback()}}
+{\footnotesize\ttfamily const uint16\+\_\+t\& osse\+::collaborate\+::\+Packet\+Forward\+::feedback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets feedback. 
+
+\begin{DoxyReturn}{Returns}
+feedback\+\_\+ Feedback 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a5f6bf9e22a6c956b08593eb35b149543}\label{classosse_1_1collaborate_1_1_packet_forward_a5f6bf9e22a6c956b08593eb35b149543}} 
+\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}!Pack\+All@{Pack\+All}}
+\index{Pack\+All@{Pack\+All}!osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+\paragraph{\texorpdfstring{Pack\+All()}{PackAll()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint8\+\_\+t $>$ osse\+::collaborate\+::\+Packet\+Forward\+::\+Pack\+All (\begin{DoxyParamCaption}\item[{const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a4627beb1294e822a7eec6038969a5da0}{Partial\+Route} \&}]{\+\_\+partial\+\_\+route,  }\item[{const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Event} \&}]{\+\_\+event,  }\item[{const uint16\+\_\+t \&}]{\+\_\+feedback }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Packs member elements into a payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+partial\+\_\+route} & Partial route \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+event} & Event \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+feedback} & Feedback \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Payload 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a186c0e8f307fb9495533e4abc977b86b}\label{classosse_1_1collaborate_1_1_packet_forward_a186c0e8f307fb9495533e4abc977b86b}} 
+\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}!route@{route}}
+\index{route@{route}!osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+\paragraph{\texorpdfstring{route()}{route()}}
+{\footnotesize\ttfamily const \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5b42a7c3605c5a6c7e0880599b213240}{Route}\& osse\+::collaborate\+::\+Packet\+Forward\+::route (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets route. 
+
+\begin{DoxyReturn}{Returns}
+route\+\_\+ Route 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_ab1bc40a24079aac6e1ee579e76b6e4a3}\label{classosse_1_1collaborate_1_1_packet_forward_ab1bc40a24079aac6e1ee579e76b6e4a3}} 
+\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+\paragraph{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily std\+::string osse\+::collaborate\+::\+Packet\+Forward\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Converts the packet to a string. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classosse_1_1collaborate_1_1_packet}{Packet} as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a954b32499a8ca1e5d68da03b567dc2e3}\label{classosse_1_1collaborate_1_1_packet_forward_a954b32499a8ca1e5d68da03b567dc2e3}} 
+\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}!Unpack\+Event@{Unpack\+Event}}
+\index{Unpack\+Event@{Unpack\+Event}!osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+\paragraph{\texorpdfstring{Unpack\+Event()}{UnpackEvent()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a66c37a806c4b486cb1af64409865fa4b}{Packet\+Forward\+::\+Event} osse\+::collaborate\+::\+Packet\+Forward\+::\+Unpack\+Event (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unpacks the event from the payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Event 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a4498a5e0e0c38145f88238df36ad815d}\label{classosse_1_1collaborate_1_1_packet_forward_a4498a5e0e0c38145f88238df36ad815d}} 
+\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}!Unpack\+Feedback@{Unpack\+Feedback}}
+\index{Unpack\+Feedback@{Unpack\+Feedback}!osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+\paragraph{\texorpdfstring{Unpack\+Feedback()}{UnpackFeedback()}}
+{\footnotesize\ttfamily uint16\+\_\+t osse\+::collaborate\+::\+Packet\+Forward\+::\+Unpack\+Feedback (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unpacks the feedback from the payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Feedback 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_packet_forward_a34d3be1f164ab0b1ee52396c8e5ec2cc}\label{classosse_1_1collaborate_1_1_packet_forward_a34d3be1f164ab0b1ee52396c8e5ec2cc}} 
+\index{osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}!Unpack\+Route@{Unpack\+Route}}
+\index{Unpack\+Route@{Unpack\+Route}!osse\+::collaborate\+::\+Packet\+Forward@{osse\+::collaborate\+::\+Packet\+Forward}}
+\paragraph{\texorpdfstring{Unpack\+Route()}{UnpackRoute()}}
+{\footnotesize\ttfamily \hyperlink{classosse_1_1collaborate_1_1_packet_forward_a5b42a7c3605c5a6c7e0880599b213240}{Packet\+Forward\+::\+Route} osse\+::collaborate\+::\+Packet\+Forward\+::\+Unpack\+Route (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{\+\_\+payload }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Unpacks the route from the payload. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+payload} & Payload \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Route (array) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/packet\+\_\+forward.\+h\item 
+libs/collaborate/src/packet\+\_\+forward.\+cpp\end{DoxyCompactItemize}

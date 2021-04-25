@@ -1,0 +1,48 @@
+\hypertarget{graph_8h_source}{}\subsection{graph.\+h}
+\label{graph_8h_source}\index{libs/collaborate/include/collaborate/graph.\+h@{libs/collaborate/include/collaborate/graph.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#include <cmath>}
+00017 \textcolor{preprocessor}{#include <cstdint>}
+00018 \textcolor{preprocessor}{#include <string>}
+00019 
+00020 \textcolor{preprocessor}{#include "collaborate/data\_logger.h"}
+00021 
+00022 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_GRAPH\_H\_}
+00023 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_GRAPH\_H\_}
+00024 
+00025 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00026 \textcolor{keyword}{namespace }collaborate \{
+00027 
+\Hypertarget{graph_8h_source_l00030}\hyperlink{classosse_1_1collaborate_1_1_graph}{00030} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_graph}{Graph} \{
+00031  \textcolor{keyword}{public}:
+\Hypertarget{graph_8h_source_l00033}\hyperlink{classosse_1_1collaborate_1_1_graph_a063285c7a14ce7499b355cac87d1900a}{00033}   \textcolor{keyword}{static} constexpr uint16\_t \hyperlink{classosse_1_1collaborate_1_1_graph_a063285c7a14ce7499b355cac87d1900a}{kMaxNodes} = 200;
+\Hypertarget{graph_8h_source_l00035}\hyperlink{classosse_1_1collaborate_1_1_graph_a9c9828305d419d29fc1eed87a4520cd5}{00035}   \textcolor{keyword}{static} constexpr uint16\_t \hyperlink{classosse_1_1collaborate_1_1_graph_a9c9828305d419d29fc1eed87a4520cd5}{kSize} = std::pow(kMaxNodes, 2);
+00038   \textcolor{keyword}{explicit} \hyperlink{classosse_1_1collaborate_1_1_graph_aa6e69d08b74393ecfa68cbf915d7eabc}{Graph}(\hyperlink{classosse_1_1collaborate_1_1_data_logger}{DataLogger}* \_data\_log);
+00042   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_graph_abaef7c4642242e096d2bbfc74b8d1d07}{Log}(\textcolor{keyword}{const} uint16\_t& \_num\_nodes, \textcolor{keyword}{const} uint64\_t& \_tick) \textcolor{keyword}{const} = 0;
+00044   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_graph_a92b99db1a453e58d1fb3fc134a8fd8ba}{Clear}() = 0;
+00045 
+00046  \textcolor{keyword}{protected}:
+\Hypertarget{graph_8h_source_l00048}\hyperlink{classosse_1_1collaborate_1_1_graph_a33e2d89c03913f2bb033a215b5f1efa6}{00048}   \hyperlink{classosse_1_1collaborate_1_1_data_logger}{DataLogger}* \hyperlink{classosse_1_1collaborate_1_1_graph_a33e2d89c03913f2bb033a215b5f1efa6}{data\_log\_};
+00049 \};
+00050 
+00051 \}  \textcolor{comment}{// namespace collaborate}
+00052 \}  \textcolor{comment}{// namespace osse}
+00053 
+00054 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_GRAPH\_H\_}
+\end{DoxyCode}

@@ -1,0 +1,51 @@
+\hypertarget{battery_8h_source}{}\subsection{battery.\+h}
+\label{battery_8h_source}\index{libs/collaborate/include/collaborate/battery.\+h@{libs/collaborate/include/collaborate/battery.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_BATTERY\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_BATTERY\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <cmath>}
+00020 \textcolor{preprocessor}{#include <string>}
+00021 
+00022 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00023 \textcolor{keyword}{namespace }collaborate \{
+00024 
+\Hypertarget{battery_8h_source_l00029}\hyperlink{classosse_1_1collaborate_1_1_battery}{00029} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_battery}{Battery} \{
+00030  \textcolor{keyword}{public}:
+00038   \hyperlink{classosse_1_1collaborate_1_1_battery_aa7cf9b637b12ead425d0643e325e3b85}{Battery}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_cell\_amp\_hr,
+00039           \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_num\_cells,
+00040           \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_voltage\_v,
+00041           \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_charging\_efficiency\_percent);
+00044   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_battery_aaba13e6f12650d1503fccb96119f5871}{IntroduceEnergy}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_energy\_w\_hr);
+\Hypertarget{battery_8h_source_l00047}\hyperlink{classosse_1_1collaborate_1_1_battery_a98033b5ec818bc5d243b76f87713f8e1}{00047}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_battery_a98033b5ec818bc5d243b76f87713f8e1}{kChargeEfficiencyPercent}()\textcolor{keyword}{ const }\{
+00048     \textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_battery_a3d18940f0a60fc606e590f718eff1248}{kChargeEfficiencyPercent\_};
+00049   \}
+\Hypertarget{battery_8h_source_l00052}\hyperlink{classosse_1_1collaborate_1_1_battery_ace47f7e90f5edd460e93438013104012}{00052}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_battery_ace47f7e90f5edd460e93438013104012}{energy\_w\_hr}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_battery_a8e45c42076a5adfbb55122872bc28bcc}{energy\_w\_hr\_};\}
+00053 
+00054  \textcolor{keyword}{private}:
+\Hypertarget{battery_8h_source_l00056}\hyperlink{classosse_1_1collaborate_1_1_battery_a66a6e5481749e19f7d0ffc48f57fd93d}{00056}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_battery_a66a6e5481749e19f7d0ffc48f57fd93d}{kCapacityWHr\_};
+\Hypertarget{battery_8h_source_l00058}\hyperlink{classosse_1_1collaborate_1_1_battery_a3d18940f0a60fc606e590f718eff1248}{00058}   \textcolor{keyword}{const} \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_battery_a3d18940f0a60fc606e590f718eff1248}{kChargeEfficiencyPercent\_};
+\Hypertarget{battery_8h_source_l00060}\hyperlink{classosse_1_1collaborate_1_1_battery_a8e45c42076a5adfbb55122872bc28bcc}{00060}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_battery_a8e45c42076a5adfbb55122872bc28bcc}{energy\_w\_hr\_};
+00061 \};
+00062 
+00063 \}  \textcolor{comment}{// namespace collaborate}
+00064 \}  \textcolor{comment}{// namespace osse}
+00065 
+00066 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_BATTERY\_H\_}
+\end{DoxyCode}

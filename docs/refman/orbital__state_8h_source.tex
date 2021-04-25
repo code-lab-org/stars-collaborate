@@ -1,0 +1,82 @@
+\hypertarget{orbital__state_8h_source}{}\subsection{orbital\+\_\+state.\+h}
+\label{orbital__state_8h_source}\index{libs/collaborate/include/collaborate/orbital\+\_\+state.\+h@{libs/collaborate/include/collaborate/orbital\+\_\+state.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_ORBITAL\_STATE\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_ORBITAL\_STATE\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <vector>}
+00020 
+00021 \textcolor{preprocessor}{#include "collaborate/geodetic.h"}
+00022 \textcolor{preprocessor}{#include "collaborate/reference\_frame.h"}
+00023 \textcolor{preprocessor}{#include "collaborate/vector.h"}
+00024 
+00025 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00026 \textcolor{keyword}{namespace }collaborate \{
+00027 
+\Hypertarget{orbital__state_8h_source_l00030}\hyperlink{classosse_1_1collaborate_1_1_orbital_state}{00030} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_orbital_state}{OrbitalState} \{
+00031  \textcolor{keyword}{public}:
+00045   \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a9990f1fc348981b44c1a9c7781cb9b4f}{OrbitalState}(\textcolor{keywordtype}{double} \_x\_m,
+00046                \textcolor{keywordtype}{double} \_y\_m,
+00047                \textcolor{keywordtype}{double} \_z\_m,
+00048                \textcolor{keywordtype}{double} \_latitude\_rad,
+00049                \textcolor{keywordtype}{double} \_longitude\_rad,
+00050                \textcolor{keywordtype}{double} \_altitude\_m,
+00051                \textcolor{keywordtype}{double} \_dx\_m\_per\_s,
+00052                \textcolor{keywordtype}{double} \_dy\_m\_per\_s,
+00053                \textcolor{keywordtype}{double} \_dz\_m\_per\_s,
+00054                \textcolor{keywordtype}{double} \_roll\_rad,
+00055                \textcolor{keywordtype}{double} \_pitch\_rad,
+00056                \textcolor{keywordtype}{double} \_yaw\_rad);
+00066   \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a0ed1213527f9cbe7a6131feb4308046e}{CalculatePlatformOrbitReferenceFrame}() \textcolor{keyword}{
+      const};
+00077   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a29fea23801f7de2f5ad72888b15ca220}{Update}(\textcolor{keywordtype}{double} \_x\_m,
+00078               \textcolor{keywordtype}{double} \_y\_m,
+00079               \textcolor{keywordtype}{double} \_z\_m,
+00080               \textcolor{keywordtype}{double} \_latitude\_rad,
+00081               \textcolor{keywordtype}{double} \_longitude\_rad,
+00082               \textcolor{keywordtype}{double} \_altitude\_m,
+00083               \textcolor{keywordtype}{double} \_dx\_m\_per\_s,
+00084               \textcolor{keywordtype}{double} \_dy\_m\_per\_s,
+00085               \textcolor{keywordtype}{double} \_dz\_m\_per\_s);
+00088   std::vector<double> \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a010c89b843916c12e8d6ec4042787af6}{ObtainLog}() \textcolor{keyword}{const};
+00091   std::vector<double> \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a5ef68d5b425411e26612f213ab406136}{ObtainGeodeticLog}() \textcolor{keyword}{const};
+\Hypertarget{orbital__state_8h_source_l00094}\hyperlink{classosse_1_1collaborate_1_1_orbital_state_a09eef3c4ce4d5a6aff3b6cee6e1dea0e}{00094}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a09eef3c4ce4d5a6aff3b6cee6e1dea0e}{position\_m\_rad}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a5508edbd6215162be9483b371e95750c}{position\_m\_rad\_};\}
+\Hypertarget{orbital__state_8h_source_l00097}\hyperlink{classosse_1_1collaborate_1_1_orbital_state_a2d52b42f0259367d91e2c247aea9522f}{00097}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a2d52b42f0259367d91e2c247aea9522f}{velocity\_m\_per\_s}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a07d091b449bf6093c0f8c8568d6625bb}{velocity\_m\_per\_s\_};\}
+\Hypertarget{orbital__state_8h_source_l00100}\hyperlink{classosse_1_1collaborate_1_1_orbital_state_a7a6f749d24d80b5e5c08eb4a03857a31}{00100}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic}& \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a7a6f749d24d80b5e5c08eb4a03857a31}{geodetic\_rad\_m}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a5129e6f49ed14ff382a4f62cabe4d80c}{geodetic\_rad\_m\_};\}
+\Hypertarget{orbital__state_8h_source_l00103}\hyperlink{classosse_1_1collaborate_1_1_orbital_state_a9704e21bdf2ed6245b4b27e5a2911310}{00103}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame}& \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a9704e21bdf2ed6245b4b27e5a2911310}{orbit\_frame}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_orbital_state_aa8a60024082bf2c299abfea13aa24f5e}{orbit\_frame\_};\}
+\Hypertarget{orbital__state_8h_source_l00106}\hyperlink{classosse_1_1collaborate_1_1_orbital_state_a28b3414c74ad4ebe11d0e835dc9591ee}{00106}   \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame}& \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a28b3414c74ad4ebe11d0e835dc9591ee}{body\_frame}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 
+      \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a3542ba071a7a50da3974a5766b089d58}{body\_frame\_};\}
+00107 
+00108  \textcolor{keyword}{private}:
+\Hypertarget{orbital__state_8h_source_l00110}\hyperlink{classosse_1_1collaborate_1_1_orbital_state_a5508edbd6215162be9483b371e95750c}{00110}   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a5508edbd6215162be9483b371e95750c}{position\_m\_rad\_};
+\Hypertarget{orbital__state_8h_source_l00112}\hyperlink{classosse_1_1collaborate_1_1_orbital_state_a07d091b449bf6093c0f8c8568d6625bb}{00112}   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a07d091b449bf6093c0f8c8568d6625bb}{velocity\_m\_per\_s\_};
+\Hypertarget{orbital__state_8h_source_l00114}\hyperlink{classosse_1_1collaborate_1_1_orbital_state_a5129e6f49ed14ff382a4f62cabe4d80c}{00114}   \hyperlink{classosse_1_1collaborate_1_1_geodetic}{Geodetic} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a5129e6f49ed14ff382a4f62cabe4d80c}{geodetic\_rad\_m\_};
+\Hypertarget{orbital__state_8h_source_l00116}\hyperlink{classosse_1_1collaborate_1_1_orbital_state_aa8a60024082bf2c299abfea13aa24f5e}{00116}   \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_aa8a60024082bf2c299abfea13aa24f5e}{orbit\_frame\_};
+\Hypertarget{orbital__state_8h_source_l00118}\hyperlink{classosse_1_1collaborate_1_1_orbital_state_a3542ba071a7a50da3974a5766b089d58}{00118}   \hyperlink{classosse_1_1collaborate_1_1_reference_frame}{ReferenceFrame} \hyperlink{classosse_1_1collaborate_1_1_orbital_state_a3542ba071a7a50da3974a5766b089d58}{body\_frame\_};
+00119 \};
+00120 
+00121 \}  \textcolor{comment}{// namespace collaborate}
+00122 \}  \textcolor{comment}{// namespace osse}
+00123 
+00124 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_ORBITAL\_STATE\_H\_}
+\end{DoxyCode}

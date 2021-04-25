@@ -1,0 +1,93 @@
+\hypertarget{vector_8h_source}{}\subsection{vector.\+h}
+\label{vector_8h_source}\index{libs/collaborate/include/collaborate/vector.\+h@{libs/collaborate/include/collaborate/vector.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{// Copyright (C) 2019 The Ohio State University}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}
+00004 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}
+00005 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License, or}
+00006 \textcolor{comment}{// (at your option) any later version.}
+00007 \textcolor{comment}{//}
+00008 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}
+00009 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}
+00010 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+00011 \textcolor{comment}{// GNU General Public License for more details.}
+00012 \textcolor{comment}{//}
+00013 \textcolor{comment}{// You should have received a copy of the GNU General Public License}
+00014 \textcolor{comment}{// along with this program.  If not, see <https://www.gnu.org/licenses/>.}
+00015 
+00016 \textcolor{preprocessor}{#ifndef LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_VECTOR\_H\_}
+00017 \textcolor{preprocessor}{#define LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_VECTOR\_H\_}
+00018 
+00019 \textcolor{preprocessor}{#include <limits>}
+00020 \textcolor{preprocessor}{#include <string>}
+00021 \textcolor{preprocessor}{#include <vector>}
+00022 
+00023 \textcolor{keyword}{namespace }\hyperlink{namespaceosse}{osse} \{
+00024 \textcolor{keyword}{namespace }collaborate \{
+00025 
+\Hypertarget{vector_8h_source_l00030}\hyperlink{classosse_1_1collaborate_1_1_vector}{00030} \textcolor{keyword}{class }\hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \{
+00031  \textcolor{keyword}{public}:
+00035   \hyperlink{classosse_1_1collaborate_1_1_vector_af495b2efd099a897642ec06be87abc16}{Vector}();
+00042   \hyperlink{classosse_1_1collaborate_1_1_vector_af495b2efd099a897642ec06be87abc16}{Vector}(\textcolor{keywordtype}{double} \_x\_m, \textcolor{keywordtype}{double} \_y\_m, \textcolor{keywordtype}{double} \_z\_m);
+00052   \textcolor{keywordtype}{void} \hyperlink{classosse_1_1collaborate_1_1_vector_a427667ec4887828003c2d3652462ad94}{CompleteCoordinates}();
+00060   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_vector_a21c93523c1b0c578e88b4ba831b2021e}{CalculateThetaRad}() \textcolor{keyword}{const};
+00067   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_vector_af4e5954804008f6fd041536ab5bb8efe}{CalculatePhiRad}() \textcolor{keyword}{const};
+00070   std::vector<double> \hyperlink{classosse_1_1collaborate_1_1_vector_acc6656dc258e0eab8cdd3baa0ac7a255}{ObtainLog}() \textcolor{keyword}{const};
+\Hypertarget{vector_8h_source_l00075}\hyperlink{classosse_1_1collaborate_1_1_vector_a7d9cb2cd1fdeaae594569c3f8886a17c}{00075}   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a7d9cb2cd1fdeaae594569c3f8886a17c}{operator-}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector_af495b2efd099a897642ec06be87abc16}{Vector}(-\hyperlink{classosse_1_1collaborate_1_1_vector_a73968df95eae0627d3ed6fe1eb1d0121}{x\_m\_}, -\hyperlink{classosse_1_1collaborate_1_1_vector_a9ed86f0af6f6d64bbdc79eec9f5ac7f7}{y\_m\_}, -
+      \hyperlink{classosse_1_1collaborate_1_1_vector_adb0356716c196646509b48043fe53c9d}{z\_m\_});\}
+\Hypertarget{vector_8h_source_l00085}\hyperlink{classosse_1_1collaborate_1_1_vector_aab7a37d0c9d6af906635510b15063cac}{00085}   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_aab7a37d0c9d6af906635510b15063cac}{operator+}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_other)\textcolor{keyword}{ const }\{
+00086     \textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector_af495b2efd099a897642ec06be87abc16}{Vector}(\hyperlink{classosse_1_1collaborate_1_1_vector_a73968df95eae0627d3ed6fe1eb1d0121}{x\_m\_}+\_other.\hyperlink{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}{x\_m}(), \hyperlink{classosse_1_1collaborate_1_1_vector_a9ed86f0af6f6d64bbdc79eec9f5ac7f7}{y\_m\_}+\_other.\hyperlink{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}{y\_m}(), \hyperlink{classosse_1_1collaborate_1_1_vector_adb0356716c196646509b48043fe53c9d}{z\_m\_}+\_other.
+      \hyperlink{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}{z\_m}());
+00087   \}
+\Hypertarget{vector_8h_source_l00097}\hyperlink{classosse_1_1collaborate_1_1_vector_a1481fdc0bedbb74a453b75f63599e35a}{00097}   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a1481fdc0bedbb74a453b75f63599e35a}{operator-}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_other)\textcolor{keyword}{ const }\{
+00098     \textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector_af495b2efd099a897642ec06be87abc16}{Vector}(\hyperlink{classosse_1_1collaborate_1_1_vector_a73968df95eae0627d3ed6fe1eb1d0121}{x\_m\_}-\_other.\hyperlink{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}{x\_m}(), \hyperlink{classosse_1_1collaborate_1_1_vector_a9ed86f0af6f6d64bbdc79eec9f5ac7f7}{y\_m\_}-\_other.\hyperlink{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}{y\_m}(), \hyperlink{classosse_1_1collaborate_1_1_vector_adb0356716c196646509b48043fe53c9d}{z\_m\_}-\_other.
+      \hyperlink{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}{z\_m}());
+00099   \}
+00104   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a1067b0871f08bdca0c1021b3763adc80}{Unit}() \textcolor{keyword}{const};
+00110   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_vector_aa33392d41fcf146180125cc0b6a84efb}{Dot}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_other) \textcolor{keyword}{const};
+00122   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a0bfa8cd492b8664c00b2e750ab13334f}{Cross}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_other) \textcolor{keyword}{const};
+\Hypertarget{vector_8h_source_l00129}\hyperlink{classosse_1_1collaborate_1_1_vector_a091294293b9af4b040f8784fa9b74cab}{00129}   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a091294293b9af4b040f8784fa9b74cab}{operator*}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_scalar)\textcolor{keyword}{ const }\{
+00130     \textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector_af495b2efd099a897642ec06be87abc16}{Vector}((\hyperlink{classosse_1_1collaborate_1_1_vector_a73968df95eae0627d3ed6fe1eb1d0121}{x\_m\_}*\_scalar), (\hyperlink{classosse_1_1collaborate_1_1_vector_a9ed86f0af6f6d64bbdc79eec9f5ac7f7}{y\_m\_}*\_scalar), (\hyperlink{classosse_1_1collaborate_1_1_vector_adb0356716c196646509b48043fe53c9d}{z\_m\_}*\_scalar));
+00131   \}
+\Hypertarget{vector_8h_source_l00140}\hyperlink{classosse_1_1collaborate_1_1_vector_aeaa64febdb5435cbd3c1e747e9920a11}{00140}   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_aeaa64febdb5435cbd3c1e747e9920a11}{operator/}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}& \_scalar)\textcolor{keyword}{ const }\{
+00141     \textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector_af495b2efd099a897642ec06be87abc16}{Vector}((\hyperlink{classosse_1_1collaborate_1_1_vector_a73968df95eae0627d3ed6fe1eb1d0121}{x\_m\_}/\_scalar), (\hyperlink{classosse_1_1collaborate_1_1_vector_a9ed86f0af6f6d64bbdc79eec9f5ac7f7}{y\_m\_}/\_scalar), (\hyperlink{classosse_1_1collaborate_1_1_vector_adb0356716c196646509b48043fe53c9d}{z\_m\_}/\_scalar));
+00142   \}
+\Hypertarget{vector_8h_source_l00145}\hyperlink{classosse_1_1collaborate_1_1_vector_adadeade94ada0735d117526a0f996c40}{00145}   \textcolor{keyword}{explicit} \textcolor{keyword}{operator} bool()\textcolor{keyword}{ const }\{
+00146     \textcolor{keywordflow}{return} (\hyperlink{classosse_1_1collaborate_1_1_vector_a73968df95eae0627d3ed6fe1eb1d0121}{x\_m\_} >= std::numeric\_limits<double>::epsilon()
+00147             && \hyperlink{classosse_1_1collaborate_1_1_vector_a9ed86f0af6f6d64bbdc79eec9f5ac7f7}{y\_m\_} >= std::numeric\_limits<double>::epsilon()
+00148             && \hyperlink{classosse_1_1collaborate_1_1_vector_adb0356716c196646509b48043fe53c9d}{z\_m\_} >= std::numeric\_limits<double>::epsilon());
+00149   \}
+00158   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_vector_a992473ff0ed786e7891d7608ad99163b}{AngleBetween}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_other) \textcolor{keyword}{const};
+00162   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a52ba4cdc72da4646b3868af7f51b100d}{OrthoNormal}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_other) \textcolor{keyword}{const};
+00167   \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector} \hyperlink{classosse_1_1collaborate_1_1_vector_a722c3aaf225c4324ff7939bd98827016}{ConstraintToPlane}(\textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_other,
+00168                            \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_reference) \textcolor{keyword}{const};
+00171   std::string \hyperlink{classosse_1_1collaborate_1_1_vector_af5fb0bf89a48d682cfbfda512b5fb24d}{ToString}() \textcolor{keyword}{const};
+\Hypertarget{vector_8h_source_l00174}\hyperlink{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}{00174}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_vector_a27f502b21a0315ed49c9930e62594315}{x\_m}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector_a73968df95eae0627d3ed6fe1eb1d0121}{x\_m\_};\}
+\Hypertarget{vector_8h_source_l00177}\hyperlink{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}{00177}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_vector_ad48f3746794d4119158f09a8876a3a7b}{y\_m}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector_a9ed86f0af6f6d64bbdc79eec9f5ac7f7}{y\_m\_};\}
+\Hypertarget{vector_8h_source_l00180}\hyperlink{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}{00180}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_vector_a149cc9058ce5610a15252a7710a13c81}{z\_m}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector_adb0356716c196646509b48043fe53c9d}{z\_m\_};\}
+\Hypertarget{vector_8h_source_l00183}\hyperlink{classosse_1_1collaborate_1_1_vector_a43ab316f8ed0dce4dc6006c80ea97987}{00183}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_vector_a43ab316f8ed0dce4dc6006c80ea97987}{r\_m}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector_a6c20f040fc2015801419933255e5c4db}{r\_m\_};\}
+\Hypertarget{vector_8h_source_l00186}\hyperlink{classosse_1_1collaborate_1_1_vector_a61bc6a4b1074ca5d69e8eb581128b6a0}{00186}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_vector_a61bc6a4b1074ca5d69e8eb581128b6a0}{rho\_m}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector_a94a19254344f6906a759953c96b86001}{rho\_m\_};\}
+\Hypertarget{vector_8h_source_l00189}\hyperlink{classosse_1_1collaborate_1_1_vector_aa74ca108111d3b520f5e39407d3c4c0a}{00189}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_vector_aa74ca108111d3b520f5e39407d3c4c0a}{theta\_rad}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector_aa6d88c9293f3b75c387ccf88cb8cd1de}{theta\_rad\_};\}
+\Hypertarget{vector_8h_source_l00192}\hyperlink{classosse_1_1collaborate_1_1_vector_a616314b8bb82923b6bc689bd8af88552}{00192}   \textcolor{keyword}{const} \textcolor{keywordtype}{double}& \hyperlink{classosse_1_1collaborate_1_1_vector_a616314b8bb82923b6bc689bd8af88552}{phi\_rad}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \hyperlink{classosse_1_1collaborate_1_1_vector_a7d1e83ec48925e32d614617bfe31223e}{phi\_rad\_};\}
+00193 
+00194  \textcolor{keyword}{private}:
+\Hypertarget{vector_8h_source_l00196}\hyperlink{classosse_1_1collaborate_1_1_vector_a73968df95eae0627d3ed6fe1eb1d0121}{00196}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_vector_a73968df95eae0627d3ed6fe1eb1d0121}{x\_m\_};
+\Hypertarget{vector_8h_source_l00198}\hyperlink{classosse_1_1collaborate_1_1_vector_a9ed86f0af6f6d64bbdc79eec9f5ac7f7}{00198}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_vector_a9ed86f0af6f6d64bbdc79eec9f5ac7f7}{y\_m\_};
+\Hypertarget{vector_8h_source_l00200}\hyperlink{classosse_1_1collaborate_1_1_vector_adb0356716c196646509b48043fe53c9d}{00200}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_vector_adb0356716c196646509b48043fe53c9d}{z\_m\_};
+\Hypertarget{vector_8h_source_l00202}\hyperlink{classosse_1_1collaborate_1_1_vector_a6c20f040fc2015801419933255e5c4db}{00202}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_vector_a6c20f040fc2015801419933255e5c4db}{r\_m\_};
+\Hypertarget{vector_8h_source_l00204}\hyperlink{classosse_1_1collaborate_1_1_vector_a94a19254344f6906a759953c96b86001}{00204}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_vector_a94a19254344f6906a759953c96b86001}{rho\_m\_};
+\Hypertarget{vector_8h_source_l00206}\hyperlink{classosse_1_1collaborate_1_1_vector_aa6d88c9293f3b75c387ccf88cb8cd1de}{00206}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_vector_aa6d88c9293f3b75c387ccf88cb8cd1de}{theta\_rad\_};
+\Hypertarget{vector_8h_source_l00208}\hyperlink{classosse_1_1collaborate_1_1_vector_a7d1e83ec48925e32d614617bfe31223e}{00208}   \textcolor{keywordtype}{double} \hyperlink{classosse_1_1collaborate_1_1_vector_a7d1e83ec48925e32d614617bfe31223e}{phi\_rad\_};
+00209 \};
+00210 
+00214 \textcolor{keyword}{inline} std::ostream& operator<<(std::ostream& strm, \textcolor{keyword}{const} \hyperlink{classosse_1_1collaborate_1_1_vector}{Vector}& \_vector) \{
+00215   \textcolor{keywordflow}{return} strm << \_vector.\hyperlink{classosse_1_1collaborate_1_1_vector_af5fb0bf89a48d682cfbfda512b5fb24d}{ToString}();
+00216 \}
+00217 
+00218 \}  \textcolor{comment}{// namespace collaborate}
+00219 \}  \textcolor{comment}{// namespace osse}
+00220 
+00221 \textcolor{preprocessor}{#endif  // LIBS\_COLLABORATE\_INCLUDE\_COLLABORATE\_VECTOR\_H\_}
+\end{DoxyCode}

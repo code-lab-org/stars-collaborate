@@ -1,0 +1,234 @@
+\hypertarget{classosse_1_1collaborate_1_1_simulation_clock}{}\subsection{osse\+:\+:collaborate\+:\+:Simulation\+Clock Class Reference}
+\label{classosse_1_1collaborate_1_1_simulation_clock}\index{osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}}
+
+
+A clock for maintaining the current simulation time.  
+
+
+
+
+{\ttfamily \#include $<$simulation\+\_\+clock.\+h$>$}
+
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer}{Log\+Buffer}
+\begin{DoxyCompactList}\small\item\em Log buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_add9ec31a41ed5f7d75967e98396c021d}\label{classosse_1_1collaborate_1_1_simulation_clock_add9ec31a41ed5f7d75967e98396c021d}} 
+typedef struct \hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer}{osse\+::collaborate\+::\+Simulation\+Clock\+::\+Log\+Buffer} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_add9ec31a41ed5f7d75967e98396c021d}{Log\+Buffer}
+\begin{DoxyCompactList}\small\item\em Log buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a538621acdc4673f7463f2fa16622f7b9}{Simulation\+Clock} (\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$\+\_\+data\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a19b6f432a5f9320650dcb047183ac09d}{Simulation\+Clock} (\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$\+\_\+data\+\_\+log, const int \&\+\_\+year, const int \&\+\_\+month, const int \&\+\_\+day)
+\begin{DoxyCompactList}\small\item\em Constructor from Year, Month, and Day. \end{DoxyCompactList}\item 
+\hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a8239ac64397b72466ec46b5785111269}{Simulation\+Clock} (\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$\+\_\+data\+\_\+log, const int \&\+\_\+year, const int \&\+\_\+month, const int \&\+\_\+day, const int \&\+\_\+hour, const int \&\+\_\+minute, const int \&\+\_\+second)
+\begin{DoxyCompactList}\small\item\em Constructor from Y\+M\+D\+H\+MS. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_aabf56af06948df891086681c1651cbfe}{Tick} (const uint64\+\_\+t \&\+\_\+seconds)
+\begin{DoxyCompactList}\small\item\em Increments time. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a10001235cd019861c226e6d8814da638}{To\+String} () const
+\begin{DoxyCompactList}\small\item\em Converts current C\+PU and S\+G\+P4 date\+\_\+time to string. \end{DoxyCompactList}\item 
+const sgp4\+::\+Date\+Time \& \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a089b6bf38ec18dde18a1aff638154269}{date\+\_\+time} () const
+\begin{DoxyCompactList}\small\item\em Get current date and time. \end{DoxyCompactList}\item 
+const uint64\+\_\+t \& \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a067a244986cc830bc796316db4b98358}{last\+\_\+increment\+\_\+s} () const
+\begin{DoxyCompactList}\small\item\em Get previous time increment (seconds) \end{DoxyCompactList}\item 
+const uint64\+\_\+t \& \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a7c4d4f02803231b0d06a80081d73c206}{elapsed\+\_\+s} () const
+\begin{DoxyCompactList}\small\item\em Get total time elapsed (seconds) \end{DoxyCompactList}\item 
+const uint64\+\_\+t \& \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a0791fb7aeb5fb252f8a57e572dab823a}{ticks} () const
+\begin{DoxyCompactList}\small\item\em Get total ticks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a2d9985044f9f5c90a87c38bb16e25c2a}\label{classosse_1_1collaborate_1_1_simulation_clock_a2d9985044f9f5c90a87c38bb16e25c2a}} 
+void \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a2d9985044f9f5c90a87c38bb16e25c2a}{Buffer} ()
+\begin{DoxyCompactList}\small\item\em Buffer clock values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_ac9d66ec221a35419d5ccc2aecfcf3cc9}\label{classosse_1_1collaborate_1_1_simulation_clock_ac9d66ec221a35419d5ccc2aecfcf3cc9}} 
+void \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_ac9d66ec221a35419d5ccc2aecfcf3cc9}{Flush} ()
+\begin{DoxyCompactList}\small\item\em Write buffers to a log file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a026eab97f275ec2d672f40b0b0bb7a3d}\label{classosse_1_1collaborate_1_1_simulation_clock_a026eab97f275ec2d672f40b0b0bb7a3d}} 
+static constexpr int \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a026eab97f275ec2d672f40b0b0bb7a3d}{k\+Log\+Buffer\+Size} = 1000
+\begin{DoxyCompactList}\small\item\em Size of a log buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_acb2239fb1e6689a6c6355c0886e2d90a}\label{classosse_1_1collaborate_1_1_simulation_clock_acb2239fb1e6689a6c6355c0886e2d90a}} 
+sgp4\+::\+Date\+Time \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_acb2239fb1e6689a6c6355c0886e2d90a}{date\+\_\+time\+\_\+}
+\begin{DoxyCompactList}\small\item\em Current date and time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_acbc4c82a635383514e306a2ec83b23e1}\label{classosse_1_1collaborate_1_1_simulation_clock_acbc4c82a635383514e306a2ec83b23e1}} 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_acbc4c82a635383514e306a2ec83b23e1}{last\+\_\+increment\+\_\+s\+\_\+}
+\begin{DoxyCompactList}\small\item\em Previous time increment (seconds) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a7168d8bf983c08e204648d8cb168133f}\label{classosse_1_1collaborate_1_1_simulation_clock_a7168d8bf983c08e204648d8cb168133f}} 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a7168d8bf983c08e204648d8cb168133f}{elapsed\+\_\+s\+\_\+}
+\begin{DoxyCompactList}\small\item\em Total time elapsed (seconds) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_ae7097d8c3a0afb5d83525aaeebcd72fd}\label{classosse_1_1collaborate_1_1_simulation_clock_ae7097d8c3a0afb5d83525aaeebcd72fd}} 
+uint64\+\_\+t \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_ae7097d8c3a0afb5d83525aaeebcd72fd}{ticks\+\_\+}
+\begin{DoxyCompactList}\small\item\em Total ticks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a99bb1f5a13702f64b1b553ef6eacdbf6}\label{classosse_1_1collaborate_1_1_simulation_clock_a99bb1f5a13702f64b1b553ef6eacdbf6}} 
+\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$ \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a99bb1f5a13702f64b1b553ef6eacdbf6}{data\+\_\+log\+\_\+}
+\begin{DoxyCompactList}\small\item\em Data logger. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a9c5e6f891b9cdec50f0ec280444458d0}\label{classosse_1_1collaborate_1_1_simulation_clock_a9c5e6f891b9cdec50f0ec280444458d0}} 
+\hyperlink{structosse_1_1collaborate_1_1_simulation_clock_1_1_log_buffer}{Log\+Buffer} \hyperlink{classosse_1_1collaborate_1_1_simulation_clock_a9c5e6f891b9cdec50f0ec280444458d0}{log\+\_\+buffer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Log buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+A clock for maintaining the current simulation time. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a538621acdc4673f7463f2fa16622f7b9}\label{classosse_1_1collaborate_1_1_simulation_clock_a538621acdc4673f7463f2fa16622f7b9}} 
+\index{osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}!Simulation\+Clock@{Simulation\+Clock}}
+\index{Simulation\+Clock@{Simulation\+Clock}!osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}}
+\paragraph{\texorpdfstring{Simulation\+Clock()}{SimulationClock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Simulation\+Clock\+::\+Simulation\+Clock (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$}]{\+\_\+data\+\_\+log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+log} & Data logger \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a19b6f432a5f9320650dcb047183ac09d}\label{classosse_1_1collaborate_1_1_simulation_clock_a19b6f432a5f9320650dcb047183ac09d}} 
+\index{osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}!Simulation\+Clock@{Simulation\+Clock}}
+\index{Simulation\+Clock@{Simulation\+Clock}!osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}}
+\paragraph{\texorpdfstring{Simulation\+Clock()}{SimulationClock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Simulation\+Clock\+::\+Simulation\+Clock (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$}]{\+\_\+data\+\_\+log,  }\item[{const int \&}]{\+\_\+year,  }\item[{const int \&}]{\+\_\+month,  }\item[{const int \&}]{\+\_\+day }\end{DoxyParamCaption})}
+
+
+
+Constructor from Year, Month, and Day. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+log} & Data logger \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+year} & Year \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+month} & Month \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+day} & Day \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a8239ac64397b72466ec46b5785111269}\label{classosse_1_1collaborate_1_1_simulation_clock_a8239ac64397b72466ec46b5785111269}} 
+\index{osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}!Simulation\+Clock@{Simulation\+Clock}}
+\index{Simulation\+Clock@{Simulation\+Clock}!osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}}
+\paragraph{\texorpdfstring{Simulation\+Clock()}{SimulationClock()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Simulation\+Clock\+::\+Simulation\+Clock (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$}]{\+\_\+data\+\_\+log,  }\item[{const int \&}]{\+\_\+year,  }\item[{const int \&}]{\+\_\+month,  }\item[{const int \&}]{\+\_\+day,  }\item[{const int \&}]{\+\_\+hour,  }\item[{const int \&}]{\+\_\+minute,  }\item[{const int \&}]{\+\_\+second }\end{DoxyParamCaption})}
+
+
+
+Constructor from Y\+M\+D\+H\+MS. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+log} & Data logger \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+year} & Year \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+month} & Month \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+day} & Day \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+hour} & Hour \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+minute} & Minute \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+second} & Second \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a089b6bf38ec18dde18a1aff638154269}\label{classosse_1_1collaborate_1_1_simulation_clock_a089b6bf38ec18dde18a1aff638154269}} 
+\index{osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}!date\+\_\+time@{date\+\_\+time}}
+\index{date\+\_\+time@{date\+\_\+time}!osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}}
+\paragraph{\texorpdfstring{date\+\_\+time()}{date\_time()}}
+{\footnotesize\ttfamily const sgp4\+::\+Date\+Time\& osse\+::collaborate\+::\+Simulation\+Clock\+::date\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get current date and time. 
+
+\begin{DoxyReturn}{Returns}
+date\+\_\+time\+\_\+ Current date and time 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a7c4d4f02803231b0d06a80081d73c206}\label{classosse_1_1collaborate_1_1_simulation_clock_a7c4d4f02803231b0d06a80081d73c206}} 
+\index{osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}!elapsed\+\_\+s@{elapsed\+\_\+s}}
+\index{elapsed\+\_\+s@{elapsed\+\_\+s}!osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}}
+\paragraph{\texorpdfstring{elapsed\+\_\+s()}{elapsed\_s()}}
+{\footnotesize\ttfamily const uint64\+\_\+t\& osse\+::collaborate\+::\+Simulation\+Clock\+::elapsed\+\_\+s (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get total time elapsed (seconds) 
+
+\begin{DoxyReturn}{Returns}
+elapsed\+\_\+s\+\_\+ Total time elapsed (seconds) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a067a244986cc830bc796316db4b98358}\label{classosse_1_1collaborate_1_1_simulation_clock_a067a244986cc830bc796316db4b98358}} 
+\index{osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}!last\+\_\+increment\+\_\+s@{last\+\_\+increment\+\_\+s}}
+\index{last\+\_\+increment\+\_\+s@{last\+\_\+increment\+\_\+s}!osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}}
+\paragraph{\texorpdfstring{last\+\_\+increment\+\_\+s()}{last\_increment\_s()}}
+{\footnotesize\ttfamily const uint64\+\_\+t\& osse\+::collaborate\+::\+Simulation\+Clock\+::last\+\_\+increment\+\_\+s (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get previous time increment (seconds) 
+
+\begin{DoxyReturn}{Returns}
+last\+\_\+increment\+\_\+s\+\_\+ Previous time increment (seconds) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_aabf56af06948df891086681c1651cbfe}\label{classosse_1_1collaborate_1_1_simulation_clock_aabf56af06948df891086681c1651cbfe}} 
+\index{osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}!Tick@{Tick}}
+\index{Tick@{Tick}!osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}}
+\paragraph{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Simulation\+Clock\+::\+Tick (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{\+\_\+seconds }\end{DoxyParamCaption})}
+
+
+
+Increments time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+seconds} & Number of seconds to increment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a0791fb7aeb5fb252f8a57e572dab823a}\label{classosse_1_1collaborate_1_1_simulation_clock_a0791fb7aeb5fb252f8a57e572dab823a}} 
+\index{osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}!ticks@{ticks}}
+\index{ticks@{ticks}!osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}}
+\paragraph{\texorpdfstring{ticks()}{ticks()}}
+{\footnotesize\ttfamily const uint64\+\_\+t\& osse\+::collaborate\+::\+Simulation\+Clock\+::ticks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get total ticks. 
+
+\begin{DoxyReturn}{Returns}
+ticks\+\_\+ Total ticks 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_simulation_clock_a10001235cd019861c226e6d8814da638}\label{classosse_1_1collaborate_1_1_simulation_clock_a10001235cd019861c226e6d8814da638}} 
+\index{osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!osse\+::collaborate\+::\+Simulation\+Clock@{osse\+::collaborate\+::\+Simulation\+Clock}}
+\paragraph{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily std\+::string osse\+::collaborate\+::\+Simulation\+Clock\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Converts current C\+PU and S\+G\+P4 date\+\_\+time to string. 
+
+\begin{DoxyReturn}{Returns}
+Current C\+PU and S\+G\+P4 date\+\_\+time as a string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/simulation\+\_\+clock.\+h\item 
+libs/collaborate/src/simulation\+\_\+clock.\+cpp\end{DoxyCompactItemize}

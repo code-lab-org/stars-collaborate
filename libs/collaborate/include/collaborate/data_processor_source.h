@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Ryan Linnabary
+// Copyright (C) 2019 The Ohio State University
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -33,6 +33,8 @@ class DataProcessorSource : public DataProcessor {
  public:
   /// @brief Constructor
   DataProcessorSource();
+  /// @brief Constructor
+  DataProcessorSource(const bool& _flag);
   /// @brief Processes a sensor measurement
   /// @param[in] _raw_packets List of raw measurement packets
   /// @param[in] _source_index Index of source node
@@ -56,6 +58,8 @@ class DataProcessorSource : public DataProcessor {
   double regression_step_;
   /// @brief Cloud depth minimum for existence of rain
   double threshold_rain_;
+  /// @brief Flag
+  bool flag_;
 };
 
 }  // namespace collaborate

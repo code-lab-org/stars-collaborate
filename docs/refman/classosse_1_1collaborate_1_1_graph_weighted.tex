@@ -1,0 +1,168 @@
+\hypertarget{classosse_1_1collaborate_1_1_graph_weighted}{}\subsection{osse\+:\+:collaborate\+:\+:Graph\+Weighted Class Reference}
+\label{classosse_1_1collaborate_1_1_graph_weighted}\index{osse\+::collaborate\+::\+Graph\+Weighted@{osse\+::collaborate\+::\+Graph\+Weighted}}
+
+
+Concrete graph with weighted edges.  
+
+
+
+
+{\ttfamily \#include $<$graph\+\_\+weighted.\+h$>$}
+
+
+
+Inheritance diagram for osse\+:\+:collaborate\+:\+:Graph\+Weighted\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classosse_1_1collaborate_1_1_graph_weighted__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_weighted_aa604a648e701d85c8deb818f13b64097}\label{classosse_1_1collaborate_1_1_graph_weighted_aa604a648e701d85c8deb818f13b64097}} 
+typedef std\+::array$<$ double, \hyperlink{classosse_1_1collaborate_1_1_graph_a9c9828305d419d29fc1eed87a4520cd5}{Graph\+::k\+Size} $>$ \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_aa604a648e701d85c8deb818f13b64097}{Edges}
+\begin{DoxyCompactList}\small\item\em Underlying adjacency attitude\+\_\+matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a983e8d0efd6bba488b979b546cb078ff}{Graph\+Weighted} (\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$\+\_\+data\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_weighted_a485197f02e24b37e2e2e47136548aa3d}\label{classosse_1_1collaborate_1_1_graph_weighted_a485197f02e24b37e2e2e47136548aa3d}} 
+void \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a485197f02e24b37e2e2e47136548aa3d}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Sets all edges to 0.\+0. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_ab55668685b7bde8d3553cedeb95efab3}{Log} (const uint16\+\_\+t \&\+\_\+num\+\_\+nodes, const uint64\+\_\+t \&\+\_\+tick) const
+\begin{DoxyCompactList}\small\item\em Writes the weighted graph to a binary file. \end{DoxyCompactList}\item 
+void \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a20ad6c253cec6b39d5d2cee4aa5ea073}{Set\+Edge} (const uint16\+\_\+t \&\+\_\+row, const uint16\+\_\+t \&\+\_\+col, const double \&\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the edge at a row and a column to. \end{DoxyCompactList}\item 
+double \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a10d1d7bb90d63fa8461e044ca5b2bd20}{Get\+Edge} (const uint16\+\_\+t \&\+\_\+row, const uint16\+\_\+t \&\+\_\+col) const
+\begin{DoxyCompactList}\small\item\em Gets the edge at a row and a column to. \end{DoxyCompactList}\item 
+std\+::vector$<$ uint16\+\_\+t $>$ \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a657a68399222496d6664418061fe2108}{Dijkstra} (const uint16\+\_\+t \&\+\_\+start, const uint16\+\_\+t \&\+\_\+end)
+\begin{DoxyCompactList}\small\item\em Uses Dijkstra\textquotesingle{}s algorithm to find shortest path between two nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_weighted_a60944e002d7910e9de5d2bba3ea87e74}\label{classosse_1_1collaborate_1_1_graph_weighted_a60944e002d7910e9de5d2bba3ea87e74}} 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_aa604a648e701d85c8deb818f13b64097}{Edges} $>$ \hyperlink{classosse_1_1collaborate_1_1_graph_weighted_a60944e002d7910e9de5d2bba3ea87e74}{edges\+\_\+}
+\begin{DoxyCompactList}\small\item\em Weighted edges. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Concrete graph with weighted edges. 
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth]{weighted}}
+\end{DoxyImageNoCaption}
+
+
+\[ n_x n_x \in \mathbb{R} \] \[ {\bf{E}} = Weighted~Edges = \begin{bmatrix} 0 & n_0 n_1 & \dots & n_0 n_{N-1} & n_0 n_N \\ n_1 n_0 & 0 & \dots & n_1 n_{N-1} & n_1 n_N \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ n_{N-1} n_0 & n_{N-1} n_1 & \dots & 0 & n_{N-1} n_N \\ n_N n_0 & n_N n_1 & \dots & n_N n_{N-1} & 0 \end{bmatrix} \] 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_weighted_a983e8d0efd6bba488b979b546cb078ff}\label{classosse_1_1collaborate_1_1_graph_weighted_a983e8d0efd6bba488b979b546cb078ff}} 
+\index{osse\+::collaborate\+::\+Graph\+Weighted@{osse\+::collaborate\+::\+Graph\+Weighted}!Graph\+Weighted@{Graph\+Weighted}}
+\index{Graph\+Weighted@{Graph\+Weighted}!osse\+::collaborate\+::\+Graph\+Weighted@{osse\+::collaborate\+::\+Graph\+Weighted}}
+\paragraph{\texorpdfstring{Graph\+Weighted()}{GraphWeighted()}}
+{\footnotesize\ttfamily osse\+::collaborate\+::\+Graph\+Weighted\+::\+Graph\+Weighted (\begin{DoxyParamCaption}\item[{\hyperlink{classosse_1_1collaborate_1_1_data_logger}{Data\+Logger} $\ast$}]{\+\_\+data\+\_\+log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+data\+\_\+log} & Data logger \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_weighted_a657a68399222496d6664418061fe2108}\label{classosse_1_1collaborate_1_1_graph_weighted_a657a68399222496d6664418061fe2108}} 
+\index{osse\+::collaborate\+::\+Graph\+Weighted@{osse\+::collaborate\+::\+Graph\+Weighted}!Dijkstra@{Dijkstra}}
+\index{Dijkstra@{Dijkstra}!osse\+::collaborate\+::\+Graph\+Weighted@{osse\+::collaborate\+::\+Graph\+Weighted}}
+\paragraph{\texorpdfstring{Dijkstra()}{Dijkstra()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint16\+\_\+t $>$ osse\+::collaborate\+::\+Graph\+Weighted\+::\+Dijkstra (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+start,  }\item[{const uint16\+\_\+t \&}]{\+\_\+end }\end{DoxyParamCaption})}
+
+
+
+Uses Dijkstra\textquotesingle{}s algorithm to find shortest path between two nodes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+start} & Beginning index \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+end} & End index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shortest path between the nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_weighted_a10d1d7bb90d63fa8461e044ca5b2bd20}\label{classosse_1_1collaborate_1_1_graph_weighted_a10d1d7bb90d63fa8461e044ca5b2bd20}} 
+\index{osse\+::collaborate\+::\+Graph\+Weighted@{osse\+::collaborate\+::\+Graph\+Weighted}!Get\+Edge@{Get\+Edge}}
+\index{Get\+Edge@{Get\+Edge}!osse\+::collaborate\+::\+Graph\+Weighted@{osse\+::collaborate\+::\+Graph\+Weighted}}
+\paragraph{\texorpdfstring{Get\+Edge()}{GetEdge()}}
+{\footnotesize\ttfamily double osse\+::collaborate\+::\+Graph\+Weighted\+::\+Get\+Edge (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+row,  }\item[{const uint16\+\_\+t \&}]{\+\_\+col }\end{DoxyParamCaption}) const}
+
+
+
+Gets the edge at a row and a column to. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+row} & Row \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+col} & Column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_weighted_ab55668685b7bde8d3553cedeb95efab3}\label{classosse_1_1collaborate_1_1_graph_weighted_ab55668685b7bde8d3553cedeb95efab3}} 
+\index{osse\+::collaborate\+::\+Graph\+Weighted@{osse\+::collaborate\+::\+Graph\+Weighted}!Log@{Log}}
+\index{Log@{Log}!osse\+::collaborate\+::\+Graph\+Weighted@{osse\+::collaborate\+::\+Graph\+Weighted}}
+\paragraph{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Graph\+Weighted\+::\+Log (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+num\+\_\+nodes,  }\item[{const uint64\+\_\+t \&}]{\+\_\+tick }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Writes the weighted graph to a binary file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+num\+\_\+nodes} & Number of nodes (rows and columns) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+tick} & The simulation clock tick \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classosse_1_1collaborate_1_1_graph_abaef7c4642242e096d2bbfc74b8d1d07}{osse\+::collaborate\+::\+Graph}.
+
+\mbox{\Hypertarget{classosse_1_1collaborate_1_1_graph_weighted_a20ad6c253cec6b39d5d2cee4aa5ea073}\label{classosse_1_1collaborate_1_1_graph_weighted_a20ad6c253cec6b39d5d2cee4aa5ea073}} 
+\index{osse\+::collaborate\+::\+Graph\+Weighted@{osse\+::collaborate\+::\+Graph\+Weighted}!Set\+Edge@{Set\+Edge}}
+\index{Set\+Edge@{Set\+Edge}!osse\+::collaborate\+::\+Graph\+Weighted@{osse\+::collaborate\+::\+Graph\+Weighted}}
+\paragraph{\texorpdfstring{Set\+Edge()}{SetEdge()}}
+{\footnotesize\ttfamily void osse\+::collaborate\+::\+Graph\+Weighted\+::\+Set\+Edge (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{\+\_\+row,  }\item[{const uint16\+\_\+t \&}]{\+\_\+col,  }\item[{const double \&}]{\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the edge at a row and a column to. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+row} & Row \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+col} & Column \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/collaborate/include/collaborate/graph\+\_\+weighted.\+h\item 
+libs/collaborate/src/graph\+\_\+weighted.\+cpp\end{DoxyCompactItemize}
